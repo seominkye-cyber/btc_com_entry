@@ -2033,7 +2033,7 @@
       if (idx < 0 || idx >= rawQuizData.length) return;
       currentIdx = idx;
       const q = rawQuizData[idx];
-
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       questionBadge.innerText = `문항 ${q.id || (idx+1)}`;
       categoryBadge.innerText = q.c;
       questionCounter.innerText = `${idx + 1} / ${rawQuizData.length}`;
