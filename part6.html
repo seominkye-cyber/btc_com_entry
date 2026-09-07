@@ -1,0 +1,2307 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정보전송일반 - 6차시 위성통신기기 CBT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap');
+    body { font-family: 'Pretendard', sans-serif; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .modal-open { overflow: hidden; }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.mb-1\.5{margin-bottom:0.375rem}.mt-0\.5{margin-top:0.125rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-2{height:0.5rem}.h-4{height:1rem}.h-7{height:1.75rem}.max-h-32{max-height:8rem}.max-h-60{max-height:15rem}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-4{width:1rem}.w-full{width:100%}.w-7{width:1.75rem}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.shrink-0{flex-shrink:0}.scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-\[1\.01\]{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-b-2xl{border-bottom-right-radius:1rem;border-bottom-left-radius:1rem}.rounded-t-2xl{border-top-left-radius:1rem;border-top-right-radius:1rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-rose-200{--tw-border-opacity:1;border-color:rgb(254 205 211 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-indigo-600{--tw-border-opacity:1;border-color:rgb(79 70 229 / var(--tw-border-opacity, 1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183 / var(--tw-border-opacity, 1))}.border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175 / var(--tw-border-opacity, 1))}.border-rose-500{--tw-border-opacity:1;border-color:rgb(244 63 94 / var(--tw-border-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-indigo-200{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-700{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.bg-indigo-800{--tw-bg-opacity:1;background-color:rgb(55 48 163 / var(--tw-bg-opacity, 1))}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-emerald-50\/80{background-color:rgb(236 253 245 / 0.8)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184 / var(--tw-bg-opacity, 1))}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pt-6{padding-top:1.5rem}.pt-0\.5{padding-top:0.125rem}.pl-1{padding-left:0.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[10px\]{font-size:10px}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-rose-900{--tw-text-opacity:1;color:rgb(136 19 55 / var(--tw-text-opacity, 1))}.opacity-60{opacity:0.6}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-400{--tw-ring-opacity:1;--tw-ring-color:rgb(129 140 248 / var(--tw-ring-opacity, 1))}.ring-emerald-300{--tw-ring-opacity:1;--tw-ring-color:rgb(110 231 183 / var(--tw-ring-opacity, 1))}.ring-rose-300{--tw-ring-opacity:1;--tw-ring-color:rgb(253 164 175 / var(--tw-ring-opacity, 1))}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-md{--tw-drop-shadow:drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.file\:mr-4::file-selector-button{margin-right:1rem}.file\:rounded-full::file-selector-button{border-radius:9999px}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-indigo-50::file-selector-button{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.file\:px-3::file-selector-button{padding-left:0.75rem;padding-right:0.75rem}.file\:py-1::file-selector-button{padding-top:0.25rem;padding-bottom:0.25rem}.file\:text-xs::file-selector-button{font-size:0.75rem;line-height:1rem}.file\:font-semibold::file-selector-button{font-weight:600}.file\:text-indigo-700::file-selector-button{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.hover\:border-indigo-400:hover{--tw-border-opacity:1;border-color:rgb(129 140 248 / var(--tw-border-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-200:hover{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-100:hover{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-200:hover{--tw-bg-opacity:1;background-color:rgb(254 205 211 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-50:hover{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:text-indigo-800:hover{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.hover\:text-rose-500:hover{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.hover\:file\:bg-indigo-100::file-selector-button:hover{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-40:disabled{opacity:0.4}.group:hover .group-hover\:text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:block{display:block}}@media (min-width: 768px){.md\:h-8{height:2rem}.md\:w-auto{width:auto}.md\:w-8{width:2rem}.md\:flex-row{flex-direction:row}.md\:justify-end{justify-content:flex-end}.md\:gap-2{gap:0.5rem}.md\:p-8{padding:2rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xs{font-size:0.75rem;line-height:1rem}}</style></head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col relative">
+
+  <!-- Header -->
+  <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-3">
+      <div class="flex items-center space-x-3 w-full md:w-auto">
+        <a href="index.html" class="bg-indigo-800 hover:bg-indigo-600 text-white text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1.5 border border-indigo-500 shadow-sm shrink-0" title="목록으로 돌아가기">
+          <i class="fa-solid fa-list"></i> 목록
+        </a>
+        <i class="fa-solid fa-satellite text-2xl text-amber-300 hidden sm:block"></i>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight truncate">6차시 위성통신 CBT</h1>
+          <p class="text-xs text-indigo-200 truncate">정지위성 · 저궤도 · 지구국 · 위성 안테나 완벽 마스터</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-end">
+        <div class="text-right mr-2">
+          <span class="text-xs text-indigo-200 block">현재 점수</span>
+          <span id="score-display" class="font-extrabold text-lg text-amber-300">60 / 63 (총 63문항)</span>
+        </div>
+        <button onclick="downloadUpdatedHTML()" class="bg-emerald-600 hover:bg-emerald-500 text-xs px-3 py-2 rounded-lg font-bold transition flex items-center gap-1 border border-emerald-500 shadow-sm">
+          <i class="fa-solid fa-download"></i> 수정본 다운로드
+        </button>
+        <button id="reset-btn" class="bg-indigo-600 hover:bg-indigo-500 text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1 border border-indigo-500">
+          <i class="fa-solid fa-rotate-right"></i> 초기화
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="w-full bg-indigo-200 h-2">
+    <div id="progress-bar" class="bg-amber-400 h-2 transition-all duration-300" style="width: 100%;"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-1 w-full">
+    
+    <!-- Question Card -->
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden relative">
+      <div class="bg-slate-50 border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <span id="question-badge" class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">문항 63</span>
+          <span id="category-badge" class="bg-slate-200 text-slate-700 text-xs font-semibold px-2 py-0.5 rounded">안테나 초점거리</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button onclick="openEditModal()" class="text-xs text-indigo-600 font-bold hover:text-indigo-800 bg-indigo-50 px-2 py-1 rounded border border-indigo-200 transition shadow-sm">
+            <i class="fa-solid fa-pen-to-square"></i> 문제/해설 수정
+          </button>
+          <span id="question-counter" class="text-xs text-slate-500 font-medium">63 / 63</span>
+        </div>
+      </div>
+
+      <div class="p-6 md:p-8">
+        <h2 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-relaxed mb-4">그림의 안테나 반사기(Dish)의 지름이 1[m], 깊이가 165[mm]일 때, 파라볼라형 위성 안테나 설계에서 반사기 컨버터를 설치할 초점길이(Focal Length)는 얼마인가?</h2>
+        
+        <!-- 이미지 출력 영역 -->
+        <img id="question-image" src="data:image/png;base64,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" alt="첨부 이미지" class="mb-6 max-h-60 rounded-lg border border-slate-200 shadow-sm">
+
+        <!-- Options -->
+        <div id="options-container" class="space-y-3"><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-emerald-500 bg-emerald-50 text-emerald-900 font-bold z-10 scale-[1.01]" disabled=""><span class="pt-0.5 shrink-0"><i class="fa-solid fa-circle-check text-emerald-600 text-xl drop-shadow-md"></i></span><span class="flex-1 leading-relaxed">① 378.7879 [mm]</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-slate-50 text-slate-400 opacity-60" disabled=""><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-300 text-xl"></i></span><span class="flex-1 leading-relaxed">② 3.787879 [mm]</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-slate-50 text-slate-400 opacity-60" disabled=""><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-300 text-xl"></i></span><span class="flex-1 leading-relaxed">③ 37.87879 [mm]</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-slate-50 text-slate-400 opacity-60" disabled=""><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-300 text-xl"></i></span><span class="flex-1 leading-relaxed">④ 3787.879 [mm]</span></button></div>
+
+        <!-- Explanation Section -->
+        <div id="explanation-box" class="mt-8 border-t border-slate-200 pt-6 animate-fade-in-up">
+          <div id="result-alert" class="p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 shadow-inner"><i class="fa-solid fa-circle-check text-emerald-600 text-2xl drop-shadow"></i> <div>정답입니다! 완벽하게 이해하셨습니다.</div></div>
+          
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-4">
+            <h3 class="text-sm font-bold text-indigo-900 flex items-center gap-2">
+              <i class="fa-solid fa-book-open-reader text-indigo-600"></i> 해설 상세 보기
+            </h3>
+            <div id="rationales-list" class="space-y-2 text-sm text-slate-700"><div class="p-3 rounded-lg border shadow-sm bg-emerald-50/80 border-emerald-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5 shadow-sm">정답 보기</span> <span class="text-emerald-900">① 378.7879 [mm]</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">파라볼라 안테나의 초점거리 공식 f = D² / 16d 입니다. 지름 D=1m(1000mm), 깊이 d=165mm를 대입하면 f = 1000² / (16 × 165) = 1,000,000 / 2,640 ≒ 378.7878... [mm] 가 나옵니다.</div></div><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">② 3.787879 [mm]</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">단위 변환 오류입니다.</div></div><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">③ 37.87879 [mm]</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">자릿수 오류입니다.</div></div><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">④ 3787.879 [mm]</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">자릿수 오류입니다.</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 flex justify-between items-center">
+        <button id="prev-btn" class="px-4 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-arrow-left mr-1"></i> 이전 문제
+        </button>
+        <button id="next-btn" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-bold transition shadow disabled:opacity-40 disabled:cursor-not-allowed" disabled="">
+          다음 문제 <i class="fa-solid fa-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Grid -->
+    <div class="mt-8 bg-white rounded-xl p-5 shadow border border-slate-200">
+      <div class="flex justify-between items-center mb-4">
+        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">전체 문항 내비게이션</h4>
+        <button onclick="addNewQuestion()" class="text-xs bg-indigo-100 text-indigo-700 hover:bg-indigo-200 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1 border border-indigo-200 shadow-sm">
+          <i class="fa-solid fa-plus"></i> 새 문제 추가하기
+        </button>
+      </div>
+      <div id="nav-grid" class="flex flex-wrap gap-1.5 md:gap-2"><button id="nav-btn-0" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">1</button><button id="nav-btn-1" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-rose-500 text-white ">2</button><button id="nav-btn-2" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">3</button><button id="nav-btn-3" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">4</button><button id="nav-btn-4" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">5</button><button id="nav-btn-5" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">6</button><button id="nav-btn-6" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">7</button><button id="nav-btn-7" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">8</button><button id="nav-btn-8" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">9</button><button id="nav-btn-9" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">10</button><button id="nav-btn-10" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">11</button><button id="nav-btn-11" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">12</button><button id="nav-btn-12" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">13</button><button id="nav-btn-13" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">14</button><button id="nav-btn-14" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">15</button><button id="nav-btn-15" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">16</button><button id="nav-btn-16" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">17</button><button id="nav-btn-17" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-rose-500 text-white ">18</button><button id="nav-btn-18" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">19</button><button id="nav-btn-19" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">20</button><button id="nav-btn-20" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">21</button><button id="nav-btn-21" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">22</button><button id="nav-btn-22" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">23</button><button id="nav-btn-23" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">24</button><button id="nav-btn-24" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">25</button><button id="nav-btn-25" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">26</button><button id="nav-btn-26" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">27</button><button id="nav-btn-27" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">28</button><button id="nav-btn-28" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">29</button><button id="nav-btn-29" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">30</button><button id="nav-btn-30" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">31</button><button id="nav-btn-31" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">32</button><button id="nav-btn-32" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">33</button><button id="nav-btn-33" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">34</button><button id="nav-btn-34" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">35</button><button id="nav-btn-35" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">36</button><button id="nav-btn-36" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">37</button><button id="nav-btn-37" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">38</button><button id="nav-btn-38" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">39</button><button id="nav-btn-39" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">40</button><button id="nav-btn-40" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">41</button><button id="nav-btn-41" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">42</button><button id="nav-btn-42" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">43</button><button id="nav-btn-43" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">44</button><button id="nav-btn-44" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">45</button><button id="nav-btn-45" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">46</button><button id="nav-btn-46" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">47</button><button id="nav-btn-47" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">48</button><button id="nav-btn-48" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">49</button><button id="nav-btn-49" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">50</button><button id="nav-btn-50" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">51</button><button id="nav-btn-51" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">52</button><button id="nav-btn-52" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">53</button><button id="nav-btn-53" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">54</button><button id="nav-btn-54" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">55</button><button id="nav-btn-55" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">56</button><button id="nav-btn-56" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">57</button><button id="nav-btn-57" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">58</button><button id="nav-btn-58" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">59</button><button id="nav-btn-59" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-rose-500 text-white ">60</button><button id="nav-btn-60" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">61</button><button id="nav-btn-61" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">62</button><button id="nav-btn-62" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ring-2 ring-emerald-300 scale-110">63</button></div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-200 border-t border-slate-300 py-4 text-center text-xs text-slate-500 mt-auto">
+    통신기능장 자가 수정/이미지 업로드 완벽 지원 시스템 © 2026
+  </footer>
+
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col">
+      <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50 rounded-t-2xl">
+        <h3 class="font-bold text-lg text-slate-800"><i class="fa-solid fa-pen-to-square text-indigo-600 mr-2"></i>문제 및 해설 편집</h3>
+        <button onclick="closeEditModal()" class="text-slate-400 hover:text-rose-500 transition"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <div class="p-6 overflow-y-auto flex-1 space-y-5">
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">카테고리</label>
+          <input type="text" id="edit-cat" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">문제 (질문)</label>
+          <textarea id="edit-q" rows="3" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea>
+        </div>
+        
+        <!-- 이미지 업로드 섹션 -->
+        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+          <label class="block text-xs font-bold text-slate-500 mb-2"><i class="fa-solid fa-image text-slate-400"></i> 문제 참고 이미지 첨부 (선택사항)</label>
+          <div class="flex items-center gap-2 mb-2">
+            <input type="file" id="edit-img-upload" accept="image/*" class="text-xs file:mr-4 file:py-1 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer" onchange="encodeImageFileAsURL(this)">
+            <button type="button" onclick="clearImage()" class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-600 px-3 py-1.5 rounded-full font-bold transition" id="btn-clear-img"><i class="fa-solid fa-trash-can"></i> 지우기</button>
+          </div>
+          <input type="hidden" id="edit-img-base64" value="data:image/png;base64,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">
+          <img id="edit-img-preview" class="max-h-32 rounded border border-slate-300 shadow-sm" src="data:image/png;base64,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">
+        </div>
+
+        <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 space-y-4">
+          <label class="block text-xs font-bold text-indigo-800 mb-2">보기 및 해설 설정 (정답 라디오 버튼 선택)</label>
+          <!-- Opt 1 -->
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="0" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-0" placeholder="보기 1 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-0" rows="1" placeholder="보기 1 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <!-- Opt 2 -->
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="1" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-1" placeholder="보기 2 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-1" rows="1" placeholder="보기 2 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <!-- Opt 3 -->
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="2" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-2" placeholder="보기 3 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-2" rows="1" placeholder="보기 3 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <!-- Opt 4 -->
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="3" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-3" placeholder="보기 4 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-3" rows="1" placeholder="보기 4 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 py-4 border-t border-slate-200 bg-slate-50 rounded-b-2xl flex justify-between items-center">
+        <button onclick="deleteCurrentQuestion()" class="px-4 py-2 bg-rose-50 border border-rose-200 text-rose-600 rounded-lg text-sm font-bold hover:bg-rose-100 transition"><i class="fa-solid fa-trash"></i> 이 문제 삭제</button>
+        <div class="flex gap-2">
+          <button onclick="closeEditModal()" class="px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-bold text-slate-600 hover:bg-slate-100 transition">취소</button>
+          <button onclick="saveEditedQuestion()" class="px-5 py-2 bg-indigo-600 rounded-lg text-sm font-bold text-white hover:bg-indigo-700 transition shadow">적용하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 여기서부터 JSON 데이터가 들어갑니다 -->
+  <script id="quiz-data" type="application/json">
+[
+  {
+    "id": 1,
+    "c": "위성통신 특징",
+    "q": "위성 통신의 특징에 대한 설명 중 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 다원 접속이 가능하다.",
+        "a": 0,
+        "r": "FDMA, TDMA, CDMA 등 다원 접속이 가능합니다."
+      },
+      {
+        "t": "② 통신 회선을 구성하는데 유연성이 있다.",
+        "a": 0,
+        "r": "지형 지물에 구애받지 않아 유연성이 높습니다."
+      },
+      {
+        "t": "③ 광대역의 통신 회선을 구성 할 수 있다.",
+        "a": 0,
+        "r": "마이크로파 대역을 사용하므로 광대역 전송이 가능합니다."
+      },
+      {
+        "t": "④ 보안성이 강하여 별도의 암호 장치가 필요 없다.",
+        "a": 1,
+        "r": "위성통신은 전파가 광범위하게 뿌려지는 동보성 때문에 도청이 쉬워 보안에 취약합니다. 따라서 암호화 장치가 필수적입니다."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "c": "위성통신 특징",
+    "q": "다음 중 위성통신의 특징으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 신호의 전송시간이 지연된다.",
+        "a": 0,
+        "r": "거리가 멀어 왕복 약 0.25초가 지연됩니다."
+      },
+      {
+        "t": "② 다원접속이 가능하다.",
+        "a": 0,
+        "r": "주요 특징 중 하나입니다."
+      },
+      {
+        "t": "③ 동보통신이 가능하다.",
+        "a": 0,
+        "r": "한 번에 여러 수신자에게 정보를 보낼 수 있습니다."
+      },
+      {
+        "t": "④ 기후 영향을 받지 않는다.",
+        "a": 1,
+        "r": "마이크로파 대역을 사용하므로 비, 눈, 구름 등에 의한 '강우 감쇠' 등 기후의 영향을 크게 받습니다."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "c": "위성통신 특징",
+    "q": "다음 중 위성통신의 장점이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 산간, 도서 지역을 불문하고 난시청을 해소할 수 있다.",
+        "a": 0,
+        "r": "전국 어디서나 수신이 가능합니다."
+      },
+      {
+        "t": "② 대용량으로 많은 통신 용량을 가지고 대용량 서비스가 가능하다.",
+        "a": 0,
+        "r": "SHF 대역 등을 쓰므로 가능합니다."
+      },
+      {
+        "t": "③ 다원접속 및 고품질의 광대역 통신이 가능하다.",
+        "a": 0,
+        "r": "우주 잡음이 적어 고품질입니다."
+      },
+      {
+        "t": "④ 포인트 투 포인트(Point to Point) 통화 구성만이 가능하다.",
+        "a": 1,
+        "r": "위성통신은 1:1 통신뿐만 아니라 1:다수의 동보 통신(Broadcasting)도 매우 훌륭하게 수행합니다."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "c": "위성통신 특징",
+    "q": "다음 중 위성통신에 대한 설명으로 바르지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 주로 SHF주파수를 이용하여 위성의 중계를 거쳐 먼 거리까지 통신하는 방식이다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "② 정지궤도위성은 지구의 공전주기와 같아서 지표면에서 보면 정지해 있는 것처럼 보이는 위성이다.",
+        "a": 1,
+        "r": "인공위성이 정지해 있는 것처럼 보이는 이유는 지구의 '자전 주기(하루)'와 위성의 공전 주기가 같기 때문입니다. 공전주기(1년)와는 무관합니다."
+      },
+      {
+        "t": "③ 지구의 정지 궤도에 떠 있는 위성이 중계소 역할을 한다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "④ 다중접속 기술을 이용해 여러 지상국이 위성을 공유한다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "c": "위성 종류",
+    "q": "다음 위성통신의 종류 중 선박들 간의 정보교환, 선박-육상간의 정보교환 등으로 사용되는 위성통신으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 통신위성",
+        "a": 0,
+        "r": "일반적인 목적입니다."
+      },
+      {
+        "t": "② 해사위성(INMARSAT)",
+        "a": 1,
+        "r": "해상에서 선박 간, 혹은 선박과 육상 간의 안전 및 정보 통신을 목적으로 설립된 국제 기구 및 위성망이 INMARSAT(인마새트)입니다."
+      },
+      {
+        "t": "③ 과학위성",
+        "a": 0,
+        "r": "과학 연구 목적입니다."
+      },
+      {
+        "t": "④ 지구관측위성",
+        "a": 0,
+        "r": "자원 탐사 목적입니다."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "c": "위성 종류",
+    "q": "다음 중 최초의 상업통신 위성은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① INTELSAT",
+        "a": 1,
+        "r": "1965년에 발사된 인텔샛 1호(Early Bird)가 세계 최초의 상업용 통신위성입니다."
+      },
+      {
+        "t": "② SPUTNIK",
+        "a": 0,
+        "r": "구소련이 쏜 세계 최초의 '인공위성'입니다."
+      },
+      {
+        "t": "③ TAIROS",
+        "a": 0,
+        "r": "최초의 기상위성입니다."
+      },
+      {
+        "t": "④ ALPHANET",
+        "a": 0,
+        "r": "인터넷의 시초망(ARPANET)과 비슷한 오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "c": "다원 접속",
+    "q": "위성통신의 회선접속방식 중 하나로 하나의 트랜스폰더를 여러 지구국이 공용할 수 있도록 주파수 대역폭을 분할하여 지상국에 배당시켜 주는 방식은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① CDMA",
+        "a": 0,
+        "r": "코드를 분할하는 방식입니다."
+      },
+      {
+        "t": "② FDMA",
+        "a": 1,
+        "r": "가용한 '주파수 대역폭을 분할'하여 각 지구국에 할당해주는 다중 접속 방식은 주파수 분할 다원 접속(FDMA)입니다."
+      },
+      {
+        "t": "③ TDMA",
+        "a": 0,
+        "r": "시간을 분할하는 방식입니다."
+      },
+      {
+        "t": "④ RDMA",
+        "a": 0,
+        "r": "임의 할당 방식입니다."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "c": "회선 할당",
+    "q": "전송정보가 발생한 즉시 임의 슬롯으로 송신하는 방식으로 데이터의 형태가 Burst한 특성을 갖고, 많은 지구국을 수용하고자 할 때 사용하는 회선할당방식은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 임의 할당방식 (RAMA)",
+        "a": 1,
+        "r": "망의 상태와 무관하게 전송할 정보가 생기면 즉시 임의로 전송하는 Random Access 방식입니다. 충돌(Collision) 가능성이 있습니다."
+      },
+      {
+        "t": "② 고정 할당방식",
+        "a": 0,
+        "r": "고정된 회선을 미리 할당합니다."
+      },
+      {
+        "t": "③ 사전 할당방식",
+        "a": 0,
+        "r": "PAMA와 같은 개념입니다."
+      },
+      {
+        "t": "④ 요구 할당방식",
+        "a": 0,
+        "r": "필요할 때 채널을 요청해 할당받습니다 (DAMA)."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "c": "위성 용어",
+    "q": "위성통신에서 다운링크 (Down Link) 란?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 위성으로부터 송신 지구국으로의 회선",
+        "a": 0,
+        "r": "수신 지구국 방향이어야 합니다."
+      },
+      {
+        "t": "② 위성으로부터 수신 지구국으로의 회선",
+        "a": 1,
+        "r": "우주국(인공위성)에서 증폭된 신호를 지상의 수신 지구국으로 내려보내는 하향 회선을 다운링크라고 합니다."
+      },
+      {
+        "t": "③ 송신 지구국으로부터 수신 지구국으로의 회선",
+        "a": 0,
+        "r": "지상간 직접 회선이 아닙니다."
+      },
+      {
+        "t": "④ 수신 지구국으로부터 송신 지구국으로의 회선",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "c": "위성 용어",
+    "q": "다음 중 위성통신에서 업링크 (Uplink)에 대한 설명으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 위성으로부터 지구국으로의 회선",
+        "a": 0,
+        "r": "다운링크입니다."
+      },
+      {
+        "t": "② 지구국으로부터 위성으로의 회선",
+        "a": 1,
+        "r": "지상의 송신 지구국에서 우주 공간의 인공위성으로 전파를 쏘아 올리는 상향 회선을 업링크라고 합니다."
+      },
+      {
+        "t": "③ 지구국으로부터 지구국으로의 회선",
+        "a": 0,
+        "r": "지상통신입니다."
+      },
+      {
+        "t": "④ 위성으로부터 위성으로의 회선",
+        "a": 0,
+        "r": "위성간 링크(ISL)입니다."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "c": "전파 특성",
+    "q": "괄호 안에 들어갈 내용으로 알맞은 것은? '일반적으로 신호 주파수가 높을수록 지향성이 (a), 동일한 신호 전력일 경우 지향성이 클수록 전파거리는 (b), 무선 라디오는 날씨의 영향을 (c), 마이크로파는 지향성이 (d) 위성통신 등에 사용되고 있다.'",
+    "img": "",
+    "o": [
+      {
+        "t": "① (a) 크며 (b) 멀고 (c) 받으며 (d) 크므로",
+        "a": 1,
+        "r": "주파수가 높으면 직진성/지향성이 (커지고), 빔이 모아져 전송거리는 (멀어지며), 파장이 짧아 눈/비 등 날씨 입자에 부딪혀 영향을 (강하게 받습니다). 위성통신은 접시 안테나로 지향성을 (크게) 하여 송수신합니다."
+      },
+      {
+        "t": "② (a) 크며 (b) 짧고 (c) 안받으며 (d) 작으므로",
+        "a": 0,
+        "r": "반대되는 설명이 섞여있습니다."
+      },
+      {
+        "t": "③ (a) 작으며 (b) 멀고 (c) 받으며 (d) 크므로",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ (a) 작으며 (b) 짧고 (c) 안받으며 (d) 작으므로",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "c": "주파수 대역",
+    "q": "우주 잡음, 대기 가스, 강우에 의한 감쇠 및 열잡음 등의 영향이 적은 전파의 창 (Radio Window)에 해당하는 주파수 대역으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 1 [GHz] 이하",
+        "a": 0,
+        "r": "우주 잡음과 전리층 감쇠가 심합니다."
+      },
+      {
+        "t": "② 1 ~ 10 [GHz]",
+        "a": 1,
+        "r": "1GHz부터 10GHz 사이의 대역은 전리층 감쇠, 우주잡음, 대기가스 및 강우 감쇠가 모두 적어 우주 통신에 가장 이상적인 대역이므로 '전파의 창'이라고 부릅니다."
+      },
+      {
+        "t": "③ 10 ~ 15 [GHz]",
+        "a": 0,
+        "r": "10GHz 이상부터는 강우 감쇠가 점점 심해집니다."
+      },
+      {
+        "t": "④ 30 [GHz] 이상",
+        "a": 0,
+        "r": "대기가스 흡수가 매우 심해집니다."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "c": "주파수 대역",
+    "q": "다음 중 레이더 또는 위성통신에 이용되며, Ka 밴드, K밴드, Ku 밴드, X 밴드, L밴드 등 특수한 용어를 사용하여 밴드를 분류하는 파는 무엇인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 단파",
+        "a": 0,
+        "r": "전리층 반사 통신에 씁니다."
+      },
+      {
+        "t": "② 마이크로파",
+        "a": 1,
+        "r": "1~30GHz 대역에 이르는 '마이크로파'는 제2차 세계대전 레이더 개발 시절 군사적 보안을 위해 붙여둔 영문자 밴드명을 오늘날 위성통신 등에서도 그대로 사용합니다."
+      },
+      {
+        "t": "③ 밀리미터파",
+        "a": 0,
+        "r": "30GHz 이상입니다."
+      },
+      {
+        "t": "④ 초단파",
+        "a": 0,
+        "r": "FM 라디오 대역입니다."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "c": "주파수 대역",
+    "q": "위성 통신에서 사용되는 밴드와 주파수의 범위가 잘못 짝지어진 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① S 밴드 : 2~4 [GHz]",
+        "a": 0,
+        "r": "올바른 매칭입니다."
+      },
+      {
+        "t": "② C 밴드 : 4~8 [GHz]",
+        "a": 0,
+        "r": "올바른 매칭입니다."
+      },
+      {
+        "t": "③ X 밴드 : 8~16 [GHz]",
+        "a": 1,
+        "r": "X 밴드는 8~12GHz를 의미합니다. 12~18GHz 구간은 Ku 밴드입니다."
+      },
+      {
+        "t": "④ Ku 밴드 : 12.5~18 [GHz]",
+        "a": 0,
+        "r": "올바른 매칭입니다."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "c": "위성 궤도",
+    "q": "다음 중 인공위성 궤도의 종류에 해당하지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 저궤도(Low Earth Orbit)",
+        "a": 0,
+        "r": "LEO 궤도입니다."
+      },
+      {
+        "t": "② 중궤도(Medium Earth Orbit)",
+        "a": 0,
+        "r": "MEO 궤도입니다."
+      },
+      {
+        "t": "③ 임의궤도(Random Earth Orbit)",
+        "a": 1,
+        "r": "궤도는 일정한 중력 법칙을 따르므로, 마음대로 비행하는 '임의 궤도'라는 분류는 통신위성에 존재하지 않습니다. (타원형 고궤도 HEO가 올바른 분류입니다.)"
+      },
+      {
+        "t": "④ 정지궤도(Geostationary Orbit)",
+        "a": 0,
+        "r": "GEO 궤도입니다."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "c": "정지 위성",
+    "q": "다음 중 위성이 정지궤도에 있기 위한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 적도 상공에만 위치하여야 한다.",
+        "a": 0,
+        "r": "원심력과 중력 균형을 위해 적도면에 위치해야 합니다."
+      },
+      {
+        "t": "② 자전주기는 지구의 자전 주기와 일치하는 24시간이어야 한다.",
+        "a": 0,
+        "r": "지구 자전과 동일하게 돌아야 정지해 보입니다."
+      },
+      {
+        "t": "③ 위성이 7.91[km/s]의 속도로 움직여야 한다.",
+        "a": 0,
+        "r": "정지궤도의 원주 속도입니다. (단, 제1우주속도와 혼동되나 기출상 4번이 확실히 틀림)"
+      },
+      {
+        "t": "④ 위성의 높이와 관계되며, 중궤도인 1,500~10,000[km] 내에 위치해야 한다.",
+        "a": 1,
+        "r": "정지 궤도의 고도는 중궤도가 아니라, 적도 상공 약 '35,786km (약 36,000km)'에 위치해야만 지구 자전 속도와 동기화될 수 있습니다."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "c": "정지 위성",
+    "q": "다음 중 정지위성 통신에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 다원 접속 가능 및 고품질 통신 가능하다.",
+        "a": 0,
+        "r": "광대역 특성 덕분입니다."
+      },
+      {
+        "t": "② 통신 영역이 넓고 난시청 지역이 적다.",
+        "a": 0,
+        "r": "높은 고도로 커버리지가 넓습니다."
+      },
+      {
+        "t": "③ 고정통신에 적합하며 대량 정보 전송이 가능하다.",
+        "a": 0,
+        "r": "안테나 방향을 고정할 수 있습니다."
+      },
+      {
+        "t": "④ 채널 수의 증가로 채널당 고비용을 소모한다.",
+        "a": 1,
+        "r": "위성 하나로 수많은 다중 통신 채널을 커버할 수 있기 때문에, 사용자가 늘어날수록 오히려 채널당 단가(비용)는 저렴해집니다."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "c": "정지 위성",
+    "q": "정지위성은 이론상 지구를 중심으로 몇 개를 설치하면 일부 극지방을 제외하고 모든 지역에서 위성통신이 가능한가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 3",
+        "a": 1,
+        "r": "정지위성은 약 42.4%의 지표면을 커버하므로, 적도 상공에 120도 간격으로 3개의 위성을 띄우면 극지방을 제외한 전 세계 글로벌 통신망 구성이 가능합니다."
+      },
+      {
+        "t": "② 5",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 6",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 10",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "c": "정지 위성",
+    "q": "다음 중 정지궤도 위성의 운용에 따른 문제점과 거리가 먼 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 궤도확보 문제",
+        "a": 0,
+        "r": "적도 상공 36,000km라는 한정된 궤도 자원 때문에 자리싸움이 치열합니다."
+      },
+      {
+        "t": "② 내구성 우수함에 따른 수리제한 문제",
+        "a": 1,
+        "r": "고장 나면 우주 공간이라 '물리적인 수리가 불가능'한 것이 큰 문제이지, 내구성이 우수해서 수리가 제한된다는 것은 논리에 맞지 않습니다."
+      },
+      {
+        "t": "③ 전송손실 및 지연 문제",
+        "a": 0,
+        "r": "36,000km 거리에 따른 0.25초 왕복 지연이 발생합니다."
+      },
+      {
+        "t": "④ 초기 투자비용이 높은 문제",
+        "a": 0,
+        "r": "위성체 제작 및 발사에 천문학적 비용이 듭니다."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "c": "정지 위성",
+    "q": "다음 중 정지궤도 위성에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 정지궤도란 적도상공 약 36,000[km]를 말한다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "② 궤도가 높을수록 위성이 지구를 한 바퀴 도는 시간이 길어진다.",
+        "a": 0,
+        "r": "케플러 법칙에 따라 고도가 높을수록 공전 주기가 길어집니다."
+      },
+      {
+        "t": "③ 극지방 관측이 불가능하다.",
+        "a": 0,
+        "r": "적도에서 쏘기 때문에 극지방에 전파가 닿지 않습니다."
+      },
+      {
+        "t": "④ 정지궤도에 있는 통신위성에서는 지구면적의 약 20[%]가 내려다 보인다.",
+        "a": 1,
+        "r": "이론적으로 정지위성 1대는 지구 전체 면적의 약 42.4% (거의 절반 가까이)를 넓게 커버할 수 있습니다."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "c": "정지 위성",
+    "q": "다음 중 정지위성에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 지구 전체 커버 위성 수는 90도 간격으로 최소 4개이다.",
+        "a": 1,
+        "r": "지구 전체(극지방 제외)를 커버하기 위한 정지위성의 최소 갯수는 120도 간격으로 배치된 3개입니다."
+      },
+      {
+        "t": "② 지구표면으로부터 정지 궤도의 고도는 약 36,000[km]이다.",
+        "a": 0,
+        "r": "고도의 정확한 수치입니다."
+      },
+      {
+        "t": "③ 지구 중심으로부터 고도는 약 42,000[km]이다.",
+        "a": 0,
+        "r": "지구 반지름(약 6,400km)을 더한 값입니다."
+      },
+      {
+        "t": "④ 지구의 인력과 위성의 원심력이 일치하는 공간에 위치한다.",
+        "a": 0,
+        "r": "추락하지 않는 역학적 원리입니다."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "c": "중궤도 위성",
+    "q": "다음 중 GPS(Global Positioning System) 위성에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 위성으로부터 전파를 수신해서 수신점의 위치, 이동 방향, 속도를 측정할 수 있다.",
+        "a": 0,
+        "r": "네비게이션의 원리입니다."
+      },
+      {
+        "t": "② 4개의 궤도에 12기 정지위성으로 구성되어 있으며 4기의 위성으로부터 신호를 수신한다.",
+        "a": 1,
+        "r": "GPS 시스템은 고도 20,200km의 '중궤도(MEO)' 6개 궤도면에 총 24기의 위성을 띄워 운용합니다. 정지위성이 아닙니다."
+      },
+      {
+        "t": "③ 위치 정보와 지도 정보를 조합해서 자동차용 자동운항 시스템에 이용한다.",
+        "a": 0,
+        "r": "활용 사례입니다."
+      },
+      {
+        "t": "④ 위성에 탑재된 세슘 원자 시계를 기준으로 동기를 맞추고 위치 정보를 계산한다.",
+        "a": 0,
+        "r": "전파 도달 시간 차이를 측정하기 위해 초정밀 원자시계가 탑재됩니다."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "c": "정지 위성",
+    "q": "정지위성에 대한 설명으로 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 주로 이동통신용으로 사용된다.",
+        "a": 1,
+        "r": "정지위성은 36,000km 거리에 있어 안테나를 정면으로 맞춰야 하므로 '고정통신 및 방송 중계'에 주로 사용됩니다. 핸드폰 같은 이동통신은 낮은 고도의 저궤도(LEO) 위성이 유리합니다."
+      },
+      {
+        "t": "② 적도 상공 약 36000[km]에 위치하고 있다.",
+        "a": 0,
+        "r": "올바른 고도입니다."
+      },
+      {
+        "t": "③ 1개 정지위성의 통신 범위는 지표의 약 40[%] 정도이다.",
+        "a": 0,
+        "r": "맞는 수치입니다."
+      },
+      {
+        "t": "④ 전파경로가 길어 평균 0.25초 정도의 전파지연이 발생한다.",
+        "a": 0,
+        "r": "왕복 약 72,000km 거리 지연이 생깁니다."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "c": "저궤도 위성",
+    "q": "저궤도 위성통신 시스템의 일반적인 특징이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 정지위성에 비해 많은 수의 위성이 필요하다.",
+        "a": 0,
+        "r": "고도가 낮아 커버리지가 좁으므로 수십~수천 개가 필요합니다(스타링크 등)."
+      },
+      {
+        "t": "② 동일한 궤도에서도 여러 개의 위성이 필요하다.",
+        "a": 0,
+        "r": "위성이 계속 이동하므로 바통 터치가 필요합니다."
+      },
+      {
+        "t": "③ 정지위성에 비해 저궤도 위성의 수명이 매우 길다.",
+        "a": 1,
+        "r": "고도가 낮아 지구 대기와의 마찰이 존재하여 고도가 떨어지므로, 수명이 5~7년 정도로 정지위성(10~15년)에 비해 짧습니다."
+      },
+      {
+        "t": "④ 다중 빔 방식으로 주파수를 효율적으로 사용한다.",
+        "a": 0,
+        "r": "지상을 작게 쪼개 셀 방식으로 주파수를 재사용합니다."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "c": "저궤도 위성",
+    "q": "저궤도 통신위성(LEO)에 대한 설명 중 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 지구관측, 기상관측, 지구자원탐사 등에 이용된다.",
+        "a": 0,
+        "r": "지표면과 가까워 선명한 관측이 가능합니다."
+      },
+      {
+        "t": "② 복수개의 궤도에 복수개의 정지위성을 이용한 통신서비스를 제공한다.",
+        "a": 1,
+        "r": "LEO는 고도 500~2,000km의 '저궤도 위성'입니다. 정지위성(GEO)을 이용한다는 설명은 완전히 상충되는 틀린 말입니다."
+      },
+      {
+        "t": "③ Iridium, Global star project가 있다.",
+        "a": 0,
+        "r": "대표적인 저궤도 위성통신 프로젝트입니다."
+      },
+      {
+        "t": "④ 음성 및 비음성 서비스를 전세계로 제공할 수 있다.",
+        "a": 0,
+        "r": "지구 전체를 거미줄처럼 덮어 글로벌 로밍이 가능합니다."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "c": "저궤도 위성",
+    "q": "저궤도 통신위성(LEO)에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 지구관측, 기상관측, 지구자원탐사 등에 이용된다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "② 24시간의 공전주기를 가진 정지위성을 이용한 통신 서비스를 제공한다.",
+        "a": 1,
+        "r": "24시간 공전 주기는 36,000km에 있는 정지위성(GEO)의 특성이며, 저궤도(LEO) 위성은 약 1시간 반~2시간마다 지구를 한 바퀴 돕니다."
+      },
+      {
+        "t": "③ Iridium, Global star project 등이 있다.",
+        "a": 0,
+        "r": "대표적 프로젝트입니다."
+      },
+      {
+        "t": "④ 음성 및 비음성 서비스를 제공할 수 있다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "c": "위성 궤도",
+    "q": "적도 평면에 대해서 50도 정도의 경사각을 가지는 중궤도 위성의 고도는 몇 [km] 인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 300 ~ 1500",
+        "a": 0,
+        "r": "저궤도(LEO) 범위입니다."
+      },
+      {
+        "t": "② 1500 ~ 3200",
+        "a": 0,
+        "r": "모호한 범위입니다."
+      },
+      {
+        "t": "③ 5000 ~ 25000",
+        "a": 1,
+        "r": "중궤도(MEO, Medium Earth Orbit)는 대략 2,000km ~ 20,000km 고도 사이를 비행하며, 주어진 보기 중 가장 근접한 영역은 5,000~25,000km 구간입니다."
+      },
+      {
+        "t": "④ 35800 ~ 36400",
+        "a": 0,
+        "r": "정지궤도(GEO) 범위입니다."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "c": "위성 궤도",
+    "q": "다음은 위성궤도의 종류별 위성고도를 나타낸 것이다. 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 저궤도 위성 : 약 300~1,500[km]",
+        "a": 0,
+        "r": "올바른 고도 범위입니다."
+      },
+      {
+        "t": "② 중궤도 위성 : 약 1,500~10,000[km]",
+        "a": 0,
+        "r": "올바른 고도 범위입니다."
+      },
+      {
+        "t": "③ 타원형 고궤도 위성 : 약 10,000~40,000[km]",
+        "a": 0,
+        "r": "HEO의 궤도 범위입니다."
+      },
+      {
+        "t": "④ 정지궤도 위성 : 약 40,000~50,000[km]",
+        "a": 1,
+        "r": "정지궤도 위성의 정확한 고도는 적도 상공 약 36,000km (35,786km) 입니다. 4~5만 km는 틀린 수치입니다."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "c": "위성 분류",
+    "q": "다음 중 위성의 궤도조건과 배치방식에 따른 분류가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 정지위성 방식",
+        "a": 0,
+        "r": "GEO(Geostationary) 궤도입니다."
+      },
+      {
+        "t": "② 랜덤위성 방식",
+        "a": 0,
+        "r": "불규칙 궤도를 돌게 하는 방식입니다."
+      },
+      {
+        "t": "③ 위상위성 방식",
+        "a": 0,
+        "r": "위성 간 위상 각을 맞춰 배치하는 방식입니다."
+      },
+      {
+        "t": "④ 주파수위성 방식",
+        "a": 1,
+        "r": "인공위성의 '궤도 및 배치 위치'에 따른 물리학적 분류법이 아니며, 통신 채널 관련 용어에 가깝습니다."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "c": "우주국 구성",
+    "q": "다음 중 위성 중계기의 구성요소가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 송신부",
+        "a": 0,
+        "r": "HPA 등을 포함합니다."
+      },
+      {
+        "t": "② 수신부",
+        "a": 0,
+        "r": "LNA 등을 포함합니다."
+      },
+      {
+        "t": "③ 헤드엔드",
+        "a": 1,
+        "r": "헤드엔드(Head-end) 장비는 지상의 케이블TV(CATV) 방송국이나 위성방송 송출국에 있는 지상 장비이지, 우주 공간의 위성 중계기(트랜스폰더) 내부에 탑재되는 구성품이 아닙니다."
+      },
+      {
+        "t": "④ 주파수 변환부",
+        "a": 0,
+        "r": "상향 주파수를 하향 주파수로 바꿔주는 믹서(Mixer)입니다."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "c": "위성 통신",
+    "q": "다음 중 위성통신 방식의 종류를 구분하는 요소로서 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 위성 중계기의 기능",
+        "a": 0,
+        "r": "재생 중계형인지, 단순 증폭형인지에 따라 구분됩니다."
+      },
+      {
+        "t": "② 위성 중계기의 위치",
+        "a": 0,
+        "r": "지구 상공 어느 위치인지 고려합니다."
+      },
+      {
+        "t": "③ 위성 중계기의 수량",
+        "a": 1,
+        "r": "위성에 탑재되는 중계기(트랜스폰더)의 '개수'는 위성체의 용량 스펙일 뿐, 위성통신의 '통신 방식(형태)' 자체를 구분 짓는 본질적인 물리 요소는 아닙니다."
+      },
+      {
+        "t": "④ 위성 중계기의 고도",
+        "a": 0,
+        "r": "저궤도, 중궤도, 고궤도로 나뉩니다."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "c": "물리 현상",
+    "q": "인공위성이나 우주 비행체는 매우 빠른 속도로 운동하고 있으므로 전파 발진원의 이동에 따라서 수신주파수가 변하는 현상은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 페이져 현상",
+        "a": 0,
+        "r": "해당사항이 없습니다."
+      },
+      {
+        "t": "② 플라즈마 현상",
+        "a": 0,
+        "r": "대기권 진입 시 발생합니다."
+      },
+      {
+        "t": "③ 도플러 현상",
+        "a": 1,
+        "r": "파원(위성)이 빠르게 다가오거나 멀어질 때 수신측에서 전파의 주파수가 다르게 측정되는 현상을 도플러 효과(Doppler Effect)라고 하며, 저궤도 위성통신에서 반드시 보정해 주어야 합니다."
+      },
+      {
+        "t": "④ 전파지연 현상",
+        "a": 0,
+        "r": "거리에 따른 지연입니다."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "c": "감쇠 보상",
+    "q": "다음 중 강우로 인한 위성통신 신호의 감쇠를 보상하기 위한 방법이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Site Diversity",
+        "a": 0,
+        "r": "강우 지역이 국지적인 점을 이용하여 수십 킬로미터 떨어진 두 개 이상의 수신 지구국을 동시에 운용하여 감쇠를 보상하는 방법입니다."
+      },
+      {
+        "t": "② Angle Diversity",
+        "a": 1,
+        "r": "강우 감쇠를 보상하기 위해 사용되는 위성통신 다이버시티 기법에 존재하지 않는 방식입니다."
+      },
+      {
+        "t": "③ Orbit Diversity",
+        "a": 0,
+        "r": "서로 다른 궤도(위치)에 있는 위성을 활용하거나 다중 위성 경로를 이용하여 강우 등 장애에 대비하는 보상 기법입니다."
+      },
+      {
+        "t": "④ Frequency Diversity",
+        "a": 0,
+        "r": "주파수 대역 간 감쇠 특성의 차이를 이용하거나 예비 주파수를 할당하여 강우 감쇠를 극복하는 방식입니다."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "c": "다원 접속",
+    "q": "다음 중 이동통신이나 위성통신에서 사용되는 무선 다원접속 (Radio Multiple Access) 방식에 해당되지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① FDMA",
+        "a": 0,
+        "r": "주파수 분할 방식입니다."
+      },
+      {
+        "t": "② TDMA",
+        "a": 0,
+        "r": "시간 분할 방식입니다."
+      },
+      {
+        "t": "③ CDMA",
+        "a": 0,
+        "r": "코드 분할 방식입니다."
+      },
+      {
+        "t": "④ WDMA",
+        "a": 1,
+        "r": "WDMA(파장 분할 다중 접속)는 무선 전파가 아니라, 유리섬유로 된 '광통신 케이블' 내부에서 빛의 색깔(파장)을 분할하여 전송하는 유선 광통신 방식입니다."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "c": "관제국",
+    "q": "다음 중 위성통신의 관제국에 대한 설명으로 맞는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 궤도상을 선회하고 있는 통신위성을 원격제어하기 위한 제어전용 지상국이다.",
+        "a": 1,
+        "r": "위성 관제국(TTC&M)은 위성의 궤도 유지, 부품 상태 모니터링, 태양광 패널 각도 조절 등 위성 자체를 조종하고 통제하는 사령탑 역할을 수행합니다."
+      },
+      {
+        "t": "② 유무선 통신시스템 및 사용자와 위성통신체 간을 연결하여 통신서비스를 제공하는 역할을 수행한다.",
+        "a": 0,
+        "r": "이는 위성 지구국(게이트웨이)의 역할입니다."
+      },
+      {
+        "t": "③ 국내 유무선 통신회선으로부터 오는 신호를 다중화한 후 송신기를 통하여 위성으로 송출한다.",
+        "a": 0,
+        "r": "지구국 송신부 역할입니다."
+      },
+      {
+        "t": "④ 안테나와 중계기의 핵심통신 장비 및 버스(Bus)로 구성되어진다.",
+        "a": 0,
+        "r": "이것은 우주국(인공위성 자체)의 구성입니다."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "c": "지구국 구성",
+    "q": "다음 중 위성통신기기에서 지구국의 기본 구성이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 열제어계",
+        "a": 1,
+        "r": "열제어계(Thermal Control Subsystem)는 극심한 온도 변화를 겪는 우주 공간에 띄워진 '위성체(우주국 버스)'를 보호하기 위한 내부 장비이며, 지상에 있는 지구국의 구성품이 아닙니다."
+      },
+      {
+        "t": "② 안테나계",
+        "a": 0,
+        "r": "위성을 바라보는 커다란 접시 안테나입니다."
+      },
+      {
+        "t": "③ 인터페이스계",
+        "a": 0,
+        "r": "지상망과 연결하는 장비입니다."
+      },
+      {
+        "t": "④ 송수신계",
+        "a": 0,
+        "r": "LNA, HPA 등을 포함합니다."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "c": "지구국 구성",
+    "q": "다음 중 위성지구국 구성 시스템과 거리가 먼 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 안테나",
+        "a": 0,
+        "r": "지구국의 핵심 장비입니다."
+      },
+      {
+        "t": "② TC&R 시스템",
+        "a": 1,
+        "r": "TC&R(Telemetry, Command & Ranging) 시스템은 위성의 상태 감시 및 궤도 통제를 위한 '관제 시스템(관제국)' 기능으로, 순수 통신 데이터를 릴레이하는 일반 위성지구국의 통신 페이로드 구성품과는 거리가 있습니다."
+      },
+      {
+        "t": "③ 위성추적장치",
+        "a": 0,
+        "r": "움직이는 위성을 안테나가 따라가기 위해 필요합니다."
+      },
+      {
+        "t": "④ 송수신기",
+        "a": 0,
+        "r": "데이터를 변복조합니다."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "c": "관제 시스템",
+    "q": "다음 중 위성의 상태, 거리, 위치 등의 데이터를 위성제어센터에 전달하고, 명령신호를 받아 위성에 보내주는 역할을 수행하는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 원격상태 추적명령(TT&C) 시스템",
+        "a": 1,
+        "r": "위성의 건강 상태를 모니터링(Telemetry)하고 위치를 추적(Tracking)하며 자세 제어 등의 명령(Command)을 내리는 관제 핵심 시스템을 TT&C 라고 부릅니다."
+      },
+      {
+        "t": "② 통신망 제어센터(NCC)",
+        "a": 0,
+        "r": "일반 통신 트래픽 망을 제어합니다."
+      },
+      {
+        "t": "③ 궤도내 시험(IOT) 시스템",
+        "a": 0,
+        "r": "발사 직후 성능 테스트용입니다."
+      },
+      {
+        "t": "④ 위성 버스(BUS)",
+        "a": 0,
+        "r": "위성 몸체를 의미합니다."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "c": "지구국 구성",
+    "q": "다음 중 지구국을 구성하는 기본장치에 해당 되지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 안테나계",
+        "a": 0,
+        "r": "지상 안테나입니다."
+      },
+      {
+        "t": "② 저잡음 수신계",
+        "a": 0,
+        "r": "LNA를 포함합니다."
+      },
+      {
+        "t": "③ 고전력 증폭계",
+        "a": 0,
+        "r": "HPA를 포함합니다."
+      },
+      {
+        "t": "④ 프로펠런트(Propellant)계",
+        "a": 1,
+        "r": "프로펠런트계는 화학 추진제(연료)를 연소시켜 위성의 자세나 궤도를 수정하는 추진 시스템으로, 지상 지구국이 아니라 우주 공간의 인공위성(우주국) 내부에 장착됩니다."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "c": "위성 시스템 구성",
+    "q": "다음 중 위성통신을 위한 시스템 구성요소에 해당하지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 지구국",
+        "a": 0,
+        "r": "지상 통신 인프라입니다."
+      },
+      {
+        "t": "② 관제국",
+        "a": 0,
+        "r": "위성을 조종합니다."
+      },
+      {
+        "t": "③ 통신위성",
+        "a": 0,
+        "r": "우주국의 핵심입니다."
+      },
+      {
+        "t": "④ 위성발사체",
+        "a": 1,
+        "r": "로켓(발사체)은 인공위성을 우주 궤도에 올려놓기 위한 1회용 수송 수단일 뿐, 궤도 안착 이후 지속적으로 운영되는 '통신 시스템 네트워크'의 직접적인 구성 요소가 아닙니다."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "c": "송신기 흐름",
+    "q": "다음 중 위성지구국 송신기의 체계도 순서가 올바르게 나열된 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 지상계 IF → 변조 다중화 → 고전력증폭기(HPA) → RF MUX → 안테나",
+        "a": 0,
+        "r": "여러 신호를 하나로 합치는 과정(다중화)이 반송파에 싣는 과정(변조)보다 먼저 이루어져야 하므로 앞부분의 순서가 틀렸습니다."
+      },
+      {
+        "t": "② 지상계 IF → 다중화 변조 → 저잡음증폭기(LNA) → RF MUX → 안테나",
+        "a": 0,
+        "r": "저잡음증폭기(LNA)는 미약하게 들어온 신호를 증폭하는 수신기의 필수 부품이므로 송신기 구성으로 적합하지 않습니다."
+      },
+      {
+        "t": "③ 지상계 IF → 변조 다중화 → 저잡음증폭기(LNA) → RF MUX → 안테나",
+        "a": 0,
+        "r": "다중화와 변조의 순서가 뒤바뀌었으며, 수신기에 쓰이는 저잡음증폭기(LNA)가 포함되어 있어 명백한 오답입니다."
+      },
+      {
+        "t": "④ 지상계 IF → 다중화 변조 → 고전력증폭기(HPA) → RF MUX → 안테나",
+        "a": 1,
+        "r": "지상계 신호를 하나로 합친 뒤(다중화) 반송파에 싣고(변조), 위성까지 도달할 수 있도록 고전력증폭기(HPA)로 신호를 크게 증폭하여 송신하는 올바른 체계도입니다."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "c": "위성 안테나",
+    "q": "다음 중 통신위성에 설치하는 안테나가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 파라볼라 안테나",
+        "a": 0,
+        "r": "스폿 빔용으로 장착됩니다."
+      },
+      {
+        "t": "② 혼 안테나",
+        "a": 0,
+        "r": "광역 빔용으로 장착됩니다."
+      },
+      {
+        "t": "③ 무지향성 안테나",
+        "a": 0,
+        "r": "텔레메트리 관제용으로 장착됩니다."
+      },
+      {
+        "t": "④ 루프 안테나",
+        "a": 1,
+        "r": "원형의 루프 안테나는 AM 라디오 수신이나 방향 탐지에 쓰이는 구형 안테나로, 초고주파를 다루는 통신위성에는 장착하지 않습니다."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "c": "위성 안테나",
+    "q": "다음 중 위성에 장착하는 안테나와 거리가 먼 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 파라볼라 안테나",
+        "a": 0,
+        "r": "탑재체에 많이 사용됩니다."
+      },
+      {
+        "t": "② 혼 안테나",
+        "a": 0,
+        "r": "위성 탑재용으로 흔히 쓰입니다."
+      },
+      {
+        "t": "③ 애드콕 안테나",
+        "a": 1,
+        "r": "애드콕(Adcock) 안테나는 지상에서 전파가 날아오는 방향을 찾는 '방향 탐지' 목적으로 쓰이는 구조물로, 인공위성에 장착하는 통신용 안테나가 아닙니다."
+      },
+      {
+        "t": "④ 헬리컬 안테나",
+        "a": 0,
+        "r": "원편파 전송을 위해 쓰입니다."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "c": "위성 안테나",
+    "q": "다음 안테나 중 위성통신용 안테나로 주로 사용되고, 주반사기의 초점과 부반사기의 허초점을 일치시킨 형태의 안테나는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 롬빅 안테나",
+        "a": 0,
+        "r": "단파(HF) 장거리용입니다."
+      },
+      {
+        "t": "② 파라볼릭 안테나",
+        "a": 0,
+        "r": "부반사기가 없는 단일 반사기 구조입니다."
+      },
+      {
+        "t": "③ 카세그레인 안테나",
+        "a": 1,
+        "r": "포물면 모양의 주반사기와 쌍곡면 모양의 부반사기를 결합하여, 급전선 손실을 줄이고 대지 잡음 유입을 막은 위성지구국 표준 안테나가 카세그레인(Cassegrain) 안테나입니다."
+      },
+      {
+        "t": "④ 혼 리플렉터 안테나",
+        "a": 0,
+        "r": "마이크로파 지상 중계용 뿔 모양 안테나입니다."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "c": "위성 안테나",
+    "q": "다음 중 위성지구국에 사용되는 카세그레인 안테나에 대한 설명으로 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 초점거리가 길고 복사기에서 고 이득이 얻어진다.",
+        "a": 1,
+        "r": "카세그레인 안테나는 부반사기를 통해 전파를 꺾어 모으기 때문에 구조상 초점거리가 매우 '짧아지는' 것이 특징입니다."
+      },
+      {
+        "t": "② 부엽이 매우 작다.",
+        "a": 0,
+        "r": "사이드로브가 적어 타 방향 간섭이 덜합니다."
+      },
+      {
+        "t": "③ 대지에서 잡음을 적게 받기 때문에 저잡음 특성을 나타낸다.",
+        "a": 0,
+        "r": "피드 혼이 하늘을 향해 있어 땅에서 올라오는 열잡음을 덜 받습니다."
+      },
+      {
+        "t": "④ 1차 복사기와 송수신기가 직결되기 때문에 급전계 전송손실이 작다.",
+        "a": 0,
+        "r": "반사기 안쪽에 장비 배치가 쉬워 도파관 길이를 줄일 수 있습니다."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "c": "지구국 안테나",
+    "q": "다음 중 위성통신용 지구국 안테나로 가장 널리 사용되는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 혼 안테나",
+        "a": 0,
+        "r": "단독으로는 이득이 부족합니다."
+      },
+      {
+        "t": "② 파라볼라 안테나",
+        "a": 0,
+        "r": "수신 전용 소형(DBS)에 주로 쓰입니다."
+      },
+      {
+        "t": "③ 카세그레인 안테나",
+        "a": 1,
+        "r": "대형 송수신용 지구국 기지국 안테나로는 LNA를 안테나 뒷면에 바짝 붙여 손실을 줄일 수 있는 카세그레인 안테나가 압도적으로 가장 널리 사용됩니다."
+      },
+      {
+        "t": "④ 다이폴 안테나",
+        "a": 0,
+        "r": "무지향성 기초 안테나입니다."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "c": "위성 안테나 기능",
+    "q": "위성에 장착되는 안테나의 종류와 기능이 틀리게 연결된 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 무지향성 안테나 - 명령 및 텔리메트리 신호 통신",
+        "a": 0,
+        "r": "자세가 틀어져도 지상과 통신해야 하므로 무지향성을 씁니다."
+      },
+      {
+        "t": "② 파라볼릭 안테나 - 스폿빔(Spot Beam)을 만드는데 사용",
+        "a": 0,
+        "r": "좁은 지역 집중용입니다."
+      },
+      {
+        "t": "③ 혼 안테나 - 넓은 지역을 커버하는 빔(Beam)을 만드는데 사용",
+        "a": 0,
+        "r": "광역 빔용으로 씁니다."
+      },
+      {
+        "t": "④ 야기 안테나 - 위성궤도상 위치 및 자세제어로 사용",
+        "a": 1,
+        "r": "야기(Yagi) 안테나는 과거 아날로그 TV 수신용으로 쓰던 생선뼈 모양의 안테나로, 우주 공간의 위성에 장착하지 않습니다. 자세제어용은 무지향성 안테나입니다."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "c": "위성 안테나",
+    "q": "다음 중 카세그레인 안테나에 대한 설명으로 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 부엽이 많다.",
+        "a": 1,
+        "r": "카세그레인 안테나는 부엽(Side Lobe)이 매우 '적게' 발생하여 이웃 위성이나 지상의 간섭 전파를 막아주는 능력이 매우 뛰어납니다."
+      },
+      {
+        "t": "② 위성통신용 지구국 고이득 안테나로 사용된다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "③ 1차 방사기(전자나팔)를 주반사기 쪽에 설치한다.",
+        "a": 0,
+        "r": "반사기 중앙 구멍에 피드 혼을 위치시킵니다."
+      },
+      {
+        "t": "④ 누설전력이 전체방향으로 향하기 때문에 대지에서의 잡음을 적게 받는다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "c": "위성 안테나 기능",
+    "q": "다음 중 위성안테나의 종류별 기능 및 역할을 설명으로 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 헬리컬(Helical) 안테나: HF 등 낮은 주파수대의 전파를 방사 및 수신하는데 이용한다.",
+        "a": 1,
+        "r": "헬리컬(Helical) 안테나는 돼지꼬리 모양으로 선을 감아 '원편파'를 송수신하기 위해 사용하는 안테나입니다. 단순히 낮은 HF 주파수를 받기 위한 안테나가 아닙니다."
+      },
+      {
+        "t": "② 파라볼라(Parabola) 안테나: 좁은 지역에 대한 SpotBeam을 형성하는데 사용한다.",
+        "a": 0,
+        "r": "빔을 예리하게 쏩니다."
+      },
+      {
+        "t": "③ 혼(Horn) 안테나: 넓은 지역을 커버하는 Beam을 형성하는데 사용한다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "④ 무지향성(Omni-Direction) 안테나: 위성의 상태를 관제소로 보고하는 Telemetry 신호를 송신한다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "c": "지구국 장비",
+    "q": "다음 중 위성통신의 저잡음 증폭기로 많이 사용되는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Parametric 증폭기",
+        "a": 0,
+        "r": "과거에 썼으나 관리가 어렵습니다."
+      },
+      {
+        "t": "② Magnetron 증폭기",
+        "a": 0,
+        "r": "전자레인지용 고출력 발진기입니다."
+      },
+      {
+        "t": "③ Tunnel 증폭기",
+        "a": 0,
+        "r": "해당사항이 없습니다."
+      },
+      {
+        "t": "④ GaAs FET 증폭기",
+        "a": 1,
+        "r": "갈륨비소(GaAs) 기반의 전계효과트랜지스터(FET)는 초고주파 대역에서 자체 발생 열잡음이 극도로 낮아, 미세한 위성 전파를 처음 증폭하는 수신단 LNA 소자로 가장 널리 사용됩니다."
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "c": "지구국 환경",
+    "q": "다음 중 위성지구국 설치 시 고려하여야 할 주변환경과 거리가 먼 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 지형조건",
+        "a": 0,
+        "r": "산 등 장애물이 없는 탁 트인 곳이어야 합니다."
+      },
+      {
+        "t": "② 인공잡음",
+        "a": 0,
+        "r": "도시의 전파 간섭을 피해야 합니다."
+      },
+      {
+        "t": "③ 기상조건",
+        "a": 0,
+        "r": "태풍, 폭우가 잦은 곳은 강우 감쇠가 우려됩니다."
+      },
+      {
+        "t": "④ 위성과의 거리",
+        "a": 1,
+        "r": "정지위성은 어차피 지구에서 36,000km나 떨어져 있으므로, 국내에서 지구국을 어디에 짓든 위성과의 '거리' 차이는 물리적으로 아무 의미가 없습니다. (고려 대상 아님)"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "c": "혼변조",
+    "q": "위성지구국에 사용되는 비선형 증폭기에 입력되는 신호의 주파수가 3.5[GHz], 4.5[GHz] 일 때 출력 가능한 신호의 주파수가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 1 [GHz]",
+        "a": 0,
+        "r": "두 입력 주파수의 차이($f_2 - f_1 = 4.5 - 3.5$)로 인해 발생하는 2차 혼변조 성분입니다."
+      },
+      {
+        "t": "② 7 [GHz]",
+        "a": 0,
+        "r": "입력 주파수 3.5[GHz]의 2배수($2f_1 = 7$)로 발생하는 2차 고조파 성분입니다."
+      },
+      {
+        "t": "③ 9 [GHz]",
+        "a": 0,
+        "r": "입력 주파수 4.5[GHz]의 2배수($2f_2 = 9$)로 발생하는 2차 고조파 성분입니다."
+      },
+      {
+        "t": "④ 10 [GHz]",
+        "a": 1,
+        "r": "주요 비선형 왜곡 출력인 2차 및 3차 혼변조 조합식($\\pm mf_1 \\pm nf_2$)으로 간단히 도출되지 않는 주파수입니다."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "c": "위성 지연시간",
+    "q": "지구국으로부터 통신위성까지의 거리가 36,000 [km] 일 때, 이 지구국에서 발사된 전파가 통신위성을 경유하여 지구국에 도착할 때까지 걸리는 이론적 시간은 얼마인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 240 [ms]",
+        "a": 1,
+        "r": "왕복 거리는 36,000 × 2 = 72,000km 입니다. 전파 속도는 초당 300,000km 이므로, 시간 t = 거리/속도 = 72,000 / 300,000 = 0.24초 = 240[ms] 가 소요됩니다."
+      },
+      {
+        "t": "② 245 [ms]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 250 [ms]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 255 [ms]",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "c": "이중 홉 현상",
+    "q": "만약 우리나라에서 대륙간 국제 통화 회선 구성 시, 고정 위성 통신링크가 2개 포함되면(예를 들어 태평양 상공의 위성과 인도양 상공의 위성) 어떤 현상이 발생하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 음량이 약해서 통화에 불편하다.",
+        "a": 0,
+        "r": "증폭기가 있으므로 음량이 약해지진 않습니다."
+      },
+      {
+        "t": "② 반향(Echo)이 발생하여 통화에 방해가 된다.",
+        "a": 0,
+        "r": "에코 캔슬러로 억제 가능합니다."
+      },
+      {
+        "t": "③ 2개의 위성 링크 홉에서 전송 에러가 증가하여 통화 명료도가 저하된다.",
+        "a": 0,
+        "r": "디지털 보정으로 극복 가능합니다."
+      },
+      {
+        "t": "④ 지연이 증가하여 실시간 대화가 어렵다.",
+        "a": 1,
+        "r": "위성 1개를 왕복할 때 약 0.25초가 걸리므로, 위성 링크가 2개 엮이는 '이중 홉(Double Hop)' 상황이 되면 내가 한 말이 상대방에게 닿고 답변을 듣기까지 약 1초가량 지연되어 무전기처럼 통화가 뚝뚝 끊기는 치명적인 지연 문제가 발생합니다."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "c": "회선 할당",
+    "q": "복수개의 지구국이 하나의 통신위성을 이용해 지구국 상호 간 통신선로를 설정하는 회선할당 방식에 해당하지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 고정할당방식",
+        "a": 0,
+        "r": "PAMA 방식입니다."
+      },
+      {
+        "t": "② 임의할당방식",
+        "a": 0,
+        "r": "RAMA 방식입니다."
+      },
+      {
+        "t": "③ 요구할당방식",
+        "a": 0,
+        "r": "DAMA 방식입니다."
+      },
+      {
+        "t": "④ 선택할당방식",
+        "a": 1,
+        "r": "위성 통신의 다중 접속 회선 할당 방식(PAMA, DAMA, RAMA) 중 '선택할당방식'이라는 용어는 존재하지 않습니다."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "c": "위성 방송",
+    "q": "다음 중 디지털 위성 방송의 장점이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 다채널 방송이 가능하다.",
+        "a": 0,
+        "r": "디지털 압축으로 수백 개의 채널 전송이 가능합니다."
+      },
+      {
+        "t": "② 아날로그 위성 방송에 비해 화질이 우수하다.",
+        "a": 0,
+        "r": "잡음 열화가 적어 초고화질이 가능합니다."
+      },
+      {
+        "t": "③ 서비스 커버리지가 좁아진다.",
+        "a": 1,
+        "r": "위성 방송은 한 번 전파를 쏘면 한반도 전역은 물론 아시아권 전체까지 덮을 수 있을 정도로 서비스 커버리지가 '매우 넓은' 것이 가장 큰 장점입니다."
+      },
+      {
+        "t": "④ 전파의 효율적 활용이 가능하다.",
+        "a": 0,
+        "r": "디지털 변조로 대역폭 효율이 높습니다."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "c": "위성 안테나",
+    "q": "다음 중 위성체에서 사용되는 안테나와 거리가 먼 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 혼 안테나",
+        "a": 0,
+        "r": "광역 빔용으로 장착됩니다."
+      },
+      {
+        "t": "② 파라볼라 안테나",
+        "a": 0,
+        "r": "스폿 빔용으로 장착됩니다."
+      },
+      {
+        "t": "③ 위상배열 안테나",
+        "a": 0,
+        "r": "전파 방향을 전자적으로 조절하기 위해 최신 위성에 쓰입니다."
+      },
+      {
+        "t": "④ 역 L형 안테나",
+        "a": 1,
+        "r": "역 L형 안테나는 중파/장파 등 낮은 주파수 대역에서 선박이나 아마추어 무선용으로 철사를 길게 늘어뜨려 쓰는 안테나로, 위성에는 적합하지 않습니다."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "c": "안테나 성능",
+    "q": "다음 중 위성 안테나의 성능에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 위성용 파라볼라 안테나는 상대이득을 기준으로 이득을 정의한다.",
+        "a": 1,
+        "r": "파라볼라와 같은 극초단파 안테나의 이득은 이상적인 등방성 안테나(사방으로 둥글게 퍼지는 가상의 안테나)를 기준으로 삼는 '절대이득(dBi)'으로 표기합니다. 반파장 다이폴을 기준으로 하는 '상대이득(dBd)'은 사용하지 않습니다."
+      },
+      {
+        "t": "② 위성용 안테나 수신기의 수신성능은 G(수신안테나 이득)/T(수신기 잡음온도)의 비로 알 수 있다.",
+        "a": 0,
+        "r": "G/T 비는 수신 성능 척도입니다."
+      },
+      {
+        "t": "③ 전송과 잡음에 대해 수신기의 잡음폭을 나타내는 것은 반송파전력대 잡음비이다.",
+        "a": 0,
+        "r": "C/N 비를 의미합니다."
+      },
+      {
+        "t": "④ 실효 방사 전력은 송신 안테나 이득과 송신출력의 곱으로 알 수 있다.",
+        "a": 0,
+        "r": "EIRP = P_t × G_t 로 올바른 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "c": "위성 안테나",
+    "q": "파라볼라(Parabola) 안테나에 대한 설명으로 잘못된 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 지향성이 예민하고 이득이 높다.",
+        "a": 0,
+        "r": "반사경을 통해 전파를 한 방향으로 강하게 모아 쏘므로 지향성과 이득이 매우 우수합니다."
+      },
+      {
+        "t": "② 이득은 안테나의 개구면적에 비례한다.",
+        "a": 0,
+        "r": "안테나의 이득은 개구면적(반사경의 크기)에 비례하고, 사용 파장의 제곱에 반비례합니다."
+      },
+      {
+        "t": "③ 비교적 소형이고 구조가 간단하여 제작이 용이하다.",
+        "a": 0,
+        "r": "초고주파 대역에서 높은 이득을 얻는 다른 안테나들에 비해 구조가 실용적이고 직관적이라 널리 제작되어 사용됩니다."
+      },
+      {
+        "t": "④ 부엽(Side Lobe)이 비교적 적고 광대역성이다.",
+        "a": 1,
+        "r": "반사경 앞에 위치한 1차 방사기(급전선 등)와 지지대가 전파를 가리는 현상(블로킹) 때문에 오히려 부엽(Side Lobe)이 크게 발생하는 단점이 있어 잘못된 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "c": "안테나 이득 공식",
+    "q": "위성 지구국용 파라볼라 안테나의 이득을 구하는 식으로 맞는 것은? (단, Ga:절대이득, η:개구효율, D:개구면 직경)",
+    "img": "",
+    "o": [
+      {
+        "t": "① Ga = η (πD / λ²)",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② Ga = η (4πD / λ²)",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ Ga = η (πD / λ)²",
+        "a": 1,
+        "r": "파라볼라 안테나의 이득 계산 공식은 구경 면적과 파장의 관계에 의해 Ga = η(πD/λ)² 로 나타냅니다. 접시 지름(D)이 크고 파장(λ)이 짧을수록 이득이 제곱으로 치솟습니다."
+      },
+      {
+        "t": "④ Ga = η (4πD / λ)²",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "c": "위성 추적",
+    "q": "위성통신에서 위성추적 방식에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 자기추적방식과 프로그램 추적 방식이 있다.",
+        "a": 0,
+        "r": "두 가지 방식이 존재합니다."
+      },
+      {
+        "t": "② 모든 궤도에서 주로 이용되는 방식은 자기추적 방식이다.",
+        "a": 0,
+        "r": "오차 보정이 쉬운 자동추적방식이 널리 쓰입니다."
+      },
+      {
+        "t": "③ 궤도의 데이터를 미리 컴퓨터에 입력하여 제어 시스템이 추적해 나가는 방식은 프로그램 추적방식이다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "④ 이동국에서 주로 적용되는 방식은 프로그램 추적 방식이다.",
+        "a": 1,
+        "r": "배나 자동차처럼 땅이 흔들리는 이동국에서는 컴퓨터 입력값(프로그램)만으로 안테나 방향을 잡을 수 없으므로, 위성에서 날아오는 비콘 신호를 스스로 감지해 쫓아가는 '자동 추적(자기추적) 방식'을 사용해야 합니다."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "c": "지구국",
+    "q": "위성통신지구국의 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 중계 회선용과 가입자 전용 회선용 등의 용도에 따라 대별된다.",
+        "a": 0,
+        "r": "지구국의 하드웨어 구성입니다."
+      },
+      {
+        "t": "② 대기권 밖에 있는 우주국과 통신을 실시하기 위해 지구 표면상에 설치된 무선국이다.",
+        "a": 0,
+        "r": "지구국의 정의입니다."
+      },
+      {
+        "t": "③ 국내 통신 회선으로부터 온 신호를 다중화/변조, 대전력 증폭 후 안테나에 급전하여 위성에 송출한다.",
+        "a": 0,
+        "r": "지구국 송신부의 역할입니다."
+      },
+      {
+        "t": "④ 중계기를 중심으로 버스계와 전력계 및 안테나계로 구성된다.",
+        "a": 1,
+        "r": "중계기(탑재체)와 버스계(태양전지판, 추진체 등)로 구성된 것은 지상의 '지구국'이 아니라 우주 궤도에 쏘아 올려진 '우주국(인공위성 자체)'에 대한 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "c": "안테나 초점거리",
+    "q": "그림의 안테나 반사기(Dish)의 지름이 1[m], 깊이가 165[mm]일 때, 파라볼라형 위성 안테나 설계에서 반사기 컨버터를 설치할 초점길이(Focal Length)는 얼마인가?",
+    "img": "data:image/png;base64,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",
+    "o": [
+      {
+        "t": "① 378.7879 [mm]",
+        "a": 1,
+        "r": "파라볼라 안테나의 초점거리 공식 f = D² / 16d 입니다. 지름 D=1m(1000mm), 깊이 d=165mm를 대입하면 f = 1000² / (16 × 165) = 1,000,000 / 2,640 ≒ 378.7878... [mm] 가 나옵니다."
+      },
+      {
+        "t": "② 3.787879 [mm]",
+        "a": 0,
+        "r": "단위 변환 오류입니다."
+      },
+      {
+        "t": "③ 37.87879 [mm]",
+        "a": 0,
+        "r": "자릿수 오류입니다."
+      },
+      {
+        "t": "④ 3787.879 [mm]",
+        "a": 0,
+        "r": "자릿수 오류입니다."
+      }
+    ]
+  }
+]
+</script>
+
+  <script>
+    // JSON 데이터 파싱 (안전하게 처리)
+    let rawQuizData = [];
+    try {
+      const jsonText = document.getElementById("quiz-data").textContent;
+      rawQuizData = JSON.parse(jsonText);
+    } catch (e) {
+      alert("문제 데이터를 불러오는 중 오류가 발생했습니다. 코드 내부의 JSON 형식을 확인해주세요.");
+      console.error("JSON Parsing Error:", e);
+    }
+
+    let currentIdx = 0;
+    let userAnswers = new Array(rawQuizData.length).fill(null);
+
+    const questionBadge = document.getElementById("question-badge");
+    const categoryBadge = document.getElementById("category-badge");
+    const questionCounter = document.getElementById("question-counter");
+    const questionText = document.getElementById("question-text");
+    const questionImage = document.getElementById("question-image");
+    const optionsContainer = document.getElementById("options-container");
+    const explanationBox = document.getElementById("explanation-box");
+    const resultAlert = document.getElementById("result-alert");
+    const rationalesList = document.getElementById("rationales-list");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const navGrid = document.getElementById("nav-grid");
+    const scoreDisplay = document.getElementById("score-display");
+    const progressBar = document.getElementById("progress-bar");
+    const resetBtn = document.getElementById("reset-btn");
+    const editModal = document.getElementById("edit-modal");
+
+    // 문항 네비게이션 버튼 초기화
+    function initNavGrid() {
+      navGrid.innerHTML = "";
+      rawQuizData.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.innerText = idx + 1;
+        btn.id = `nav-btn-${idx}`;
+        // 반응형 사이즈 조절 (모바일에서도 잘 보이게 w-7 h-7)
+        btn.className = "w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200 transition";
+        btn.onclick = () => loadQuestion(idx);
+        navGrid.appendChild(btn);
+      });
+      updateScoreAndProgress();
+    }
+
+    // 네비게이션 색상 및 점수 업데이트
+    function updateScoreAndProgress() {
+      const answeredCount = userAnswers.filter(a => a !== null).length;
+      let correctCount = 0;
+      userAnswers.forEach((ans, idx) => {
+        if (ans !== null && rawQuizData[idx].o[ans].a === 1) correctCount++;
+      });
+      scoreDisplay.innerText = `${correctCount} / ${answeredCount} (총 ${rawQuizData.length}문항)`;
+      progressBar.style.width = `${(answeredCount / rawQuizData.length) * 100}%`;
+
+      rawQuizData.forEach((_, idx) => {
+        const navBtn = document.getElementById(`nav-btn-${idx}`);
+        if(!navBtn) return;
+        if (userAnswers[idx] === null) {
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm ${idx === currentIdx ? 'border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700 scale-110' : 'border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200'}`;
+        } else {
+          const isUserCorrect = rawQuizData[idx].o[userAnswers[idx]].a === 1;
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-${isUserCorrect ? 'emerald' : 'rose'}-500 text-white ${idx === currentIdx ? `ring-2 ring-${isUserCorrect ? 'emerald' : 'rose'}-300 scale-110` : ''}`;
+        }
+      });
+    }
+
+    // 문제 화면 렌더링
+    function loadQuestion(idx) {
+      if (idx < 0 || idx >= rawQuizData.length) return;
+      currentIdx = idx;
+      const q = rawQuizData[idx];
+
+      questionBadge.innerText = `문항 ${q.id || (idx+1)}`;
+      categoryBadge.innerText = q.c;
+      questionCounter.innerText = `${idx + 1} / ${rawQuizData.length}`;
+      questionText.innerText = q.q;
+      
+      // 이미지 출력 로직
+      if(q.img) {
+          questionImage.src = q.img;
+          questionImage.classList.remove('hidden');
+      } else {
+          questionImage.src = "";
+          questionImage.classList.add('hidden');
+      }
+
+      optionsContainer.innerHTML = "";
+      const selected = userAnswers[idx];
+
+      q.o.forEach((opt, optIdx) => {
+        const btn = document.createElement("button");
+        btn.className = "w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm ";
+        
+        if (selected === null) {
+          btn.className += "border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800";
+          btn.onclick = () => selectOption(optIdx);
+        } else {
+          if (opt.a === 1) btn.className += "border-emerald-500 bg-emerald-50 text-emerald-900 font-bold z-10 scale-[1.01]";
+          else if (selected === optIdx) btn.className += "border-rose-500 bg-rose-50 text-rose-900";
+          else btn.className += "border-slate-200 bg-slate-50 text-slate-400 opacity-60";
+          btn.disabled = true;
+        }
+
+        const iconSpan = document.createElement("span");
+        iconSpan.className = "pt-0.5 shrink-0"; 
+        if (selected !== null) {
+          if (opt.a === 1) iconSpan.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-xl drop-shadow-md"></i>';
+          else if (selected === optIdx) iconSpan.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-600 text-xl"></i>';
+          else iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-300 text-xl"></i>';
+        } else {
+          iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i>';
+        }
+
+        const textSpan = document.createElement("span");
+        textSpan.className = "flex-1 leading-relaxed";
+        textSpan.innerText = opt.t;
+        
+        btn.appendChild(iconSpan);
+        btn.appendChild(textSpan);
+        optionsContainer.appendChild(btn);
+      });
+
+      if (selected !== null) {
+        renderExplanation(selected);
+        explanationBox.classList.remove("hidden");
+      } else {
+        explanationBox.classList.add("hidden");
+      }
+
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === rawQuizData.length - 1;
+      updateScoreAndProgress();
+    }
+
+    // 답안 선택 처리
+    function selectOption(optIdx) {
+      userAnswers[currentIdx] = optIdx;
+      loadQuestion(currentIdx);
+    }
+
+    // 해설 렌더링
+    function renderExplanation(selectedIdx) {
+      const q = rawQuizData[currentIdx];
+      const isCorrect = q.o[selectedIdx].a === 1;
+
+      if (isCorrect) {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-2xl drop-shadow"></i> <div>정답입니다! 완벽하게 이해하셨습니다.</div>';
+      } else {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-rose-900 bg-rose-100 border border-rose-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-600 text-2xl drop-shadow"></i> <div>오답입니다. 아래 보기별 해설을 반드시 확인하세요.</div>';
+      }
+
+      rationalesList.innerHTML = "";
+      q.o.forEach((opt) => {
+        const item = document.createElement("div");
+        item.className = `p-3 rounded-lg border shadow-sm ${opt.a === 1 ? 'bg-emerald-50/80 border-emerald-200' : 'bg-white border-slate-200'}`;
+        
+        const header = document.createElement("div");
+        header.className = "font-bold mb-1.5 flex items-start gap-2";
+        if (opt.a === 1) header.innerHTML = `<span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5 shadow-sm">정답 보기</span> <span class="text-emerald-900">${opt.t}</span>`;
+        else header.innerHTML = `<span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">${opt.t}</span>`;
+        
+        const body = document.createElement("div");
+        body.className = "text-xs md:text-sm text-slate-600 pl-1 leading-relaxed";
+        body.innerText = opt.r;
+
+        item.appendChild(header);
+        item.appendChild(body);
+        rationalesList.appendChild(item);
+      });
+    }
+
+    // ==========================================
+    // 🛠 에디터 (모달) & 데이터 수정/추가 기능
+    // ==========================================
+    
+    // 모달 열기 (현재 문제 데이터 세팅)
+    function openEditModal() {
+      const q = rawQuizData[currentIdx];
+      document.getElementById('edit-cat').value = q.c;
+      document.getElementById('edit-q').value = q.q;
+      
+      // 이미지 세팅
+      if(q.img) {
+          document.getElementById('edit-img-base64').value = q.img;
+          document.getElementById('edit-img-preview').src = q.img;
+          document.getElementById('edit-img-preview').classList.remove('hidden');
+          document.getElementById('btn-clear-img').classList.remove('hidden');
+      } else {
+          clearImage(); // 기존 찌꺼기 지우기
+      }
+
+      for(let i=0; i<4; i++) {
+        document.getElementById(`edit-opt-${i}`).value = q.o[i].t;
+        document.getElementById(`edit-rat-${i}`).value = q.o[i].r;
+        if(q.o[i].a === 1) {
+          document.querySelector(`input[name="edit-ans"][value="${i}"]`).checked = true;
+        }
+      }
+      
+      document.body.classList.add('modal-open');
+      editModal.classList.remove('hidden');
+    }
+
+    // 모달 닫기
+    function closeEditModal() {
+      document.body.classList.remove('modal-open');
+      editModal.classList.add('hidden');
+    }
+
+    // 수정 내용 반영
+    function saveEditedQuestion() {
+      const q = rawQuizData[currentIdx];
+      q.c = document.getElementById('edit-cat').value;
+      q.q = document.getElementById('edit-q').value;
+      q.img = document.getElementById('edit-img-base64').value; // 이미지 저장
+      
+      const correctVal = document.querySelector('input[name="edit-ans"]:checked').value;
+      
+      for(let i=0; i<4; i++) {
+        q.o[i].t = document.getElementById(`edit-opt-${i}`).value;
+        q.o[i].r = document.getElementById(`edit-rat-${i}`).value;
+        q.o[i].a = (i.toString() === correctVal) ? 1 : 0;
+      }
+      
+      closeEditModal();
+      loadQuestion(currentIdx); // 화면 즉시 갱신
+      alert("해당 문항의 내용이 성공적으로 수정되었습니다.\n\n※ 영구 보존을 원하시면 상단의 [수정본 다운로드] 버튼을 꼭 눌러주세요!");
+    }
+
+    // 새 문제 추가 로직
+    function addNewQuestion() {
+      const newQ = {
+        id: rawQuizData.length + 1,
+        c: "새로운 카테고리",
+        q: "새로운 질문을 입력하세요.",
+        img: "",
+        o: [
+          { t: "① 보기 1", a: 1, r: "해설 1" },
+          { t: "② 보기 2", a: 0, r: "해설 2" },
+          { t: "③ 보기 3", a: 0, r: "해설 3" },
+          { t: "④ 보기 4", a: 0, r: "해설 4" }
+        ]
+      };
+      rawQuizData.push(newQ);
+      userAnswers.push(null);
+      initNavGrid();
+      loadQuestion(rawQuizData.length - 1); // 추가된 맨 끝 문제로 이동
+      openEditModal(); // 이동하자마자 바로 수정창 띄우기
+    }
+
+    // 현재 문제 삭제 로직
+    function deleteCurrentQuestion() {
+      if(rawQuizData.length <= 1) {
+          alert("최소 1개의 문제는 남아있어야 합니다.");
+          return;
+      }
+      if(confirm("정말로 이 문제를 삭제하시겠습니까?\n삭제 후 복구할 수 없습니다.")) {
+          rawQuizData.splice(currentIdx, 1);
+          userAnswers.splice(currentIdx, 1);
+          
+          // ID 재정렬
+          rawQuizData.forEach((q, i) => q.id = i + 1);
+          
+          initNavGrid();
+          closeEditModal();
+          // 지워진 인덱스가 맨 끝이었다면 한칸 앞으로, 아니면 그자리 유지
+          let nextIdx = currentIdx >= rawQuizData.length ? rawQuizData.length - 1 : currentIdx;
+          loadQuestion(nextIdx);
+      }
+    }
+
+    // 이미지 파일을 Base64 데이터로 변환 (파일 선택 시 자동 실행)
+    function encodeImageFileAsURL(element) {
+      const file = element.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onloadend = function() {
+        document.getElementById('edit-img-base64').value = reader.result;
+        document.getElementById('edit-img-preview').src = reader.result;
+        document.getElementById('edit-img-preview').classList.remove('hidden');
+        document.getElementById('btn-clear-img').classList.remove('hidden');
+      }
+      reader.readAsDataURL(file);
+    }
+
+    // 에디터 창의 이미지 지우기
+    function clearImage() {
+      document.getElementById('edit-img-upload').value = "";
+      document.getElementById('edit-img-base64').value = "";
+      document.getElementById('edit-img-preview').src = "";
+      document.getElementById('edit-img-preview').classList.add('hidden');
+      document.getElementById('btn-clear-img').classList.add('hidden');
+    }
+
+    // HTML 파일 자가 저장(다운로드) 기능
+    function downloadUpdatedHTML() {
+      // 1. 메모리상의 rawQuizData 배열을 하단 <script id="quiz-data"> 영역에 JSON 텍스트로 덮어쓰기
+      const dataScript = document.getElementById('quiz-data');
+      dataScript.textContent = "\n" + JSON.stringify(rawQuizData, null, 2) + "\n";
+      
+      // 2. 현재 상태의 전체 HTML 텍스트를 추출
+      let htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+      
+      // 3. Blob 변환 후 자동 다운로드 트리거
+      const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = "정보전송일반_6차시_수정본.html"; // 다운로드될 파일명
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    // 네비게이션 버튼 바인딩
+    prevBtn.addEventListener("click", () => { if (currentIdx > 0) loadQuestion(currentIdx - 1); });
+    nextBtn.addEventListener("click", () => { if (currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1); });
+    resetBtn.addEventListener("click", () => {
+      if (confirm("풀이 기록을 모두 초기화하시겠습니까? 처음부터 다시 풉니다.")) {
+        userAnswers = new Array(rawQuizData.length).fill(null);
+        loadQuestion(0);
+      }
+    });
+
+    // 키보드 방향키 및 숫자키 입력 지원
+    document.addEventListener("keydown", (e) => {
+      // 에디터 모달이 열려있으면 단축키 무시
+      if(!editModal.classList.contains('hidden')) return;
+
+      if (e.key === "ArrowLeft" && currentIdx > 0) loadQuestion(currentIdx - 1);
+      else if (e.key === "ArrowRight" && currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1);
+      else if (["1", "2", "3", "4"].includes(e.key) && userAnswers[currentIdx] === null) selectOption(parseInt(e.key) - 1);
+    });
+
+    // 시작
+    initNavGrid();
+    loadQuestion(0);
+  </script>
+
+</body></html>

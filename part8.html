@@ -1,0 +1,2944 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정보전송일반 - 8차시 네트워크 프로토콜 CBT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap');
+    body { font-family: 'Pretendard', sans-serif; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .modal-open { overflow: hidden; }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.mb-1\.5{margin-bottom:0.375rem}.mt-0\.5{margin-top:0.125rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-2{height:0.5rem}.h-4{height:1rem}.h-7{height:1.75rem}.max-h-32{max-height:8rem}.max-h-60{max-height:15rem}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-4{width:1rem}.w-full{width:100%}.w-7{width:1.75rem}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.shrink-0{flex-shrink:0}.scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-\[1\.01\]{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-b-2xl{border-bottom-right-radius:1rem;border-bottom-left-radius:1rem}.rounded-t-2xl{border-top-left-radius:1rem;border-top-right-radius:1rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-rose-200{--tw-border-opacity:1;border-color:rgb(254 205 211 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-indigo-600{--tw-border-opacity:1;border-color:rgb(79 70 229 / var(--tw-border-opacity, 1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183 / var(--tw-border-opacity, 1))}.border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175 / var(--tw-border-opacity, 1))}.border-rose-500{--tw-border-opacity:1;border-color:rgb(244 63 94 / var(--tw-border-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-indigo-200{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-700{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.bg-indigo-800{--tw-bg-opacity:1;background-color:rgb(55 48 163 / var(--tw-bg-opacity, 1))}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-emerald-50\/80{background-color:rgb(236 253 245 / 0.8)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184 / var(--tw-bg-opacity, 1))}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pt-6{padding-top:1.5rem}.pt-0\.5{padding-top:0.125rem}.pl-1{padding-left:0.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[10px\]{font-size:10px}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-rose-900{--tw-text-opacity:1;color:rgb(136 19 55 / var(--tw-text-opacity, 1))}.opacity-60{opacity:0.6}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-400{--tw-ring-opacity:1;--tw-ring-color:rgb(129 140 248 / var(--tw-ring-opacity, 1))}.ring-emerald-300{--tw-ring-opacity:1;--tw-ring-color:rgb(110 231 183 / var(--tw-ring-opacity, 1))}.ring-rose-300{--tw-ring-opacity:1;--tw-ring-color:rgb(253 164 175 / var(--tw-ring-opacity, 1))}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-md{--tw-drop-shadow:drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.file\:mr-4::file-selector-button{margin-right:1rem}.file\:rounded-full::file-selector-button{border-radius:9999px}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-indigo-50::file-selector-button{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.file\:px-3::file-selector-button{padding-left:0.75rem;padding-right:0.75rem}.file\:py-1::file-selector-button{padding-top:0.25rem;padding-bottom:0.25rem}.file\:text-xs::file-selector-button{font-size:0.75rem;line-height:1rem}.file\:font-semibold::file-selector-button{font-weight:600}.file\:text-indigo-700::file-selector-button{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.hover\:border-indigo-400:hover{--tw-border-opacity:1;border-color:rgb(129 140 248 / var(--tw-border-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-200:hover{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-100:hover{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-200:hover{--tw-bg-opacity:1;background-color:rgb(254 205 211 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-50:hover{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:text-indigo-800:hover{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.hover\:text-rose-500:hover{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.hover\:file\:bg-indigo-100::file-selector-button:hover{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-40:disabled{opacity:0.4}.group:hover .group-hover\:text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:block{display:block}}@media (min-width: 768px){.md\:h-8{height:2rem}.md\:w-auto{width:auto}.md\:w-8{width:2rem}.md\:flex-row{flex-direction:row}.md\:justify-end{justify-content:flex-end}.md\:gap-2{gap:0.5rem}.md\:p-8{padding:2rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xs{font-size:0.75rem;line-height:1rem}}</style></head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col relative">
+
+  <!-- Header -->
+  <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-3">
+      <div class="flex items-center space-x-3 w-full md:w-auto">
+        <a href="index.html" class="bg-indigo-800 hover:bg-indigo-600 text-white text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1.5 border border-indigo-500 shadow-sm shrink-0" title="목록으로 돌아가기">
+          <i class="fa-solid fa-list"></i> 목록
+        </a>
+        <i class="fa-solid fa-sitemap text-2xl text-amber-300 hidden sm:block"></i>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight truncate">8차시 프로토콜 CBT (85제)</h1>
+          <p class="text-xs text-indigo-200 truncate">OSI-7계층 · HDLC · BSC · ARQ 프로토콜 마스터</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-end">
+        <div class="text-right mr-2">
+          <span class="text-xs text-indigo-200 block">현재 점수</span>
+          <span id="score-display" class="font-extrabold text-lg text-amber-300">74 / 75 (총 87문항)</span>
+        </div>
+        <button onclick="downloadUpdatedHTML()" class="bg-emerald-600 hover:bg-emerald-500 text-xs px-3 py-2 rounded-lg font-bold transition flex items-center gap-1 border border-emerald-500 shadow-sm">
+          <i class="fa-solid fa-download"></i> 수정본 다운로드
+        </button>
+        <button id="reset-btn" class="bg-indigo-600 hover:bg-indigo-500 text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1 border border-indigo-500">
+          <i class="fa-solid fa-rotate-right"></i> 초기화
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="w-full bg-indigo-200 h-2">
+    <div id="progress-bar" class="bg-amber-400 h-2 transition-all duration-300" style="width: 86.2069%;"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-1 w-full">
+    
+    <!-- Question Card -->
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden relative">
+      <div class="bg-slate-50 border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <span id="question-badge" class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">문항 87</span>
+          <span id="category-badge" class="bg-slate-200 text-slate-700 text-xs font-semibold px-2 py-0.5 rounded">프로토콜 [2024 CBT 기출]</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button onclick="openEditModal()" class="text-xs text-indigo-600 font-bold hover:text-indigo-800 bg-indigo-50 px-2 py-1 rounded border border-indigo-200 transition shadow-sm">
+            <i class="fa-solid fa-pen-to-square"></i> 문제/해설 수정
+          </button>
+          <span id="question-counter" class="text-xs text-slate-500 font-medium">87 / 87</span>
+        </div>
+      </div>
+
+      <div class="p-6 md:p-8">
+        <h2 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-relaxed mb-4">다음 중 문자지향 프로토콜에서 사용되는 전송제어 문자 중 옳은 것은?<br><br><br></h2>
+        
+        <!-- 이미지 출력 영역 -->
+        <img id="question-image" src="" alt="첨부 이미지" class="mb-6 max-h-60 rounded-lg border border-slate-200 hidden shadow-sm">
+
+        <!-- Options -->
+        <div id="options-container" class="space-y-3"><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">① EOT : 문자의 한 블록의 종료</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">② SOH : 데이터 블록의 시작</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">③ SYN : 헤딩의 개시</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">④ STX : 텍스트의 개시</span></button></div>
+
+        <!-- Explanation Section -->
+        <div id="explanation-box" class="mt-8 border-t border-slate-200 pt-6 animate-fade-in-up hidden">
+          <div id="result-alert" class="p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 shadow-inner"><i class="fa-solid fa-circle-check text-emerald-600 text-2xl drop-shadow"></i> <div>정답입니다! 완벽하게 이해하셨습니다.</div></div>
+          
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-4">
+            <h3 class="text-sm font-bold text-indigo-900 flex items-center gap-2">
+              <i class="fa-solid fa-book-open-reader text-indigo-600"></i> 해설 상세 보기
+            </h3>
+            <div id="rationales-list" class="space-y-2 text-sm text-slate-700"><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">① TCP/IP</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">인터넷 표준 프로토콜이자 오늘날 대부분의 LAN 및 WAN 환경에서 기본 전송 통신 프로토콜로 사용됩니다.</div></div><div class="p-3 rounded-lg border shadow-sm bg-emerald-50/80 border-emerald-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5 shadow-sm">정답 보기</span> <span class="text-emerald-900">② HDLC</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">1:1 점대점(Point-to-Point) 또는 멀티포인트 전용회선 등 주로 광역 통신망(WAN) 환경의 직렬 링크에서 사용되는 데이터 링크 계층 프로토콜입니다.</div></div><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">③ NetBEUI</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">과거 IBM 및 마이크로소프트의 소규모 LAN 환경에서 라우팅 없이 빠르고 가볍게 파일 및 프린터 공유 등을 지원하던 대표적인 LAN 전용 프로토콜입니다.</div></div><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">④ IPX/SPX</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">과거 노벨(Novell)사의 넷웨어(NetWare) 운영체제 기반 근거리 통신망(LAN)에서 광범위하게 쓰였던 네트워크/전송 계층 프로토콜입니다.</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 flex justify-between items-center">
+        <button id="prev-btn" class="px-4 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-arrow-left mr-1"></i> 이전 문제
+        </button>
+        <button id="next-btn" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-bold transition shadow disabled:opacity-40 disabled:cursor-not-allowed" disabled="">
+          다음 문제 <i class="fa-solid fa-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Grid -->
+    <div class="mt-8 bg-white rounded-xl p-5 shadow border border-slate-200">
+      <div class="flex justify-between items-center mb-4">
+        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">전체 문항 내비게이션</h4>
+        <button onclick="addNewQuestion()" class="text-xs bg-indigo-100 text-indigo-700 hover:bg-indigo-200 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1 border border-indigo-200 shadow-sm">
+          <i class="fa-solid fa-plus"></i> 새 문제 추가하기
+        </button>
+      </div>
+      <div id="nav-grid" class="flex flex-wrap gap-1.5 md:gap-2"><button id="nav-btn-0" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">1</button><button id="nav-btn-1" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">2</button><button id="nav-btn-2" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">3</button><button id="nav-btn-3" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">4</button><button id="nav-btn-4" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">5</button><button id="nav-btn-5" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">6</button><button id="nav-btn-6" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">7</button><button id="nav-btn-7" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">8</button><button id="nav-btn-8" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">9</button><button id="nav-btn-9" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">10</button><button id="nav-btn-10" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">11</button><button id="nav-btn-11" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">12</button><button id="nav-btn-12" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">13</button><button id="nav-btn-13" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">14</button><button id="nav-btn-14" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">15</button><button id="nav-btn-15" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">16</button><button id="nav-btn-16" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">17</button><button id="nav-btn-17" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">18</button><button id="nav-btn-18" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">19</button><button id="nav-btn-19" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">20</button><button id="nav-btn-20" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">21</button><button id="nav-btn-21" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">22</button><button id="nav-btn-22" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">23</button><button id="nav-btn-23" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">24</button><button id="nav-btn-24" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-rose-500 text-white ">25</button><button id="nav-btn-25" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">26</button><button id="nav-btn-26" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">27</button><button id="nav-btn-27" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">28</button><button id="nav-btn-28" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">29</button><button id="nav-btn-29" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">30</button><button id="nav-btn-30" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">31</button><button id="nav-btn-31" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">32</button><button id="nav-btn-32" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">33</button><button id="nav-btn-33" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">34</button><button id="nav-btn-34" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">35</button><button id="nav-btn-35" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">36</button><button id="nav-btn-36" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">37</button><button id="nav-btn-37" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">38</button><button id="nav-btn-38" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">39</button><button id="nav-btn-39" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">40</button><button id="nav-btn-40" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">41</button><button id="nav-btn-41" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">42</button><button id="nav-btn-42" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">43</button><button id="nav-btn-43" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">44</button><button id="nav-btn-44" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">45</button><button id="nav-btn-45" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">46</button><button id="nav-btn-46" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">47</button><button id="nav-btn-47" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">48</button><button id="nav-btn-48" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">49</button><button id="nav-btn-49" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">50</button><button id="nav-btn-50" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">51</button><button id="nav-btn-51" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">52</button><button id="nav-btn-52" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">53</button><button id="nav-btn-53" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">54</button><button id="nav-btn-54" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">55</button><button id="nav-btn-55" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">56</button><button id="nav-btn-56" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">57</button><button id="nav-btn-57" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">58</button><button id="nav-btn-58" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">59</button><button id="nav-btn-59" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">60</button><button id="nav-btn-60" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">61</button><button id="nav-btn-61" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">62</button><button id="nav-btn-62" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">63</button><button id="nav-btn-63" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">64</button><button id="nav-btn-64" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">65</button><button id="nav-btn-65" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">66</button><button id="nav-btn-66" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">67</button><button id="nav-btn-67" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">68</button><button id="nav-btn-68" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">69</button><button id="nav-btn-69" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">70</button><button id="nav-btn-70" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">71</button><button id="nav-btn-71" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">72</button><button id="nav-btn-72" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">73</button><button id="nav-btn-73" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">74</button><button id="nav-btn-74" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">75</button><button id="nav-btn-75" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">76</button><button id="nav-btn-76" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">77</button><button id="nav-btn-77" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">78</button><button id="nav-btn-78" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">79</button><button id="nav-btn-79" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">80</button><button id="nav-btn-80" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">81</button><button id="nav-btn-81" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">82</button><button id="nav-btn-82" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">83</button><button id="nav-btn-83" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">84</button><button id="nav-btn-84" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">85</button><button id="nav-btn-85" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">86</button><button id="nav-btn-86" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700 scale-110">87</button></div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-200 border-t border-slate-300 py-4 text-center text-xs text-slate-500 mt-auto">
+    통신기능장 자가 수정/이미지 업로드 완벽 지원 시스템 © 2026
+  </footer>
+
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col">
+      <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50 rounded-t-2xl">
+        <h3 class="font-bold text-lg text-slate-800"><i class="fa-solid fa-pen-to-square text-indigo-600 mr-2"></i>문제 및 해설 편집</h3>
+        <button onclick="closeEditModal()" class="text-slate-400 hover:text-rose-500 transition"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <div class="p-6 overflow-y-auto flex-1 space-y-5">
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">카테고리</label>
+          <input type="text" id="edit-cat" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">문제 (질문)</label>
+          <textarea id="edit-q" rows="3" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea>
+        </div>
+        
+        <!-- 이미지 업로드 섹션 -->
+        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+          <label class="block text-xs font-bold text-slate-500 mb-2"><i class="fa-solid fa-image text-slate-400"></i> 문제 참고 이미지 첨부 (선택사항)</label>
+          <div class="flex items-center gap-2 mb-2">
+            <input type="file" id="edit-img-upload" accept="image/*" class="text-xs file:mr-4 file:py-1 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer" onchange="encodeImageFileAsURL(this)">
+            <button type="button" onclick="clearImage()" class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-600 px-3 py-1.5 rounded-full font-bold transition hidden" id="btn-clear-img"><i class="fa-solid fa-trash-can"></i> 지우기</button>
+          </div>
+          <input type="hidden" id="edit-img-base64" value="">
+          <img id="edit-img-preview" class="max-h-32 rounded border border-slate-300 hidden shadow-sm" src="">
+        </div>
+
+        <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 space-y-4">
+          <label class="block text-xs font-bold text-indigo-800 mb-2">보기 및 해설 설정 (정답 라디오 버튼 선택)</label>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="0" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-0" placeholder="보기 1 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-0" rows="1" placeholder="보기 1 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="1" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-1" placeholder="보기 2 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-1" rows="1" placeholder="보기 2 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="2" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-2" placeholder="보기 3 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-2" rows="1" placeholder="보기 3 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="3" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-3" placeholder="보기 4 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-3" rows="1" placeholder="보기 4 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 py-4 border-t border-slate-200 bg-slate-50 rounded-b-2xl flex justify-between items-center">
+        <button onclick="deleteCurrentQuestion()" class="px-4 py-2 bg-rose-50 border border-rose-200 text-rose-600 rounded-lg text-sm font-bold hover:bg-rose-100 transition"><i class="fa-solid fa-trash"></i> 이 문제 삭제</button>
+        <div class="flex gap-2">
+          <button onclick="closeEditModal()" class="px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-bold text-slate-600 hover:bg-slate-100 transition">취소</button>
+          <button onclick="saveEditedQuestion()" class="px-5 py-2 bg-indigo-600 rounded-lg text-sm font-bold text-white hover:bg-indigo-700 transition shadow">적용하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 85제 JSON 데이터 모음 -->
+  <script id="quiz-data" type="application/json">
+[
+  {
+    "id": 1,
+    "c": "네트워크 종류",
+    "q": "네트워크의 공간적인 거리에 따른 구분에 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① LAN",
+        "a": 0,
+        "r": "근거리 지역망(Local Area Network) 분류에 해당합니다."
+      },
+      {
+        "t": "② MAN",
+        "a": 0,
+        "r": "도시권 통신망(Metropolitan Area Network) 분류에 해당합니다."
+      },
+      {
+        "t": "③ WAN",
+        "a": 0,
+        "r": "광역 통신망(Wide Area Network) 분류에 해당합니다."
+      },
+      {
+        "t": "④ PDN",
+        "a": 1,
+        "r": "PDN(Public Data Network, 공중데이터망)은 공간적 거리 규모가 아니라 공중 통신 사업자가 제공하는 '통신 서비스 형태 및 망 종류'에 따른 분류이므로 공간적 거리(LAN/MAN/WAN) 분류에 적합하지 않습니다."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "c": "네트워크 토폴로지",
+    "q": "중앙에 제어노드가 있고 모든 노드가 점대점으로 연결된 구성형태의 LAN은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 그물형(mesh type)",
+        "a": 0,
+        "r": "모든 노드가 그물망처럼 얽혀 있습니다."
+      },
+      {
+        "t": "② 스타형(star type)",
+        "a": 1,
+        "r": "중앙에 허브나 스위치 같은 제어 노드가 위치하고, 주변 단말기들이 방사형 1:1(점대점) 링크로 연결되는 형태를 성형(Star) 토폴로지라 합니다."
+      },
+      {
+        "t": "③ 버스형(bus type)",
+        "a": 0,
+        "r": "단일 공통 케이블에 다중 연결됩니다."
+      },
+      {
+        "t": "④ 링형(ring type)",
+        "a": 0,
+        "r": "고리 형태로 양 옆 노드와 연결됩니다."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "c": "LAN 구성요소",
+    "q": "[2023-1회 기출] 다음 중 LAN의 구성요소로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전송매체",
+        "a": 0,
+        "r": "UTP 케이블, 광케이블 등이 필수적입니다."
+      },
+      {
+        "t": "② 패킷교환기",
+        "a": 1,
+        "r": "패킷교환기(Packet Switch)는 주로 대규모 장거리 광역망(WAN)이나 공중 데이터망 내부에서 트래픽을 처리하는 장비이며, 소규모 근거리 통신망(LAN) 자체의 기본 구성 장비로는 분류하지 않습니다."
+      },
+      {
+        "t": "③ 스위치",
+        "a": 0,
+        "r": "근거리 LAN을 묶어주는 핵심 장비입니다."
+      },
+      {
+        "t": "④ 네트워크 인터페이스 카드(NIC)",
+        "a": 0,
+        "r": "PC마다 꽂히는 랜카드입니다."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "c": "LAN 접속장치",
+    "q": "[2023-2회 기출] 다음 중 근거리 정보통신망을 구성하기 위한 네트워크 접속장치가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 허브",
+        "a": 0,
+        "r": "LAN 단말 연결 장치입니다."
+      },
+      {
+        "t": "② 라우터",
+        "a": 0,
+        "r": "LAN 간을 연결하는 3계층 장비입니다."
+      },
+      {
+        "t": "③ 브릿지",
+        "a": 0,
+        "r": "LAN 세그먼트를 연결하는 2계층 장비입니다."
+      },
+      {
+        "t": "④ 모뎀",
+        "a": 1,
+        "r": "모뎀(Modem)은 아날로그 전화선 등을 통해 디지털 데이터를 변복조하여 '원거리(WAN)' 통신망에 접속할 때 주로 쓰이는 장비로, 빌딩 내부의 근거리 LAN 전용 접속 장치와는 거리가 멉니다."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "c": "백본망 토폴로지",
+    "q": "[2023-2회 기출] 네트워크 통신에서 '전용회선 서비스에 주로 사용되는 기간망'의 안정성을 고려하여 구성하는 망 형태가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Ring형",
+        "a": 0,
+        "r": "노드가 순환 고리로 연결되어 있어 한 구간에 장애가 발생해도 반대 방향으로 우회 통신이 가능해 안정성이 높습니다."
+      },
+      {
+        "t": "② Mesh형",
+        "a": 0,
+        "r": "모든 노드가 그물망처럼 서로 연결되어 있어 장애 발생 시 대체 경로가 가장 많아 기간망 구성에 매우 안정적입니다."
+      },
+      {
+        "t": "③ 8자형",
+        "a": 0,
+        "r": "두 개의 링이 교차하는 구조로 경로 이중화를 통해 단일 링보다 더 높은 수준의 안정성을 제공합니다."
+      },
+      {
+        "t": "④ Star형",
+        "a": 1,
+        "r": "모든 노드가 중앙 제어 노드에 연결된 형태로, 중앙 노드에 장애가 발생하면 전체 네트워크가 마비되므로 높은 안정성이 필수적인 기간망(Backbone)에는 부적합합니다."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "c": "광역망 장비",
+    "q": "다음 중 독립적으로 MAN 이나 WAN 을 구성하기에 부적절한 장비는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 이동전화시스템",
+        "a": 0,
+        "r": "광역 무선 WAN 망을 구축합니다."
+      },
+      {
+        "t": "② 교환기",
+        "a": 0,
+        "r": "전국 단위 백본 교환망을 구축합니다."
+      },
+      {
+        "t": "③ 인공위성",
+        "a": 0,
+        "r": "초광역 대륙간 WAN 커버리지를 제공합니다."
+      },
+      {
+        "t": "④ 허브 (Hub)",
+        "a": 1,
+        "r": "허브(Hub)는 단순히 건물의 한 사무실 안에서 PC 몇 대를 묶어주는 소규모 'LAN' 확장용 물리 장비이므로, 독립적으로 대도시 규모의 MAN이나 광역 WAN을 구성하기에는 턱없이 부적절합니다."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "c": "망형 토폴로지",
+    "q": "단말과 단말 사이를 각각의 회선으로 연결한 형태의 통신망은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 원형",
+        "a": 0,
+        "r": "링형입니다."
+      },
+      {
+        "t": "② 토리형",
+        "a": 0,
+        "r": "격자형 변형입니다."
+      },
+      {
+        "t": "③ 메쉬형 (Mesh)",
+        "a": 1,
+        "r": "모든 노드가 서로 1:1 전용 회선들로 빽빽하게 상호 연결되어 높은 가용성과 우회 경로를 제공하는 형태를 망형(Mesh)이라 합니다."
+      },
+      {
+        "t": "④ 버스형",
+        "a": 0,
+        "r": "단일선 공유형입니다."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "c": "회선 수 계산",
+    "q": "20개의 전화국 간을 메쉬(Mesh) 형으로 연결하려면 필요한 회선 수는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 190개",
+        "a": 1,
+        "r": "그물형 회선 수 공식 n(n-1)/2 에 대입. (20 × 19) / 2 = 380 / 2 = 190개가 도출됩니다."
+      },
+      {
+        "t": "② 200개",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 260개",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 380개",
+        "a": 0,
+        "r": "2를 나누기 전 값입니다."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "c": "회선 수 계산",
+    "q": "교환국 수가 n일 때 그물형 (Mesh) 통신망의 중계회선수는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① n",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② n(n-1)/2",
+        "a": 1,
+        "r": "n개의 노드가 서로 빠짐없이 1:1 통신 링크를 맺을 때 필요한 총 회선 수 공식은 n(n-1)/2 입니다."
+      },
+      {
+        "t": "③ n/2",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ n-1",
+        "a": 0,
+        "r": "스타형이나 버스형의 링크 수입니다."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "c": "프로토콜 3요소",
+    "q": "다음 중 프로토콜의 3요소가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 구문(Syntax)",
+        "a": 0,
+        "r": "데이터 형식과 코딩 규칙입니다."
+      },
+      {
+        "t": "② 순서(Timing)",
+        "a": 0,
+        "r": "속도 일치 및 메시지 순서 제어입니다."
+      },
+      {
+        "t": "③ 의미(Semantics)",
+        "a": 0,
+        "r": "제어 정보 및 에러 처리를 위한 해석입니다."
+      },
+      {
+        "t": "④ 구조(Structure)",
+        "a": 1,
+        "r": "통신 프로토콜의 3대 핵심 요소는 구문(Syntax), 의미(Semantics), 순서(Timing)이며, 구조는 포함되지 않습니다."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "c": "프로토콜 3요소",
+    "q": "프로토콜의 구성요소 중 '속도 맞춤이나 정보의 순서' 등의 전달되는 정보 간 시간의 약속을 규정하는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 의미(Semantics)",
+        "a": 0,
+        "r": "제어 정보의 해석입니다."
+      },
+      {
+        "t": "② 구분(Syntax)",
+        "a": 0,
+        "r": "데이터 포맷 구조입니다."
+      },
+      {
+        "t": "③ 타이밍(Timing)",
+        "a": 1,
+        "r": "송수신 간의 속도 일치(Flow Control) 및 패킷 전송 순서 조절 등 시간적 제반 약속을 규정하는 요소가 Timing(순서)입니다."
+      },
+      {
+        "t": "④ 포맷(Format)",
+        "a": 0,
+        "r": "용어가 아닙니다."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "c": "프로토콜 3요소",
+    "q": "프로토콜의 구성요소 중 “통신할 데이터의 형식”이란 의미로 코딩, 신호레벨 등을 정의하며 전달되는 자료의 구조를 정의하는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 의미(Semantics)",
+        "a": 0,
+        "r": "동작 및 제어 정보입니다."
+      },
+      {
+        "t": "② 구문(Syntax)",
+        "a": 1,
+        "r": "데이터의 형식, 코딩 방식, 신호 레벨 등 물리적/형식적 구조를 규정하는 요소를 구문(Syntax)이라 합니다."
+      },
+      {
+        "t": "③ 타이밍(Timing)",
+        "a": 0,
+        "r": "시간적 약속입니다."
+      },
+      {
+        "t": "④ 포맷(Format)",
+        "a": 0,
+        "r": "구문의 하위 개념입니다."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "c": "프로토콜 목적",
+    "q": "다음 중 프로토콜의 이용 목적으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 터미널의 회선접속",
+        "a": 0,
+        "r": "접속 절차를 표준화합니다."
+      },
+      {
+        "t": "② 에러 메시지의 재전송",
+        "a": 0,
+        "r": "오류 복구를 수행합니다."
+      },
+      {
+        "t": "③ 하드웨어 설계 및 구현",
+        "a": 1,
+        "r": "프로토콜은 서로 다른 기종 간의 '소프트웨어 통신 규약'을 정하는 것이 목적이지, 특정 칩셋이나 물리적 하드웨어 자체의 전기 회로를 설계하고 구현하는 것이 주 목적은 아닙니다."
+      },
+      {
+        "t": "④ 메시지의 블로킹과 포맷구조",
+        "a": 0,
+        "r": "패킷 블록 구조를 정의합니다."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "c": "프로토콜 기능",
+    "q": "프로토콜의 기능 중 송신측 개체로부터 오는 데이터의 양이나 속도를 수신측 개체에서 조절하는 기능은 무엇인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 연결제어",
+        "a": 0,
+        "r": "세션 연결 관리입니다."
+      },
+      {
+        "t": "② 에러제어",
+        "a": 0,
+        "r": "손실 및 깨짐 검출입니다."
+      },
+      {
+        "t": "③ 흐름제어",
+        "a": 1,
+        "r": "수신측이 처리할 수 있는 능력 이상으로 데이터가 밀려들어와 버퍼가 넘치는 것을 막기 위해 전송 속도와 양을 조절하는 프로토콜 기능을 흐름제어(Flow Control)라 합니다."
+      },
+      {
+        "t": "④ 동기제어",
+        "a": 0,
+        "r": "타이밍 맞춤입니다."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "c": "프로토콜 목적",
+    "q": "네트워크 노드 사이에서의 신뢰성 있고 효율적인 정보의 전달에 목적을 둔 프로토콜은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 네트워크 액세스 프로토콜",
+        "a": 0,
+        "r": "사용자의 단말 장치(DTE)가 통신망(DCE/교환기)에 접속하기 위한 규약입니다."
+      },
+      {
+        "t": "② 네트워크 내부 프로토콜",
+        "a": 1,
+        "r": "통신망을 구성하는 내부 교환기나 노드(Node) 상호 간에 신뢰성 있고 효율적인 데이터 전송을 목적으로 하는 규약입니다."
+      },
+      {
+        "t": "③ 응용 지향 프로토콜",
+        "a": 0,
+        "r": "사용자 프로그램이나 특정 애플리케이션 서비스 처리를 직접 지원하기 위한 상위 계층 규약입니다."
+      },
+      {
+        "t": "④ 네트워크간 프로토콜",
+        "a": 0,
+        "r": "서로 다른 독립적인 네트워크 망 사이(Inter-network)를 상호 연결하고 패킷을 중계하기 위한 규약입니다."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "c": "엔티티 정의",
+    "q": "정보를 송수신할 수 있는 능력을 가진 개체로써, 주어진 입력에 대하여 어떤 기능을 수행하고 출력하는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 데이터(Data)",
+        "a": 0,
+        "r": "정보의 내용물입니다."
+      },
+      {
+        "t": "② 엔티티 (Entity)",
+        "a": 1,
+        "r": "통신 시스템에서 프로토콜을 실행하여 데이터를 주고받는 독립된 소프트웨어 또는 하드웨어 실체(개체)를 통틀어 엔티티(Entity)라 부릅니다."
+      },
+      {
+        "t": "③ 프로토콜(Protocol)",
+        "a": 0,
+        "r": "통신 규약입니다."
+      },
+      {
+        "t": "④ 스테이트(State)",
+        "a": 0,
+        "r": "상태값입니다."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "c": "프로토콜 3요소",
+    "q": "프로토콜의 3요소 중 전송되는 데이터 형식, 신호 레벨 등을 규정하는 것은 무엇인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 구문(Syntax)",
+        "a": 1,
+        "r": "데이터의 형식, 코딩 방식, 신호 레벨 등 물리적/형식적 구조를 규정하는 요소를 구문(Syntax)이라 합니다."
+      },
+      {
+        "t": "② 순서(Timing)",
+        "a": 0,
+        "r": "시간적 약속입니다."
+      },
+      {
+        "t": "③ 의미(Semantics)",
+        "a": 0,
+        "r": "제어 정보의 해석입니다."
+      },
+      {
+        "t": "④ 구조(Structure)",
+        "a": 0,
+        "r": "포함되지 않습니다."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "c": "프로토콜 설명",
+    "q": "프로토콜에 관한 설명 중 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 온라인 시스템 등장 이후 필요성이 제기되었다.",
+        "a": 0,
+        "r": "컴퓨터 통신망과 함께 발전했습니다."
+      },
+      {
+        "t": "② 프로토콜의 기본구성은 구문(syntax), 패스(path), 의미(semantics)로 분류된다.",
+        "a": 1,
+        "r": "프로토콜의 3대 요소는 구문(Syntax), 의미(Semantics), 그리고 경로(Path)가 아니라 시간적 약속을 뜻하는 '순서(Timing)'입니다."
+      },
+      {
+        "t": "③ 표준화가 제기되면서 ITU에서 공중패킷망용 X.25를 표준화하였다.",
+        "a": 0,
+        "r": "역사적 사실입니다."
+      },
+      {
+        "t": "④ 기능별 계층화 프로토콜 기술을 채택하는 아키텍처로 발전했다.",
+        "a": 0,
+        "r": "OSI 7계층 등의 배경입니다."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "c": "캡슐화",
+    "q": "데이터에 통신국의 주소, 에러 검출 부호, 프로토콜 제어 등의 제어 정보인 헤더(Header)를 부착하는 기능은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 흐름제어",
+        "a": 0,
+        "r": "속도 조절 기능입니다."
+      },
+      {
+        "t": "② 주소지정",
+        "a": 0,
+        "r": "수신지 표기입니다."
+      },
+      {
+        "t": "③ 다중화",
+        "a": 0,
+        "r": "회선 공유 기술입니다."
+      },
+      {
+        "t": "④ 캡슐화 (Encapsulation)",
+        "a": 1,
+        "r": "상위 계층의 데이터에 각 계층별 제어 정보(헤더, 트레일러)를 껍데기처럼 덧붙여 나가는 과정을 캡슐화라 합니다."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "c": "프로토콜 기능",
+    "q": "다음 중 통신 프로토콜의 주요 기능이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 송신지 및 수신지 주소 지정",
+        "a": 0,
+        "r": "주소 지정은 필수 기능입니다."
+      },
+      {
+        "t": "② 전송 메시지의 생성 및 캡슐화",
+        "a": 1,
+        "r": "프로토콜은 이미 만들어진 메시지를 규격에 맞게 포장(캡슐화)하고 전달하는 '규약'일 뿐, 사용자가 작성할 원본 메시지 자체를 '생성'해 내는 주체는 응용 프로그램(어플리케이션)입니다."
+      },
+      {
+        "t": "③ 정보 흐름의 양을 조절하는 흐름 제어",
+        "a": 0,
+        "r": "핵심 기능입니다."
+      },
+      {
+        "t": "④ 정확하고 효율적인 전송을 위한 동기 맞춤",
+        "a": 0,
+        "r": "핵심 기능입니다."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "c": "프로토콜 기능",
+    "q": "다음 중 프로토콜의 기능에 대한 설명으로 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 캡슐화 : 전송 데이터에 제어정보를 추가하는 기능이다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "② 순서제어 : 수신한 데이터의 순서가 바르게 하도록 하는 기능이다.",
+        "a": 0,
+        "r": "시퀀스 번호로 바로잡습니다."
+      },
+      {
+        "t": "③ 다중화: 사용자마다 물리적인 회선을 할당해 전송하는 기능이다.",
+        "a": 1,
+        "r": "다중화(Multiplexing)는 여러 사용자가 '하나의 물리적 회선'을 공유하여 효율적으로 쓰기 위해 쪼개어 쓰는 기술이지, 사용자마다 물리 회선을 통째로 1개씩 할당해 주는 것은 다중화의 정의와 정반대입니다."
+      },
+      {
+        "t": "④ 분할(단편화) : 전송 데이터를 적절한 크기로 분할하는 기능이다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "c": "게이트웨이",
+    "q": "[2023-4회 기출] 다음 중 OSI 기본 참조 모델에서 서로 다른 프로토콜을 사용하는 통신망 간의 상호 접속을 위해 프로토콜 변환 기능을 제공하는 장치는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 게이트웨이",
+        "a": 1,
+        "r": "게이트웨이(Gateway)는 완전히 체계와 구조(프로토콜)가 다른 이기종 네트워크 간을 상호 연결하기 위해 최상위 응용 계층까지 데이터를 완전히 변환해 주는 만능 접속 장치입니다."
+      },
+      {
+        "t": "② 브릿지",
+        "a": 0,
+        "r": "2계층 장비입니다."
+      },
+      {
+        "t": "③ 허브",
+        "a": 0,
+        "r": "1계층 장비입니다."
+      },
+      {
+        "t": "④ 리피터",
+        "a": 0,
+        "r": "1계층 장비입니다."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "c": "OSI 계층",
+    "q": "OSI 7계층에서 가장 하위 레벨의 계층은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전송 계층",
+        "a": 0,
+        "r": "4계층입니다."
+      },
+      {
+        "t": "② 표현 계층",
+        "a": 0,
+        "r": "6계층입니다."
+      },
+      {
+        "t": "③ 데이터링크 계층",
+        "a": 0,
+        "r": "2계층입니다."
+      },
+      {
+        "t": "④ 물리 계층",
+        "a": 1,
+        "r": "OSI 7계층 중 전송 매체와 직접 맞닿아 0과 1의 비트 신호를 전기적/광학적으로 날려 보내는 맨 밑바닥(1계층)은 물리 계층입니다."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "c": "OSI 개방형",
+    "q": "[2023-1회 기출] OSI 참조모델에서 컴퓨터, 단말기, 통신 제어장치 등과 같은 응용 프로세서 간에 데이터통신 기능을 제공하는 요소는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 개방형 시스템 (Open System)",
+        "a": 1,
+        "r": "서로 다른 기종의 시스템들이 표준화된 규약을 통해 통신할 수 있도록 개방된 구조를 갖춘 시스템을 의미합니다."
+      },
+      {
+        "t": "② 응용개체",
+        "a": 0,
+        "r": "상위 소프트웨어 모듈입니다."
+      },
+      {
+        "t": "③ 연결",
+        "a": 0,
+        "r": "링크 개념입니다."
+      },
+      {
+        "t": "④ 전송미디어",
+        "a": 0,
+        "r": "케이블 매체입니다."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "c": "OSI 4계층",
+    "q": "[2023-2회 기출] OSI 7계층 중 시스템간의 전송로 상에서 순서제어, 오류제어, 회복처리, 흐름제어 등의 기능을 실행하는 종단간(End-to-End) 계층은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 물리 계층",
+        "a": 0,
+        "r": "전송 매체를 통한 비트 단위의 전기적·물리적 전송만을 담당하며 제어 기능은 수행하지 않습니다."
+      },
+      {
+        "t": "② 트랜스포트 계층 (전송 계층)",
+        "a": 1,
+        "r": "최종 송수신자 사이의 양 종단간(End-to-End) 투명하고 신뢰성 있는 전송 제어를 담당합니다."
+      },
+      {
+        "t": "③ 데이터링크 계층",
+        "a": 0,
+        "r": "직접 연결된 인접 시스템(노드) 간 전송로 상에서 프레임의 순서제어, 오류제어, 흐름제어 등을 수행합니다."
+      },
+      {
+        "t": "④ 세션 계층",
+        "a": 0,
+        "r": "응용 프로세스 간의 대화 구성, 동기 제어 및 연결 설정·유지·종료를 관리합니다."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "c": "OSI 전송제어",
+    "q": "다음 중 OSI 7계층에서 종단간 신뢰성 있는 전송제어 기능을 수행하는 계층(Layer)은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 2계층",
+        "a": 1,
+        "r": "인접 노드 간 전송 제어(동기화, 오류제어, 흐름제어)를 담당하여 출제 기관 발표정답으로 처리되었습니다."
+      },
+      {
+        "t": "② 3계층",
+        "a": 0,
+        "r": "패킷 전달 경로 배정(라우팅) 및 논리 주소 지정을 담당하는 계층입니다."
+      },
+      {
+        "t": "③ 4계층",
+        "a": 0,
+        "r": "양 종단 간(End-to-End)의 완전한 신뢰성 있는 전송 제어를 전담하므로 단서 조건이 없을 때 실질적인 복수정답 소지가 있습니다."
+      },
+      {
+        "t": "④ 5계층",
+        "a": 0,
+        "r": "응용 프로세스 상호 간 대화 동기화 및 세션 수립·관리를 담당합니다."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "c": "프로토콜 기능",
+    "q": "다음 중 통신 프로토콜의 기능과 관계가 없는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 오류 제어",
+        "a": 0,
+        "r": "전송 중 발생하는 왜곡이나 에러를 검출하고 정정하는 프로토콜의 대표적인 표준 기능입니다."
+      },
+      {
+        "t": "② 흐름 제어",
+        "a": 0,
+        "r": "송수신 노드 간의 데이터 처리 속도 차이로 인한 패킷 손실을 방지하는 필수 기능입니다."
+      },
+      {
+        "t": "③ 전송 제어",
+        "a": 1,
+        "r": "오류·흐름·순서 제어 등을 아우르는 상위 목적 개념일 뿐, 표준 교재에서 분류하는 '프로토콜의 기본 8대/10대 기능 항목'에 직접 포함되지 않는 용어라 오답으로 출제되었습니다."
+      },
+      {
+        "t": "④ 연결 제어",
+        "a": 0,
+        "r": "연결 설정(Connection Setup), 데이터 전송, 연결 해제 단계를 총괄 제어하는 표준 기능입니다."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "c": "전송 계층",
+    "q": "OSI 7계층에서 단말기 사이에 오류 수정과 흐름제어를 수행하여 신뢰성 있고 명확한 데이터 전송을 수행하는 계층은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 네트워크계층",
+        "a": 0,
+        "r": "패킷 라우팅입니다."
+      },
+      {
+        "t": "② 전송계층",
+        "a": 1,
+        "r": "오류 수정과 흐름 제어를 종단 간에 보장하는 전송 계층(Transport)에 대한 설명입니다."
+      },
+      {
+        "t": "③ 데이터링크계층",
+        "a": 0,
+        "r": "인접 노드 간입니다."
+      },
+      {
+        "t": "④ 표현계층",
+        "a": 0,
+        "r": "데이터 포맷 변환입니다."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "c": "데이터링크 기능",
+    "q": "데이터 링크 계층의 기능에 관한 내용으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 인접노드간의 흐름제어와 에러제어 기능을 수행한다.",
+        "a": 0,
+        "r": "2계층의 주요 역할입니다."
+      },
+      {
+        "t": "② 매체공유를 위한 매체접근제어(MAC)를 수행한다.",
+        "a": 0,
+        "r": "이더넷 등에서 충돌을 제어합니다."
+      },
+      {
+        "t": "③ 발신지에서 목적지까지 최적의 패킷 전송경로를 설정한다.",
+        "a": 1,
+        "r": "출발지부터 목적지까지 전 세계 망을 통틀어 최적의 '경로(Route)를 설정'하는 라우팅 임무는 데이터 링크 계층이 아니라 상위인 '네트워크 계층(3계층)'의 고유 임무입니다."
+      },
+      {
+        "t": "④ 프레임을 노드에서 노드로 전달한다.",
+        "a": 0,
+        "r": "인접 노드 간 프레임 전송입니다."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "c": "데이터링크 기능",
+    "q": "다음 OSI 7계층 중 한 노드에서 다른 노드로 프레임을 전송하는 책임을 갖는 층(Layer)은 무엇인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 물리 계층",
+        "a": 0,
+        "r": "단순 비트 송수신입니다."
+      },
+      {
+        "t": "② 데이터 링크 계층",
+        "a": 1,
+        "r": "물리 회선을 통해 인접한 두 노드 간에 프레임(Frame) 단위로 오류 없이 안전하게 데이터를 전달하는 책임을 2계층(데이터 링크 계층)이 가집니다."
+      },
+      {
+        "t": "③ 네트워크 계층",
+        "a": 0,
+        "r": "패킷 단위 전송입니다."
+      },
+      {
+        "t": "④ 응용 계층",
+        "a": 0,
+        "r": "7계층입니다."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "c": "세션 계층",
+    "q": "OSI 7 계층에서 응용 사이의 연결을 설정·관리·해제하는 통신제어 구조를 제공하는 계층은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 물리계층",
+        "a": 0,
+        "r": "1계층입니다."
+      },
+      {
+        "t": "② 표현계층",
+        "a": 0,
+        "r": "6계층입니다."
+      },
+      {
+        "t": "③ 전송계층",
+        "a": 0,
+        "r": "4계층입니다."
+      },
+      {
+        "t": "④ 세션계층",
+        "a": 1,
+        "r": "응용 프로그램 프로세스 간의 대화 상대를 만들고 연결을 설정, 유지, 동기화하며 안전하게 해제하는 관리 구조를 제공하는 계층은 5계층 세션(Session) 계층입니다."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "c": "네트워크 계층",
+    "q": "발신지로부터 목적지로 패킷을 전달하는 기능을 수행하는 OSI 7계층은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 물리계층",
+        "a": 0,
+        "r": "1계층입니다."
+      },
+      {
+        "t": "② 데이터링크계층",
+        "a": 0,
+        "r": "2계층입니다."
+      },
+      {
+        "t": "③ 네트워크계층",
+        "a": 1,
+        "r": "출발지부터 목적지까지 주소를 지정하고 라우팅을 거쳐 패킷을 최종 전달하는 3계층은 네트워크 계층입니다."
+      },
+      {
+        "t": "④ 전송계층",
+        "a": 0,
+        "r": "4계층입니다."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "c": "전송 계층 기능",
+    "q": "OSI 7계층 중 전송계층의 주요 기능으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 동기화",
+        "a": 0,
+        "r": "세션 계층(5계층) 기능입니다."
+      },
+      {
+        "t": "② 프로세스 대 프로세스 전달",
+        "a": 1,
+        "r": "전송 계층(Transport)은 포트 번호를 이용하여 컴퓨터 내부에서 구동 중인 개별 응용 프로세스와 프로세스 간의 신뢰성 있는 데이터 전달을 책임집니다."
+      },
+      {
+        "t": "③ 노드 대 노드 전달",
+        "a": 0,
+        "r": "데이터링크 계층(2계층) 기능입니다."
+      },
+      {
+        "t": "④ 라우팅 테이블의 생성과 유지",
+        "a": 0,
+        "r": "네트워크 계층(3계층) 기능입니다."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "c": "브리지 장비",
+    "q": "LAN 과 LAN 을 연결하는 장비로, OSI 7계층 중 데이터 링크계층에 해당하는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 브리지 (Bridge)",
+        "a": 1,
+        "r": "동일한 프로토콜을 사용하는 두 개의 LAN 세그먼트를 MAC 주소 기반으로 연결하며 데이터 링크 계층(2계층)에서 동작하는 대표적 장비가 브리지입니다."
+      },
+      {
+        "t": "② 라우터",
+        "a": 0,
+        "r": "3계층 장비입니다."
+      },
+      {
+        "t": "③ 리피터",
+        "a": 0,
+        "r": "1계층 장비입니다."
+      },
+      {
+        "t": "④ 게이트웨이",
+        "a": 0,
+        "r": "7계층 장비입니다."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "c": "물리적 특성",
+    "q": "물리계층의 특성 중 DTE 와 DCE 간의 신호의 전압레벨, 상승시간, 하강시간, 잡음이득을 규정한 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 기계적 특성",
+        "a": 0,
+        "r": "커넥터의 핀 모양 규격 등입니다."
+      },
+      {
+        "t": "② 전기적 특성",
+        "a": 1,
+        "r": "전압 레벨, 신호의 주파수, 상승/하강 시간 등 전기에너지와 관련된 물리적 규격은 '전기적 특성'에 해당합니다."
+      },
+      {
+        "t": "③ 기능적 특성",
+        "a": 0,
+        "r": "각 핀이 담당하는 역할 규정입니다."
+      },
+      {
+        "t": "④ 절차적 특성",
+        "a": 0,
+        "r": "신호 교환 순서 규정입니다."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "c": "네트워크 장비 구별",
+    "q": "다음 중 네트워크 계층에서 동작하는 장비로서, 하드웨어와 프로토콜 등이 서로 다른 LAN을 연결하여 네트워크의 크기를 확장시키는 장비는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 리피터",
+        "a": 0,
+        "r": "1계층 장비입니다."
+      },
+      {
+        "t": "② 브리지",
+        "a": 0,
+        "r": "2계층 장비입니다."
+      },
+      {
+        "t": "③ 라우터",
+        "a": 1,
+        "r": "서로 다른 네트워크 간을 IP 주소 기반으로 연결하며 네트워크 계층(3계층)에서 동작하는 장비는 라우터(Router)입니다."
+      },
+      {
+        "t": "④ 허브",
+        "a": 0,
+        "r": "1계층 장비입니다."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "c": "캡슐화 헤더",
+    "q": "OSI 참조모델에서 데이터 패킷이 하위 계층에서 상위 계층으로 이동함에 따라 헤더는 어떻게 처리되는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 삭제된다.",
+        "a": 1,
+        "r": "수신측에서 하위 계층(1계층)부터 상위 계층(7계층)으로 올라갈 때, 각 계층에서 자신에게 해당하는 포장지(헤더)를 한 겹씩 벗겨내며 올라가는 '역캡슐화(Decapsulation)'가 일어나므로 헤더는 순차적으로 삭제됩니다."
+      },
+      {
+        "t": "② 추가된다.",
+        "a": 0,
+        "r": "송신측에서 내려갈 때 추가됩니다."
+      },
+      {
+        "t": "③ 재배열된다.",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 변경된다.",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "c": "캡슐화 개념",
+    "q": "OSI 참조모델에서 N-1 계층 패킷의 데이터 부분은 N 계층의 패킷(데이터와 헤더) 전체를 포함한다. 이러한 개념을 무엇이라고 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 서비스",
+        "a": 0,
+        "r": "상하위 계층간 인터페이스 서비스입니다."
+      },
+      {
+        "t": "② 인터페이스",
+        "a": 0,
+        "r": "접점 규격입니다."
+      },
+      {
+        "t": "③ 대등-대-대등 프로세스",
+        "a": 0,
+        "r": "동일 계층 간 통신입니다."
+      },
+      {
+        "t": "④ 캡슐화 (Encapsulation)",
+        "a": 1,
+        "r": "상위 계층의 패킷 전체를 하위 계층 패킷의 '데이터 영역'에 통째로 집어넣고 자신만의 제어 헤더를 덧붙여 포장하는 방식을 캡슐화라 합니다."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "c": "OSI 계층 설명",
+    "q": "다음 중 OSI 참조모델 각 계층의 역할에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 응용 계층: 사용자가 네트워크에 접근할 수 있도록 사용자 인터페이스를 제공",
+        "a": 0,
+        "r": "7계층의 역할입니다."
+      },
+      {
+        "t": "② 표현 계층: 보안을 위한 데이터 암호화 및 데이터 압축 수행",
+        "a": 0,
+        "r": "6계층의 역할입니다."
+      },
+      {
+        "t": "③ 네트워크 계층: 패킷이 최종 목적지까지 안전하게 전달되도록 경로 지정",
+        "a": 0,
+        "r": "3계층의 역할입니다."
+      },
+      {
+        "t": "④ 데이터 링크 계층: 실제 비트정보가 흐르는 물리적인 통로를 제공",
+        "a": 1,
+        "r": "실제 비트 정보가 0과 1의 전기적 신호로 바뀌어 흘러가는 '물리적인 통로(매체)'를 제공하는 계층은 최하위인 '물리 계층(1계층)'입니다. 데이터 링크 계층이 아닙니다."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "c": "베어러 서비스",
+    "q": "다음 중 광대역 서비스의 베어러 서비스(Bearer Service)와 관련이 없는 OSI 참조모델의 계층은 무엇인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 응용(Application) 계층",
+        "a": 1,
+        "r": "통신에서 '베어러(Bearer)' 서비스란 순수하게 하위 계층에서 데이터를 안전하게 날라다 주는 전송 전용 수송 매개체 기능(1~3계층)을 뜻하므로, 맨 꼭대기 사용자 응용 프로그램 영역인 7계층 응용 계층과는 무관합니다."
+      },
+      {
+        "t": "② 네트워크(Network) 계층",
+        "a": 0,
+        "r": "패킷 전송의 핵심 베어러 계층입니다."
+      },
+      {
+        "t": "③ 데이터링크(Data link) 계층",
+        "a": 0,
+        "r": "프레임 전송 베어러 계층입니다."
+      },
+      {
+        "t": "④ 물리(Physical) 계층",
+        "a": 0,
+        "r": "비트 전송 물리 베어러 계층입니다."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "c": "상/하위 계층",
+    "q": "OSI 7 Layer 중 소프트웨어적인 응용 처리들만 다루는 상위 계층에 속하지 않는 계층은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 네트워크 계층",
+        "a": 1,
+        "r": "OSI 7계층 중 1~3계층(물리, 데이터링크, 네트워크)은 하드웨어와 전송 매체 중심의 '하위 계층'으로 분류되며, 3계층인 네트워크 계층은 상위 계층에 속하지 않습니다."
+      },
+      {
+        "t": "② 세션 계층",
+        "a": 0,
+        "r": "5계층 상위 계층입니다."
+      },
+      {
+        "t": "③ 표현 계층",
+        "a": 0,
+        "r": "6계층 상위 계층입니다."
+      },
+      {
+        "t": "④ 응용 계층",
+        "a": 0,
+        "r": "7계층 상위 계층입니다."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "c": "전송제어 정의",
+    "q": "다음 중 데이터 전송제어에 관한 설명으로 알맞지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① OSI 참조모델 네트워크 계층에서 수행하는 기능을 전송제어라 한다.",
+        "a": 1,
+        "r": "전송제어(Data Link Control / Transport Control)는 주로 2계층(데이터링크)이나 4계층(전송)에서 에러와 흐름을 잡기 위해 수행하는 통신 절차를 뜻하며, 3계층(네트워크)의 주임무인 '라우팅'을 전송제어라 부르지 않습니다."
+      },
+      {
+        "t": "② 전송제어란 입출력제어, 회선제어, 동기제어, 에러제어를 총칭한다.",
+        "a": 0,
+        "r": "전송제어의 일반적인 구성 요소입니다."
+      },
+      {
+        "t": "③ SDLC와 HDLC는 전송제어 방식 중 비트방식 프로토콜에 해당된다.",
+        "a": 0,
+        "r": "비트 중심 제어 규격입니다."
+      },
+      {
+        "t": "④ 에러제어란 전송도중 손실되는 데이터를 검출하여 재전송하거나 정정하는 제어이다.",
+        "a": 0,
+        "r": "에러 제어의 올바른 정의입니다."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "c": "계층 매칭 오류",
+    "q": "OSI 7 Layer 참조 모델의 계층과 주요 기능이 잘못 연결된 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 표현 계층 - 데이터 표현 방식 변환",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "② 세션 계층 - 응용 개체들 간의 대화, 동기화 제어",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "③ 데이터링크 계층 - 경로 배정, 호 설정 및 해지",
+        "a": 1,
+        "r": "패킷의 경로 배정(라우팅)과 호 설정 및 해지 기능은 2계층 데이터링크가 아니라 '네트워크 계층(3계층)'의 고유 기능입니다."
+      },
+      {
+        "t": "④ 물리 계층 - 기계적, 전기적인 통신망 연결",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "c": "비트 중심 프로토콜",
+    "q": "다음 데이터 링크 계층의 프로토콜 중 비트 중심의 프로토콜이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① SDLC",
+        "a": 0,
+        "r": "IBM이 개발한 대표적인 비트 지향(Bit-oriented) 데이터 링크 프로토콜입니다."
+      },
+      {
+        "t": "② X.25",
+        "a": 0,
+        "r": "데이터링크 계층 프로토콜로 비트 지향 방식인 LAPB를 채택하여 사용합니다."
+      },
+      {
+        "t": "③ HDLC",
+        "a": 0,
+        "r": "비트 스터핑(0-bit insertion) 방식을 사용하는 표준 비트 지향(Bit-oriented) 프로토콜입니다."
+      },
+      {
+        "t": "④ PPP",
+        "a": 1,
+        "r": "바이트 스터핑(Byte stuffing)을 사용하는 문자(바이트) 지향(Byte-oriented) 프로토콜이므로 비트 중심 프로토콜이 아닙니다."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "c": "HDLC 단위",
+    "q": "HDLC 전송 프로토콜의 국 사이에서 교환되는 데이터 전송 단위는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 블록",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 프레임 (Frame)",
+        "a": 1,
+        "r": "2계층 데이터링크 계층에서 플래그로 감싸며 송수신하는 기본 데이터 단위를 '프레임(Frame)'이라 부릅니다."
+      },
+      {
+        "t": "③ 비트",
+        "a": 0,
+        "r": "물리계층 단위입니다."
+      },
+      {
+        "t": "④ 패킷",
+        "a": 0,
+        "r": "3계층 네트워크 단위입니다."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "c": "HDLC 플래그",
+    "q": "전송제어 프로토콜 중 HDLC 프로토콜의 시작 플래그가 '01111110' 이면, 종료 플래그는 어느 것인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 11111110",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 01111111",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 01111110",
+        "a": 1,
+        "r": "HDLC 프레임은 양 끝에 정확히 동일한 플래그 비트 패턴인 '01111110 (0x7E)'을 붙여 프레임의 시작과 끝을 알립니다."
+      },
+      {
+        "t": "④ 11111111",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "c": "HDLC 제어부",
+    "q": "HDLC 프레임의 제어부 형식 중 링크 상태의 초기 설정, 데이터 전송 동작 모드 설정 및 데이터 링크의 확립·절단 등에 사용되는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 정보전송 형식 (I Frame)",
+        "a": 0,
+        "r": "사용자 데이터를 실어나릅니다."
+      },
+      {
+        "t": "② 감시 형식 (S Frame)",
+        "a": 0,
+        "r": "흐름제어 및 에러 감시용입니다."
+      },
+      {
+        "t": "③ 비번호제 형식 (U Frame)",
+        "a": 1,
+        "r": "순서 번호를 사용하지 않고 링크의 연결 확립, 모드 설정, 절단 등의 제어 명령만을 전용으로 수행하는 제어부 형식을 비번호제 형식(Unnumbered Frame)이라 합니다."
+      },
+      {
+        "t": "④ 시험 형식",
+        "a": 0,
+        "r": "존재하지 않는 형식입니다."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "c": "HDLC 제어부",
+    "q": "HDLC 프로토콜에서 I-프레임의 P/F(Poll/Final) 비트의 의미는 무엇에 따라 다르게 해석될 수 있는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전송 방식",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 시스템 모드(Mode)",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 시스템 구성(Configuration)",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 프레임이 명령인지 또는 응답인지",
+        "a": 1,
+        "r": "HDLC 제어 필드에 있는 P/F 비트는 주국이 응답을 요구하는 '명령(Poll)'으로 쓰였는지, 아니면 종국이 최종 응답을 보내는 '최종(Final)' 신호로 쓰였는지에 따라 해석이 달라집니다."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "c": "HDLC 특징",
+    "q": "다음 중 HDLC 프로토콜의 특징이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 비트 방식 프로토콜의 일종이다.",
+        "a": 0,
+        "r": "비트 오리엔티드 규격입니다."
+      },
+      {
+        "t": "② 단방향, 반이중, 전이중 전송에 모두 사용된다.",
+        "a": 0,
+        "r": "유연한 전송 방식을 지원합니다."
+      },
+      {
+        "t": "③ 데이터 링크 형식으로 Point-to-Point, Multipoint 및 Loop가 가능하다.",
+        "a": 0,
+        "r": "다양한 망 구조를 지원합니다."
+      },
+      {
+        "t": "④ 에러제어 방식으로 정지대기(Stop-and-Wait) ARQ를 사용한다.",
+        "a": 1,
+        "r": "고효율 전이중 통신을 지원하는 HDLC는 정지대기 ARQ가 아니라, 고성능인 Go-Back-N 및 Selective Repeat ARQ 에러 제어 방식을 사용합니다. (정지대기 ARQ는 고전 BSC의 특징입니다.)"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "c": "HDLC 설명",
+    "q": "다음 중 HDLC 프로토콜에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 바이트 방식의 프로토콜이다.",
+        "a": 1,
+        "r": "HDLC는 문자가 아니라 0과 1의 '비트(Bit) 중심' 스트림으로 제어하는 비트 방식 프로토콜입니다. 바이트 방식 프로토콜은 BSC입니다."
+      },
+      {
+        "t": "② 단방향, 반이중, 전이중 방식 모두 사용이 가능하다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "③ 데이터 링크 계층의 프로토콜이다.",
+        "a": 0,
+        "r": "2계층 규격입니다."
+      },
+      {
+        "t": "④ 오류제어방식으로 ARQ 방식을 사용한다.",
+        "a": 0,
+        "r": "Go-Back-N 등을 씁니다."
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "c": "동기 방식",
+    "q": "다음 중 플래그(Flag) 동기방식의 설명으로 맞는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① BSC 또는 Basic Protocol에서 사용한다.",
+        "a": 0,
+        "r": "BSC는 문자 동기 방식입니다."
+      },
+      {
+        "t": "② SDLC 또는 HDLC Protocol에서 사용한다.",
+        "a": 1,
+        "r": "플래그(0x7E) 비트 패턴을 프레임 앞뒤로 붙여 동기를 맞추고 시작과 끝을 알리는 방식을 플래그 동기 방식이라 하며, 대표적으로 SDLC와 HDLC가 이에 해당합니다."
+      },
+      {
+        "t": "③ 각 비트의 위치를 맞추는 디지트 동기방식이다.",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 데이터는 문자 단위로 전송하며 동기를 유지한다.",
+        "a": 0,
+        "r": "문자 단위는 문자 동기 방식입니다."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "c": "HDLC 동작모드",
+    "q": "다음 중 HDLC 데이터 전송 모드에서 복합국끼리는 상대방 복합국의 허가가 없어도 명령과 응답을 송신할 수 있는 모드는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 비동기 평형모드 (ABM)",
+        "a": 1,
+        "r": "비동기 평형모드(ABM, Asynchronous Balanced Mode)는 두 복합국(Combined Station)이 주종 관계 없이 대등한 자격으로 상대방의 허가(Poll)를 기다릴 필요 없이 언제든 원할 때 데이터를 주고받을 수 있는 전이중 전송 모드입니다."
+      },
+      {
+        "t": "② 정규 응답모드 (NRM)",
+        "a": 0,
+        "r": "주국의 허가가 있어야만 송신 가능한 반이중 모드입니다."
+      },
+      {
+        "t": "③ 비동기 응답모드 (ARM)",
+        "a": 0,
+        "r": "종국이 주국 허가 없이 보낼 수 있으나 주종 관계가 있습니다."
+      },
+      {
+        "t": "④ 절단모드 (DCM)",
+        "a": 0,
+        "r": "링크가 끊어진 상태입니다."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "c": "HDLC 프레임 구조",
+    "q": "다음 중 HDLC 프레임 구조에서 FCS(프레임 검사 시퀀스)의 비트 수는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 6",
+        "a": 0,
+        "r": "HDLC 프레임 필드 구성 비트수 규격에 해당하지 않는 수치입니다."
+      },
+      {
+        "t": "② 12",
+        "a": 0,
+        "r": "통신 프레임의 헤더나 검사 필드 규격에서 일반적으로 사용되지 않는 비트수입니다."
+      },
+      {
+        "t": "③ 16",
+        "a": 1,
+        "r": "오류 검출용 필드인 FCS(Frame Check Sequence)는 표준으로 CRC-16 방식을 사용하여 16비트(또는 확장 시 32비트)로 구성됩니다."
+      },
+      {
+        "t": "④ 24",
+        "a": 0,
+        "r": "HDLC 프레임 구조(플래그 8, 주소부 8, 제어부 8, FCS 16비트)에 포함되지 않는 비트수입니다."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "c": "비트 스터핑",
+    "q": "플래그 동기방식에서 비트 스터핑(Bit Stuffing)을 행하는 목적은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 프레임 검사 시퀀스의 구분",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 데이터의 투명성 보장",
+        "a": 1,
+        "r": "정보 데이터 중간에 우연히 플래그 패턴(01111110)과 똑같은 비트열이 포함되면 수신기가 프레임 끝으로 오해해 데이터가 잘리므로, 이를 막기 위해 1이 5개 연속되면 강제로 0을 끼워 넣었다가 빼내는 '데이터 투명성(Transparency) 보장' 기법이 비트 스터핑입니다."
+      },
+      {
+        "t": "③ 정보부 암호화",
+        "a": 0,
+        "r": "보안 암호화 목적이 아닙니다."
+      },
+      {
+        "t": "④ 데이터 변환",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "c": "HDLC 주소",
+    "q": "전송제어 프로토콜 중 HDLC 프로토콜의 프레임 구조에서 어드레스(Address) 부의 모든 비트가 1인 경우를 무엇이라 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① No Station Address",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② Destination Address",
+        "a": 0,
+        "r": "단순 목적지 주소입니다."
+      },
+      {
+        "t": "③ Source Address",
+        "a": 0,
+        "r": "출발지 주소입니다."
+      },
+      {
+        "t": "④ Global Address (브로드캐스트)",
+        "a": 1,
+        "r": "HDLC 주소 필드의 모든 비트가 1(11111111)로 채워져 있으면 특정 종국 하나가 아니라 망에 연결된 모든 국에 동시에 데이터를 뿌리는 '글로벌 주소(브로드캐스트)' 역할을 수행합니다."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "c": "비트 방식 프로토콜",
+    "q": "다음 중 비트 방식의 데이터링크 프로토콜이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① BSC",
+        "a": 1,
+        "r": "BSC(Binary Synchronous Communication)는 앞서 설명한 대로 1바이트 문자 단위로 동기를 잡는 '문자(Character) 중심' 프로토콜이므로 비트 방식이 아닙니다."
+      },
+      {
+        "t": "② SDLC",
+        "a": 0,
+        "r": "IBM의 비트 방식 프로토콜입니다."
+      },
+      {
+        "t": "③ HDLC",
+        "a": 0,
+        "r": "대표적인 비트 방식 ISO 표준입니다."
+      },
+      {
+        "t": "④ LAPB",
+        "a": 0,
+        "r": "HDLC 기반의 비트 방식 X.25 링크 규격입니다."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "c": "HDLC S프레임",
+    "q": "HDLC 프로토콜에서 S-프레임(감시 프레임)의 명령어와 거리가 먼 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Receive Ready (RR)",
+        "a": 0,
+        "r": "수신 준비 완료 S 프레임입니다."
+      },
+      {
+        "t": "② Request Disconnect (RD)",
+        "a": 1,
+        "r": "연결 해제를 요구하는 RD는 S-프레임 감시 명령이 아니라 링크 제어를 담당하는 '비번호제(U) 프레임'의 명령어에 속합니다."
+      },
+      {
+        "t": "③ Reject (REJ)",
+        "a": 0,
+        "r": "오류 발생 시 재전송을 요구하는 S 프레임입니다."
+      },
+      {
+        "t": "④ Selective-Reject (SREJ)",
+        "a": 0,
+        "r": "선택적 거부 S 프레임입니다."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "c": "HDLC 전달 모드",
+    "q": "다음 중 HDLC 링크 제어 프로토콜의 전달 모드가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 정상 응답 모드 (NRM)",
+        "a": 0,
+        "r": "주국 허가 시 전송하는 반이중 모드입니다."
+      },
+      {
+        "t": "② 동기 응답 모드",
+        "a": 1,
+        "r": "HDLC 공식 전송 모드 분류에는 NRM, ARM, ABM이 존재하며 '동기 응답 모드'라는 공식 명칭은 존재하지 않는 오답 오타입니다."
+      },
+      {
+        "t": "③ 비동기 균형 모드 (ABM)",
+        "a": 0,
+        "r": "복합국 간 대등한 전이중 모드입니다."
+      },
+      {
+        "t": "④ 비동기 응답 모드 (ARM)",
+        "a": 0,
+        "r": "종국이 자발적 송신 가능한 모드입니다."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "c": "HDLC 프레임 순서",
+    "q": "HDLC의 프레임 구조의 순서가 옳은 것은? (단, F:플래그, A:주소부, C:제어부, I:정보부, FCS:플래그검사시퀀스)",
+    "img": "",
+    "o": [
+      {
+        "t": "① F - A - C - I - FCS - F",
+        "a": 1,
+        "r": "HDLC 표준 프레임 구조의 정확한 순서는 [시작 플래그(F) -> 주소부(A) -> 제어부(C) -> 정보데이터부(I) -> 에러검사(FCS) -> 종료 플래그(F)] 입니다. (암기법: 'F A C I F')스니펫 연상"
+      },
+      {
+        "t": "② F - I - C - A - FCS - F",
+        "a": 0,
+        "r": "주소와 정보 순서가 뒤바뀌었습니다."
+      },
+      {
+        "t": "③ F - A - I - C - FCS - F",
+        "a": 0,
+        "r": "정보부와 제어부 순서가 뒤바뀌었습니다."
+      },
+      {
+        "t": "④ F - I - A - C - FCS - F",
+        "a": 0,
+        "r": "틀린 순서입니다."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "c": "HDLC 특징",
+    "q": "다음 중 HDLC 프로토콜의 특징이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전송제어 절차로 비트방식 프로토콜이다.",
+        "a": 0,
+        "r": "비트 단위 동기 규격입니다."
+      },
+      {
+        "t": "② 문자 동기에 의해 투명한 데이터 전송을 보장한다.",
+        "a": 1,
+        "r": "HDLC는 문자가 아니라 '비트 스터핑'이라는 비트 동기 및 투명성 보장 메커니즘을 사용하므로, 문자 동기(Character Sync)에 의해 투명성을 보장한다는 설명은 틀렸습니다."
+      },
+      {
+        "t": "③ 에러검출 방식으로 CRC를 사용한다.",
+        "a": 0,
+        "r": "FCS에 CRC 코드를 담아 검출합니다."
+      },
+      {
+        "t": "④ 에러제어 방식으로 Go-back-N ARQ를 사용한다.",
+        "a": 0,
+        "r": "연속 ARQ 방식을 지원합니다."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "c": "X.25 프로토콜",
+    "q": "X.25 프로토콜의 링크레벨에서 적용되는 프로토콜은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① LAP-B",
+        "a": 1,
+        "r": "ITU-T 패킷 교환망 표준인 X.25의 2계층(데이터 링크 레벨)에서는 HDLC의 변형 규격인 LAP-B(Link Access Procedure-Balanced) 프로토콜을 사용합니다."
+      },
+      {
+        "t": "② ADCCP",
+        "a": 0,
+        "r": "미국 ANSI의 링크 표준입니다."
+      },
+      {
+        "t": "③ BSC",
+        "a": 0,
+        "r": "고전 문자형 프로토콜입니다."
+      },
+      {
+        "t": "④ SDLC",
+        "a": 0,
+        "r": "IBM 비트형 프로토콜입니다."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "c": "X.25 표준",
+    "q": "다음 중 X.25 표준에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① ITU-T가 개발한 패킷교환 방식의 장거리통신망 표준이다.",
+        "a": 0,
+        "r": "공중 패킷망 표준입니다."
+      },
+      {
+        "t": "② X.25 계층 구조는 물리계층, 프레임계층, 상위계층으로 구성되어 있다.",
+        "a": 1,
+        "r": "X.25의 3계층 구조는 하위부터 순서대로 '물리 계층(Physical)', '링크 계층(Frame/Link)', 그리고 '패킷 계층(Packet)'으로 구성됩니다. 상위계층이라 부르지 않습니다."
+      },
+      {
+        "t": "③ 패킷 방식 단말이 데이터 교환을 하기 위해 패킷 네트워크에 연결되는 방법을 정의한다.",
+        "a": 0,
+        "r": "DTE-DCE 간 인터페이스 규격입니다."
+      },
+      {
+        "t": "④ 패킷의 다중화는 비동기식 TDM을 사용한다.",
+        "a": 0,
+        "r": "가상회선을 통한 통계적 시분할 다중화를 지원합니다."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "c": "X.25 계층",
+    "q": "X.25 인터페이스 프로토콜에서 LAPB 방식을 정의하며, ISO7776에서 제정하였고 HDLC의 일종으로 제어 순서, 오류, 흐름 등을 제어하는 계층은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 네트워크계층",
+        "a": 0,
+        "r": "패킷 계층에 해당합니다."
+      },
+      {
+        "t": "② 데이터링크계층",
+        "a": 1,
+        "r": "LAPB 프로토콜은 X.25 구조에서 프레임 간 오류 및 흐름 제어를 담당하는 '데이터링크 계층(2계층)'에 해당합니다."
+      },
+      {
+        "t": "③ 물리계층",
+        "a": 0,
+        "r": "X.21 등의 물리 규격입니다."
+      },
+      {
+        "t": "④ 표현계층",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "c": "X.25 패킷계층",
+    "q": "X.25 프로토콜에 대한 설명 중 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 물리계층, 링크계층, 패킷계층 등으로 구성된다.",
+        "a": 0,
+        "r": "X.25의 3대 계층 구조입니다."
+      },
+      {
+        "t": "② 패킷형 단말기를 패킷 교환망에 접속하기 위한 인터페이스 프로토콜이다.",
+        "a": 0,
+        "r": "정확한 정의입니다."
+      },
+      {
+        "t": "③ 패킷 계층에서의 데이터 전송 절차는 호 설정, 데이터 전송, 호 해제의 3단계이다.",
+        "a": 0,
+        "r": "가상회선 설정 기반의 3단계 절차를 거칩니다."
+      },
+      {
+        "t": "④ 모든 패킷은 최소 2옥텟의 헤드를 가지며 일반형식식별자(GFI), 가상회선식별자(VCI) 필드로 구성된다.",
+        "a": 1,
+        "r": "가상회선 식별자를 뜻하는 용어는 VCI가 아니라 'LCN (Logical Channel Number)' 또는 논리 채널 그룹/번호 필드로 구성됩니다."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "c": "BSC 특징",
+    "q": "BSC(Binary Synchronous Communication) 프로토콜의 특징이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 사용 코드에 제한이 있다.",
+        "a": 0,
+        "r": "EBCDIC이나 ASCII 등 특정 문자 코드 체계에 의존합니다."
+      },
+      {
+        "t": "② 동일한 통신 회선상의 터미널은 동일한 코드를 사용한다.",
+        "a": 0,
+        "r": "문자 동기 방식의 제약입니다."
+      },
+      {
+        "t": "③ 전이중 전송 방식만 가능하다.",
+        "a": 1,
+        "r": "BSC는 구조상 주고받기를 번갈아 수행하는 '반이중(Half-Duplex) 방식'만을 지원하는 고전 프로토콜입니다. 전이중 전송은 HDLC의 특징입니다."
+      },
+      {
+        "t": "④ 전파 지연 시간이 긴 선로에서는 비효율적이다.",
+        "a": 0,
+        "r": "Stop-and-Wait ARQ를 쓰므로 위성이랑 쓰면 매우 비효율적입니다."
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "c": "BSC 방식",
+    "q": "다음 중 BSC 프로토콜에서 사용되지 않는 방식은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 루프(Loop) 방식",
+        "a": 1,
+        "r": "고리 형태로 단말들을 엮는 루프(Loop) 방식 데이터 링크 제어 형태는 비트 중심의 고성능 규격(HDLC 등)에서 지원하며, 고전 문자형인 BSC에서는 지원하지 않습니다."
+      },
+      {
+        "t": "② 반이중(Half Duplex) 방식",
+        "a": 0,
+        "r": "기본 전송 방식입니다."
+      },
+      {
+        "t": "③ 포인트 투 포인트(Point-to-Point) 방식",
+        "a": 0,
+        "r": "1:1 연결을 지원합니다."
+      },
+      {
+        "t": "④ 셀렉션(Selection) 방식",
+        "a": 0,
+        "r": "주국이 종국에 수신 준비를 묻는 회선 제어 방식입니다."
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "c": "제어 문자 EOT",
+    "q": "각종 제어문자들의 기능 중 데이터 블록의 전송이 끝나 논리적 링크를 해제할 때 사용되는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① ACK",
+        "a": 0,
+        "r": "긍정 응답입니다."
+      },
+      {
+        "t": "② NAK",
+        "a": 0,
+        "r": "부정 응답입니다."
+      },
+      {
+        "t": "③ ENQ",
+        "a": 0,
+        "r": "링크 연결 요구 및 응답 문의입니다."
+      },
+      {
+        "t": "④ EOT (End of Transmission)",
+        "a": 1,
+        "r": "데이터 전송의 완전한 종료를 알리고 통신 회선(링크)의 연결을 해제하여 초기화 상태로 돌려놓는 제어 문자는 EOT 입니다."
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "c": "BSC 문자 오류",
+    "q": "전송제어 프로토콜 중 BSC 프로토콜의 전송제어 문자 내용이 틀린 것은? (교재 오타 정정 반영)",
+    "img": "",
+    "o": [
+      {
+        "t": "① SYN : 헤딩의 시작 (원 교재 오타 지문)",
+        "a": 1,
+        "r": "SYN(Synchronous Idle)은 문자의 시작이 아니라 오직 '문자 동기'를 유지하기 위한 동기 전용 문자입니다. 헤딩의 시작 문자는 SOH(Start of Heading)입니다."
+      },
+      {
+        "t": "② STX : 헤딩의 종료 및 TEXT의 개시",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "③ EOT : 전송의 끝 및 데이터링크의 초기화",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "④ ACK : 수신한 정보 메시지에 대한 긍정응답",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "c": "BSC 특징",
+    "q": "BSC(Binary Synchronous Communication) 프로토콜의 특징이 아닌 것은?\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① 사용 코드에 제한이 있다.",
+        "a": 0,
+        "r": "ASCII, EBCDIC, Transcode 등 정해진 특정 문자 코드 체계만 사용할 수 있어 제약이 있습니다."
+      },
+      {
+        "t": "② 동일한 통신 회선상의 터미널은 동일한 코드를 사용한다.",
+        "a": 0,
+        "r": "문자 중심 동기식 프로토콜이므로 같은 회선 내 단말기들은 동일한 문자 세트를 공유해야 정상 통신이 가능합니다."
+      },
+      {
+        "t": "③ 전이중 전송 방식만 가능하다.",
+        "a": 1,
+        "r": "BSC는 전송 후 응답을 기다려야 하는 정지-대기(Stop-and-Wait) 방식을 쓰므로 반이중(Half Duplex) 전송만 지원합니다."
+      },
+      {
+        "t": "④ 전파 지연 시간이 긴 선로에서는 비효율적이다.",
+        "a": 0,
+        "r": "프레임을 하나 보낼 때마다 ACK/NAK 확인 응답을 기다려야 하므로 전파 지연이 큰 전송로(예: 위성통신)에서는 효율이 극도로 떨어집니다."
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "c": "BSC 방식",
+    "q": "다음 중 BSC 프로토콜에서 사용되지 않는 방식은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 루프(Loop) 방식",
+        "a": 1,
+        "r": "고리 형태의 루프 접속 제어 구조는 고전 문자형 BSC에서 지원하지 않습니다."
+      },
+      {
+        "t": "반이중 방식",
+        "a": 0,
+        "r": "지원합니다."
+      },
+      {
+        "t": "포인트 투 포인트 방식",
+        "a": 0,
+        "r": "지원합니다."
+      },
+      {
+        "t": "셀렉션 방식",
+        "a": 0,
+        "r": "지원합니다."
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "c": "제어 문자 EOT",
+    "q": "데이터 블록의 전송이 끝나 논리적 링크를 해제할 때 사용되는 전송 제어 문자는?",
+    "img": "",
+    "o": [
+      {
+        "t": "ACK",
+        "a": 0,
+        "r": "수신 확인입니다."
+      },
+      {
+        "t": "NAK",
+        "a": 0,
+        "r": "에러 발생 통보입니다."
+      },
+      {
+        "t": "ENQ",
+        "a": 0,
+        "r": "연결 문의입니다."
+      },
+      {
+        "t": "EOT (End of Transmission)",
+        "a": 1,
+        "r": "데이터링크의 초기화와 회선 해제를 뜻하는 EOT 문자에 대한 반복 출제 문항입니다."
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "c": "BSC 문자 오류",
+    "q": "전송제어 프로토콜 중 BSC 프로토콜의 전송제어 문자 내용이 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① SYN : 헤딩의 시작",
+        "a": 1,
+        "r": "SYN은 동기 유지 문자이며, 헤딩의 시작은 SOH(Start of Heading)입니다."
+      },
+      {
+        "t": "STX : 헤딩의 종료 및 TEXT의 개시",
+        "a": 0,
+        "r": "맞습니다."
+      },
+      {
+        "t": "EOT : 전송의 끝 및 데이터링크의 초기화",
+        "a": 0,
+        "r": "맞습니다."
+      },
+      {
+        "t": "ACK : 수신한 정보 메시지에 대한 긍정응답",
+        "a": 0,
+        "r": "맞습니다."
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "c": "블록동기",
+    "q": "블록동기는 문자동기와 플래그 방식으로 구분되는데 문자동기 방식의 설명 중 틀린 것은?\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① 데이터블록 앞에 데이터의 시작을 알리는 전송제어 코드 \"STX\" 사용",
+        "a": 0,
+        "r": "본문 데이터 블록의 시작을 나타내기 위해 STX(Start of Text) 문자를 사용하는 것이 맞습니다."
+      },
+      {
+        "t": "② 전송 시 동기용 전송 제어코드 \"SYN\" 2개 이상 사용",
+        "a": 0,
+        "r": "프레임 동기를 맞추기 위해 블록 맨 앞에 최소 2개 이상의 SYN(Synchronous Idle) 문자를 배치합니다."
+      },
+      {
+        "t": "③ 데이터 전송의 끝을 의미하는 \"END\" 제어신호 사용",
+        "a": 1,
+        "r": "데이터 전송 종료 시에는 ETX(End of Text)나 전체 전송 종료를 뜻하는 EOT(End of Transmission)를 사용하며, \"END\"라는 제어 코드는 존재하지 않습니다."
+      },
+      {
+        "t": "④ 에러를 체크하기 위한 에러제어코드 \"BCC\" 사용",
+        "a": 0,
+        "r": "전송 중 발생한 블록 단위의 오류 검출을 위해 프레임 끝부분에 BCC(Block Check Character)를 부가합니다."
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "c": "전송 제어 프로토콜",
+    "q": "전송제어 프로토콜 중 BASIC 프로토콜의 BCC 체크범위가 아닌 것은?\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① STX",
+        "a": 0,
+        "r": "① STX\n"
+      },
+      {
+        "t": "② SOH",
+        "a": 1,
+        "r": "블록 검사 문자(BCC)의 계산은 SOH 바로 다음 문자부터 시작되므로 SOH 문자 자체는 체크 범위에서 제외됩니다."
+      },
+      {
+        "t": "③ ETX",
+        "a": 0,
+        "r": "텍스트 블록의 끝을 알리는 제어문자(ETX 또는 ETB)는 BCC 체크 범위에 최종 포함됩니다."
+      },
+      {
+        "t": "④ Text",
+        "a": 0,
+        "r": "전송하려는 실제 데이터 본문 영역이므로 당연히 오류 검사(BCC) 범위에 포함됩니다."
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "c": "표준화기구",
+    "q": "구내통신선로설비란 통신사업자설비와 건물 내의 가입자 단말기 간을 접속하여 통신서비스가 가능케 하는 건물 내 정보통신 기반시설을 말한다. 다음 중 이러한 구내통신선로 기술기준에 대한 국제표준은 어느 것인가?\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① ISO/IEC 96000",
+        "a": 0,
+        "r": "구내 배선 규격과 무관한 표준 번호입니다."
+      },
+      {
+        "t": "② ISO/IEC 29103",
+        "a": 0,
+        "r": "소프트웨어 및 시스템 엔지니어링 관련 표준 규격입니다."
+      },
+      {
+        "t": "③ ISO/IEC 11801",
+        "a": 1,
+        "r": "일반 업무용 빌딩 및 상업용 건물의 구내 통신 배선 설비(통합 배선 시스템)에 대한 대표적인 국제 표준입니다"
+      },
+      {
+        "t": "④ ISO 20022",
+        "a": 0,
+        "r": "금융 기관 간 금융 메시지 전송 및 전자 데이터 교환을 위한 금융 통신 표준입니다."
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "c": "표준화기구",
+    "q": "ISO/IEC JTC 1의 활동 중 SC21(OSI 상위계층/데이터베이스)에 활동하는 WG 설명으로 맞는 것은?\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① WG1: OSI 관리",
+        "a": 0,
+        "r": "SC21의 WG1은 OSI 구조(OSI Architecture)를 담당하므로 매칭이 잘못되었습니다."
+      },
+      {
+        "t": "② WG4: OSI 구조",
+        "a": 0,
+        "r": "SC21의 WG4는 OSI 관리(OSI Management)를 담당하므로 설명이 바뀌어 있습니다."
+      },
+      {
+        "t": "③ WG5: 특정 응용 서비스",
+        "a": 1,
+        "r": "출제 기관에서 정답으로 발표한 보기입니다. (※ 실제 SC21 과거 조직 기준으로는 WG5가 프로토콜 규격 및 특정 서비스 관련 연구를 수행하였으나, 현재 SC21 분과 자체가 1997년에 해체 및 재편되어 실무·수험적으로 논란이 된 문항입니다.)"
+      },
+      {
+        "t": "④ WG8: 데이터베이스",
+        "a": 0,
+        "r": "과거 SC21에서 데이터베이스(Database) 관련 표준화는 WG3에서 담당했습니다."
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "c": "회선 제어 방식",
+    "q": "ISO의 OSI 및 IBM의 SNA 등을 무엇이라고 하는가?\n\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① 프로토콜 프로그램",
+        "a": 0,
+        "r": "네트워크 프로토콜을 소프트웨어로 구현한 개별 실행 코드를 의미하므로 전체 통신 구조 체계를 일컫는 용어가 아닙니다."
+      },
+      {
+        "t": "② 네트워크 아키텍처",
+        "a": 1,
+        "r": "컴퓨터 간 통신을 위해 프로토콜과 계층 구조를 체계적으로 정립한 포괄적인 통신망 구조(설계 체계)를 의미합니다."
+      },
+      {
+        "t": "③ 네트워크 인터페이스",
+        "a": 0,
+        "r": "서로 다른 하드웨어나 소프트웨어 계층 간에 신호와 데이터를 주고받기 위한 접속점(접점 규격)입니다."
+      },
+      {
+        "t": "④ 네트워크 관리",
+        "a": 0,
+        "r": "네트워크 자원의 상태 감시, 장애 복구, 성능 측정 및 보안 유지 등을 총괄하는 운영 관리 행위입니다."
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "c": "표준화기구",
+    "q": "국제 표준화 기구 중 정보통신 기술 분야의 표준화를 목적으로 한 국제 표준화 기구는?\n\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① ITU(International Telecommunication Unit)",
+        "a": 1,
+        "r": "UN 산하의 유일한 정부 간 공식 국제기구로, 유·무선 정보통신 및 전파 기술 전반의 국제 표준을 총괄 제정합니다. (※ 약어 표기 원형은 International Telecommunication Union입니다.)"
+      },
+      {
+        "t": "② ISO(International Organization for Standardization)",
+        "a": 0,
+        "r": "정보통신 기술뿐만 아니라 공학, 농업, 제조업 등 비전기·전자 전 분야에 걸친 광범위한 국제 표준을 제정하는 민간 기구입니다."
+      },
+      {
+        "t": "③ IEEE(Institute of Electrical and Electronics Engineers)",
+        "a": 0,
+        "r": "미국에 본부를 두고 전기·전자 및 컴퓨터 공학 기술 표준(예: LAN 802 시리즈)을 제정하는 국제 규모의 전문 학술 단체입니다."
+      },
+      {
+        "t": "④ TTA(Telecommunication Technology Association)",
+        "a": 0,
+        "r": "국제 표준화 기구가 아닌 대한민국 국내 ICT 표준화 및 시험 인증을 전담하는 국가 공인 표준화 단체입니다."
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "c": "표준화기구",
+    "q": "V.32, V.42, X.25등의 표준을 제정한 표준화 기구는 어디인가?\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① IEEE",
+        "a": 0,
+        "r": "LAN/MAN 기술 규격인 IEEE 802 시리즈(이더넷, Wi-Fi 등)를 주로 제정하는 단체입니다."
+      },
+      {
+        "t": "② ANSI",
+        "a": 0,
+        "r": "미국의 표준화 체계를 총괄하는 민간 비영리 표준화 기구(미국표준협회)입니다."
+      },
+      {
+        "t": "③ ISO",
+        "a": 1,
+        "r": "OSI 7계층 참조 모델, HDLC 프로토콜 등 광범위한 산업·통신 국제 표준을 제정하는 기구입니다."
+      },
+      {
+        "t": "④ ITU-T",
+        "a": 0,
+        "r": "아날로그 전화망 모뎀 규격(V 시리즈) 및 공중 데이터망 인터페이스 규격(X 시리즈: X.21, X.25 등)을 제정한 국제전기통신연합 전기통신표준화부문(구 CCITT)입니다."
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "c": "표준화기구",
+    "q": "미국 국립표준협회로서 미국의 표준 제정은 물론 ISO등 국제 표준화 활동에서 미국을 대표하는 기관은?\n\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① DIN",
+        "a": 0,
+        "r": "독일의 국가 표준을 제정하고 관리하는 독일 규격 협회입니다."
+      },
+      {
+        "t": "② BSI",
+        "a": 0,
+        "r": "영국의 국가 표준 제정 및 인증 업무를 수행하는 영국 표준 협회입니다."
+      },
+      {
+        "t": "③ ANSI",
+        "a": 1,
+        "r": "미국의 민간 비영리 표준화 기구(미국 국립표준협회)로, 미국 내 공업 규격 제정 및 ISO·IEC 등 국제 표준화 기구에서 미국을 대표하는 기관입니다."
+      },
+      {
+        "t": "④ EIA",
+        "a": 0,
+        "r": "미국의 전자제품 제조사 연합 단체로, RS-232C 등 전자·통신 인터페이스 표준을 제정했던 기구입니다."
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "c": "표준화기구",
+    "q": "ITU-T 권고안 중 전화망을 통한 아날로그 신호 전송에 대한 인터페이스 규격은?\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① G 시리즈",
+        "a": 0,
+        "r": "전송 시스템(디지털 시스템, 광전송로 등) 및 전송 미디어에 대한 권고안입니다."
+      },
+      {
+        "t": "② V 시리즈",
+        "a": 1,
+        "r": "일반 공중 전화망(PSTN)을 이용한 데이터 통신(모뎀 인터페이스, 아날로그 신호 전송 규격 등)을 규정한 권고안입니다."
+      },
+      {
+        "t": "③ Q 시리즈",
+        "a": 0,
+        "r": "교환 방식 및 신호 방식(공통선 신호 방식 SS7 등)에 대한 권고안입니다."
+      },
+      {
+        "t": "④ X 시리즈",
+        "a": 0,
+        "r": "공중 데이터망(PDN, 패킷 교환망)을 통한 디지털 데이터 전송 인터페이스(X.21, X.25 등) 및 네트워크 보안 규격입니다."
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "c": "표준화기구",
+    "q": "다음 중 통신망 구조를 나타낼 때 통신망의 기능들을 계층으로 나누는 이유가 아닌 것은?\n\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① 각 계층 별 정의는 이기종간 호환성을 유지할 수 있다.",
+        "a": 0,
+        "r": "각 계층마다 명확하게 표준화된 인터페이스를 규정함으로써, 제조사나 시스템 구조가 다른 이기종 간에도 원활한 통신망 연결이 가능해집니다."
+      },
+      {
+        "t": "② 상위 계층 기능을 하위 계층의 기능이 지원하는 경우를 잘 나타 낼 수 있다.",
+        "a": 0,
+        "r": "통신망 모델은 철저하게 하위 계층이 바로 위 상위 계층에게 특정 통신 서비스를 제공하는 수직적 상호작용 구조를 가집니다."
+      },
+      {
+        "t": "③ 상위 계층의 정보가 하위 계층에서는 내용으로 전달되는 경우를 잘 나타낼 수 있다.",
+        "a": 0,
+        "r": "데이터를 전송할 때 상위 계층의 제어 정보(헤더)와 데이터 전체가 하위 계층으로 내려가면서 다시 하나의 데이터(페이로드)로 취급되는 캡슐화(Encapsulation) 과정을 명확히 설명할 수 있습니다."
+      },
+      {
+        "t": "④ 상위 계층일수록 물리적이고 실제의 정보 전달 기능을 제시할 수 있다.",
+        "a": 1,
+        "r": "물리적 매체를 통해 0과 1의 실제 전기적·기계적 신호를 전달하는 것은 최하위 계층(물리 계층)의 역할입니다. 계층이 상위로 올라갈수록 물리적 특성보다는 사용자 중심의 논리적이고 추상적인 응용 서비스를 다루게 되므로 틀린 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "c": "OSI-7",
+    "q": "OSI-7 계층 중 네트워크 종단 시스템(End to End) 간의 투명한 데이터 전송에 관련된 계층은?\n\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① 물리 계층",
+        "a": 0,
+        "r": "전송 매체를 통해 비트 스트림(0과 1)을 전기적·광학적 신호로 전송하는 최하위 계층입니다."
+      },
+      {
+        "t": "② 네트워크 계층",
+        "a": 0,
+        "r": "패킷의 발신지-목적지 경로 선택(라우팅) 및 논리 주소 지정(IP)을 담당합니다."
+      },
+      {
+        "t": "③ 트랜스포트 계층",
+        "a": 1,
+        "r": "양 종단 시스템(End-to-End) 프로세스 간에 상위 계층이 하위 전송 기술에 신경 쓰지 않도록 투명하고 신뢰성 있는 데이터 전송을 보장하는 계층입니다."
+      },
+      {
+        "t": "④ 응용 계층",
+        "a": 0,
+        "r": "최종 사용자가 네트워크 자원에 접근할 수 있도록 전자우편, 파일 전송, 웹 접속 등의 사용자 인터페이스 및 응용 서비스를 제공합니다."
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "c": "라우터",
+    "q": "다음 중 라우터(Router)에 대한 설명으로 적합하지 않은 것은?\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① 원격지에 있는 랜(LAN)과 랜(LAN)을 연결시켜주는 역할을 한다.",
+        "a": 0,
+        "r": "라우터는 WAN 회선을 통해 서로 멀리 떨어진 독립적인 LAN 망들을 상호 연결하는 핵심 장비입니다."
+      },
+      {
+        "t": "② OSI 참조모델의 1계층부터 7계층까지의 기능을 지원한다.",
+        "a": 1,
+        "r": "라우터는 OSI 3계층(네트워크 계층) 장비로서 주로 1~3계층의 기능을 수행합니다. 1계층부터 7계층 전 계층에 걸쳐 프로토콜 변환을 수행하는 장비는 게이트웨이(Gateway)이므로 적합하지 않은 설명입니다."
+      },
+      {
+        "t": "③ 브로드캐스트 패킷을 필터링하여 불필요한 트래픽을 줄일 수 있다.",
+        "a": 0,
+        "r": "라우터는 브로드캐스트 도메인을 분할하여 불필요한 브로드캐스트 트래픽이 다른 네트워크로 전파되지 않도록 차단(필터링)합니다."
+      },
+      {
+        "t": "④ 인터넷 환경에서 송신단과 수신단간에 최적화된 경로를 설정 관리한다.",
+        "a": 0,
+        "r": "라우팅 테이블과 라우팅 프로토콜(OSPF, BGP 등)을 사용하여 패킷이 목적지까지 도달하는 최적의 경로를 결정하고 제어합니다."
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "c": "프로토콜 [2024 CBT 기출]",
+    "q": "다음 중 근거리 통신망(LAN)에서 사용되는 대표적인 프로토콜이 아닌 것은?\n\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① TCP/IP",
+        "a": 0,
+        "r": "인터넷 표준 프로토콜이자 오늘날 대부분의 LAN 및 WAN 환경에서 기본 전송 통신 프로토콜로 사용됩니다."
+      },
+      {
+        "t": "② HDLC",
+        "a": 1,
+        "r": "1:1 점대점(Point-to-Point) 또는 멀티포인트 전용회선 등 주로 광역 통신망(WAN) 환경의 직렬 링크에서 사용되는 데이터 링크 계층 프로토콜입니다."
+      },
+      {
+        "t": "③ NetBEUI",
+        "a": 0,
+        "r": "과거 IBM 및 마이크로소프트의 소규모 LAN 환경에서 라우팅 없이 빠르고 가볍게 파일 및 프린터 공유 등을 지원하던 대표적인 LAN 전용 프로토콜입니다."
+      },
+      {
+        "t": "④ IPX/SPX",
+        "a": 0,
+        "r": "과거 노벨(Novell)사의 넷웨어(NetWare) 운영체제 기반 근거리 통신망(LAN)에서 광범위하게 쓰였던 네트워크/전송 계층 프로토콜입니다."
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "c": "프로토콜 [2024 CBT 기출]",
+    "q": "다음 중 데이터 전송을 위해 전송할 데이터의 앞부분과 뒷부분에 헤더와 트레일러를 첨가하는 과정은?\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① 주소 지정",
+        "a": 0,
+        "r": "송신지와 수신지를 식별하기 위해 식별 번호(MAC, IP 등)를 부여하는 기능입니다."
+      },
+      {
+        "t": "② 순서 지정",
+        "a": 0,
+        "r": "분할된 데이터 조각들이 순서대로 정확하게 재조립될 수 있도록 일련번호(시퀀스 번호)를 부여하는 기능입니다."
+      },
+      {
+        "t": "③ 정보 캡슐화",
+        "a": 1,
+        "r": "상위 계층의 데이터 단위(SDU/페이로드) 앞뒤에 제어 정보가 담긴 헤더(Header)와 오류 검출용 트레일러(Trailer)를 부가하여 하위 프로토콜 데이터 단위(PDU)로 감싸는 과정입니다."
+      },
+      {
+        "t": "④ 정보 분할",
+        "a": 0,
+        "r": "전송로의 최대 전송 단위(MTU) 규격에 맞춰 긴 데이터 블록을 전송 가능한 작은 크기의 블록으로 잘라내는 과정입니다."
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "c": "프로토콜 [2024 CBT 기출]",
+    "q": "다음 중 문자지향 프로토콜에서 사용되는 전송제어 문자 중 옳은 것은?\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① EOT : 문자의 한 블록의 종료",
+        "a": 0,
+        "r": "전체 데이터 전송의 종료 및 데이터 링크 해제를 의미합니다. (한 블록의 종료는 ETB 또는 ETX입니다.)"
+      },
+      {
+        "t": "② SOH : 데이터 블록의 시작",
+        "a": 0,
+        "r": "데이터 블록의 시작이 아니라 헤딩(Heading) 부분의 시작을 나타냅니다."
+      },
+      {
+        "t": "③ SYN : 헤딩의 개시",
+        "a": 0,
+        "r": "헤딩 개시가 아니라 문자 동기를 유지하기 위한 동기 문자입니다. (헤딩 개시는 SOH입니다.)"
+      },
+      {
+        "t": "④ STX : 텍스트의 개시",
+        "a": 1,
+        "r": "본문(텍스트) 데이터의 시작을 알리고 헤딩 부분을 종료시키는 제어문자입니다."
+      }
+    ]
+  }
+]
+</script>
+
+  <script>
+    let rawQuizData = [];
+    try {
+      const jsonText = document.getElementById("quiz-data").textContent;
+      rawQuizData = JSON.parse(jsonText);
+    } catch (e) {
+      alert("문제 데이터를 불러오는 중 오류가 발생했습니다. JSON 형식을 확인해주세요.");
+      console.error("JSON Parsing Error:", e);
+    }
+
+    let currentIdx = 0;
+    let userAnswers = new Array(rawQuizData.length).fill(null);
+
+    const questionBadge = document.getElementById("question-badge");
+    const categoryBadge = document.getElementById("category-badge");
+    const questionCounter = document.getElementById("question-counter");
+    const questionText = document.getElementById("question-text");
+    const questionImage = document.getElementById("question-image");
+    const optionsContainer = document.getElementById("options-container");
+    const explanationBox = document.getElementById("explanation-box");
+    const resultAlert = document.getElementById("result-alert");
+    const rationalesList = document.getElementById("rationales-list");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const navGrid = document.getElementById("nav-grid");
+    const scoreDisplay = document.getElementById("score-display");
+    const progressBar = document.getElementById("progress-bar");
+    const resetBtn = document.getElementById("reset-btn");
+    const editModal = document.getElementById("edit-modal");
+
+    function initNavGrid() {
+      navGrid.innerHTML = "";
+      rawQuizData.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.innerText = idx + 1;
+        btn.id = `nav-btn-${idx}`;
+        btn.className = "w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200 transition shadow-sm";
+        btn.onclick = () => loadQuestion(idx);
+        navGrid.appendChild(btn);
+      });
+      updateScoreAndProgress();
+    }
+
+    function updateScoreAndProgress() {
+      const answeredCount = userAnswers.filter(a => a !== null).length;
+      let correctCount = 0;
+      userAnswers.forEach((ans, idx) => {
+        if (ans !== null && rawQuizData[idx].o[ans].a === 1) correctCount++;
+      });
+      scoreDisplay.innerText = `${correctCount} / ${answeredCount} (총 ${rawQuizData.length}문항)`;
+      progressBar.style.width = `${(answeredCount / rawQuizData.length) * 100}%`;
+
+      rawQuizData.forEach((_, idx) => {
+        const navBtn = document.getElementById(`nav-btn-${idx}`);
+        if(!navBtn) return;
+        if (userAnswers[idx] === null) {
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm ${idx === currentIdx ? 'border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700 scale-110' : 'border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200'}`;
+        } else {
+          const isUserCorrect = rawQuizData[idx].o[userAnswers[idx]].a === 1;
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-${isUserCorrect ? 'emerald' : 'rose'}-500 text-white ${idx === currentIdx ? `ring-2 ring-${isUserCorrect ? 'emerald' : 'rose'}-300 scale-110` : ''}`;
+        }
+      });
+    }
+
+    function loadQuestion(idx) {
+      if (idx < 0 || idx >= rawQuizData.length) return;
+      currentIdx = idx;
+      const q = rawQuizData[idx];
+
+      questionBadge.innerText = `문항 ${q.id || (idx+1)}`;
+      categoryBadge.innerText = q.c;
+      questionCounter.innerText = `${idx + 1} / ${rawQuizData.length}`;
+      questionText.innerText = q.q;
+      
+      if(q.img && q.img.trim() !== "") {
+          questionImage.src = q.img;
+          questionImage.classList.remove('hidden');
+      } else {
+          questionImage.src = "";
+          questionImage.classList.add('hidden');
+      }
+
+      optionsContainer.innerHTML = "";
+      const selected = userAnswers[idx];
+
+      q.o.forEach((opt, optIdx) => {
+        const btn = document.createElement("button");
+        btn.className = "w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm ";
+        
+        if (selected === null) {
+          btn.className += "border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800";
+          btn.onclick = () => selectOption(optIdx);
+        } else {
+          if (opt.a === 1) btn.className += "border-emerald-500 bg-emerald-50 text-emerald-900 font-bold z-10 scale-[1.01]";
+          else if (selected === optIdx) btn.className += "border-rose-500 bg-rose-50 text-rose-900";
+          else btn.className += "border-slate-200 bg-slate-50 text-slate-400 opacity-60";
+          btn.disabled = true;
+        }
+
+        const iconSpan = document.createElement("span");
+        iconSpan.className = "pt-0.5 shrink-0"; 
+        if (selected !== null) {
+          if (opt.a === 1) iconSpan.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-xl drop-shadow-md"></i>';
+          else if (selected === optIdx) iconSpan.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-600 text-xl"></i>';
+          else iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-300 text-xl"></i>';
+        } else {
+          iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i>';
+        }
+
+        const textSpan = document.createElement("span");
+        textSpan.className = "flex-1 leading-relaxed";
+        textSpan.innerText = opt.t;
+        
+        btn.appendChild(iconSpan);
+        btn.appendChild(textSpan);
+        optionsContainer.appendChild(btn);
+      });
+
+      if (selected !== null) {
+        renderExplanation(selected);
+        explanationBox.classList.remove("hidden");
+      } else {
+        explanationBox.classList.add("hidden");
+      }
+
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === rawQuizData.length - 1;
+      updateScoreAndProgress();
+    }
+
+    function selectOption(optIdx) {
+      userAnswers[currentIdx] = optIdx;
+      loadQuestion(currentIdx);
+    }
+
+    function renderExplanation(selectedIdx) {
+      const q = rawQuizData[currentIdx];
+      const isCorrect = q.o[selectedIdx].a === 1;
+
+      if (isCorrect) {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-2xl drop-shadow"></i> <div>정답입니다! 완벽하게 이해하셨습니다.</div>';
+      } else {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-rose-900 bg-rose-100 border border-rose-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-600 text-2xl drop-shadow"></i> <div>오답입니다. 아래 보기별 해설을 반드시 확인하세요.</div>';
+      }
+
+      rationalesList.innerHTML = "";
+      q.o.forEach((opt) => {
+        const item = document.createElement("div");
+        item.className = `p-3 rounded-lg border shadow-sm ${opt.a === 1 ? 'bg-emerald-50/80 border-emerald-200' : 'bg-white border-slate-200'}`;
+        
+        const header = document.createElement("div");
+        header.className = "font-bold mb-1.5 flex items-start gap-2";
+        if (opt.a === 1) header.innerHTML = `<span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5 shadow-sm">정답 보기</span> <span class="text-emerald-900">${opt.t}</span>`;
+        else header.innerHTML = `<span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">${opt.t}</span>`;
+        
+        const body = document.createElement("div");
+        body.className = "text-xs md:text-sm text-slate-600 pl-1 leading-relaxed";
+        body.innerText = opt.r;
+
+        item.appendChild(header);
+        item.appendChild(body);
+        rationalesList.appendChild(item);
+      });
+    }
+
+    function openEditModal() {
+      const q = rawQuizData[currentIdx];
+      document.getElementById('edit-cat').value = q.c;
+      document.getElementById('edit-q').value = q.q;
+      
+      if(q.img && q.img.trim() !== "") {
+          document.getElementById('edit-img-base64').value = q.img;
+          document.getElementById('edit-img-preview').src = q.img;
+          document.getElementById('edit-img-preview').classList.remove('hidden');
+          document.getElementById('btn-clear-img').classList.remove('hidden');
+      } else {
+          clearImage(); 
+      }
+
+      for(let i=0; i<4; i++) {
+        document.getElementById(`edit-opt-${i}`).value = q.o[i].t;
+        document.getElementById(`edit-rat-${i}`).value = q.o[i].r;
+        if(q.o[i].a === 1) {
+          document.querySelector(`input[name="edit-ans"][value="${i}"]`).checked = true;
+        }
+      }
+      
+      document.body.classList.add('modal-open');
+      editModal.classList.remove('hidden');
+    }
+
+    function closeEditModal() {
+      document.body.classList.remove('modal-open');
+      editModal.classList.add('hidden');
+    }
+
+    function saveEditedQuestion() {
+      const q = rawQuizData[currentIdx];
+      q.c = document.getElementById('edit-cat').value;
+      q.q = document.getElementById('edit-q').value;
+      q.img = document.getElementById('edit-img-base64').value;
+      
+      const correctVal = document.querySelector('input[name="edit-ans"]:checked').value;
+      
+      for(let i=0; i<4; i++) {
+        q.o[i].t = document.getElementById(`edit-opt-${i}`).value;
+        q.o[i].r = document.getElementById(`edit-rat-${i}`).value;
+        q.o[i].a = (i.toString() === correctVal) ? 1 : 0;
+      }
+      
+      closeEditModal();
+      loadQuestion(currentIdx);
+      alert("문제가 성공적으로 수정되었습니다.\n\n※ 영구 저장을 원하시면 상단의 [수정본 다운로드] 버튼을 클릭하세요!");
+    }
+
+    function addNewQuestion() {
+      const newQ = {
+        id: rawQuizData.length + 1,
+        c: "새로운 카테고리",
+        q: "여기에 추가할 문제를 입력하세요.",
+        img: "",
+        o: [
+          { t: "① 보기 1", a: 1, r: "해설 1" },
+          { t: "② 보기 2", a: 0, r: "해설 2" },
+          { t: "③ 보기 3", a: 0, r: "해설 3" },
+          { t: "④ 보기 4", a: 0, r: "해설 4" }
+        ]
+      };
+      rawQuizData.push(newQ);
+      userAnswers.push(null);
+      initNavGrid();
+      loadQuestion(rawQuizData.length - 1);
+      openEditModal(); 
+    }
+
+    function deleteCurrentQuestion() {
+      if(rawQuizData.length <= 1) {
+          alert("최소 1개의 문제는 남아있어야 합니다.");
+          return;
+      }
+      if(confirm("정말로 이 문제를 삭제하시겠습니까?\n삭제 후 복구할 수 없습니다.")) {
+          rawQuizData.splice(currentIdx, 1);
+          userAnswers.splice(currentIdx, 1);
+          rawQuizData.forEach((q, i) => q.id = i + 1);
+          
+          initNavGrid();
+          closeEditModal();
+          let nextIdx = currentIdx >= rawQuizData.length ? rawQuizData.length - 1 : currentIdx;
+          loadQuestion(nextIdx);
+      }
+    }
+
+    function encodeImageFileAsURL(element) {
+      const file = element.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onloadend = function() {
+        document.getElementById('edit-img-base64').value = reader.result;
+        document.getElementById('edit-img-preview').src = reader.result;
+        document.getElementById('edit-img-preview').classList.remove('hidden');
+        document.getElementById('btn-clear-img').classList.remove('hidden');
+      }
+      reader.readAsDataURL(file);
+    }
+
+    function clearImage() {
+      document.getElementById('edit-img-upload').value = "";
+      document.getElementById('edit-img-base64').value = "";
+      document.getElementById('edit-img-preview').src = "";
+      document.getElementById('edit-img-preview').classList.add('hidden');
+      document.getElementById('btn-clear-img').classList.add('hidden');
+    }
+
+    function downloadUpdatedHTML() {
+      const dataScript = document.getElementById('quiz-data');
+      dataScript.textContent = "\n" + JSON.stringify(rawQuizData, null, 2) + "\n";
+      
+      let htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = "정보전송일반_8차시_프로토콜_최종본.html"; 
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    prevBtn.addEventListener("click", () => { if (currentIdx > 0) loadQuestion(currentIdx - 1); });
+    nextBtn.addEventListener("click", () => { if (currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1); });
+    resetBtn.addEventListener("click", () => {
+      if (confirm("풀이 기록을 모두 초기화하시겠습니까? 처음부터 다시 풉니다.")) {
+        userAnswers = new Array(rawQuizData.length).fill(null);
+        loadQuestion(0);
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if(!editModal.classList.contains('hidden')) return;
+      if (e.key === "ArrowLeft" && currentIdx > 0) loadQuestion(currentIdx - 1);
+      else if (e.key === "ArrowRight" && currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1);
+      else if (["1", "2", "3", "4"].includes(e.key) && userAnswers[currentIdx] === null) selectOption(parseInt(e.key) - 1);
+    });
+
+    if (rawQuizData.length > 0) {
+      initNavGrid();
+      loadQuestion(0);
+    }
+  </script>
+
+</body></html>

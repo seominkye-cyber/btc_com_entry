@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정보전송일반 - 3차시 PCM 통신 CBT (39제)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap');
+    body { font-family: 'Pretendard', sans-serif; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .modal-open { overflow: hidden; }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.mb-1\.5{margin-bottom:0.375rem}.mt-0\.5{margin-top:0.125rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-2{height:0.5rem}.h-4{height:1rem}.h-8{height:2rem}.max-h-32{max-height:8rem}.max-h-60{max-height:15rem}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-4{width:1rem}.w-full{width:100%}.w-8{width:2rem}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.shrink-0{flex-shrink:0}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-b-2xl{border-bottom-right-radius:1rem;border-bottom-left-radius:1rem}.rounded-t-2xl{border-top-left-radius:1rem;border-top-right-radius:1rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-rose-200{--tw-border-opacity:1;border-color:rgb(254 205 211 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-indigo-600{--tw-border-opacity:1;border-color:rgb(79 70 229 / var(--tw-border-opacity, 1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183 / var(--tw-border-opacity, 1))}.border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175 / var(--tw-border-opacity, 1))}.border-rose-500{--tw-border-opacity:1;border-color:rgb(244 63 94 / var(--tw-border-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-indigo-200{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-700{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.bg-indigo-800{--tw-bg-opacity:1;background-color:rgb(55 48 163 / var(--tw-bg-opacity, 1))}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-emerald-50\/80{background-color:rgb(236 253 245 / 0.8)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184 / var(--tw-bg-opacity, 1))}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pt-6{padding-top:1.5rem}.pt-0\.5{padding-top:0.125rem}.pl-1{padding-left:0.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[10px\]{font-size:10px}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-rose-900{--tw-text-opacity:1;color:rgb(136 19 55 / var(--tw-text-opacity, 1))}.opacity-60{opacity:0.6}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-400{--tw-ring-opacity:1;--tw-ring-color:rgb(129 140 248 / var(--tw-ring-opacity, 1))}.ring-emerald-300{--tw-ring-opacity:1;--tw-ring-color:rgb(110 231 183 / var(--tw-ring-opacity, 1))}.ring-rose-300{--tw-ring-opacity:1;--tw-ring-color:rgb(253 164 175 / var(--tw-ring-opacity, 1))}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.file\:mr-4::file-selector-button{margin-right:1rem}.file\:rounded-full::file-selector-button{border-radius:9999px}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-indigo-50::file-selector-button{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.file\:px-3::file-selector-button{padding-left:0.75rem;padding-right:0.75rem}.file\:py-1::file-selector-button{padding-top:0.25rem;padding-bottom:0.25rem}.file\:text-xs::file-selector-button{font-size:0.75rem;line-height:1rem}.file\:font-semibold::file-selector-button{font-weight:600}.file\:text-indigo-700::file-selector-button{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.hover\:border-indigo-400:hover{--tw-border-opacity:1;border-color:rgb(129 140 248 / var(--tw-border-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-200:hover{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-100:hover{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-200:hover{--tw-bg-opacity:1;background-color:rgb(254 205 211 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-50\/50:hover{background-color:rgb(238 242 255 / 0.5)}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:text-indigo-800:hover{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.hover\:text-rose-500:hover{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.hover\:file\:bg-indigo-100::file-selector-button:hover{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-40:disabled{opacity:0.4}.group:hover .group-hover\:text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:block{display:block}}@media (min-width: 768px){.md\:w-auto{width:auto}.md\:flex-row{flex-direction:row}.md\:justify-end{justify-content:flex-end}.md\:gap-2{gap:0.5rem}.md\:p-8{padding:2rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xs{font-size:0.75rem;line-height:1rem}}</style></head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col relative">
+
+  <!-- Header -->
+  <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-3">
+      <div class="flex items-center space-x-3 w-full md:w-auto">
+        <a href="index.html" class="bg-indigo-800 hover:bg-indigo-600 text-white text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1.5 border border-indigo-500 shadow-sm shrink-0" title="목록으로 돌아가기">
+          <i class="fa-solid fa-list"></i> 목록
+        </a>
+        <i class="fa-solid fa-satellite-dish text-2xl text-amber-300 hidden sm:block"></i>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight truncate">3차시 PCM 통신 CBT (39제)</h1>
+          <p class="text-xs text-indigo-200 truncate">표본화 · 양자화 · 부호화 · T1/E1 완벽 마스터</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-end">
+        <div class="text-right mr-2">
+          <span class="text-xs text-indigo-200 block">현재 점수</span>
+          <span id="score-display" class="font-extrabold text-lg text-amber-300">34 / 36 (총 37문항)</span>
+        </div>
+        <button onclick="downloadUpdatedHTML()" class="bg-emerald-600 hover:bg-emerald-500 text-xs px-3 py-2 rounded-lg font-bold transition flex items-center gap-1 border border-emerald-500 shadow-sm">
+          <i class="fa-solid fa-download"></i> 수정본 다운로드
+        </button>
+        <button id="reset-btn" class="bg-indigo-600 hover:bg-indigo-500 text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1 border border-indigo-500">
+          <i class="fa-solid fa-rotate-right"></i> 초기화
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="w-full bg-indigo-200 h-2">
+    <div id="progress-bar" class="bg-amber-400 h-2 transition-all duration-300" style="width: 97.2973%;"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-1 w-full">
+    
+    <!-- Question Card -->
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden relative">
+      <div class="bg-slate-50 border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <span id="question-badge" class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">문항 37</span>
+          <span id="category-badge" class="bg-slate-200 text-slate-700 text-xs font-semibold px-2 py-0.5 rounded">PCM 양자화잡음 개선 방법</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button onclick="openEditModal()" class="text-xs text-indigo-600 font-bold hover:text-indigo-800 bg-indigo-50 px-2 py-1 rounded border border-indigo-200 transition shadow-sm">
+            <i class="fa-solid fa-pen-to-square"></i> 문제/해설 수정
+          </button>
+          <span id="question-counter" class="text-xs text-slate-500 font-medium">37 / 37</span>
+        </div>
+      </div>
+
+      <div class="p-6 md:p-8">
+        <h2 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-relaxed mb-4">양자화 잡음화의 개선 방법으로 틀린 것은?<br><br><br></h2>
+        
+        <!-- 이미지 출력 영역 -->
+        <img id="question-image" src="" alt="첨부 이미지" class="mb-6 max-h-60 rounded-lg border border-slate-200 hidden shadow-sm">
+
+        <!-- Options -->
+        <div id="options-container" class="space-y-3"><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50/50 text-slate-800"><span class="pt-0.5"><i class="fa-regular fa-circle text-slate-400 text-lg group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">① 양자화 스텝을 크게 한다.</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50/50 text-slate-800"><span class="pt-0.5"><i class="fa-regular fa-circle text-slate-400 text-lg group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">② 비선형 양자화 방법을 사용한다.</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50/50 text-slate-800"><span class="pt-0.5"><i class="fa-regular fa-circle text-slate-400 text-lg group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">③ 선형양자화와 압신방식을 같이 사용한다.</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50/50 text-slate-800"><span class="pt-0.5"><i class="fa-regular fa-circle text-slate-400 text-lg group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">④ 양자화 스텝수가 2배로 증가할 때마다 6[dB]씩 개선된다.</span></button></div>
+
+        <!-- Explanation Section -->
+        <div id="explanation-box" class="mt-8 border-t border-slate-200 pt-6 animate-fade-in-up hidden">
+          <div id="result-alert" class="p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300"><i class="fa-solid fa-circle-check text-emerald-600 text-2xl"></i> <div>정답입니다!</div></div>
+          
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-4">
+            <h3 class="text-sm font-bold text-indigo-900 flex items-center gap-2">
+              <i class="fa-solid fa-book-open-reader text-indigo-600"></i> 해설 상세 보기
+            </h3>
+            <div id="rationales-list" class="space-y-2 text-sm text-slate-700"><div class="p-3 rounded-lg border bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">① 양자화 → 표본화 → 부호화 과정을 거친다</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">순서가 틀렸습니다 (표본화→양자화→부호화).</div></div><div class="p-3 rounded-lg border bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">② 양자화 잡음을 방지하기 위해 스텝 수를 감소시킨다</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">스텝 수를 감소시키면 오차가 커져 잡음이 증가합니다.</div></div><div class="p-3 rounded-lg border bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">③ 부호화란 신호에 대한 진폭의 이산화 과정이다</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">진폭을 이산화하는 것은 '양자화'입니다.</div></div><div class="p-3 rounded-lg border bg-emerald-50/80 border-emerald-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">정답 보기</span> <span class="text-emerald-900">④ 표본화란 신호에 대한 시간적인 이산화 과정이다</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">연속적인 시간 파형을 일정 간격 단위로 끊어내는(이산화) 과정이 '표본화(Sampling)'이므로 가장 정확한 설명입니다.</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 flex justify-between items-center">
+        <button id="prev-btn" class="px-4 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-arrow-left mr-1"></i> 이전 문제
+        </button>
+        <button id="next-btn" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-bold transition shadow disabled:opacity-40 disabled:cursor-not-allowed" disabled="">
+          다음 문제 <i class="fa-solid fa-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Grid -->
+    <div class="mt-8 bg-white rounded-xl p-5 shadow border border-slate-200">
+      <div class="flex justify-between items-center mb-4">
+        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">전체 문항 내비게이션</h4>
+        <button onclick="addNewQuestion()" class="text-xs bg-indigo-100 text-indigo-700 hover:bg-indigo-200 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1 border border-indigo-200 shadow-sm">
+          <i class="fa-solid fa-plus"></i> 새 문제 추가하기
+        </button>
+      </div>
+      <div id="nav-grid" class="flex flex-wrap gap-1.5 md:gap-2"><button id="nav-btn-0" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">1</button><button id="nav-btn-1" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">2</button><button id="nav-btn-2" class="w-8 h-8 rounded-lg font-bold text-xs bg-rose-500 text-white ">3</button><button id="nav-btn-3" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">4</button><button id="nav-btn-4" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">5</button><button id="nav-btn-5" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">6</button><button id="nav-btn-6" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">7</button><button id="nav-btn-7" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">8</button><button id="nav-btn-8" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">9</button><button id="nav-btn-9" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">10</button><button id="nav-btn-10" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">11</button><button id="nav-btn-11" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">12</button><button id="nav-btn-12" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">13</button><button id="nav-btn-13" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">14</button><button id="nav-btn-14" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">15</button><button id="nav-btn-15" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">16</button><button id="nav-btn-16" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">17</button><button id="nav-btn-17" class="w-8 h-8 rounded-lg font-bold text-xs bg-rose-500 text-white ">18</button><button id="nav-btn-18" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">19</button><button id="nav-btn-19" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">20</button><button id="nav-btn-20" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">21</button><button id="nav-btn-21" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">22</button><button id="nav-btn-22" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">23</button><button id="nav-btn-23" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">24</button><button id="nav-btn-24" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">25</button><button id="nav-btn-25" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">26</button><button id="nav-btn-26" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">27</button><button id="nav-btn-27" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">28</button><button id="nav-btn-28" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">29</button><button id="nav-btn-29" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">30</button><button id="nav-btn-30" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">31</button><button id="nav-btn-31" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">32</button><button id="nav-btn-32" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">33</button><button id="nav-btn-33" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">34</button><button id="nav-btn-34" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">35</button><button id="nav-btn-35" class="w-8 h-8 rounded-lg font-bold text-xs bg-emerald-500 text-white ">36</button><button id="nav-btn-36" class="w-8 h-8 rounded-lg font-bold text-xs border border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700">37</button></div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-200 border-t border-slate-300 py-4 text-center text-xs text-slate-500 mt-auto">
+    통신기능장 자가 수정/이미지 업로드 완벽 지원 시스템 © 2026
+  </footer>
+
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col">
+      <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50 rounded-t-2xl">
+        <h3 class="font-bold text-lg text-slate-800"><i class="fa-solid fa-pen-to-square text-indigo-600 mr-2"></i>문제 및 해설 편집</h3>
+        <button onclick="closeEditModal()" class="text-slate-400 hover:text-rose-500 transition"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <div class="p-6 overflow-y-auto flex-1 space-y-5">
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">카테고리</label>
+          <input type="text" id="edit-cat" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">문제 (질문)</label>
+          <textarea id="edit-q" rows="3" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea>
+        </div>
+        
+        <!-- 이미지 업로드 섹션 -->
+        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+          <label class="block text-xs font-bold text-slate-500 mb-2"><i class="fa-solid fa-image text-slate-400"></i> 문제 참고 이미지 첨부 (선택사항)</label>
+          <div class="flex items-center gap-2 mb-2">
+            <input type="file" id="edit-img-upload" accept="image/*" class="text-xs file:mr-4 file:py-1 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer" onchange="encodeImageFileAsURL(this)">
+            <button type="button" onclick="clearImage()" class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-600 px-3 py-1.5 rounded-full font-bold transition hidden" id="btn-clear-img"><i class="fa-solid fa-trash-can"></i> 지우기</button>
+          </div>
+          <input type="hidden" id="edit-img-base64" value="">
+          <img id="edit-img-preview" class="max-h-32 rounded border border-slate-300 hidden shadow-sm" src="">
+        </div>
+
+        <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 space-y-4">
+          <label class="block text-xs font-bold text-indigo-800 mb-2">보기 및 해설 설정 (정답 라디오 버튼 선택)</label>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="0" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-0" placeholder="보기 1 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-0" rows="1" placeholder="보기 1 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="1" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-1" placeholder="보기 2 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-1" rows="1" placeholder="보기 2 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="2" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-2" placeholder="보기 3 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-2" rows="1" placeholder="보기 3 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="3" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-3" placeholder="보기 4 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-3" rows="1" placeholder="보기 4 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 py-4 border-t border-slate-200 bg-slate-50 rounded-b-2xl flex justify-between items-center">
+        <button onclick="deleteCurrentQuestion()" class="px-4 py-2 bg-rose-50 border border-rose-200 text-rose-600 rounded-lg text-sm font-bold hover:bg-rose-100 transition"><i class="fa-solid fa-trash"></i> 이 문제 삭제</button>
+        <div class="flex gap-2">
+          <button onclick="closeEditModal()" class="px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-bold text-slate-600 hover:bg-slate-100 transition">취소</button>
+          <button onclick="saveEditedQuestion()" class="px-5 py-2 bg-indigo-600 rounded-lg text-sm font-bold text-white hover:bg-indigo-700 transition shadow">적용하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 39제 JSON 데이터 모음 -->
+  <script id="quiz-data" type="application/json">
+[
+  {
+    "id": 1,
+    "c": "PCM 표본화",
+    "q": "PCM 단계 중에서 연속적인 아날로그 신호를 입력으로 받아 불연속적인 진폭을 갖는 펄스를 생성하는 과정에 해당되는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 표본화",
+        "a": 1,
+        "r": "연속적인 아날로그 파형을 시간축에서 일정 주기마다 추출하여 샘플링(이산적 펄스 생성)을 수행하는 단계입니다."
+      },
+      {
+        "t": "② 양자화",
+        "a": 0,
+        "r": "표본화된 펄스의 진폭을 유한개의 값으로 근사화(Rounding)하는 과정입니다."
+      },
+      {
+        "t": "③ 부호화",
+        "a": 0,
+        "r": "양자화된 이산값을 0과 1의 디지털 신호로 변환하는 마지막 과정입니다."
+      },
+      {
+        "t": "④ 압축기",
+        "a": 0,
+        "r": "작은 신호의 양자화 잡음을 줄이기 위해 이득을 키우는 압신 장치입니다."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "c": "나이퀴스트 주파수",
+    "q": "18[kHz] 까지 전송할 수 있는 PCM 시스템에서 요구되는 Nyquist 표본화 주파수는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 9 [kHz]",
+        "a": 0,
+        "r": "주파수를 절반으로 하면 앨리어싱(왜곡)이 심하게 발생합니다."
+      },
+      {
+        "t": "② 18 [kHz]",
+        "a": 0,
+        "r": "최고 주파수와 동일하게 샘플링하면 원래 신호를 온전히 복원할 수 없습니다."
+      },
+      {
+        "t": "③ 36 [kHz]",
+        "a": 1,
+        "r": "나이퀴스트 정리에 따라 최소 표본화 주파수(fs)는 최고 주파수(fm)의 2배(2 × 18 = 36 kHz) 이상이어야 합니다."
+      },
+      {
+        "t": "④ 72 [kHz]",
+        "a": 0,
+        "r": "오버샘플링 수치에 해당합니다."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "c": "표본화 주기",
+    "q": "5[kHz] 의 음성신호를 재생시키기 위한 표본화 주기는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 225 [μs]",
+        "a": 0,
+        "r": "공식에 맞지 않는 수치입니다."
+      },
+      {
+        "t": "② 200 [μs]",
+        "a": 0,
+        "r": "5kHz의 단순 역수로 계산한 오답입니다."
+      },
+      {
+        "t": "③ 100 [μs]",
+        "a": 1,
+        "r": "표본화 주파수 fs = 2 × 5kHz = 10kHz 입니다. 주기는 역수이므로 Ts = 1/fs = 1/10,000초 = 100[μs] 가 됩니다."
+      },
+      {
+        "t": "④ 125 [μs]",
+        "a": 0,
+        "r": "표준 음성대역 4kHz 기준(fs=8kHz)일 때의 주기입니다."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "c": "나이퀴스트 주파수",
+    "q": "다음 중 나이퀴스트 (Nyquist) 표본화 주파수 (fs)로 알맞은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① fs = 2fm",
+        "a": 1,
+        "r": "나이퀴스트 표본화 정리에 의해 표본화 주파수(fs)는 신호의 최고 주파수(fm)의 2배 이상이어야 합니다."
+      },
+      {
+        "t": "② fs < 2fm",
+        "a": 0,
+        "r": "이 조건에서는 앨리어싱이 발생합니다."
+      },
+      {
+        "t": "③ fs > 2fm",
+        "a": 0,
+        "r": "오버샘플링 조건입니다."
+      },
+      {
+        "t": "④ fs ≤ 2fm",
+        "a": 0,
+        "r": "나이퀴스트 레이트의 정확한 기준 수식은 fs = 2fm 입니다."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "c": "PCM 일반",
+    "q": "다음 중 펄스부호변조(PCM) 통신방식의 특징으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① PCM 특유의 고유잡음이 발생한다.",
+        "a": 0,
+        "r": "아날로그를 디지털로 변환하며 양자화 잡음이 발생합니다."
+      },
+      {
+        "t": "② 누화에 강하다.",
+        "a": 0,
+        "r": "디지털 신호로 전송하므로 아날로그에 비해 누화와 잡음에 강합니다."
+      },
+      {
+        "t": "③ S/N 비가 좋다.",
+        "a": 0,
+        "r": "디지털 전송의 특징으로 신호 대 잡음비가 우수합니다."
+      },
+      {
+        "t": "④ 변조회로가 단순하고 가격이 저가이다.",
+        "a": 1,
+        "r": "표본화, 양자화, 부호화, 압신 등의 복잡한 회로가 필요하여 장비가 복잡하고 고가입니다."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "c": "표본화 특징",
+    "q": "다음 중 표본화 주파수가 높다는 것은 무엇을 의미하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 초당 샘플수가 낮다.",
+        "a": 0,
+        "r": "주파수가 높으면 샘플 수는 많아집니다."
+      },
+      {
+        "t": "② 전송하려는 정보의 양이 적다.",
+        "a": 0,
+        "r": "샘플 수가 많아져 정보량이 증가합니다."
+      },
+      {
+        "t": "③ 요구되는 채널 용량이 커진다.",
+        "a": 1,
+        "r": "표본화 주파수가 높으면 초당 추출하는 샘플 수가 많아져 정보량이 늘어나므로, 이를 전송하기 위해 더 큰 채널 용량(대역폭)이 요구됩니다."
+      },
+      {
+        "t": "④ 초당 프레임수가 낮다.",
+        "a": 0,
+        "r": "초당 전송해야 할 프레임 수도 함께 증가합니다."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "c": "앨리어싱",
+    "q": "다음 중 앨리어싱 (Aliasing) 현상이 발생하는 원인으로 알맞은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 나이키스트 주파수보다 높게 하여 표본화할 경우 발생한다.",
+        "a": 0,
+        "r": "높게 표본화하면 원신호 복원이 더 잘 됩니다."
+      },
+      {
+        "t": "② 나이키스트 주파수보다 낮게 하여 표본화 할 경우 발생한다.",
+        "a": 1,
+        "r": "표본화 주파수가 신호 최고 주파수의 2배 미만(fs < 2fm)일 때 스펙트럼이 겹치는 앨리어싱이 발생합니다."
+      },
+      {
+        "t": "③ 나이키스트 주파수로 표본화 했을 경우 발생한다.",
+        "a": 0,
+        "r": "앨리어싱이 발생하지 않는 최소 기준입니다."
+      },
+      {
+        "t": "④ 나이키스트 주기보다 짧게 하여 표본화할 경우에 발생한다.",
+        "a": 0,
+        "r": "주기가 짧다는 것은 주파수가 높다는 의미이므로 앨리어싱이 방지됩니다."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "c": "앨리어싱 대책",
+    "q": "다음 중 데이터의 신호처리 과정에서 나타나는 앨리어싱 현상에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 표본화율이 나이키스트 표본화율보다 낮으면 발생한다.",
+        "a": 0,
+        "r": "앨리어싱의 발생 원인입니다."
+      },
+      {
+        "t": "② 앨리어싱이 발생하면 원래의 신호를 정확히 재생하기 어렵다.",
+        "a": 0,
+        "r": "스펙트럼 중첩으로 인해 원신호가 왜곡됩니다."
+      },
+      {
+        "t": "③ 표본화 전에 HPF를 사용하여 앨리어싱을 방지할 수 있다.",
+        "a": 1,
+        "r": "앨리어싱을 방지하려면 표본화 전에 신호의 최고 주파수를 대역 제한하는 LPF(저역통과필터)를 사용해야 합니다."
+      },
+      {
+        "t": "④ 주파수 스펙트럼 분포에서 서로 이웃하는 부분이 겹쳐서 발생한다.",
+        "a": 0,
+        "r": "정확한 원리 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "c": "PCM 과정",
+    "q": "다음 중 아날로그 신호를 디지털 신호로 변환하여 전송매체로 전송하기 위한 과정으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 표본화 → 부호화 → 양자화 → 펄스발생기 → 통신채널",
+        "a": 0,
+        "r": "부호화와 양자화의 순서가 바뀌어 틀렸습니다. (반드시 양자화된 이산값을 2진수로 부호화해야 합니다.)"
+      },
+      {
+        "t": "② 펄스발생기 → 부호화 → 표본화 → 양자화 → 통신채널",
+        "a": 0,
+        "r": "변환 순서가 완전히 뒤섞여 있어 틀렸습니다."
+      },
+      {
+        "t": "③ 표본화 → 양자화 → 부호화 → 통신채널 → 펄스발생기",
+        "a": 0,
+        "r": "전송 매체(통신채널)로 보내기 전에 구형파 펄스 열을 정형하는 펄스발생기를 먼저 거쳐야 하므로 순서가 틀렸습니다."
+      },
+      {
+        "t": "④ 표본화 → 양자화 → 부호화 → 펄스발생기 → 통신채널",
+        "a": 1,
+        "r": "아날로그 신호를 시간축으로 샘플링(표본화)하고, 전압값을 대표 이산값으로 근사화(양자화)한 뒤, 2진 디지털 부호로 변환(부호화)하여 최종적으로 송신 펄스를 생성(펄스발생기)해 전송 선로(통신채널)로 내보내는 정석적인 순서입니다."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "c": "양자화",
+    "q": "다음 중 양자화(Quantizing)에 대한 설명으로 알맞은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① PAM 신호를 0과 1의 이산적인 값으로 바꾸는 과정",
+        "a": 1,
+        "r": "엄밀히 '0과 1'은 부호화의 개념도 포함하지만, 기출 기준에서 PAM 진폭 신호를 이산적인(불연속적) 값으로 정수화하는 양자화 과정을 나타내는 대표 보기로 사용됩니다."
+      },
+      {
+        "t": "② 연속적인 신호 파형을 일정시간 간격으로 검출하는 단계",
+        "a": 0,
+        "r": "이것은 표본화(Sampling)입니다."
+      },
+      {
+        "t": "③ PAM 신호로부터 원신호를 얻는 과정",
+        "a": 0,
+        "r": "이것은 복조 또는 재구성입니다."
+      },
+      {
+        "t": "④ 수신된 디지털 신호를 PAM 신호로 되돌리는 단계",
+        "a": 0,
+        "r": "이것은 복호화입니다."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "c": "양자화 분류",
+    "q": "다음 중 양자화 간격에 따른 분류에 해당하지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 선형양자화",
+        "a": 0,
+        "r": "스텝 크기가 균일한 양자화입니다."
+      },
+      {
+        "t": "② 비선형양자화",
+        "a": 0,
+        "r": "신호 크기에 따라 스텝을 다르게 하는 양자화입니다."
+      },
+      {
+        "t": "③ 적응양자화",
+        "a": 0,
+        "r": "시간에 따라 가변적으로 스텝 크기를 적용합니다."
+      },
+      {
+        "t": "④ 복합양자화",
+        "a": 1,
+        "r": "통신 이론에서 양자화 간격에 따른 분류로 존재하지 않는 용어입니다."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "c": "양자화 계단수",
+    "q": "양자화 비트수가 6 비트이면 양자화 계단 수(M)는 얼마인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 16",
+        "a": 0,
+        "r": "4비트일 때의 수치입니다."
+      },
+      {
+        "t": "② 64",
+        "a": 1,
+        "r": "양자화 계단 수 M = 2ⁿ 공식에 따라, 2⁶ = 64 개의 계단을 가집니다."
+      },
+      {
+        "t": "③ 32",
+        "a": 0,
+        "r": "5비트일 때의 수치입니다."
+      },
+      {
+        "t": "④ 48",
+        "a": 0,
+        "r": "단순 배수(6×8)로 착각한 오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "c": "양자화 잡음",
+    "q": "양자화 잡음은 다음 중 어느 방식에서 주로 발생하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① PDM",
+        "a": 0,
+        "r": "아날로그 펄스 변조이므로 양자화 과정이 없습니다."
+      },
+      {
+        "t": "② PPM",
+        "a": 0,
+        "r": "아날로그 위치 변조입니다."
+      },
+      {
+        "t": "③ PCM",
+        "a": 1,
+        "r": "PCM은 아날로그를 디지털로 근사화(양자화)하는 대표적인 방식이므로 근사화 오차인 양자화 잡음이 필연적으로 발생합니다."
+      },
+      {
+        "t": "④ PWM",
+        "a": 0,
+        "r": "아날로그 펄스 폭 변조입니다."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "c": "PCM 정보량",
+    "q": "PCM 통신방식에서 4[kHz]의 대역폭을 갖는 음성 정보를 8[bit] 코딩으로 표본화하면 음성을 전송하기 위해 필요한 데이터 전송률은 얼마인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 4 [kbps]",
+        "a": 0,
+        "r": "대역폭을 그대로 적은 오답입니다."
+      },
+      {
+        "t": "② 8 [kbps]",
+        "a": 0,
+        "r": "표본화 주파수(8kHz) 값입니다."
+      },
+      {
+        "t": "③ 32 [kbps]",
+        "a": 0,
+        "r": "4비트로 코딩했을 때의 값입니다."
+      },
+      {
+        "t": "④ 64 [kbps]",
+        "a": 1,
+        "r": "표본화 주파수 fs = 2 × 4kHz = 8,000Hz. 데이터 전송률 = 8,000 × 8 bits = 64,000 bps = 64 [kbps] 입니다."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "c": "양자화 잡음",
+    "q": "다음 중 PCM 통신에서 양자화 잡음의 설명으로 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 진폭 값을 디지털 신호로 변환시키는 과정에서 생기는 잡음이다.",
+        "a": 0,
+        "r": "양자화 근사화 과정의 원리입니다."
+      },
+      {
+        "t": "② 진폭 값이 양자화 기준 값을 초과하게 된 경우 생기는 잡음이다.",
+        "a": 1,
+        "r": "이것은 양자화 잡음이 아니라 입력 신호가 허용 범위를 넘을 때 발생하는 '과부하 잡음(Overload Noise)'에 대한 설명입니다."
+      },
+      {
+        "t": "③ 양자화 잡음의 크기는 평균전력으로 표현한다.",
+        "a": 0,
+        "r": "잡음 전력을 구해 SNR을 계산합니다."
+      },
+      {
+        "t": "④ 입력 진폭이 작을 때 신호 대 양자화 잡음비가 크게 나빠진다.",
+        "a": 0,
+        "r": "신호가 작을수록 상대적 스텝 오차가 커져 잡음비가 악화됩니다."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "c": "양자화 잡음 대책",
+    "q": "양자화 잡음비(S/Nq)의 개선 방법으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 양자화 스텝을 크게 한다.",
+        "a": 1,
+        "r": "양자화 스텝(계단 폭)을 '작게' 해야 원래 신호와의 오차가 줄어들어 잡음이 개선됩니다."
+      },
+      {
+        "t": "② 비선형 양자화 방법을 사용한다.",
+        "a": 0,
+        "r": "작은 신호의 잡음을 줄이는데 탁월합니다."
+      },
+      {
+        "t": "③ 선형양자화와 압신방식을 같이 사용한다.",
+        "a": 0,
+        "r": "비선형 양자화와 같은 효과를 냅니다."
+      },
+      {
+        "t": "④ 양자화 스텝수가 2배로 증가할 때마다 6[dB]씩 개선된다.",
+        "a": 0,
+        "r": "스텝수가 2배가 되면 비트가 1비트 늘어나며, 1비트당 6dB 개선됩니다."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "c": "DPCM 특징",
+    "q": "다음 설명 중 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① ADM은 양자화기의 스텝 크기를 입력신호에 따라 적응시키는 방법이다.",
+        "a": 0,
+        "r": "적응형 델타 변조의 올바른 설명입니다."
+      },
+      {
+        "t": "② PCM은 연속적인 아날로그 신호의 진폭을 일정한 간격으로 변환하는 방법이다.",
+        "a": 0,
+        "r": "이산화 변조의 기본 개념입니다."
+      },
+      {
+        "t": "③ DM은 예측 값과 측정값의 차이를 양자화하는 변조 방법이다.",
+        "a": 1,
+        "r": "DM(델타변조)은 차이값을 단 '1비트'로 부호화하는 방식입니다. 차이 자체를 여러 스텝으로 양자화하는 것은 DPCM(차분 PCM)에 대한 설명입니다."
+      },
+      {
+        "t": "④ DPCM은 진폭 값과 예측 값과의 차이만을 양자화하는 방법이다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "c": "DPCM 송신기",
+    "q": "다음 중 DPCM 송신기의 구성요소가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 양자화기",
+        "a": 0,
+        "r": "차이값을 양자화합니다."
+      },
+      {
+        "t": "② 예측기",
+        "a": 0,
+        "r": "이전 값을 바탕으로 다음 신호를 예측합니다."
+      },
+      {
+        "t": "③ 복호기",
+        "a": 1,
+        "r": "복호기(Decoder)는 수신기에서 디지털 신호를 다시 아날로그로 복원할 때 사용되는 장치이므로 송신기의 구성요소가 아닙니다."
+      },
+      {
+        "t": "④ 부호화기",
+        "a": 0,
+        "r": "양자화된 차분값을 비트로 부호화합니다."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "c": "DM (델타변조)",
+    "q": "다음 중 델타변조 DM(Delta Modulation)의 특징으로 알맞지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 신뢰성이 높으며 표본화 주파수는 PCM의 2~4배이다.",
+        "a": 0,
+        "r": "1비트 양자화 오차를 줄이기 위해 오버샘플링을 강하게 적용합니다."
+      },
+      {
+        "t": "② 표본화 주파수를 2배 증가시키면 S/Nq 6[dB]가 개선된다.",
+        "a": 1,
+        "r": "DM 방식은 표본화 주파수를 2배 늘리면 신호대 잡음비(S/Nq)가 9[dB] 개선됩니다. 6[dB] 개선은 PCM에서 1비트를 추가했을 때의 특징입니다."
+      },
+      {
+        "t": "③ 업다운 카운터(Up-Down Counter)가 필요하다.",
+        "a": 0,
+        "r": "이전 값 대비 증감을 판단해야 하므로 필수적입니다."
+      },
+      {
+        "t": "④ 전송 중의 에러에도 강하다.",
+        "a": 0,
+        "r": "비트 에러 발생 시 원래 값에 1스텝 오차만 나므로 충격이 덜합니다."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "c": "ADPCM",
+    "q": "화상회의의 오디오 압축방식으로 300~3,400[Hz]의 대역폭을 가진 채널 상에서 16, 24, 32, 40[kbps] ADPCM 을 지원하는 표준은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① G.711",
+        "a": 0,
+        "r": "일반 64kbps PCM 규격입니다."
+      },
+      {
+        "t": "② G.722",
+        "a": 0,
+        "r": "광대역(7kHz) 음성 부호화 표준입니다."
+      },
+      {
+        "t": "③ G.724",
+        "a": 0,
+        "r": "해당사항이 없습니다."
+      },
+      {
+        "t": "④ G.726",
+        "a": 1,
+        "r": "ITU-T G.726은 음성 대역에서 가변 비트레이트(16~40kbps)를 지원하는 대표적인 ADPCM 표준입니다."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "c": "E1 규격",
+    "q": "유럽 다중화 방식 E1의 전송속도로 맞는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 1.048 [Mbps]",
+        "a": 0,
+        "r": "존재하지 않는 규격입니다."
+      },
+      {
+        "t": "② 1.544 [Mbps]",
+        "a": 0,
+        "r": "북미 T1 방식의 전송속도입니다."
+      },
+      {
+        "t": "③ 2.048 [Mbps]",
+        "a": 1,
+        "r": "E1은 32채널 × 8비트 = 256비트 프레임을 사용하며, 256 × 8,000 = 2,048,000 bps (2.048 Mbps)의 전송속도를 가집니다."
+      },
+      {
+        "t": "④ 2.544 [Mbps]",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "c": "T1/E1 규격",
+    "q": "다중화 방식 T1/E1의 표본화 주파수로 맞는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 8,000 [Hz]",
+        "a": 1,
+        "r": "전화 음성대역(4kHz) 전송을 위해 T1과 E1 모두 나이퀴스트 정리에 따라 초당 8,000번 표본화를 수행합니다."
+      },
+      {
+        "t": "② 9,000 [Hz]",
+        "a": 0,
+        "r": "표준 표본화 주파수가 아닙니다."
+      },
+      {
+        "t": "③ 10,000 [Hz]",
+        "a": 0,
+        "r": "표준 표본화 주파수가 아닙니다."
+      },
+      {
+        "t": "④ 12,000 [Hz]",
+        "a": 0,
+        "r": "표준 표본화 주파수가 아닙니다."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "c": "E1 특징",
+    "q": "다중화 방식 E1의 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 표본화 주기는 125[μs]이다",
+        "a": 0,
+        "r": "1/8000 초 이므로 맞습니다."
+      },
+      {
+        "t": "② 동기용 채널은 프레임 당 마지막 bit이다",
+        "a": 1,
+        "r": "프레임 끝에 1개의 동기 비트를 붙이는 것은 북미 T1 방식입니다. E1 방식은 0번 타임슬롯(8비트) 전체를 동기용으로 사용합니다."
+      },
+      {
+        "t": "③ 멀티프레임 수는 16개이다",
+        "a": 0,
+        "r": "E1은 16개 프레임이 1개 멀티프레임을 이룹니다."
+      },
+      {
+        "t": "④ 유럽 다중화 방식의 표준이다",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "c": "부호속도",
+    "q": "시분할방식 스위치 회로망을 사용하는 디지털 교환기가 음성 32 채널의 PCM 신호방식일 때, 부호속도[Mbps]는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 1.544",
+        "a": 0,
+        "r": "24채널인 T1 방식입니다."
+      },
+      {
+        "t": "② 2.048",
+        "a": 1,
+        "r": "32채널 시스템(E1)은 32채널 × 8비트 × 8000Hz = 2.048 Mbps의 부호속도를 가집니다."
+      },
+      {
+        "t": "③ 6.312",
+        "a": 0,
+        "r": "북미 T2 계위입니다."
+      },
+      {
+        "t": "④ 8.192",
+        "a": 0,
+        "r": "유럽 E2 계위입니다."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "c": "E1 프레임",
+    "q": "PCM-32/TDM 에서 1 프레임의 비트 수는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 64 비트",
+        "a": 0,
+        "r": "1개 채널의 전송 비트레이트 혼동입니다."
+      },
+      {
+        "t": "② 193 비트",
+        "a": 0,
+        "r": "24채널 T1 방식의 비트 수입니다."
+      },
+      {
+        "t": "③ 256 비트",
+        "a": 1,
+        "r": "PCM-32 방식은 32개 채널이 각각 8비트씩 할당되므로 1프레임은 32 × 8 = 256 비트입니다."
+      },
+      {
+        "t": "④ 512 비트",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "c": "PCM-32 규격",
+    "q": "PCM-32 채널 다중화 장치의 음성비트와 표본화 주기는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 7비트, 256[μs]",
+        "a": 0,
+        "r": "수치가 모두 틀립니다."
+      },
+      {
+        "t": "② 8비트, 125[μs]",
+        "a": 1,
+        "r": "표준 PCM은 무조건 채널당 8비트로 양자화/부호화하며, 초당 8000번 샘플링하므로 주기는 1/8000 = 125[μs] 입니다."
+      },
+      {
+        "t": "③ 8비트, 256[μs]",
+        "a": 0,
+        "r": "256은 프레임 비트 수입니다."
+      },
+      {
+        "t": "④ 7비트, 125[μs]",
+        "a": 0,
+        "r": "표준 음성비트는 8비트입니다."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "c": "T1 규격",
+    "q": "PDH 중 북미방식인 T1의 전송 속도는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 64 [Kbps]",
+        "a": 0,
+        "r": "채널 1개의 속도입니다."
+      },
+      {
+        "t": "② 1.544 [Mbps]",
+        "a": 1,
+        "r": "북미 T1 방식은 24채널로 193비트 프레임을 가지며, 전송속도는 193 × 8000 = 1.544 Mbps 입니다."
+      },
+      {
+        "t": "③ 2.048 [Mbps]",
+        "a": 0,
+        "r": "유럽 E1 방식 속도입니다."
+      },
+      {
+        "t": "④ 6.312 [Mbps]",
+        "a": 0,
+        "r": "T2 방식 속도입니다."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "c": "T1/E1 비교",
+    "q": "다음 중 PCM 북미방식과 유럽방식의 설명이 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 북미방식과 유럽방식의 표본화주파수는 모두 8[kHz]이다.",
+        "a": 1,
+        "r": "두 방식 모두 인간 음성 대역(4kHz)을 처리하기 위해 공통적으로 8kHz로 샘플링합니다."
+      },
+      {
+        "t": "② 유럽방식은 24채널, 프레임당 비트수는 193비트이다.",
+        "a": 0,
+        "r": "북미방식(T1)에 대한 설명입니다."
+      },
+      {
+        "t": "③ 북미방식은 32채널, 프레임당 비트수는 256비트이다.",
+        "a": 0,
+        "r": "유럽방식(E1)에 대한 설명입니다."
+      },
+      {
+        "t": "④ 유럽방식은 15절선, 북미방식은 13절선을 사용한다.",
+        "a": 0,
+        "r": "반대로, 북미(μ-law)가 15절선, 유럽(A-law)이 13절선 압신을 사용합니다."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "c": "PAM 변조",
+    "q": "다음 중 PAM 변조방식에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 장거리 전송 시 아날로그 광대역증폭기가 필요하다.",
+        "a": 0,
+        "r": "진폭 자체를 전송하므로 아날로그 증폭기가 필요합니다."
+      },
+      {
+        "t": "② 잡음에 매우 강하여 PAM 신호가 잡음에 영향을 받지 않는다.",
+        "a": 1,
+        "r": "PAM은 진폭 레벨이 그대로 살아있는 아날로그 특성의 펄스이므로 선로의 외부 잡음에 매우 취약합니다."
+      },
+      {
+        "t": "③ 변조기로 on-off 스위치를 이용해 간단하게 구성할 수 있다.",
+        "a": 0,
+        "r": "샘플링 스위치로 쉽게 생성 가능합니다."
+      },
+      {
+        "t": "④ 복조기는 저역통과필터(LPF)를 사용하여 구성할 수 있다.",
+        "a": 0,
+        "r": "수신측 LPF를 통해 원신호를 부드럽게 복원합니다."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "c": "PCM 생성 원리",
+    "q": "다음 중 음악 CD로부터 PCM 신호를 생성하는데 사용하는 펄스 변조방식으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① PAM (Pulse Amplitude Modulation)",
+        "a": 1,
+        "r": "PCM을 만들기 위해서는 아날로그 신호를 먼저 샘플링하여 진폭 펄스(PAM)를 생성한 뒤, 이를 양자화 및 부호화해야 합니다."
+      },
+      {
+        "t": "② PWM (Pulse Width Modulation)",
+        "a": 0,
+        "r": "펄스 폭을 바꾸는 아날로그 변조입니다."
+      },
+      {
+        "t": "③ PPM (Pulse Position Modulation)",
+        "a": 0,
+        "r": "펄스 위치를 바꾸는 아날로그 변조입니다."
+      },
+      {
+        "t": "④ PFM (Pulse Frequency Modulation)",
+        "a": 0,
+        "r": "해당하지 않습니다."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "c": "DPCM",
+    "q": "DPCM에 대한 다음 설명 중 잘못된 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 표본값과 예측 표본값과의 차이만을 양자화한다.",
+        "a": 0,
+        "r": "DPCM의 기본 정의로 올바른 설명입니다."
+      },
+      {
+        "t": "② 영상 예측 부호화 등에 이용된다.",
+        "a": 0,
+        "r": "인접 픽셀간 차이가 적은 영상/음성 압축에 널리 쓰입니다."
+      },
+      {
+        "t": "③ 일반 PCM보다 정보전송량이 감소한다.",
+        "a": 0,
+        "r": "차이값만 보내므로 대역폭이 감소합니다."
+      },
+      {
+        "t": "④ 양자화 수행 시 사용 비트수가 일반적인 PCM보다 증가한다.",
+        "a": 1,
+        "r": "차이값(오차)의 변동폭이 원신호보다 훨씬 작으므로, 양자화에 필요한 비트수를 4~5비트 수준으로 크게 '감소'시킬 수 있습니다."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "c": "양자화 잡음",
+    "q": "다음 중 양자화 잡음이 발생하지 않는 방식은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 펄스 부호 변조 (PCM)",
+        "a": 0,
+        "r": "양자화가 필수이므로 잡음이 존재합니다."
+      },
+      {
+        "t": "② 델타 변조 (DM)",
+        "a": 0,
+        "r": "1비트 양자화를 수행하므로 입상/과부하 잡음이 발생합니다."
+      },
+      {
+        "t": "③ ADPCM",
+        "a": 0,
+        "r": "적응형이지만 여전히 양자화 잡음이 존재합니다."
+      },
+      {
+        "t": "④ 주파수 변조 (FM)",
+        "a": 1,
+        "r": "FM은 연속된 파형을 그대로 싣는 아날로그 변조 방식이므로, 신호를 강제로 끊어 맞추는 '양자화' 과정이 아예 없어 양자화 잡음이 발생하지 않습니다."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "c": "SNR 공식",
+    "q": "PCM 방식에서 양자화 비트의 수가 1비트 증가할 때마다 개선되는 신호대 양자화 잡음전력비는 몇 [dB]씩인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 3 [dB]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 5 [dB]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 6 [dB]",
+        "a": 1,
+        "r": "SNR 공식 (6n + 1.8 dB)에 의해 비트수(n)가 1 증가할 때마다 신호대 잡음비는 약 6 [dB]씩 대폭 개선됩니다."
+      },
+      {
+        "t": "④ 9 [dB]",
+        "a": 0,
+        "r": "DM에서 주파수를 2배 올렸을 때의 수치입니다."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "c": "압축 단계",
+    "q": "PCM 방식에서 압축(Compressing)이 이루어지는 단계는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전송로와 전송로 사이",
+        "a": 0,
+        "r": "아닙니다."
+      },
+      {
+        "t": "② 양자화와 부호화 사이",
+        "a": 0,
+        "r": "양자화 전에 신호 레벨을 조정해야 효과가 있습니다."
+      },
+      {
+        "t": "③ 표본화와 양자화 사이",
+        "a": 1,
+        "r": "송신기에서 표본화된 샘플 값 중 작은 신호는 크게, 큰 신호는 작게 이득을 조절(압축)한 뒤에 '양자화'를 수행하여 잡음을 최소화합니다."
+      },
+      {
+        "t": "④ 복호화와 여파기",
+        "a": 0,
+        "r": "수신단에서 원래대로 늘려주는 '신장'이 일어나는 위치입니다."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "c": "압신기",
+    "q": "PCM에서 압신기(Compander)가 설치되는 위치로 올바른 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 송신기에 설치한다.",
+        "a": 0,
+        "r": "압신기는 분리된 두 시스템의 합입니다."
+      },
+      {
+        "t": "② 수신기에 설치한다.",
+        "a": 0,
+        "r": "반쪽짜리 설명입니다."
+      },
+      {
+        "t": "③ 압축기는 송신기에, 신장기는 수신기에 설치한다.",
+        "a": 1,
+        "r": "Compander는 압축기(Compressor)와 신장기(Expander)의 합성어입니다. 잡음을 줄이기 위해 송신단에서 신호를 압축하고 수신단에서 신장하여 복원합니다."
+      },
+      {
+        "t": "④ 압축기는 수신기에, 신장기는 송신기에 설치한다.",
+        "a": 0,
+        "r": "기능 배치가 완전히 거꾸로 되었습니다."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "c": "PCM 요약",
+    "q": "다음 중 펄스코드변조(PCM)에 대한 설명으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 양자화 → 표본화 → 부호화 과정을 거친다",
+        "a": 0,
+        "r": "순서가 틀렸습니다 (표본화→양자화→부호화)."
+      },
+      {
+        "t": "② 양자화 잡음을 방지하기 위해 스텝 수를 감소시킨다",
+        "a": 0,
+        "r": "스텝 수를 감소시키면 오차가 커져 잡음이 증가합니다."
+      },
+      {
+        "t": "③ 부호화란 신호에 대한 진폭의 이산화 과정이다",
+        "a": 0,
+        "r": "진폭을 이산화하는 것은 '양자화'입니다."
+      },
+      {
+        "t": "④ 표본화란 신호에 대한 시간적인 이산화 과정이다",
+        "a": 1,
+        "r": "연속적인 시간 파형을 일정 간격 단위로 끊어내는(이산화) 과정이 '표본화(Sampling)'이므로 가장 정확한 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "c": "PCM 양자화잡음 개선 방법",
+    "q": "양자화 잡음화의 개선 방법으로 틀린 것은?\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① 양자화 스텝을 크게 한다.",
+        "a": 1,
+        "r": "양자화 잡음 전력은 $N_q = \\frac{\\Delta^2}{12}$이므로, 양자화 간격(스텝 크기 $\\Delta$)을 작게(조밀하게) 해야 오차와 잡음이 줄어듭니다."
+      },
+      {
+        "t": "② 비선형 양자화 방법을 사용한다.",
+        "a": 0,
+        "r": "신호 레벨이 작은 구간에서는 스텝을 좁히고 큰 구간에서는 넓혀 전체적인 신호 대 양자화잡음비(SNR)를 개선합니다."
+      },
+      {
+        "t": "③ 선형양자화와 압신방식을 같이 사용한다.",
+        "a": 0,
+        "r": "송신 측에서 압축하고 수신 측에서 신장하는 압신(Companding)을 선형양자화와 결합하면 비선형 양자화와 동일한 잡음 개선 효과를 얻습니다."
+      },
+      {
+        "t": "④ 양자화 스텝수가 2배로 증가할 때마다 6[dB]씩 개선된다.",
+        "a": 0,
+        "r": "부호화 비트 수($n$)가 1비트 늘어나면 스텝 수($2^n$)는 2배가 되며, $SNR \\approx 6n + 1.8 \\text{ [dB]}$ 공식에 따라 잡음 특성이 약 6[dB]씩 개선됩니다."
+      }
+    ]
+  }
+]
+</script>
+
+  <script>
+    let rawQuizData = [];
+    try {
+      const jsonText = document.getElementById("quiz-data").textContent;
+      rawQuizData = JSON.parse(jsonText);
+    } catch (e) {
+      alert("문제 데이터를 불러오는 중 오류가 발생했습니다. JSON 형식을 확인해주세요.");
+      console.error("JSON Parsing Error:", e);
+    }
+
+    let currentIdx = 0;
+    let userAnswers = new Array(rawQuizData.length).fill(null);
+
+    const questionBadge = document.getElementById("question-badge");
+    const categoryBadge = document.getElementById("category-badge");
+    const questionCounter = document.getElementById("question-counter");
+    const questionText = document.getElementById("question-text");
+    const optionsContainer = document.getElementById("options-container");
+    const explanationBox = document.getElementById("explanation-box");
+    const resultAlert = document.getElementById("result-alert");
+    const rationalesList = document.getElementById("rationales-list");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const navGrid = document.getElementById("nav-grid");
+    const scoreDisplay = document.getElementById("score-display");
+    const progressBar = document.getElementById("progress-bar");
+    const resetBtn = document.getElementById("reset-btn");
+    const editModal = document.getElementById("edit-modal");
+
+    function initNavGrid() {
+      navGrid.innerHTML = "";
+      rawQuizData.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.innerText = idx + 1;
+        btn.id = `nav-btn-${idx}`;
+        btn.className = "w-8 h-8 rounded-lg font-bold text-xs border border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200 transition";
+        btn.onclick = () => loadQuestion(idx);
+        navGrid.appendChild(btn);
+      });
+    }
+
+    function updateScoreAndProgress() {
+      const answeredCount = userAnswers.filter(a => a !== null).length;
+      let correctCount = 0;
+      userAnswers.forEach((ans, idx) => {
+        if (ans !== null && rawQuizData[idx].o[ans].a === 1) correctCount++;
+      });
+      scoreDisplay.innerText = `${correctCount} / ${answeredCount} (총 ${rawQuizData.length}문항)`;
+      progressBar.style.width = `${(answeredCount / rawQuizData.length) * 100}%`;
+
+      rawQuizData.forEach((_, idx) => {
+        const navBtn = document.getElementById(`nav-btn-${idx}`);
+        if(!navBtn) return;
+        if (userAnswers[idx] === null) {
+          navBtn.className = `w-8 h-8 rounded-lg font-bold text-xs border ${idx === currentIdx ? 'border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700' : 'border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200'}`;
+        } else {
+          const isUserCorrect = rawQuizData[idx].o[userAnswers[idx]].a === 1;
+          navBtn.className = `w-8 h-8 rounded-lg font-bold text-xs bg-${isUserCorrect ? 'emerald' : 'rose'}-500 text-white ${idx === currentIdx ? `ring-2 ring-${isUserCorrect ? 'emerald' : 'rose'}-300` : ''}`;
+        }
+      });
+    }
+
+    function loadQuestion(idx) {
+      if (idx < 0 || idx >= rawQuizData.length) return;
+      currentIdx = idx;
+      const q = rawQuizData[idx];
+
+      questionBadge.innerText = `문항 ${q.id || (idx+1)}`;
+      categoryBadge.innerText = q.c;
+      questionCounter.innerText = `${idx + 1} / ${rawQuizData.length}`;
+      questionText.innerText = q.q;
+      optionsContainer.innerHTML = "";
+      
+      const selected = userAnswers[idx];
+
+      q.o.forEach((opt, optIdx) => {
+        const btn = document.createElement("button");
+        btn.className = "w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm ";
+        
+        if (selected === null) {
+          btn.className += "border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50/50 text-slate-800";
+          btn.onclick = () => selectOption(optIdx);
+        } else {
+          if (opt.a === 1) btn.className += "border-emerald-500 bg-emerald-50 text-emerald-900 font-bold";
+          else if (selected === optIdx) btn.className += "border-rose-500 bg-rose-50 text-rose-900";
+          else btn.className += "border-slate-200 bg-slate-50 text-slate-400 opacity-60";
+          btn.disabled = true;
+        }
+
+        const iconSpan = document.createElement("span");
+        iconSpan.className = "pt-0.5"; 
+        if (selected !== null) {
+          if (opt.a === 1) iconSpan.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i>';
+          else if (selected === optIdx) iconSpan.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-600 text-lg"></i>';
+          else iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-300 text-lg"></i>';
+        } else {
+          iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-400 text-lg group-hover:text-indigo-600"></i>';
+        }
+
+        const textSpan = document.createElement("span");
+        textSpan.className = "flex-1 leading-relaxed";
+        textSpan.innerText = opt.t;
+        btn.appendChild(iconSpan);
+        btn.appendChild(textSpan);
+        optionsContainer.appendChild(btn);
+      });
+
+      if (selected !== null) {
+        renderExplanation(selected);
+        explanationBox.classList.remove("hidden");
+      } else {
+        explanationBox.classList.add("hidden");
+      }
+
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === rawQuizData.length - 1;
+      updateScoreAndProgress();
+    }
+
+    function selectOption(optIdx) {
+      userAnswers[currentIdx] = optIdx;
+      loadQuestion(currentIdx);
+    }
+
+    function renderExplanation(selectedIdx) {
+      const q = rawQuizData[currentIdx];
+      const isCorrect = q.o[selectedIdx].a === 1;
+
+      if (isCorrect) {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300";
+        resultAlert.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-2xl"></i> <div>정답입니다!</div>';
+      } else {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-rose-900 bg-rose-100 border border-rose-300";
+        resultAlert.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-600 text-2xl"></i> <div>오답입니다. 보기별 해설을 확인하세요.</div>';
+      }
+
+      rationalesList.innerHTML = "";
+      q.o.forEach((opt) => {
+        const item = document.createElement("div");
+        item.className = `p-3 rounded-lg border ${opt.a === 1 ? 'bg-emerald-50/80 border-emerald-200' : 'bg-white border-slate-200'}`;
+        const header = document.createElement("div");
+        header.className = "font-bold mb-1.5 flex items-start gap-2";
+        if (opt.a === 1) header.innerHTML = `<span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">정답 보기</span> <span class="text-emerald-900">${opt.t}</span>`;
+        else header.innerHTML = `<span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">${opt.t}</span>`;
+        
+        const body = document.createElement("div");
+        body.className = "text-xs md:text-sm text-slate-600 pl-1 leading-relaxed";
+        body.innerText = opt.r;
+
+        item.appendChild(header);
+        item.appendChild(body);
+        rationalesList.appendChild(item);
+      });
+    }
+
+    function openEditModal() {
+      const q = rawQuizData[currentIdx];
+      document.getElementById('edit-cat').value = q.c;
+      document.getElementById('edit-q').value = q.q;
+      
+      if(q.img && q.img.trim() !== "") {
+          document.getElementById('edit-img-base64').value = q.img;
+          document.getElementById('edit-img-preview').src = q.img;
+          document.getElementById('edit-img-preview').classList.remove('hidden');
+          document.getElementById('btn-clear-img').classList.remove('hidden');
+      } else {
+          clearImage(); 
+      }
+
+      for(let i=0; i<4; i++) {
+        document.getElementById(`edit-opt-${i}`).value = q.o[i].t;
+        document.getElementById(`edit-rat-${i}`).value = q.o[i].r;
+        if(q.o[i].a === 1) {
+          document.querySelector(`input[name="edit-ans"][value="${i}"]`).checked = true;
+        }
+      }
+      
+      document.body.classList.add('modal-open');
+      editModal.classList.remove('hidden');
+    }
+
+    function closeEditModal() {
+      document.body.classList.remove('modal-open');
+      editModal.classList.add('hidden');
+    }
+
+    function saveEditedQuestion() {
+      const q = rawQuizData[currentIdx];
+      q.c = document.getElementById('edit-cat').value;
+      q.q = document.getElementById('edit-q').value;
+      q.img = document.getElementById('edit-img-base64').value;
+      
+      const correctVal = document.querySelector('input[name="edit-ans"]:checked').value;
+      
+      for(let i=0; i<4; i++) {
+        q.o[i].t = document.getElementById(`edit-opt-${i}`).value;
+        q.o[i].r = document.getElementById(`edit-rat-${i}`).value;
+        q.o[i].a = (i.toString() === correctVal) ? 1 : 0;
+      }
+      
+      closeEditModal();
+      loadQuestion(currentIdx);
+      alert("문제가 성공적으로 수정되었습니다.\\n\\n※ 영구 저장을 원하시면 상단의 [수정본 다운로드] 버튼을 클릭하세요!");
+    }
+
+    function addNewQuestion() {
+      const newQ = {
+        id: rawQuizData.length + 1,
+        c: "새로운 카테고리",
+        q: "여기에 추가할 문제를 입력하세요.",
+        img: "",
+        o: [
+          { t: "① 보기 1", a: 1, r: "해설 1" },
+          { t: "② 보기 2", a: 0, r: "해설 2" },
+          { t: "③ 보기 3", a: 0, r: "해설 3" },
+          { t: "④ 보기 4", a: 0, r: "해설 4" }
+        ]
+      };
+      rawQuizData.push(newQ);
+      userAnswers.push(null);
+      initNavGrid();
+      loadQuestion(rawQuizData.length - 1);
+      openEditModal(); 
+    }
+
+    function deleteCurrentQuestion() {
+      if(rawQuizData.length <= 1) {
+          alert("최소 1개의 문제는 남아있어야 합니다.");
+          return;
+      }
+      if(confirm("정말로 이 문제를 삭제하시겠습니까?\\n삭제 후 복구할 수 없습니다.")) {
+          rawQuizData.splice(currentIdx, 1);
+          userAnswers.splice(currentIdx, 1);
+          rawQuizData.forEach((q, i) => q.id = i + 1);
+          
+          initNavGrid();
+          closeEditModal();
+          let nextIdx = currentIdx >= rawQuizData.length ? rawQuizData.length - 1 : currentIdx;
+          loadQuestion(nextIdx);
+      }
+    }
+
+    function encodeImageFileAsURL(element) {
+      const file = element.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onloadend = function() {
+        document.getElementById('edit-img-base64').value = reader.result;
+        document.getElementById('edit-img-preview').src = reader.result;
+        document.getElementById('edit-img-preview').classList.remove('hidden');
+        document.getElementById('btn-clear-img').classList.remove('hidden');
+      }
+      reader.readAsDataURL(file);
+    }
+
+    function clearImage() {
+      document.getElementById('edit-img-upload').value = "";
+      document.getElementById('edit-img-base64').value = "";
+      document.getElementById('edit-img-preview').src = "";
+      document.getElementById('edit-img-preview').classList.add('hidden');
+      document.getElementById('btn-clear-img').classList.add('hidden');
+    }
+
+    function downloadUpdatedHTML() {
+      const dataScript = document.getElementById('quiz-data');
+      dataScript.textContent = "\n" + JSON.stringify(rawQuizData, null, 2) + "\n";
+      
+      let htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = "정보전송일반_3차시_PCM통신_최종.html"; 
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    prevBtn.addEventListener("click", () => { if (currentIdx > 0) loadQuestion(currentIdx - 1); });
+    nextBtn.addEventListener("click", () => { if (currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1); });
+    resetBtn.addEventListener("click", () => {
+      if (confirm("풀이 기록을 모두 초기화하시겠습니까?")) {
+        userAnswers = new Array(rawQuizData.length).fill(null);
+        loadQuestion(0);
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if(!editModal.classList.contains('hidden')) return;
+      if (e.key === "ArrowLeft" && currentIdx > 0) loadQuestion(currentIdx - 1);
+      else if (e.key === "ArrowRight" && currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1);
+      else if (["1", "2", "3", "4"].includes(e.key) && userAnswers[currentIdx] === null) selectOption(parseInt(e.key) - 1);
+    });
+
+    initNavGrid();
+    loadQuestion(0);
+  </script>
+
+</body></html>

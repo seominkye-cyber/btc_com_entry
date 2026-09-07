@@ -1,0 +1,2356 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정보전송일반 - 9차시 정보통신 네트워크 CBT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap');
+    body { font-family: 'Pretendard', sans-serif; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .modal-open { overflow: hidden; }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.mb-1\.5{margin-bottom:0.375rem}.mt-0\.5{margin-top:0.125rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-2{height:0.5rem}.h-4{height:1rem}.h-7{height:1.75rem}.max-h-32{max-height:8rem}.max-h-60{max-height:15rem}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-4{width:1rem}.w-full{width:100%}.w-7{width:1.75rem}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.shrink-0{flex-shrink:0}.scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-\[1\.01\]{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-b-2xl{border-bottom-right-radius:1rem;border-bottom-left-radius:1rem}.rounded-t-2xl{border-top-left-radius:1rem;border-top-right-radius:1rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-rose-200{--tw-border-opacity:1;border-color:rgb(254 205 211 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-indigo-600{--tw-border-opacity:1;border-color:rgb(79 70 229 / var(--tw-border-opacity, 1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183 / var(--tw-border-opacity, 1))}.border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175 / var(--tw-border-opacity, 1))}.border-rose-500{--tw-border-opacity:1;border-color:rgb(244 63 94 / var(--tw-border-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-indigo-200{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-700{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.bg-indigo-800{--tw-bg-opacity:1;background-color:rgb(55 48 163 / var(--tw-bg-opacity, 1))}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-emerald-50\/80{background-color:rgb(236 253 245 / 0.8)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184 / var(--tw-bg-opacity, 1))}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pt-6{padding-top:1.5rem}.pt-0\.5{padding-top:0.125rem}.pl-1{padding-left:0.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[10px\]{font-size:10px}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-rose-900{--tw-text-opacity:1;color:rgb(136 19 55 / var(--tw-text-opacity, 1))}.opacity-60{opacity:0.6}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-400{--tw-ring-opacity:1;--tw-ring-color:rgb(129 140 248 / var(--tw-ring-opacity, 1))}.ring-emerald-300{--tw-ring-opacity:1;--tw-ring-color:rgb(110 231 183 / var(--tw-ring-opacity, 1))}.ring-rose-300{--tw-ring-opacity:1;--tw-ring-color:rgb(253 164 175 / var(--tw-ring-opacity, 1))}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-md{--tw-drop-shadow:drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.file\:mr-4::file-selector-button{margin-right:1rem}.file\:rounded-full::file-selector-button{border-radius:9999px}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-indigo-50::file-selector-button{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.file\:px-3::file-selector-button{padding-left:0.75rem;padding-right:0.75rem}.file\:py-1::file-selector-button{padding-top:0.25rem;padding-bottom:0.25rem}.file\:text-xs::file-selector-button{font-size:0.75rem;line-height:1rem}.file\:font-semibold::file-selector-button{font-weight:600}.file\:text-indigo-700::file-selector-button{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.hover\:border-indigo-400:hover{--tw-border-opacity:1;border-color:rgb(129 140 248 / var(--tw-border-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-200:hover{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-100:hover{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-200:hover{--tw-bg-opacity:1;background-color:rgb(254 205 211 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-50:hover{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:text-indigo-800:hover{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.hover\:text-rose-500:hover{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.hover\:file\:bg-indigo-100::file-selector-button:hover{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-40:disabled{opacity:0.4}.group:hover .group-hover\:text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:block{display:block}}@media (min-width: 768px){.md\:h-8{height:2rem}.md\:w-auto{width:auto}.md\:w-8{width:2rem}.md\:flex-row{flex-direction:row}.md\:justify-end{justify-content:flex-end}.md\:gap-2{gap:0.5rem}.md\:p-8{padding:2rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xs{font-size:0.75rem;line-height:1rem}}</style></head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col relative">
+
+  <!-- Header -->
+  <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-3">
+      <div class="flex items-center space-x-3 w-full md:w-auto">
+        <a href="index.html" class="bg-indigo-800 hover:bg-indigo-600 text-white text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1.5 border border-indigo-500 shadow-sm shrink-0" title="목록으로 돌아가기">
+          <i class="fa-solid fa-list"></i> 목록
+        </a>
+        <i class="fa-solid fa-network-wired text-2xl text-amber-300 hidden sm:block"></i>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight truncate">9차시 네트워크 CBT (63제)</h1>
+          <p class="text-xs text-indigo-200 truncate">TCP/IP · 서브네팅 · 라우팅 · ICMP 완벽 마스터</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-end">
+        <div class="text-right mr-2">
+          <span class="text-xs text-indigo-200 block">현재 점수</span>
+          <span id="score-display" class="font-extrabold text-lg text-amber-300">61 / 63 (총 66문항)</span>
+        </div>
+        <button onclick="downloadUpdatedHTML()" class="bg-emerald-600 hover:bg-emerald-500 text-xs px-3 py-2 rounded-lg font-bold transition flex items-center gap-1 border border-emerald-500 shadow-sm">
+          <i class="fa-solid fa-download"></i> 수정본 다운로드
+        </button>
+        <button id="reset-btn" class="bg-indigo-600 hover:bg-indigo-500 text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1 border border-indigo-500">
+          <i class="fa-solid fa-rotate-right"></i> 초기화
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="w-full bg-indigo-200 h-2">
+    <div id="progress-bar" class="bg-amber-400 h-2 transition-all duration-300" style="width: 95.4545%;"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-1 w-full">
+    
+    <!-- Question Card -->
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden relative">
+      <div class="bg-slate-50 border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <span id="question-badge" class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">문항 66</span>
+          <span id="category-badge" class="bg-slate-200 text-slate-700 text-xs font-semibold px-2 py-0.5 rounded">TCP/IP [CBT기출]</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button onclick="openEditModal()" class="text-xs text-indigo-600 font-bold hover:text-indigo-800 bg-indigo-50 px-2 py-1 rounded border border-indigo-200 transition shadow-sm">
+            <i class="fa-solid fa-pen-to-square"></i> 문제/해설 수정
+          </button>
+          <span id="question-counter" class="text-xs text-slate-500 font-medium">66 / 66</span>
+        </div>
+      </div>
+
+      <div class="p-6 md:p-8">
+        <h2 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-relaxed mb-4">다음 중 ICMP 프로토콜에 대한 설명으로 적합하지 않은 것은?<br><br><br><br></h2>
+        
+        <!-- 이미지 출력 영역 -->
+        <img id="question-image" src="" alt="첨부 이미지" class="mb-6 max-h-60 rounded-lg border border-slate-200 shadow-sm hidden">
+
+        <!-- Options -->
+        <div id="options-container" class="space-y-3"><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">① 네트워크 상에서 오류 메시지를 보고, 전송하는데 사용한다.</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">② 오류 보고 및 수정의 기능이 없는 IP의 단점을 보완하기 위한 프로토콜이다.</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">③ 메시지의 형태는 동일한 형식을 사용한다.</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">④ 메시지 전송에 따른 신뢰성을 고려하지 않는다.</span></button></div>
+
+        <!-- Explanation Section -->
+        <div id="explanation-box" class="mt-8 border-t border-slate-200 pt-6 animate-fade-in-up hidden">
+          <div id="result-alert" class="p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 shadow-inner"><i class="fa-solid fa-circle-check text-emerald-600 text-2xl drop-shadow"></i> <div>정답입니다! 완벽하게 이해하셨습니다.</div></div>
+          
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-4">
+            <h3 class="text-sm font-bold text-indigo-900 flex items-center gap-2">
+              <i class="fa-solid fa-book-open-reader text-indigo-600"></i> 해설 상세 보기
+            </h3>
+            <div id="rationales-list" class="space-y-2 text-sm text-slate-700"><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">① IP 주소에서 네트워크 주소와 호스트 주소를 구별하는 구별자 역할을 한다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">정확한 역할입니다.</div></div><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">② 32비트로 이루어져 있다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">IP와 같은 크기입니다.</div></div><div class="p-3 rounded-lg border shadow-sm bg-emerald-50/80 border-emerald-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5 shadow-sm">정답 보기</span> <span class="text-emerald-900">③ 서브넷 비트열이 '0'이면 네트워크 부분으로 인식된다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">서브넷 마스크 비트 필터에서 '1'로 꽉 채워 칠해진 영역이 소속을 나타내는 '네트워크' 영역이며, 뻥 뚫린 '0' 영역이 각 PC들에게 번호를 매기는 '호스트' 영역으로 취급됩니다. 반대로 설명되었습니다.</div></div><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">④ 서브넷 비트열이 '0'이면 호스트 주소로 인식된다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">맞는 설명입니다.</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 flex justify-between items-center">
+        <button id="prev-btn" class="px-4 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-arrow-left mr-1"></i> 이전 문제
+        </button>
+        <button id="next-btn" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-bold transition shadow disabled:opacity-40 disabled:cursor-not-allowed" disabled="">
+          다음 문제 <i class="fa-solid fa-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Grid -->
+    <div class="mt-8 bg-white rounded-xl p-5 shadow border border-slate-200">
+      <div class="flex justify-between items-center mb-4">
+        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">전체 문항 내비게이션</h4>
+        <button onclick="addNewQuestion()" class="text-xs bg-indigo-100 text-indigo-700 hover:bg-indigo-200 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1 border border-indigo-200 shadow-sm">
+          <i class="fa-solid fa-plus"></i> 새 문제 추가하기
+        </button>
+      </div>
+      <div id="nav-grid" class="flex flex-wrap gap-1.5 md:gap-2"><button id="nav-btn-0" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">1</button><button id="nav-btn-1" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">2</button><button id="nav-btn-2" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">3</button><button id="nav-btn-3" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">4</button><button id="nav-btn-4" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">5</button><button id="nav-btn-5" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">6</button><button id="nav-btn-6" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">7</button><button id="nav-btn-7" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">8</button><button id="nav-btn-8" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">9</button><button id="nav-btn-9" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">10</button><button id="nav-btn-10" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">11</button><button id="nav-btn-11" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">12</button><button id="nav-btn-12" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">13</button><button id="nav-btn-13" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">14</button><button id="nav-btn-14" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">15</button><button id="nav-btn-15" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">16</button><button id="nav-btn-16" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">17</button><button id="nav-btn-17" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">18</button><button id="nav-btn-18" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">19</button><button id="nav-btn-19" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">20</button><button id="nav-btn-20" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-rose-500 text-white ">21</button><button id="nav-btn-21" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">22</button><button id="nav-btn-22" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">23</button><button id="nav-btn-23" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">24</button><button id="nav-btn-24" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">25</button><button id="nav-btn-25" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">26</button><button id="nav-btn-26" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">27</button><button id="nav-btn-27" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">28</button><button id="nav-btn-28" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">29</button><button id="nav-btn-29" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">30</button><button id="nav-btn-30" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">31</button><button id="nav-btn-31" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">32</button><button id="nav-btn-32" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">33</button><button id="nav-btn-33" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">34</button><button id="nav-btn-34" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">35</button><button id="nav-btn-35" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">36</button><button id="nav-btn-36" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">37</button><button id="nav-btn-37" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">38</button><button id="nav-btn-38" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">39</button><button id="nav-btn-39" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">40</button><button id="nav-btn-40" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">41</button><button id="nav-btn-41" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">42</button><button id="nav-btn-42" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">43</button><button id="nav-btn-43" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">44</button><button id="nav-btn-44" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">45</button><button id="nav-btn-45" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">46</button><button id="nav-btn-46" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">47</button><button id="nav-btn-47" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">48</button><button id="nav-btn-48" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">49</button><button id="nav-btn-49" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">50</button><button id="nav-btn-50" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">51</button><button id="nav-btn-51" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">52</button><button id="nav-btn-52" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">53</button><button id="nav-btn-53" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">54</button><button id="nav-btn-54" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">55</button><button id="nav-btn-55" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">56</button><button id="nav-btn-56" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">57</button><button id="nav-btn-57" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">58</button><button id="nav-btn-58" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">59</button><button id="nav-btn-59" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">60</button><button id="nav-btn-60" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">61</button><button id="nav-btn-61" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">62</button><button id="nav-btn-62" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-rose-500 text-white ">63</button><button id="nav-btn-63" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">64</button><button id="nav-btn-64" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">65</button><button id="nav-btn-65" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700 scale-110">66</button></div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-200 border-t border-slate-300 py-4 text-center text-xs text-slate-500 mt-auto">
+    통신기능장 자가 수정/이미지 업로드 완벽 지원 시스템 © 2026
+  </footer>
+
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col">
+      <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50 rounded-t-2xl">
+        <h3 class="font-bold text-lg text-slate-800"><i class="fa-solid fa-pen-to-square text-indigo-600 mr-2"></i>문제 및 해설 편집</h3>
+        <button onclick="closeEditModal()" class="text-slate-400 hover:text-rose-500 transition"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <div class="p-6 overflow-y-auto flex-1 space-y-5">
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">카테고리</label>
+          <input type="text" id="edit-cat" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">문제 (질문)</label>
+          <textarea id="edit-q" rows="3" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea>
+        </div>
+        
+        <!-- 이미지 업로드 섹션 -->
+        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+          <label class="block text-xs font-bold text-slate-500 mb-2"><i class="fa-solid fa-image text-slate-400"></i> 문제 참고 이미지 첨부 (선택사항)</label>
+          <div class="flex items-center gap-2 mb-2">
+            <input type="file" id="edit-img-upload" accept="image/*" class="text-xs file:mr-4 file:py-1 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer" onchange="encodeImageFileAsURL(this)">
+            <button type="button" onclick="clearImage()" class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-600 px-3 py-1.5 rounded-full font-bold transition hidden" id="btn-clear-img"><i class="fa-solid fa-trash-can"></i> 지우기</button>
+          </div>
+          <input type="hidden" id="edit-img-base64" value="">
+          <img id="edit-img-preview" class="max-h-32 rounded border border-slate-300 shadow-sm hidden" src="">
+        </div>
+
+        <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 space-y-4">
+          <label class="block text-xs font-bold text-indigo-800 mb-2">보기 및 해설 설정 (정답 라디오 버튼 선택)</label>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="0" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-0" placeholder="보기 1 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-0" rows="1" placeholder="보기 1 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="1" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-1" placeholder="보기 2 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-1" rows="1" placeholder="보기 2 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="2" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-2" placeholder="보기 3 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-2" rows="1" placeholder="보기 3 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="3" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-3" placeholder="보기 4 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-3" rows="1" placeholder="보기 4 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 py-4 border-t border-slate-200 bg-slate-50 rounded-b-2xl flex justify-between items-center">
+        <button onclick="deleteCurrentQuestion()" class="px-4 py-2 bg-rose-50 border border-rose-200 text-rose-600 rounded-lg text-sm font-bold hover:bg-rose-100 transition"><i class="fa-solid fa-trash"></i> 이 문제 삭제</button>
+        <div class="flex gap-2">
+          <button onclick="closeEditModal()" class="px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-bold text-slate-600 hover:bg-slate-100 transition">취소</button>
+          <button onclick="saveEditedQuestion()" class="px-5 py-2 bg-indigo-600 rounded-lg text-sm font-bold text-white hover:bg-indigo-700 transition shadow">적용하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 데이터 스크립트 -->
+  <script id="quiz-data" type="application/json">
+[
+  {
+    "id": 1,
+    "c": "네트워크 장비",
+    "q": "다음은 정보통신 네트워크의 장치에 관한 설명이다. 그 중 라우터에 해당 되는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 복수개의 네트워크를 연결하는데 사용하는 장치이다.",
+        "a": 1,
+        "r": "라우터는 서로 다른, 즉 독립적으로 구성된 복수개의 네트워크(LAN이나 WAN)를 연결하여 최적의 패킷 전송 경로를 설정하는 3계층 핵심 장치입니다."
+      },
+      {
+        "t": "② 데이터의 송·수신처리를 담당하는 장치이다.",
+        "a": 0,
+        "r": "스위치나 송수신기 전반에 대한 설명입니다."
+      },
+      {
+        "t": "③ 데이터 송·수신과정에서 패킷으로 조립하거나 분해하는 장치이다.",
+        "a": 0,
+        "r": "전송 계층(TCP)이나 단말의 역할입니다."
+      },
+      {
+        "t": "④ 양측 단말기간 링크조건을 설정하는 장치이다.",
+        "a": 0,
+        "r": "세션 계층이나 연결 설정 장비의 역할입니다."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "c": "라우터의 특징",
+    "q": "다음 중 라우터에 대한 설명으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① OSI 3계층 레벨에서 프로토콜 처리 능력을 갖는 Network간 접속 장치이다.",
+        "a": 1,
+        "r": "라우터는 OSI 참조 모델의 네트워크 계층(3계층)에서 동작하며, IP 주소를 기반으로 논리적으로 서로 다른 네트워크들을 상호 연결해주는 장치입니다."
+      },
+      {
+        "t": "② 단말기 사이의 거리가 멀어질수록 감쇠되는 신호를 재생시키는 장비이다.",
+        "a": 0,
+        "r": "이것은 리피터(Repeater)에 대한 설명입니다."
+      },
+      {
+        "t": "③ OSI 2계층에서 LAN을 상호 연결하여 프레임을 저장하고 중계하는 장치이다.",
+        "a": 0,
+        "r": "이것은 브리지(Bridge)나 스위치에 대한 설명입니다."
+      },
+      {
+        "t": "④ OSI 4계층 이상에서 동작하며, 서로 다른 데이터 포맷을 가지는 정보를 변환해 준다.",
+        "a": 0,
+        "r": "이것은 게이트웨이(Gateway)에 대한 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "c": "네트워크 계층 장비",
+    "q": "다음 중 LAN 장비에서 네트워크계층의 연결장비인 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Router",
+        "a": 1,
+        "r": "네트워크 계층(3계층)에서 IP 주소를 기반으로 최적 경로를 설정해 주는 장비가 라우터(Router)입니다."
+      },
+      {
+        "t": "② Bridge",
+        "a": 0,
+        "r": "데이터링크 계층(2계층) 장비입니다."
+      },
+      {
+        "t": "③ Repeater",
+        "a": 0,
+        "r": "물리 계층(1계층) 장비입니다."
+      },
+      {
+        "t": "④ Hub",
+        "a": 0,
+        "r": "물리 계층(1계층) 장비입니다."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "c": "라우터 구조",
+    "q": "다음 중 라우터의 내부 물리적 구조에 포함되지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① GPU",
+        "a": 1,
+        "r": "GPU(그래픽 처리 장치)는 그래픽/영상 연산에 쓰이는 장치로, 네트워크 경로를 계산하는 통신 장비인 라우터의 기본 내부 구성품에는 포함되지 않습니다."
+      },
+      {
+        "t": "② CPU",
+        "a": 0,
+        "r": "라우팅 테이블 연산을 위해 필수적입니다."
+      },
+      {
+        "t": "③ DRAM",
+        "a": 0,
+        "r": "라우팅 테이블 등을 임시 저장하는 주 메모리입니다."
+      },
+      {
+        "t": "④ ROM",
+        "a": 0,
+        "r": "부트스트랩 등 기본 프로그램을 저장합니다."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "c": "라우터 인터페이스",
+    "q": "다음 중 라우터의 이더넷 (Ethernet) 인터페이스인 접속 포트에 활용되지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① TP",
+        "a": 0,
+        "r": "Twisted Pair (RJ-45) 포트로 가장 흔히 쓰입니다."
+      },
+      {
+        "t": "② AUI",
+        "a": 0,
+        "r": "과거 동축 케이블 연결을 위해 사용되던 15핀 이더넷 포트입니다."
+      },
+      {
+        "t": "③ DVI",
+        "a": 1,
+        "r": "DVI(Digital Visual Interface)는 모니터나 디스플레이에 디지털 영상을 전송하기 위한 '비디오 단자' 규격이므로, 네트워크 이더넷 접속 포트와는 무관합니다."
+      },
+      {
+        "t": "④ MAU",
+        "a": 0,
+        "r": "AUI 포트에 꽂아 TP 케이블 등으로 매체를 변환해주는 장비입니다."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "c": "라우터 인터페이스",
+    "q": "라우터를 로컬 내에서만 연결하여 관리할 수 있는 인터페이스(포트)는 무엇인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 이더넷 포트",
+        "a": 0,
+        "r": "네트워크 통신용 포트입니다."
+      },
+      {
+        "t": "② 직렬 포트",
+        "a": 0,
+        "r": "WAN 구간 연결용입니다."
+      },
+      {
+        "t": "③ 콘솔 포트",
+        "a": 1,
+        "r": "콘솔 포트(Console Port)는 라우터를 초기 설정하거나 장애가 났을 때, IP 주소 없이 관리자 PC와 시리얼 케이블로 직접(로컬로) 1:1 연결하여 설정 화면에 접속할 수 있게 해주는 관리 전용 인터페이스입니다."
+      },
+      {
+        "t": "④ Auxiliary 포트",
+        "a": 0,
+        "r": "모뎀을 연결하여 원격에서 관리할 때 주로 쓰는 포트입니다."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "c": "네트워크 장비 매칭",
+    "q": "다음 중 계층별로 소요될 인터네트워킹 장비를 알맞게 구성한 것은? '상위계층-(a), 네트워크계층-(b), 데이터링크계층-(c), 물리계층-(d)'",
+    "img": "",
+    "o": [
+      {
+        "t": "① (a) 리피터, (b) 브리지",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② (b) 브리지, (c) 라우터",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ (a) 라우터, (d) 게이트웨이",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ (a) 게이트웨이, (d) 리피터",
+        "a": 1,
+        "r": "OSI 계층별 장비 매칭에 의하면 물리계층(1계층)은 허브/리피터(d), 데이터링크계층(2계층)은 브리지/스위치(c), 네트워크계층(3계층)은 라우터(b), 상위계층(4계층 이상)은 프로토콜 변환기인 게이트웨이(a)입니다."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "c": "라우팅 프로토콜",
+    "q": "다음 중 라우터가 패킷을 목적지까지 전달하기 위하여 사용하는 라우팅 프로토콜에 속하지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① BGP",
+        "a": 0,
+        "r": "외부 게이트웨이 라우팅 프로토콜입니다."
+      },
+      {
+        "t": "② RIP",
+        "a": 0,
+        "r": "내부 게이트웨이 라우팅 프로토콜입니다."
+      },
+      {
+        "t": "③ BSC",
+        "a": 1,
+        "r": "BSC(Base Station Controller)는 이동통신망에서 기지국(BTS)들을 관리하는 '기지국 제어기' 하드웨어 시스템의 명칭이며, 경로를 설정하는 라우팅 소프트웨어 프로토콜이 아닙니다."
+      },
+      {
+        "t": "④ IGRP",
+        "a": 0,
+        "r": "시스코 전용 라우팅 프로토콜입니다."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "c": "라우팅 프로토콜",
+    "q": "다음 중 라우팅 프로토콜이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① BGP",
+        "a": 0,
+        "r": "Border Gateway Protocol 입니다."
+      },
+      {
+        "t": "② EGP",
+        "a": 0,
+        "r": "Exterior Gateway Protocol 입니다."
+      },
+      {
+        "t": "③ SNMP",
+        "a": 1,
+        "r": "SNMP(Simple Network Management Protocol)는 네트워크 장비들의 트래픽, 상태, 고장 여부 등을 원격으로 감시하고 관리하기 위해 사용하는 통신망 '관리' 규약으로, 패킷 경로를 찾는 라우팅 규약이 아닙니다."
+      },
+      {
+        "t": "④ RIP",
+        "a": 0,
+        "r": "Routing Information Protocol 입니다."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "c": "라우팅 역할",
+    "q": "다음 중 라우팅의 역할로 가장 알맞은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 여러 경로 중 가장 적절한 전송 경로를 선택하는 기능이다.",
+        "a": 1,
+        "r": "라우팅은 복잡한 네트워크 망 속에서 송신지부터 수신지까지 데이터 패킷이 빠르고 안전하게 도달할 수 있는 '최적의 경로(Best Route)를 찾아내는 기능'입니다."
+      },
+      {
+        "t": "② 다음으로 송신되는 노드의 물리주소를 찾는 기능이다.",
+        "a": 0,
+        "r": "이는 ARP 프로토콜의 역할입니다."
+      },
+      {
+        "t": "③ 물리 링크들을 임시적으로 연결하여 더 긴 링크를 만드는 기능이다.",
+        "a": 0,
+        "r": "이는 스위칭 혹은 연결 확장의 개념입니다."
+      },
+      {
+        "t": "④ 하나의 데이터 회선으로 상위 프로토콜 간의 데이터 전송을 수행하는 기능이다.",
+        "a": 0,
+        "r": "이는 다중화(Multiplexing)의 개념입니다."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "c": "라우팅 특징",
+    "q": "다음 중 라우팅(Routing) 에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 알고리즘에는 거리 벡터 알고리즘과 링크 상태 알고리즘이 있다.",
+        "a": 0,
+        "r": "동적 라우팅의 두 가지 핵심 분류입니다."
+      },
+      {
+        "t": "② 거리 벡터 알고리즘을 사용하는 프로토콜에는 RIP, IGRP가 있다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "③ 링크 상태 알고리즘을 사용하는 대표적인 프로토콜로는 OSPF가 있다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "④ BGP는 플러딩을 위해 D class IP 주소를 사용하여 멀티캐스팅을 수행한다.",
+        "a": 1,
+        "r": "D Class(멀티캐스트) IP 주소를 사용하여 헬로 패킷을 뿌리고 링크 상태를 플러딩(Flooding)하는 방식은 'OSPF'에 대한 설명입니다. 외부 라우팅 규약인 BGP는 단일 유니캐스트 기반의 TCP 통신을 사용합니다."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "c": "라우팅 루프 방지",
+    "q": "라우팅의 루핑 문제를 방지하기 위한 방법 중, 라우팅 정보가 들어온 인터페이스 쪽으로는 동일한 라우팅 정보를 다시 내보내지 않는 방법은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 최대 홉 카운트",
+        "a": 0,
+        "r": "홉 수를 15로 제한하여 루프를 막습니다."
+      },
+      {
+        "t": "② 스플릿 호라이즌",
+        "a": 1,
+        "r": "A가 B에게 알려준 정보를 B가 다시 A에게 되돌려줄 경우 무한 루프가 생기므로, 수신한 정보는 받은 쪽으로는 '다시 내보내지 않는다'는 쪼개기 원칙이 스플릿 호라이즌(Split Horizon)입니다."
+      },
+      {
+        "t": "③ 홀드 다운 타이머",
+        "a": 0,
+        "r": "다운된 망 정보를 일정 시간 무시하는 방법입니다."
+      },
+      {
+        "t": "④ 라우트 포이즈닝",
+        "a": 0,
+        "r": "끊어진 망의 거리를 무한대로 강제 전송하는 방법입니다."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "c": "자율시스템(AS)",
+    "q": "다음 중 자율 시스템 (AS: Autonomous System)에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 단체에 속하여 통제되며, 동일한 라우팅 정책을 사용하는 네트워크 그룹이다.",
+        "a": 0,
+        "r": "AS의 올바른 정의입니다."
+      },
+      {
+        "t": "② 전세계적으로 유일한 자율시스템번호(ASN)를 부여받는다.",
+        "a": 0,
+        "r": "식별을 위해 ASN이 부여됩니다."
+      },
+      {
+        "t": "③ AS 내에서의 라우팅을 위해 IGP 프로토콜을 사용한다.",
+        "a": 0,
+        "r": "내부 라우팅 규약입니다."
+      },
+      {
+        "t": "④ 타 AS와의 라우팅 정보 교환을 위해 외부 프로토콜인 EIGRP를 사용한다.",
+        "a": 1,
+        "r": "자율 시스템(AS) 외부, 즉 망과 망 사이를 연결하여 정보를 교환할 때 사용하는 외부 라우팅 프로토콜(EGP)의 대표 규격은 BGP입니다. EIGRP는 이름 그대로 '내부(Interior)' 프로토콜인 IGP에 속합니다."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "c": "자율시스템(AS)",
+    "q": "[2022-2회 기출] 자율시스템(AS)에 관한 설명으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① AS 내부 라우팅 프로토콜을 IGP라 하며 대표적으로 RIP와 OSPF가 있다.",
+        "a": 1,
+        "r": "하나의 관리자 그룹(AS) 내부에서 최적의 경로를 찾는 라우팅 방식을 IGP(Interior Gateway Protocol)라 부르며, 대표적으로 RIP, OSPF, EIGRP 등이 사용됩니다."
+      },
+      {
+        "t": "② 대표적인 AS간 라우팅 프로토콜은 EGP이며 EGP 이전에는 BGP가 쓰였다.",
+        "a": 0,
+        "r": "EGP가 쓰이다가 성능 한계로 BGP로 발전했습니다."
+      },
+      {
+        "t": "③ EGP는 RIP나 OSPF와 같게 통신 시 TCP 연결을 맺어서 동작한다.",
+        "a": 0,
+        "r": "RIP는 UDP를 사용하며, OSPF는 자체 IP 프로토콜 번호를 가집니다. EGP(BGP)만 TCP를 씁니다."
+      },
+      {
+        "t": "④ EGP는 AS 순서를 전송하므로 RIP의 문제점을 해결한다.",
+        "a": 0,
+        "r": "거리 제한 문제 해결과는 관련성이 멉니다."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "c": "거리 벡터 알고리즘",
+    "q": "IP 통신망에서 경유하는 라우터의 대수(홉 카운트)에 따라 최단 경로를 동적으로 결정하는 거리 벡터 알고리즘을 사용하는 프로토콜은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① RIP",
+        "a": 1,
+        "r": "RIP(Routing Information Protocol)는 오직 거쳐 가는 라우터의 개수, 즉 '홉(Hop) 카운트'만을 거리 측정 기준으로 삼아 최적의 경로를 결정하는 가장 대표적이고 단순한 거리 벡터(Distance Vector) 라우팅 프로토콜입니다."
+      },
+      {
+        "t": "② OSPF",
+        "a": 0,
+        "r": "대역폭 기반의 링크 상태 프로토콜입니다."
+      },
+      {
+        "t": "③ BGP",
+        "a": 0,
+        "r": "경로 벡터 프로토콜입니다."
+      },
+      {
+        "t": "④ DHCP",
+        "a": 0,
+        "r": "IP 자동 할당 프로토콜입니다."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "c": "RIP 특징",
+    "q": "다음 중 RIP 의 특징으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 라우팅 정보 전달 방식은 브로드캐스트 방식이다.",
+        "a": 0,
+        "r": "RIPv1은 브로드캐스트로 정보를 전달합니다."
+      },
+      {
+        "t": "② 한 번에 전송 가능한 경로 정보의 크기는 512[Kbyte]이다.",
+        "a": 0,
+        "r": "최대 512바이트 크기의 UDP 메시지를 보냅니다."
+      },
+      {
+        "t": "③ 경로 설정 알고리즘은 거리 벡터 알고리즘을 사용한다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      },
+      {
+        "t": "④ 경로 정보에는 서브넷 마스크 값이 포함된다.",
+        "a": 1,
+        "r": "구형인 RIP 버전 1은 라우팅 정보를 갱신할 때 '서브넷 마스크(Subnet Mask)' 정보를 전달하지 못하는 치명적 단점이 있습니다 (클래스풀 라우팅). 서브넷 마스크를 전달하는 것은 OSPF나 RIPv2의 특징입니다."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "c": "RIP 특성치",
+    "q": "다음 중 RIP 라우팅 프로토콜에 대한 최대 홉(Hop) 수와 라우팅 테이블의 업데이트 시간으로 적합한 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 15 [Hops], 30 [sec]",
+        "a": 1,
+        "r": "RIP는 라우팅 루프를 방지하기 위해 거쳐 갈 수 있는 최대 홉(Hop) 카운트를 15개로 제한(16은 도달 불가)하며, 망의 변화 여부와 무관하게 무조건 '30초마다' 자신의 라우팅 테이블 전체를 이웃에게 뿌립니다."
+      },
+      {
+        "t": "② 15 [Hops], 180 [sec]",
+        "a": 0,
+        "r": "180초는 장애 간주(Invalid) 타이머 시간입니다."
+      },
+      {
+        "t": "③ 255 [Hops], 30 [sec]",
+        "a": 0,
+        "r": "255홉은 IGRP의 한계치입니다."
+      },
+      {
+        "t": "④ 255 [Hops], 180 [sec]",
+        "a": 0,
+        "r": "틀린 수치 조합입니다."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "c": "RIP 동작",
+    "q": "[2022-1회 기출] 다음 중 RIP 프로토콜의 동작 특성이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Distance Vector 알고리즘을 사용하여 최단 경로를 구한다.",
+        "a": 0,
+        "r": "거리 벡터를 사용합니다."
+      },
+      {
+        "t": "② 링크 상태 라우팅에 근거를 둔 도메인 내 프로토콜이다.",
+        "a": 1,
+        "r": "RIP는 '거리 벡터(Distance Vector)' 알고리즘에 근거한 프로토콜입니다. 링크 상태(Link State) 라우팅에 근거를 둔 프로토콜은 OSPF나 IS-IS입니다."
+      },
+      {
+        "t": "③ 서브네트워크 주소는 클래스풀 자연 마스크를 기준으로 구성한다.",
+        "a": 0,
+        "r": "서브넷을 지원하지 않는 클래스풀(Classful) 방식입니다."
+      },
+      {
+        "t": "④ 라우팅 정보를 RIP 메시지로 작성하여 인접 라우터에 주기적으로 전송한다.",
+        "a": 0,
+        "r": "30초마다 갱신 정보를 뿌립니다."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "c": "OSPF 플러딩",
+    "q": "[2023-2회 기출] OSPF에서 갱신정보를 인접 라우터에 전송하고 인접 라우터는 다시 자신의 인접 라우터에 즉시 전달하여, 갱신정보가 네트워크 전역으로 신속하게 전파되도록 하는 과정은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 플러딩(Flooding)",
+        "a": 1,
+        "r": "망 내 링크의 상태가 변했을 때, 마치 홍수(Flood)가 밀려오듯 새로운 상태 갱신 패킷(LSA)을 물결처럼 모든 이웃 라우터로 무조건 퍼뜨려 정보를 동기화하는 기법을 플러딩이라고 합니다."
+      },
+      {
+        "t": "② 경로 태그(Route Tag)",
+        "a": 0,
+        "r": "외부 경로 정보를 식별하기 위한 값입니다."
+      },
+      {
+        "t": "③ 헬로우(Hello)",
+        "a": 0,
+        "r": "이웃 라우터가 살아있는지 점검하는 패킷입니다."
+      },
+      {
+        "t": "④ 데이터베이스 교환(Database Exchange)",
+        "a": 0,
+        "r": "플러딩 후 상세 정보를 맞추는 단계입니다."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "c": "VLSM 라우팅",
+    "q": "다음 중 VLSM을 지원하는 내부 라우팅 프로토콜이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① RIP v1",
+        "a": 1,
+        "r": "가변 길이 서브넷 마스크(VLSM)를 전송하려면 라우팅 프로토콜이 클래스리스(Classless)를 지원해야 합니다. OSPF, EIGRP, RIPv2는 이를 지원하지만 구형인 'RIP v1'은 서브넷 정보를 담을 수 없어 지원이 불가능합니다."
+      },
+      {
+        "t": "② EIGRP",
+        "a": 0,
+        "r": "시스코의 진보된 내부 프로토콜로 VLSM을 완벽 지원합니다."
+      },
+      {
+        "t": "③ OSPF",
+        "a": 0,
+        "r": "가장 대중적인 링크상태 프로토콜로 VLSM을 지원합니다."
+      },
+      {
+        "t": "④ Integrated IS-IS",
+        "a": 0,
+        "r": "링크상태 프로토콜로 VLSM을 지원합니다."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "c": "라우팅 프로토콜 분류",
+    "q": "[2022-4회 기출] 다음 중 IGP(Interior Gateway Protocol)로 사용되지 않는 라우팅 프로토콜은 어느 것인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① RIP",
+        "a": 0,
+        "r": "대표적인 내부 망(IGP) 규약입니다."
+      },
+      {
+        "t": "② BGP",
+        "a": 1,
+        "r": "BGP(Border Gateway Protocol)는 거대한 자율 시스템(AS) 즉, KT망과 SKT망 같이 서로 다른 관리자 네트워크 간의 국경(Border)을 넘나들 때 사용하는 외부망 전용 프로토콜인 'EGP'에 속합니다."
+      },
+      {
+        "t": "③ IGRP",
+        "a": 0,
+        "r": "내부 라우팅 규약입니다."
+      },
+      {
+        "t": "④ OSPF",
+        "a": 0,
+        "r": "내부 라우팅 규약입니다."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "c": "링크 상태 라우팅",
+    "q": "[2023-4회 기출] 다음 중 링크 상태 기반 라우팅 알고리즘이 수행하는 동작 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 주변 라우터에 측정된 링크 상태 분배",
+        "a": 0,
+        "r": "LSA 패킷을 통해 정보를 뿌립니다."
+      },
+      {
+        "t": "② 주변 라우터에 자신의 호스트 리스트 분배",
+        "a": 1,
+        "r": "링크 상태 기반 방식(OSPF 등)은 회선의 속도, 활성화 여부 등 '링크(선로)의 연결 상태' 정보를 주고받는 것이지, 네트워크에 물린 개별 PC(호스트)들의 목록을 분배하는 것이 아닙니다."
+      },
+      {
+        "t": "③ 주변 라우터 각각에 대한 지연시간 측정",
+        "a": 0,
+        "r": "회선 대역폭, 지연 비용 등 상태를 측정합니다."
+      },
+      {
+        "t": "④ 주변 라우터를 인지하고 그들의 네트워크 주소 숙지",
+        "a": 0,
+        "r": "이웃 라우터와의 관계를 형성합니다."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "c": "TCP/IP 구조",
+    "q": "다음 중 TCP/IP 프로토콜에 관한 설명으로 거리가 먼 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① TCP/IP는 De jure(법률) 표준이다.",
+        "a": 1,
+        "r": "TCP/IP는 정부나 국제기구가 강제로 정한 법적 규격(De jure)이 아니라, 인터넷이 발달하면서 산업계와 전 세계 사용자들이 자연스럽게 채택하여 사실상의 글로벌 표준이 되어버린 'De facto(사실상) 표준'입니다."
+      },
+      {
+        "t": "② IP는 ARP, RARP, ICMP, IGMP를 포함한다.",
+        "a": 0,
+        "r": "네트워크 계층 프로토콜 제품군입니다."
+      },
+      {
+        "t": "③ 인터넷에서 사용하는 프로토콜이다.",
+        "a": 0,
+        "r": "인터넷의 뼈대 규약입니다."
+      },
+      {
+        "t": "④ TCP는 신뢰성 있는 스트림 전송 프로토콜이다.",
+        "a": 0,
+        "r": "올바른 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "c": "서브넷 마스크",
+    "q": "다음 중 서브넷 마스크 (Subnet Mask) 에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 라우터에서 서브넷 식별자를 구별하기 위해서 필요하다.",
+        "a": 0,
+        "r": "네트워크 영역을 쪼개기 위해 씁니다."
+      },
+      {
+        "t": "② 서브넷 마스크는 IP주소와 마찬가지로 32비트로 이루어져 있다.",
+        "a": 0,
+        "r": "192.168.0.0처럼 32비트 체계입니다."
+      },
+      {
+        "t": "③ 비트열이 1인 경우 해당 IP주소의 네트워크 주소 부분으로 간주된다.",
+        "a": 0,
+        "r": "1로 씌워진 부분이 네트워크 영역입니다."
+      },
+      {
+        "t": "④ 목적지 IP주소 비트열에 서브넷 마스크 비트열을 OR 논리연산을 적용한다.",
+        "a": 1,
+        "r": "컴퓨터나 라우터가 IP 주소에서 자신의 소속 네트워크 대역만을 정확하게 분리해 내기 위해서는, 두 비트가 모두 1일 때만 1을 내보내는 'AND 논리연산'을 수행해야 합니다. (OR이 아님)"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "c": "서브넷 마스크 목적",
+    "q": "다음 중 서브넷 마스크 (Subnet Mask) 의 목적이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 네트워크 ID 축소",
+        "a": 1,
+        "r": "서브넷 마스크를 사용하여 큰 네트워크를 잘게 쪼개면(서브네팅), 호스트 ID의 비트를 빌려 네트워크 ID로 전환하므로 전체적으로 서브 네트워크의 갯수(네트워크 ID)는 축소가 아니라 '늘어나게' 됩니다."
+      },
+      {
+        "t": "② 네트워크의 부하 감소",
+        "a": 0,
+        "r": "망을 분리해 브로드캐스트 도메인을 줄여줍니다."
+      },
+      {
+        "t": "③ 네트워크의 논리적인 분할",
+        "a": 0,
+        "r": "부서별로 망을 논리적으로 분리합니다."
+      },
+      {
+        "t": "④ 네트워크 ID와 호스트 ID의 구분",
+        "a": 0,
+        "r": "마스크 필터링으로 주소를 구별합니다."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "c": "IP 클래스",
+    "q": "IPv4 에서 B 클래스의 경우 IP 주소 범위를 바르게 나타낸 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 0.0.0.0 ~ 127.255.255.255",
+        "a": 0,
+        "r": "A 클래스의 범위입니다."
+      },
+      {
+        "t": "② 128.0.0.0 ~ 191.255.255.255",
+        "a": 1,
+        "r": "B 클래스는 첫 번째 바이트가 이진수 '10'으로 시작하므로, 십진수로 변환하면 128.0.0.0 부터 191.255.255.255 까지의 주소 대역을 가집니다."
+      },
+      {
+        "t": "③ 192.0.0.0 ~ 223.255.255.255",
+        "a": 0,
+        "r": "C 클래스의 범위입니다."
+      },
+      {
+        "t": "④ 224.0.0.0 ~ 239.255.255.255",
+        "a": 0,
+        "r": "D 클래스의 범위입니다."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "c": "IP 클래스",
+    "q": "다음 중 IP 주소의 Class 에 대한 설명으로 잘못된 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Class A는 첫 번째 바이트의 첫 비트가 0으로 시작한다.",
+        "a": 0,
+        "r": "맞는 설명입니다 (0~127)."
+      },
+      {
+        "t": "② Class B의 가용 호스트 수는 65,534개이다.",
+        "a": 0,
+        "r": "2¹⁶ - 2 = 65,534개 맞습니다."
+      },
+      {
+        "t": "③ Class C는 가장 많은 네트워크를 수용할 수 있다.",
+        "a": 0,
+        "r": "Class C는 네트워크 식별에 24비트(상위 3비트 110 제외 시 21비트)를 할당하여 약 209만 개의 네트워크를 가질 수 있으므로 유니캐스트 클래스(A, B, C) 중 가장 많은 네트워크 수를 제공합니다."
+      },
+      {
+        "t": "④ Class D는 127로 시작하는 Loopback 주소로 사용된다.",
+        "a": 1,
+        "r": "127로 시작하는 주소(127.0.0.1 등)는 Class A 대역에 할당된 루프백(Loopback) 전용 예약 주소입니다. Class D(224.0.0.0 ~ 239.255.255.255)는 멀티캐스트(Multicast) 통신용으로 사용됩니다."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "c": "IP 주소 계산",
+    "q": "IPv4 주소체계는 Class A, B, C, D, E 로 구분하여 사용하고 있다. Class C가 수용할 수 있는 호스트 개수로 가장 적합한 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 17 개",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 254 개",
+        "a": 1,
+        "r": "클래스 C는 마지막 8비트(1바이트)만을 호스트 주소로 사용합니다. 경우의 수는 2⁸=256개 이나, 네트워크 자체 주소(전부 0)와 브로드캐스트 주소(전부 1) 2개를 빼야 하므로 실제 쓸 수 있는 PC는 254개입니다."
+      },
+      {
+        "t": "③ 1,204 개",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 65,536 개",
+        "a": 0,
+        "r": "클래스 B의 호스트 수량에 가깝습니다."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "c": "IP 클래스 구별",
+    "q": "다음 IP 주소들이 어느 클래스에 속하는지를 알맞게 연결한 것은?",
+    "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QLaRXhpZgAATU0AKgAAAAgABAE7AAIAAAAFAAABSodpAAQAAAABAAABUJydAAEAAAAKAAACyOocAAcAAAEMAAAAPgAAAAAc6gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdXNlcgAAAAWQAwACAAAAFAAAAp6QBAACAAAAFAAAArKSkQACAAAAAzM5AACSkgACAAAAAzM5AADqHAAHAAABDAAAAZIAAAAAHOoAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIwMjY6MDk6MDYgMDA6NDI6MDYAMjAyNjowOTowNiAwMDo0MjowNgAAAHUAcwBlAHIAAAD/4QQXaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCc/Pg0KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyI+PHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj48cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0idXVpZDpmYWY1YmRkNS1iYTNkLTExZGEtYWQzMS1kMzNkNzUxODJmMWIiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIvPjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSJ1dWlkOmZhZjViZGQ1LWJhM2QtMTFkYS1hZDMxLWQzM2Q3NTE4MmYxYiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIj48eG1wOkNyZWF0ZURhdGU+MjAyNi0wOS0wNlQwMDo0MjowNi4zOTI8L3htcDpDcmVhdGVEYXRlPjwvcmRmOkRlc2NyaXB0aW9uPjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSJ1dWlkOmZhZjViZGQ1LWJhM2QtMTFkYS1hZDMxLWQzM2Q3NTE4MmYxYiIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIj48ZGM6Y3JlYXRvcj48cmRmOlNlcSB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPjxyZGY6bGk+dXNlcjwvcmRmOmxpPjwvcmRmOlNlcT4NCgkJCTwvZGM6Y3JlYXRvcj48L3JkZjpEZXNjcmlwdGlvbj48L3JkZjpSREY+PC94OnhtcG1ldGE+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPD94cGFja2V0IGVuZD0ndyc/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q/5Q/wDxyj/hILr/AKFvV/yh/wDjlbdFHPH+X8w5X3MT/hILr/oW9X/KH/45R/wkF1/0Ler/AJQ//HK26KOeP8v5hyvuYn/CQXX/AELer/lD/wDHKP8AhILr/oW9X/KH/wCOVt0Uc8f5fzDlfcxP+Eguv+hb1f8AKH/45R/wkF1/0Ler/lD/APHK26KOeP8AL+Ycr7mJ/wAJBdf9C3q/5Q//AByj/hILr/oW9X/KH/45W3RRzx/l/MOV9zE/4SC6/wChb1f8of8A45R/wkF1/wBC3q/5Q/8Axytuijnj/L+Ycr7mJ/wkF1/0Ler/AJQ//HKP+Eguv+hb1f8AKH/45W3RRzx/l/MOV9zE/wCEguv+hb1f8of/AI5R/wAJBdf9C3q/5Q//ABytuijnj/L+Ycr7nNme81XxFpUv9j3tpDatK0klz5YHzRlRja5PU10lFFTOXNbS1hxjYKKKKgoKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//9k=",
+    "o": [
+      {
+        "t": "① ⓐ C클래스 ⓑ E클래스 ⓒ D클래스",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② ⓐ A클래스 ⓑ B클래스 ⓒ C클래스",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ ⓐ B클래스 ⓑ C클래스 ⓒ A클래스",
+        "a": 1,
+        "r": "ⓐ 165.132.124.65: 첫 번째 옥텟이 165이므로 128 ~ 191 범위에 속해 B클래스입니다.\n\nⓑ 210.150.165.140: 첫 번째 옥텟이 210이므로 192 ~ 223 범위에 속해 C클래스입니다.\n\nⓒ 65.80.158.57: 첫 번째 옥텟이 65이므로 0 ~ 127 범위에 속해 A클래스입니다."
+      },
+      {
+        "t": "④  ⓐ A클래스 ⓑ B클래스 ⓒ D클래스",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "c": "IP 클래스 비트",
+    "q": "다음 중 IPv4의 주소 구성을 나타낸 것으로 옳은 것은?",
+    "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QLaRXhpZgAATU0AKgAAAAgABAE7AAIAAAAFAAABSodpAAQAAAABAAABUJydAAEAAAAKAAACyOocAAcAAAEMAAAAPgAAAAAc6gAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdXNlcgAAAAWQAwACAAAAFAAAAp6QBAACAAAAFAAAArKSkQACAAAAAzQ3AACSkgACAAAAAzQ3AADqHAAHAAABDAAAAZIAAAAAHOoAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIwMjY6MDk6MDYgMDA6NDY6MTUAMjAyNjowOTowNiAwMDo0NjoxNQAAAHUAcwBlAHIAAAD/4QQXaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCc/Pg0KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyI+PHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj48cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0idXVpZDpmYWY1YmRkNS1iYTNkLTExZGEtYWQzMS1kMzNkNzUxODJmMWIiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIvPjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSJ1dWlkOmZhZjViZGQ1LWJhM2QtMTFkYS1hZDMxLWQzM2Q3NTE4MmYxYiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIj48eG1wOkNyZWF0ZURhdGU+MjAyNi0wOS0wNlQwMDo0NjoxNS40NjU8L3htcDpDcmVhdGVEYXRlPjwvcmRmOkRlc2NyaXB0aW9uPjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSJ1dWlkOmZhZjViZGQ1LWJhM2QtMTFkYS1hZDMxLWQzM2Q3NTE4MmYxYiIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIj48ZGM6Y3JlYXRvcj48cmRmOlNlcSB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPjxyZGY6bGk+dXNlcjwvcmRmOmxpPjwvcmRmOlNlcT4NCgkJCTwvZGM6Y3JlYXRvcj48L3JkZjpEZXNjcmlwdGlvbj48L3JkZjpSREY+PC94OnhtcG1ldGE+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPD94cGFja2V0IGVuZD0ndyc/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I/8AAxv8KPtPxM/6Bekf+Bjf4V3tFAHBfafiZ/0C9I/8DG/wo+0/Ez/oF6R/4GN/hXe0UAcF9p+Jn/QL0j/wMb/Cj7T8TP8AoF6R/wCBjf4V3tFAHBfafiZ/0C9I/wDAxv8ACj7T8TP+gXpH/gY3+Fd7RQBwX2n4mf8AQL0j/wADG/wo+0/Ez/oF6R/4GN/hXe0UAcF9p+Jn/QL0j/wMb/Cj7T8TP+gXpH/gY3+Fd7RQBwX2n4mf9AvSP/Axv8Kz73RvHmvaxoz6tZabBbWN6tw7RXJZiB7EV6bRQADpz1ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooqteahaafGJL2dYVJwC1AFmisj/hKNIzzexhezZ4rStrqC8hWW2kWSNujL3oAlooooAKKjNxCsgQyqGPQZpZJUhiaSRgqKMlj2oAfRWE3jbw4jFW1e3BBwRk8fpSf8Jx4a/6DFv8Amf8ACgDeoqvZX9rqNuJ7KZZoj0delWMj1oAKKhubuCziElzKsaFgoZu5PQVBHrGnzam2nRXUbXix+aYQfmC5xmgC7RRRmgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAIrqb7PaSzddiFgD3wK5K8tNSufDl1q9hGtxqk0Ja1jkOFT0HPH410etRtJpcu042fOfoOTTLDULWPQ7W4lkWKORBt3UAeXa/ouveFfC/wDwkFzrSPexlWktzCu07iMqPpmu0t5ZLSys9atUZFuSiz2/YluN3tisT4o+H7m7tV12C8aeC22s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hw1D/vylAHYx2GnxW8cCww+XGMKuBwKelrYxsGSKFWHQgCuL/wCFcaj/ANDhqH/flKP+Fcaj/wBDhqH/AH5SgDT8UaDLrPibwzfwTIselXbzSg/xBk28U3U/AemarqEl5NquqxPIeUgviij6Cs7/AIVxqP8A0OGof9+Uo/4VxqP/AEOGof8AflKAJv8AhWWkf9BrW/8AwZNQPhppKsGGs61kHIzqLVD/AMK41H/ocNQ/78pR/wAK41H/AKHDUP8AvylAG9pHhu10zVrnUpJvPuZ8AO7Z2ADGBnpW75if31/OuE/4VxqP/Q4ah/35Sj/hXGo/9DhqH/flKAO78xP76/nR5if31/OuE/4VxqP/AEOGof8AflKP+Fcaj/0OGof9+UoA7vzE/vr+dHmJ/fX864T/AIVxqP8A0OGof9+Uo/4VxqP/AEOGof8AflKAO78xP76/nR5if31/OuE/4VxqP/Q4ah/35Sj/AIVxqP8A0OGof9+UoAk0Zg3xs8R7SD/xLrXp+NdzXKeFvA48N6xe6nLqk+oXN5EkTvMgXAU8dK6ugAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigArPv9Zt7GQQ8zXLDKwJ95qsX9x9msZZQcMFO3644rI0xLfTtHbVtSIV3Xzpnf8Ah/PpQA4+IrpSA2h3oPvt/wAa0dP1S21JGNu4LocOndD6GvDbHWdX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",
+    "o": [
+      {
+        "t": "① A클래스",
+        "a": 0,
+        "r": "첫 번째 식별 비트는 0이어야 하며, 네트워크 주소(7비트)와 호스트 주소(24비트)로 구성됩니다. (보기는 식별 비트가 1로 표기되어 틀림)"
+      },
+      {
+        "t": "② B클래스",
+        "a": 0,
+        "r": "최상위 식별 비트는 10이어야 하며, 네트워크 식별에 14비트(앞의 10을 합치면 16비트), 호스트 주소에 16비트가 배정됩니다. (보기는 식별 비트가 01이고 비트 수가 뒤바뀌어 틀림)"
+      },
+      {
+        "t": "③ C클래스",
+        "a": 1,
+        "r": "최상위 식별 비트 3비트가 110으로 시작하며, 나머지 네트워크 주소 21비트(총 24비트)와 호스트 주소 8비트로 구성되어 정확한 구조입니다."
+      },
+      {
+        "t": "④ D클래스",
+        "a": 0,
+        "r": "최상위 식별 비트는 1110이며, 나머지 28비트는 브로드캐스트가 아니라 멀티캐스트 그룹 주소(Multicast Group ID)로 사용됩니다."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "c": "서브넷",
+    "q": "다음 중 IP(IPv4) 의 서브넷에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① IP주소를 보다 효율적으로 낭비 없이 쓰기 위함이 목적이다.",
+        "a": 0,
+        "r": "망을 쪼개 낭비를 줄입니다."
+      },
+      {
+        "t": "② 서브넷을 만들 때 사용하는 마스크를 서브넷 마스크라고 한다.",
+        "a": 0,
+        "r": "맞는 명칭입니다."
+      },
+      {
+        "t": "③ 클래스 기본 성질대로 쓰는 경우엔 디폴트 서브넷 마스크를 쓴다.",
+        "a": 0,
+        "r": "클래스 기본 마스크가 디폴트입니다."
+      },
+      {
+        "t": "④ IP주소에서 호스트 부분을 전부 '1' 로 한 것은 네트워크 주소이고, 전부 '0'으로 한 것은 브로드캐스트 주소이다.",
+        "a": 1,
+        "r": "완전히 반대로 설명했습니다. 호스트 비트를 전부 '0'으로 채운 것이 속한 묶음의 대문 이름인 '네트워크 자체 주소'가 되며, 전부 '1'로 채운 것이 모두에게 외치는 '브로드캐스트 주소'가 됩니다."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "c": "네트워크 설계",
+    "q": "PC 90대 운영 중이며, 1년 내 250대로 확장 예정인 사이트에 배정하기 가장 효율적인 IP 주소 클래스는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 클래스 A",
+        "a": 0,
+        "r": "수천만 개의 IP가 배정되어 극심한 낭비가 생깁니다."
+      },
+      {
+        "t": "② 클래스 B",
+        "a": 0,
+        "r": "6만 개의 IP로 낭비가 큽니다."
+      },
+      {
+        "t": "③ 클래스 C",
+        "a": 1,
+        "r": "클래스 C는 기본적으로 254대의 호스트 IP를 제공하므로, 250대까지 확장이 예정된 중소규모 사무실(사이트)의 경우 IP 낭비가 가장 적고 효율적인 최적의 배정 클래스입니다."
+      },
+      {
+        "t": "④ 클래스 D",
+        "a": 0,
+        "r": "특수 통신(멀티캐스트)용이므로 배정 불가합니다."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "c": "서브넷 목적",
+    "q": "다음 중 서브넷팅 (Subnetting)을 하는 이유로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① IP주소를 효율적으로 사용할 수 있다.",
+        "a": 0,
+        "r": "IP 낭비를 최소화합니다."
+      },
+      {
+        "t": "② 트래픽의 관리 및 제어가 가능하다.",
+        "a": 0,
+        "r": "망을 분리하여 관리가 편해집니다."
+      },
+      {
+        "t": "③ 불필요한 브로드캐스팅 메시지를 제한할 수 있다.",
+        "a": 0,
+        "r": "도메인이 분리되어 브로드캐스트 패킷 폭주를 막습니다."
+      },
+      {
+        "t": "④ 서브넷 분할을 하면 호스트 ID를 사용하지 않아도 된다.",
+        "a": 1,
+        "r": "네트워크를 아무리 잘게 쪼개어 서브넷을 구성하더라도, 각각의 PC가 자신만의 고유한 식별 번호를 가져야 하므로 '호스트 ID'는 반드시 존재해야 합니다."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "c": "서브넷 마스크 계산",
+    "q": "IPv4 C 클래스 네트워크를 26개의 서브넷으로 나누고, 각 서브넷에는 4~5 개의 호스트를 연결하려 한다. 서브넷 마스크 값은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 255.255.255.192",
+        "a": 0,
+        "r": "서브넷 4개로 쪼갤 때의 값입니다."
+      },
+      {
+        "t": "② 255.255.255.221",
+        "a": 0,
+        "r": "표준 마스크 형식이 아닙니다."
+      },
+      {
+        "t": "③ 255.255.255.240",
+        "a": 0,
+        "r": "서브넷 16개로 쪼갤 때의 값입니다."
+      },
+      {
+        "t": "④ 255.255.255.248",
+        "a": 1,
+        "r": "26개의 서브넷을 만들려면 호스트 비트 중 최소 5비트(2⁵=32)를 빌려와야 합니다. 8비트 중 앞 5개를 1로 채우면 11111000 이 되며, 십진수로 변환하면 128+64+32+16+8 = 248이 나옵니다. 남은 3비트(2³=8)로 호스트 4~5개 수용이 가능합니다."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "c": "IP 브로드캐스트",
+    "q": "다음 중 브로드캐스트 주소 (Broadcast Address)에 대한 설명으로 알맞은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 특정 노드에게만 데이터를 보낸다.",
+        "a": 0,
+        "r": "유니캐스트(Unicast)입니다."
+      },
+      {
+        "t": "② 네트워크 주소에서 호스트의 비트가 모두 1인 주소이다.",
+        "a": 1,
+        "r": "자신이 속한 네트워크 대역 내부의 '모든' 호스트 PC들에게 방송(Broadcast)하듯 동시에 데이터를 뿌리고 싶을 때 사용하는 주소로, IP 구성 비트 중 호스트 ID 자리를 전부 '1'로 꽉 채운 형태를 가집니다."
+      },
+      {
+        "t": "③ 네트워크 검사용으로 예약된 주소이다.",
+        "a": 0,
+        "r": "루프백 주소입니다."
+      },
+      {
+        "t": "④ 호스트 식별자에 127를 붙여서 사용한다.",
+        "a": 0,
+        "r": "잘못된 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "c": "IP 주소 기초",
+    "q": "다음 중 인터넷 주소 IP에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① IP주소는 네트워크 크기에 따라 5개 클래스로 구분되며 클래스 A는 가장 많은 호스트를 가진다.",
+        "a": 0,
+        "r": "A클래스는 호스트가 가장 많습니다."
+      },
+      {
+        "t": "② 인터넷 IP 주소는 64[bits]로 이루어지며 16[bit]씩 4부분으로 나누어 사용한다.",
+        "a": 1,
+        "r": "현재 가장 보편적인 IPv4 주소는 64비트가 아니라 '32비트' 길이이며, 이를 8비트씩 4도막 내어 점(.)으로 구분하는 십진수 방식으로 표기합니다."
+      },
+      {
+        "t": "③ 인터넷 모든 IP 주소는 InterNIC에서 할당한다.",
+        "a": 0,
+        "r": "글로벌 공인 IP 관리를 의미합니다."
+      },
+      {
+        "t": "④ 인터넷 IP 주소는 네트워크 주소와 호스트 주소로 구성한다.",
+        "a": 0,
+        "r": "두 부분으로 명확히 나뉩니다."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "c": "CIDR",
+    "q": "다음의 내용을 가장 잘 설명하는 것은? '다수의 C클래스 네트워크를 하나의 그룹으로 묶고, 이 요약된 정보로 라우팅 테이블 크기를 줄일 수 있다.'",
+    "img": "",
+    "o": [
+      {
+        "t": "① CIDR",
+        "a": 1,
+        "r": "비효율적인 클래스 장벽을 허물고, 여러 개의 자잘한 네트워크 주소를 비트 조작을 통해 큼지막한 덩어리 하나로 합쳐서(Supernetting/Route Summarization) 전 세계 라우터들의 테이블 메모리 부담을 크게 덜어준 핵심 기술이 바로 CIDR(Classless Inter-Domain Routing)입니다."
+      },
+      {
+        "t": "② 사설 어드레싱",
+        "a": 0,
+        "r": "내부망용 IP 사용 기법입니다."
+      },
+      {
+        "t": "③ NAT",
+        "a": 0,
+        "r": "사설 IP를 공인 IP로 변환하는 장비입니다."
+      },
+      {
+        "t": "④ IPv6",
+        "a": 0,
+        "r": "차세대 128비트 주소 체계입니다."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "c": "CIDR 표기",
+    "q": "[2022-4회 기출] 다음 중 네트워크 서브넷 마스크가 255.255.255.248일 때 CIDR 표기법으로 표시하면 어떤 숫자인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 32",
+        "a": 0,
+        "r": "호스트 단위 마스크입니다."
+      },
+      {
+        "t": "② 30",
+        "a": 0,
+        "r": "252로 끝나는 마스크입니다."
+      },
+      {
+        "t": "③ 29",
+        "a": 1,
+        "r": "255는 이진수 1이 8개입니다. 255가 세 개이므로 8+8+8 = 24. 마지막 248은 이진수 '11111000' 이므로 1이 5개입니다. 다 합치면 네트워크 비트(1)의 총 개수는 29개이므로, 슬래시 표기법으로는 /29가 됩니다."
+      },
+      {
+        "t": "④ 28",
+        "a": 0,
+        "r": "240으로 끝나는 마스크입니다."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "c": "CIDR 표기",
+    "q": "[2022-2회 기출] 다음 중 IP주소와 서브넷 마스크로 표시된 1.1.1.1 255.255.0.0을 CIDR 표기법으로 표현한 것은 무엇인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 1.1.1.1/4",
+        "a": 0,
+        "r": "틀린 표기입니다."
+      },
+      {
+        "t": "② 1.1.1.1/8",
+        "a": 0,
+        "r": "255.0.0.0 일 때의 표기입니다."
+      },
+      {
+        "t": "③ 1.1.1.1/10",
+        "a": 0,
+        "r": "틀린 표기입니다."
+      },
+      {
+        "t": "④ 1.1.1.1/16",
+        "a": 1,
+        "r": "서브넷 마스크 255.255.0.0은 이진수 1이 앞의 2바이트(8비트+8비트) 꽉 차 있는 형태이므로 네트워크 비트의 총 개수는 16개입니다. 따라서 CIDR 표기법으로는 IP 뒤에 '/16'을 붙여 표기합니다."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "c": "서브넷 용량 계산",
+    "q": "[2023-2회 기출] CIDR 형태로 192.168.128.0/20 으로 표기된 네트워크가 가질 수 있는 총 IP주소의 수는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 512",
+        "a": 0,
+        "r": "9비트 호스트일 때입니다."
+      },
+      {
+        "t": "② 1,024",
+        "a": 0,
+        "r": "10비트 호스트일 때입니다."
+      },
+      {
+        "t": "③ 2,048",
+        "a": 0,
+        "r": "11비트 호스트일 때입니다."
+      },
+      {
+        "t": "④ 4,096",
+        "a": 1,
+        "r": "총 IP 길이는 32비트입니다. 네트워크를 나타내는 프리픽스가 /20 이므로, PC에 배정할 수 있는 남은 호스트 비트는 32 - 20 = 12비트입니다. 2의 12승(2¹²)을 계산하면 이 네트워크 묶음은 총 4,096개의 엄청난 IP 주소를 수용할 수 있습니다."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "c": "IP 헤더",
+    "q": "다음 중 IP 헤더의 구조에 속하지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 버전 (Version)",
+        "a": 0,
+        "r": "IPv4인지 IPv6인지 명시합니다."
+      },
+      {
+        "t": "② 헤더길이 (Header length)",
+        "a": 0,
+        "r": "가변 길이인 IPv4 헤더 길이를 표기합니다."
+      },
+      {
+        "t": "③ IP 주소",
+        "a": 0,
+        "r": "출발지와 목적지 논리 주소가 들어갑니다."
+      },
+      {
+        "t": "④ 긴급 포인터 (Urgent Pointer)",
+        "a": 1,
+        "r": "급하게 먼저 처리해야 할 데이터의 위치를 콕 집어 알려주는 '긴급 포인터' 필드는 하위 3계층 IP 헤더가 아니라 상위 4계층인 'TCP 헤더'에만 존재하는 고유 필드입니다."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "c": "IP 데이터그램",
+    "q": "[2023-4회 기출] 다음 중 IP 데이터그램 구조에 포함되지 않는 항목은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Version",
+        "a": 0,
+        "r": "4 또는 6이 들어갑니다."
+      },
+      {
+        "t": "② Protocol",
+        "a": 0,
+        "r": "상위 페이로드가 TCP인지 UDP인지 구별합니다."
+      },
+      {
+        "t": "③ IP Address",
+        "a": 0,
+        "r": "필수 요소입니다."
+      },
+      {
+        "t": "④ Sequence number",
+        "a": 1,
+        "r": "조각난 패킷을 순서대로 짜맞추기 위한 일련번호(Sequence Number)는 데이터의 순서를 보장하는 전송 계층 'TCP'의 전유물이며, 순서를 보장하지 않는 IP 헤더에는 포함되어 있지 않습니다."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "c": "IP 특성",
+    "q": "다음 중 IP의 특성이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 비접속형",
+        "a": 0,
+        "r": "연결을 미리 맺지 않고 패킷을 던집니다."
+      },
+      {
+        "t": "② 신뢰성",
+        "a": 1,
+        "r": "인터넷 프로토콜(IP)은 패킷을 던져놓고 중간에 유실되든 순서가 뒤섞이든 전혀 신경 쓰지 않는 무책임한 '비신뢰성(Unreliable)' 프로토콜입니다. 에러 복구와 신뢰성 확보는 상위 계층인 TCP가 도맡아 처리합니다."
+      },
+      {
+        "t": "③ 주소 지정",
+        "a": 0,
+        "r": "논리적 32비트 주소를 사용합니다."
+      },
+      {
+        "t": "④ 경로 설정",
+        "a": 0,
+        "r": "라우터를 통한 라우팅 기능을 제공합니다."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "c": "네트워크 주소",
+    "q": "다음 중 네트워크 주소 (Network Address)에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 라우팅 프로토콜에서 네트워크를 지칭할 때 사용한다.",
+        "a": 0,
+        "r": "라우팅 테이블의 목적지 주소가 됩니다."
+      },
+      {
+        "t": "② IP주소와 서브넷 마스크를 AND 연산한다.",
+        "a": 0,
+        "r": "AND 연산 결과로 도출됩니다."
+      },
+      {
+        "t": "③ 네트워크 자체를 의미한다.",
+        "a": 0,
+        "r": "해당 네트워크 대역을 통칭합니다."
+      },
+      {
+        "t": "④ 패킷의 송신 주소나 수신 주소로 사용이 가능하다.",
+        "a": 1,
+        "r": "네트워크 주소(호스트 비트가 모두 0)는 그 대역의 통칭 이름표일 뿐이므로, 특정 PC에게 편지를 보내듯 개별적인 '송신/수신지 IP 주소'로는 절대로 사용할 수 없습니다."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "c": "네트워크 프로토콜",
+    "q": "네트워크 계층의 핵심적인 프로토콜로 상위계층으로부터 메시지를 받아 이를 패킷형태로 전송하는 프로토콜은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① IP (Internet Protocol)",
+        "a": 1,
+        "r": "OSI 3계층(네트워크 계층)에서 TCP나 UDP로부터 넘어온 데이터에 발송/수신 주소가 적힌 편지봉투(IP 헤더)를 씌워 '패킷' 형태로 만들어 목적지로 배달하는 인터넷 통신의 핵심 주역이 IP입니다."
+      },
+      {
+        "t": "② UDP",
+        "a": 0,
+        "r": "4계층 전송 규약입니다."
+      },
+      {
+        "t": "③ ICMP",
+        "a": 0,
+        "r": "오류 진단 메시지 규약입니다."
+      },
+      {
+        "t": "④ ARP",
+        "a": 0,
+        "r": "MAC 주소를 찾는 2계층 연계 프로토콜입니다."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "c": "TCP 특성",
+    "q": "다음 중 TCP 의 특징이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 접속형 프로토콜",
+        "a": 0,
+        "r": "미리 3-Way Handshake로 회선을 엽니다."
+      },
+      {
+        "t": "② 신뢰성 서비스",
+        "a": 0,
+        "r": "확인 응답(ACK)을 받아 분실 시 재전송합니다."
+      },
+      {
+        "t": "③ 데이터그램 서비스",
+        "a": 1,
+        "r": "목적지만 적어 던지고 잊어버리는 무연결 방식의 '데이터그램(Datagram)' 서비스는 UDP의 특징입니다. TCP는 데이터의 순서와 스트림을 보장하는 '세그먼트(Segment)' 단위를 다룹니다."
+      },
+      {
+        "t": "④ 혼잡 제어",
+        "a": 0,
+        "r": "망이 붐비면 속도를 늦춰 조절합니다."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "c": "TCP / UDP",
+    "q": "다음 중 TCP와 UDP 헤더의 구조에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① TCP 헤더는 8바이트, UDP는 20바이트 크기를 갖는다.",
+        "a": 1,
+        "r": "숫자가 완전히 뒤바뀌었습니다. 수많은 복구 제어 필드가 들어있는 무거운 'TCP 헤더는 최소 20바이트'이며, 포트 번호만 덜렁 있는 단순한 'UDP 헤더는 8바이트' 크기를 갖습니다."
+      },
+      {
+        "t": "② TCP 포트 번호는 UDP 포트 번호와 서로 독립적이다.",
+        "a": 0,
+        "r": "예를 들어 TCP 53포트와 UDP 53포트는 시스템 내부에서 꼬이지 않게 별도로 관리됩니다."
+      },
+      {
+        "t": "③ TCP에서는 강제적으로 검사합을 수행하는 반면, UDP는 선택적으로 수행한다.",
+        "a": 0,
+        "r": "TCP는 에러 검출이 필수입니다."
+      },
+      {
+        "t": "④ UDP는 비연결형 방식이고, TCP는 연결형 방식이다.",
+        "a": 0,
+        "r": "두 프로토콜의 가장 큰 성격 차이입니다."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "c": "TCP 특성",
+    "q": "다음 중 TCP 에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① TCP는 트랜스포트 계층의 프로토콜이다.",
+        "a": 0,
+        "r": "OSI 4계층 전송 프로토콜입니다."
+      },
+      {
+        "t": "② 혼잡을 회피하기 위한 방법으로 Slow-Start 알고리즘을 사용한다.",
+        "a": 0,
+        "r": "처음에 천천히 보내다 속도를 올립니다."
+      },
+      {
+        "t": "③ UDP와 같이 전송 전 연결을 설정하지 않고 상태 정보를 유지한다.",
+        "a": 1,
+        "r": "TCP는 데이터 전송을 시작하기 전, 반드시 송수신자 간에 SYN-ACK 인사(3-way Handshake)를 나누어 '연결(세션)을 미리 굳건하게 설정한 후'에야 비로소 통신을 시작하는 깐깐한 연결 지향형 규약입니다."
+      },
+      {
+        "t": "④ 양 종단에 버퍼를 가져 흐름 및 혼잡 제어를 수행한다.",
+        "a": 0,
+        "r": "수신 측 윈도우 사이즈를 통해 속도를 조절합니다."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "c": "OSI 계층",
+    "q": "인터넷 프로토콜 중 TCP 및 IP 계층은 ISO의 OSI 모델 7계층 중 각각 어느 계층에 대응하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 물리 계층 - 데이터링크 계층",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 네트워크 계층 - 세션 계층",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 전송 계층 - 물리 계층",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 전송 계층 - 네트워크 계층",
+        "a": 1,
+        "r": "포트 번호로 어플리케이션을 구별하며 신뢰성을 보장하는 TCP는 OSI의 4계층인 '전송(Transport) 계층'에 완벽히 대응하고, 논리 주소(IP)로 망의 경로를 찾는 IP는 3계층인 '네트워크(Network) 계층'에 대응합니다."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "c": "TCP 플래그",
+    "q": "TCP 헤더의 플래그 비트에서 긴급데이터를 전송하기 위해 사용하는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① URG",
+        "a": 1,
+        "r": "새치기 기능입니다. 수신측 버퍼에 데이터가 꽉 차 있더라도 대기열을 무시하고 최우선으로 처리해야 하는 '긴급(Urgent)' 데이터임을 깃발로 알릴 때 URG 플래그를 1로 세팅합니다."
+      },
+      {
+        "t": "② ACK",
+        "a": 0,
+        "r": "정상 수신 확인 깃발입니다."
+      },
+      {
+        "t": "③ RST",
+        "a": 0,
+        "r": "강제 비정상 종료(리셋) 깃발입니다."
+      },
+      {
+        "t": "④ FIN",
+        "a": 0,
+        "r": "정상 연결 종료 요구 깃발입니다."
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "c": "TCP/IP vs OSI",
+    "q": "다음 중 OSI 7 Layer 와 TCP/IP 의 관계에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① TCP/IP는 OSI 참조모델보다 먼저 개발되었다.",
+        "a": 0,
+        "r": "인터넷의 시초가 더 빠릅니다."
+      },
+      {
+        "t": "② TCP/IP의 계층구조는 OSI 모델과 정확하게 일치하지 않는다.",
+        "a": 0,
+        "r": "구조 병합의 차이가 있습니다."
+      },
+      {
+        "t": "③ OSI 모델은 7개 계층으로 TCP/IP 프로토콜은 4개 계층으로 구성된다.",
+        "a": 0,
+        "r": "일반적인 미국 국방성(DoD) 모델 기준입니다."
+      },
+      {
+        "t": "④ OSI 모델의 상위 4개 계층은 TCP/IP에서 응용계층으로 표현된다.",
+        "a": 1,
+        "r": "TCP/IP 4계층 모델의 '응용 계층'은 OSI 7계층 모델의 맨 꼭대기 '3개' 계층(표현, 세션, 응용 계층)만을 하나로 뭉뚱그려 표현한 것입니다. 상위 4개를 묶은 것이 아닙니다."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "c": "TCP 기능",
+    "q": "다음 중 TCP의 주요 서비스 기능이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 두 프로세스 간 연결 설정, 유지, 종료 기능",
+        "a": 0,
+        "r": "세션 지향 특성입니다."
+      },
+      {
+        "t": "② 에러 제어를 위한 메커니즘 제공",
+        "a": 0,
+        "r": "체크섬과 재전송을 통해 보장합니다."
+      },
+      {
+        "t": "③ 포트번호를 사용하여 송수신 간 다중연결 허용",
+        "a": 0,
+        "r": "하나의 IP 안에서 포트로 앱을 나눕니다."
+      },
+      {
+        "t": "④ 데이터 표현방식, 상이한 부호체계 간의 변화에 대하여 규정",
+        "a": 1,
+        "r": "데이터를 압축하거나 JPEG, ASCII 등의 부호체계를 해석해 화면에 띄울 수 있게 변환해주는 것은 OSI의 6계층인 '표현 계층(Presentation Layer)'의 역할입니다. 4계층 TCP는 박스의 내용물 형식엔 관여하지 않고 배달만 확실히 책임집니다."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "c": "TCP 헤더",
+    "q": "다음 중 TCP 프레임의 헤더 구조에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 순차 번호(Sequence Num) 필드는 송신되는 데이터 중 마지막 바이트를 지정한다.",
+        "a": 1,
+        "r": "순차 번호(Seq Number)는 무작위로 날아가는 수많은 데이터 조각들 중 '첫 번째' 바이트의 일련번호를 가리킵니다. 이를 기준으로 수신측에서 순서를 퍼즐처럼 맞춥니다. 마지막을 가리키는 것이 아닙니다."
+      },
+      {
+        "t": "② 응답 번호(Ack Number)는 응답제어 비트가 설정되어 있을 때만 제공된다.",
+        "a": 0,
+        "r": "ACK 플래그 세팅 시 유효합니다."
+      },
+      {
+        "t": "③ 헤더 길이(HLEN)는 TCP Segment 헤더의 길이를 4비트 워드 단위로 나타낸다.",
+        "a": 0,
+        "r": "가변적인 옵션 필드 때문입니다."
+      },
+      {
+        "t": "④ Window Size는 지정한 번호부터 수신 할 수 있는 바이트 수를 표시한다.",
+        "a": 0,
+        "r": "자신의 빈 버퍼 크기를 알려 속도를 제어합니다."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "c": "UDP 특징",
+    "q": "다음 중 UDP 의 특징으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 비상태정보(Non-state)",
+        "a": 0,
+        "r": "상대방의 상태를 묻지도 따지지도 않습니다."
+      },
+      {
+        "t": "② 비연결형(Connectionless)",
+        "a": 0,
+        "r": "사전 셋업 단계가 없습니다."
+      },
+      {
+        "t": "③ 최선형 서비스(Best Effort Service)",
+        "a": 0,
+        "r": "도착 보장 없이 그저 보낼 뿐입니다."
+      },
+      {
+        "t": "④ 정규적인 송신률(Regulated Send Rate)",
+        "a": 1,
+        "r": "UDP는 TCP처럼 윈도우 사이즈를 통해 송신 속도를 정규적으로 조절(Regulate)하는 흐름 제어 기능이 전혀 없습니다. 망이 막히든 말든 막무가내로 데이터를 쏟아냅니다."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "c": "UDP 설명",
+    "q": "다음 중 UDP 에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 신뢰성을 제공하지 않는다.",
+        "a": 0,
+        "r": "응답 패킷이 없어 유실 여부를 모릅니다."
+      },
+      {
+        "t": "② 연결설정 없이 데이터를 전송한다.",
+        "a": 0,
+        "r": "곧바로 던져버립니다."
+      },
+      {
+        "t": "③ 연결 등에 대한 상태 정보를 저장하지 않는다.",
+        "a": 0,
+        "r": "가벼운 통신 방식입니다."
+      },
+      {
+        "t": "④ TCP에 비해 오버헤드의 크기가 크다.",
+        "a": 1,
+        "r": "UDP 헤더는 각종 에러 제어 필드가 싹 빠진 아주 뼈대만 남은 8바이트 구조입니다. 따라서 무거운 TCP(최소 20바이트) 헤더에 비해 데이터 오버헤드가 훨씬 '적어서' 인터넷 전화나 실시간 동영상 전송에 월등히 유리합니다."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "c": "ARP 프로토콜",
+    "q": "논리 주소인 IP 주소를 바탕으로 물리 주소(MAC Address)를 얻어내는데 사용하는 프로토콜은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① RIP",
+        "a": 0,
+        "r": "홉 카운트(Hop Count)를 거리 메트릭으로 사용하는 거리 벡터(Distance Vector) 기반 내부 라우팅 프로토콜입니다."
+      },
+      {
+        "t": "② ARP",
+        "a": 0,
+        "r": "논리적 IP 주소를 알고 있을 때 이에 해당하는 하드웨어 물리 주소(MAC Address)를 알아내는 프로토콜입니다 (IP $\\rightarrow$ MAC)."
+      },
+      {
+        "t": "③ RARP",
+        "a": 1,
+        "r": "디스크가 없는 단말(Diskless Workstation) 등이 자신의 하드웨어 물리 주소(MAC Address)를 기반으로 논리적 IP 주소를 할당받기 위해 사용하는 프로토콜입니다 (MAC $\\rightarrow$ IP)."
+      },
+      {
+        "t": "④ ICMP",
+        "a": 0,
+        "r": "IP 패킷 전송 중 발생하는 에러 보고 및 상태 진단(Ping, Traceroute 등)을 수행하는 네트워크 제어 메시지 프로토콜입니다."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "c": "TCP/IP 모델",
+    "q": "[CBT기출] 다음 중 TCP/IP 프로토콜의 구조에 대한 설명으로 알맞지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① OSI 참조모델처럼 계층형 구조를 가진다.",
+        "a": 0,
+        "r": "계층화된 아키텍처입니다."
+      },
+      {
+        "t": "② OSI 참조모델이 표준화되기 전에 개발되었다.",
+        "a": 0,
+        "r": "실무에서 먼저 태동한 실용 모델입니다."
+      },
+      {
+        "t": "③ 세션과 표현계층이 별도로 존재하지 않는다.",
+        "a": 0,
+        "r": "응용계층에 통합되었습니다."
+      },
+      {
+        "t": "④ 물리, 인터넷, 전송, 응용계층으로 구성된다.",
+        "a": 1,
+        "r": "미국 국방부(DoD)가 정의한 TCP/IP 4계층의 맨 밑바닥 계층은 OSI 모델의 1계층(물리)과 2계층(데이터링크)을 하나로 짬뽕한 '네트워크 인터페이스(Network Access) 계층'입니다. 단독으로 물리 계층이라 부르지 않습니다."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "c": "서브넷 마스크",
+    "q": "[CBT기출] IPv4 C클래스에서 네트워크 식별자를 27비트로 사용할 경우 서브넷 마스크는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 255.255.255.224",
+        "a": 1,
+        "r": "기본 C클래스 네트워크는 24비트입니다. 식별자를 27비트로 늘렸다는 것은 호스트 자리에서 3비트를 더 빼앗았다는 뜻입니다. 마지막 바이트의 이진수 '11100000'을 십진수로 풀면 128+64+32 = 224 가 됩니다."
+      },
+      {
+        "t": "② 255.255.255.240",
+        "a": 0,
+        "r": "28비트 마스크입니다."
+      },
+      {
+        "t": "③ 255.255.255.248",
+        "a": 0,
+        "r": "29비트 마스크입니다."
+      },
+      {
+        "t": "④ 255.255.255.255",
+        "a": 0,
+        "r": "32비트 마스크입니다."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "c": "서브네팅",
+    "q": "[CBT기출] 네트워크 ID 가 192.168.55.0 이다. 각 서브넷은 최소 25개의 호스트 ID가 필요하다. 이 경우 서브넷 마스크는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 255.255.255.192",
+        "a": 0,
+        "r": "호스트를 62개나 허용해 낭비가 큽니다."
+      },
+      {
+        "t": "② 255.255.255.224",
+        "a": 1,
+        "r": "192로 시작하므로 C클래스입니다. 25대의 PC를 묶으려면 2의 제곱수 중 32(2⁵)를 써야 합니다. 즉, 호스트 비트로 5자리가 필요합니다. 8비트 중 남은 3비트를 1로 채워 서브넷으로 쓰면 '11100000'이 되며, 십진수로 변환하면 224가 떨어집니다."
+      },
+      {
+        "t": "③ 255.255.255.240",
+        "a": 0,
+        "r": "PC를 14대밖에 달지 못해 모자랍니다."
+      },
+      {
+        "t": "④ 255.255.255.248",
+        "a": 0,
+        "r": "PC를 6대밖에 달지 못합니다."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "c": "CIDR 용어",
+    "q": "[CBT기출] 서브넷 마스크의 비트 정보를 십진수가 아니라, 1의 비트 개수를 적어서 직관적으로 표기(/24 등)하는 방법을 무엇이라 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Subneting",
+        "a": 0,
+        "r": "망을 쪼개는 행위 자체입니다."
+      },
+      {
+        "t": "② Suppernetting",
+        "a": 0,
+        "r": "망을 합치는 행위입니다."
+      },
+      {
+        "t": "③ Netmask",
+        "a": 0,
+        "r": "마스크 자체를 뜻합니다."
+      },
+      {
+        "t": "④ CIDR",
+        "a": 1,
+        "r": "기존의 클래스 장벽(A/B/C)을 박살내고, 마스크의 1비트 개수를 세어 슬래시 뒤에 붙이는(/24, /27 등) 극도로 유연하고 혁신적인 IP 라우팅 표기 기법이 바로 CIDR(Classless Inter-Domain Routing)입니다."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "c": "서브넷 최적화",
+    "q": "[CBT기출] 어떤 네트워크 ID가 192.168.55.0 이다. 각 서브넷은 25개의 호스트 IP를 할당할 수 있어야 하고 '최대한 많은' 서브넷을 가져야 한다. 가장 적당한 마스크는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 255.255.255.192",
+        "a": 0,
+        "r": "호스트가 62명이라 서브넷 개수가 줄어듭니다."
+      },
+      {
+        "t": "② 255.255.255.224",
+        "a": 1,
+        "r": "25대의 PC를 수용하기 위한 최소 2진수 덩어리는 2⁵=32(실가용 30대)입니다. 즉, 호스트 5비트만 남기고 앞의 3비트(11100000)를 싹 다 네트워크(서브넷) 용도로 돌리면, 서브넷 개수도 최대한(8개) 뻥튀기할 수 있습니다. 이를 십진수로 변환하면 224가 됩니다."
+      },
+      {
+        "t": "③ 255.255.255.240",
+        "a": 0,
+        "r": "호스트 수용 불가(14대)입니다."
+      },
+      {
+        "t": "④ 255.255.255.248",
+        "a": 0,
+        "r": "호스트 수용 불가(6대)입니다."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "c": "서브넷 마스크",
+    "q": "[CBT기출] 다음 중 서브넷마스크에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① IP 주소에서 네트워크 주소와 호스트 주소를 구별하는 구별자 역할을 한다.",
+        "a": 0,
+        "r": "정확한 역할입니다."
+      },
+      {
+        "t": "② 32비트로 이루어져 있다.",
+        "a": 0,
+        "r": "IP와 같은 크기입니다."
+      },
+      {
+        "t": "③ 서브넷 비트열이 '0'이면 네트워크 부분으로 인식된다.",
+        "a": 1,
+        "r": "서브넷 마스크 비트 필터에서 '1'로 꽉 채워 칠해진 영역이 소속을 나타내는 '네트워크' 영역이며, 뻥 뚫린 '0' 영역이 각 PC들에게 번호를 매기는 '호스트' 영역으로 취급됩니다. 반대로 설명되었습니다."
+      },
+      {
+        "t": "④ 서브넷 비트열이 '0'이면 호스트 주소로 인식된다.",
+        "a": 0,
+        "r": "맞는 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "c": "ICMP",
+    "q": "[CBT기출] 다음 중 ICMP 프로토콜에 대한 설명으로 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 네트워크 상에서 오류 메시지를 보고, 전송하는데 사용한다.",
+        "a": 0,
+        "r": "Ping 테스트 등의 기반입니다."
+      },
+      {
+        "t": "② 오류 보고 기능이 없는 IP의 단점을 보완하기 위한 프로토콜이다.",
+        "a": 0,
+        "r": "IP 옆에서 보좌역을 합니다."
+      },
+      {
+        "t": "③ 메시지의 형태는 동일한 형식을 사용한다.",
+        "a": 1,
+        "r": "ICMP(Internet Control Message Protocol) 메시지는 목적지 도달 불가, 시간 초과, 에코 요청/응답 등 수많은 고장 상황과 알림 유형(Type)에 따라 메시지의 필드 구조와 덧붙는 데이터 형태가 '제각각 다르게' 유동적으로 구성됩니다."
+      },
+      {
+        "t": "④ 메시지 전송에 따른 신뢰성을 고려하지 않는다.",
+        "a": 0,
+        "r": "ICMP 메시지 자체가 분실되어도 다시 보내주지 않습니다."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "c": "TCP/IP [CBT기출]",
+    "q": "IPv4의 C클래스에서 네트워크 식별자로 27비트만을 사용한다고 할 경우 서브넷 마스크의 값은?\n\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① 255.255.255.224",
+        "a": 1,
+        "r": "상위 27비트가 1이므로 마지막 옥텟이 11100000(128+64+32=224)이 됩니다."
+      },
+      {
+        "t": "② 255.255.255.240",
+        "a": 0,
+        "r": "상위 28비트를 네트워크 식별자로 사용할 때(11110000)의 서브넷 마스크입니다."
+      },
+      {
+        "t": "③ 255.255.255.248",
+        "a": 0,
+        "r": "상위 29비트를 네트워크 식별자로 사용할 때(11111000)의 서브넷 마스크입니다."
+      },
+      {
+        "t": "④ 255.255.255.255",
+        "a": 0,
+        "r": "32비트 전체를 네트워크 식별자로 사용할 때의 단일 호스트 전용 서브넷 마스크입니다."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "c": "TCP/IP [CBT기출]",
+    "q": "사용중인 설비의 IP주소가 165.132.10.21일 경우, 해당IP의 Class와 등록 가능한 호스트의 수로 바르게 연결된 것은?\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① Class B : 2의16승-2개",
+        "a": 1,
+        "r": " 첫 번째 옥텟(165)이 B클래스(128~191) 범위이고, 호스트 비트가 16비트이므로 가용 호스트 수는 $2^{16}-2$개입니다."
+      },
+      {
+        "t": "② Class B : 2의 8승-2개",
+        "a": 0,
+        "r": "호스트 비트가 8비트인 C클래스의 호스트 수 공식을 잘못 대입한 보기입니다."
+      },
+      {
+        "t": "③ Class C : 2의16승-2개",
+        "a": 0,
+        "r": "IP의 클래스 판별과 호스트 비트 수가 모두 잘못 매칭된 보기입니다."
+      },
+      {
+        "t": "④ Class C : 2의 8승-2개",
+        "a": 0,
+        "r": "165번 대역은 C클래스가 아니므로 클래스 구분이 틀렸습니다."
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "c": "TCP/IP [CBT기출]",
+    "q": "다음 중 ICMP 프로토콜에 대한 설명으로 적합하지 않은 것은?\n\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① 네트워크 상에서 오류 메시지를 보고, 전송하는데 사용한다.",
+        "a": 0,
+        "r": "패킷 전송 실패나 목적지 도달 불가 등의 오류 상황을 발신지에 통보하는 역할을 합니다."
+      },
+      {
+        "t": "② 오류 보고 및 수정의 기능이 없는 IP의 단점을 보완하기 위한 프로토콜이다.",
+        "a": 0,
+        "r": "비연결형·비신뢰성 프로토콜인 IP에 오류 통보 기능을 제공하여 동작을 보완합니다."
+      },
+      {
+        "t": "③ 메시지의 형태는 동일한 형식을 사용한다.",
+        "a": 1,
+        "r": "Type과 Code에 따라 오류 보고 메시지와 질의 메시지 등 메시지 유형별 세부 데이터 필드 포맷이 서로 다릅니다."
+      },
+      {
+        "t": "④ 메시지 전송에 따른 신뢰성을 고려하지 않는다.",
+        "a": 0,
+        "r": "ICMP 메시지 역시 IP 데이터그램에 실려 비신뢰성 방식으로 전송되므로 자체적인 전달 확인이나 재전송을 보장하지 않습니다."
+      }
+    ]
+  }
+]
+</script>
+
+  <script>
+    let rawQuizData = [];
+    try {
+      const jsonText = document.getElementById("quiz-data").textContent;
+      rawQuizData = JSON.parse(jsonText);
+    } catch (e) {
+      alert("문제 데이터를 불러오는 중 오류가 발생했습니다. JSON 형식을 확인해주세요.");
+      console.error("JSON Parsing Error:", e);
+    }
+
+    let currentIdx = 0;
+    let userAnswers = new Array(rawQuizData.length).fill(null);
+
+    const questionBadge = document.getElementById("question-badge");
+    const categoryBadge = document.getElementById("category-badge");
+    const questionCounter = document.getElementById("question-counter");
+    const questionText = document.getElementById("question-text");
+    const questionImage = document.getElementById("question-image");
+    const optionsContainer = document.getElementById("options-container");
+    const explanationBox = document.getElementById("explanation-box");
+    const resultAlert = document.getElementById("result-alert");
+    const rationalesList = document.getElementById("rationales-list");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const navGrid = document.getElementById("nav-grid");
+    const scoreDisplay = document.getElementById("score-display");
+    const progressBar = document.getElementById("progress-bar");
+    const resetBtn = document.getElementById("reset-btn");
+    const editModal = document.getElementById("edit-modal");
+
+    function initNavGrid() {
+      navGrid.innerHTML = "";
+      rawQuizData.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.innerText = idx + 1;
+        btn.id = `nav-btn-${idx}`;
+        btn.className = "w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200 transition shadow-sm";
+        btn.onclick = () => loadQuestion(idx);
+        navGrid.appendChild(btn);
+      });
+      updateScoreAndProgress();
+    }
+
+    function updateScoreAndProgress() {
+      const answeredCount = userAnswers.filter(a => a !== null).length;
+      let correctCount = 0;
+      userAnswers.forEach((ans, idx) => {
+        if (ans !== null && rawQuizData[idx].o[ans].a === 1) correctCount++;
+      });
+      scoreDisplay.innerText = `${correctCount} / ${answeredCount} (총 ${rawQuizData.length}문항)`;
+      progressBar.style.width = `${(answeredCount / rawQuizData.length) * 100}%`;
+
+      rawQuizData.forEach((_, idx) => {
+        const navBtn = document.getElementById(`nav-btn-${idx}`);
+        if(!navBtn) return;
+        if (userAnswers[idx] === null) {
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm ${idx === currentIdx ? 'border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700 scale-110' : 'border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200'}`;
+        } else {
+          const isUserCorrect = rawQuizData[idx].o[userAnswers[idx]].a === 1;
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-${isUserCorrect ? 'emerald' : 'rose'}-500 text-white ${idx === currentIdx ? `ring-2 ring-${isUserCorrect ? 'emerald' : 'rose'}-300 scale-110` : ''}`;
+        }
+      });
+    }
+
+    function loadQuestion(idx) {
+      if (idx < 0 || idx >= rawQuizData.length) return;
+      currentIdx = idx;
+      const q = rawQuizData[idx];
+
+      questionBadge.innerText = `문항 ${q.id || (idx+1)}`;
+      categoryBadge.innerText = q.c;
+      questionCounter.innerText = `${idx + 1} / ${rawQuizData.length}`;
+      questionText.innerText = q.q;
+      
+      if(q.img && q.img.trim() !== "") {
+          questionImage.src = q.img;
+          questionImage.classList.remove('hidden');
+      } else {
+          questionImage.src = "";
+          questionImage.classList.add('hidden');
+      }
+
+      optionsContainer.innerHTML = "";
+      const selected = userAnswers[idx];
+
+      q.o.forEach((opt, optIdx) => {
+        const btn = document.createElement("button");
+        btn.className = "w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm ";
+        
+        if (selected === null) {
+          btn.className += "border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800";
+          btn.onclick = () => selectOption(optIdx);
+        } else {
+          if (opt.a === 1) btn.className += "border-emerald-500 bg-emerald-50 text-emerald-900 font-bold z-10 scale-[1.01]";
+          else if (selected === optIdx) btn.className += "border-rose-500 bg-rose-50 text-rose-900";
+          else btn.className += "border-slate-200 bg-slate-50 text-slate-400 opacity-60";
+          btn.disabled = true;
+        }
+
+        const iconSpan = document.createElement("span");
+        iconSpan.className = "pt-0.5 shrink-0"; 
+        if (selected !== null) {
+          if (opt.a === 1) iconSpan.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-xl drop-shadow-md"></i>';
+          else if (selected === optIdx) iconSpan.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-600 text-xl"></i>';
+          else iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-300 text-xl"></i>';
+        } else {
+          iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i>';
+        }
+
+        const textSpan = document.createElement("span");
+        textSpan.className = "flex-1 leading-relaxed";
+        textSpan.innerText = opt.t;
+        
+        btn.appendChild(iconSpan);
+        btn.appendChild(textSpan);
+        optionsContainer.appendChild(btn);
+      });
+
+      if (selected !== null) {
+        renderExplanation(selected);
+        explanationBox.classList.remove("hidden");
+      } else {
+        explanationBox.classList.add("hidden");
+      }
+
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === rawQuizData.length - 1;
+      updateScoreAndProgress();
+    }
+
+    function selectOption(optIdx) {
+      userAnswers[currentIdx] = optIdx;
+      loadQuestion(currentIdx);
+    }
+
+    function renderExplanation(selectedIdx) {
+      const q = rawQuizData[currentIdx];
+      const isCorrect = q.o[selectedIdx].a === 1;
+
+      if (isCorrect) {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-2xl drop-shadow"></i> <div>정답입니다! 완벽하게 이해하셨습니다.</div>';
+      } else {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-rose-900 bg-rose-100 border border-rose-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-600 text-2xl drop-shadow"></i> <div>오답입니다. 아래 보기별 해설을 반드시 확인하세요.</div>';
+      }
+
+      rationalesList.innerHTML = "";
+      q.o.forEach((opt) => {
+        const item = document.createElement("div");
+        item.className = `p-3 rounded-lg border shadow-sm ${opt.a === 1 ? 'bg-emerald-50/80 border-emerald-200' : 'bg-white border-slate-200'}`;
+        
+        const header = document.createElement("div");
+        header.className = "font-bold mb-1.5 flex items-start gap-2";
+        if (opt.a === 1) header.innerHTML = `<span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5 shadow-sm">정답 보기</span> <span class="text-emerald-900">${opt.t}</span>`;
+        else header.innerHTML = `<span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">${opt.t}</span>`;
+        
+        const body = document.createElement("div");
+        body.className = "text-xs md:text-sm text-slate-600 pl-1 leading-relaxed";
+        body.innerText = opt.r;
+
+        item.appendChild(header);
+        item.appendChild(body);
+        rationalesList.appendChild(item);
+      });
+    }
+
+    function openEditModal() {
+      const q = rawQuizData[currentIdx];
+      document.getElementById('edit-cat').value = q.c;
+      document.getElementById('edit-q').value = q.q;
+      
+      if(q.img && q.img.trim() !== "") {
+          document.getElementById('edit-img-base64').value = q.img;
+          document.getElementById('edit-img-preview').src = q.img;
+          document.getElementById('edit-img-preview').classList.remove('hidden');
+          document.getElementById('btn-clear-img').classList.remove('hidden');
+      } else {
+          clearImage(); 
+      }
+
+      for(let i=0; i<4; i++) {
+        document.getElementById(`edit-opt-${i}`).value = q.o[i].t;
+        document.getElementById(`edit-rat-${i}`).value = q.o[i].r;
+        if(q.o[i].a === 1) {
+          document.querySelector(`input[name="edit-ans"][value="${i}"]`).checked = true;
+        }
+      }
+      
+      document.body.classList.add('modal-open');
+      editModal.classList.remove('hidden');
+    }
+
+    function closeEditModal() {
+      document.body.classList.remove('modal-open');
+      editModal.classList.add('hidden');
+    }
+
+    function saveEditedQuestion() {
+      const q = rawQuizData[currentIdx];
+      q.c = document.getElementById('edit-cat').value;
+      q.q = document.getElementById('edit-q').value;
+      q.img = document.getElementById('edit-img-base64').value;
+      
+      const correctVal = document.querySelector('input[name="edit-ans"]:checked').value;
+      
+      for(let i=0; i<4; i++) {
+        q.o[i].t = document.getElementById(`edit-opt-${i}`).value;
+        q.o[i].r = document.getElementById(`edit-rat-${i}`).value;
+        q.o[i].a = (i.toString() === correctVal) ? 1 : 0;
+      }
+      
+      closeEditModal();
+      loadQuestion(currentIdx);
+      alert("문제가 성공적으로 수정되었습니다.\n\n※ 영구 저장을 원하시면 상단의 [수정본 다운로드] 버튼을 클릭하세요!");
+    }
+
+    function addNewQuestion() {
+      const newQ = {
+        id: rawQuizData.length + 1,
+        c: "새로운 카테고리",
+        q: "여기에 추가할 문제를 입력하세요.",
+        img: "",
+        o: [
+          { t: "① 보기 1", a: 1, r: "해설 1" },
+          { t: "② 보기 2", a: 0, r: "해설 2" },
+          { t: "③ 보기 3", a: 0, r: "해설 3" },
+          { t: "④ 보기 4", a: 0, r: "해설 4" }
+        ]
+      };
+      rawQuizData.push(newQ);
+      userAnswers.push(null);
+      initNavGrid();
+      loadQuestion(rawQuizData.length - 1);
+      openEditModal(); 
+    }
+
+    function deleteCurrentQuestion() {
+      if(rawQuizData.length <= 1) {
+          alert("최소 1개의 문제는 남아있어야 합니다.");
+          return;
+      }
+      if(confirm("정말로 이 문제를 삭제하시겠습니까?\n삭제 후 복구할 수 없습니다.")) {
+          rawQuizData.splice(currentIdx, 1);
+          userAnswers.splice(currentIdx, 1);
+          rawQuizData.forEach((q, i) => q.id = i + 1);
+          
+          initNavGrid();
+          closeEditModal();
+          let nextIdx = currentIdx >= rawQuizData.length ? rawQuizData.length - 1 : currentIdx;
+          loadQuestion(nextIdx);
+      }
+    }
+
+    function encodeImageFileAsURL(element) {
+      const file = element.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onloadend = function() {
+        document.getElementById('edit-img-base64').value = reader.result;
+        document.getElementById('edit-img-preview').src = reader.result;
+        document.getElementById('edit-img-preview').classList.remove('hidden');
+        document.getElementById('btn-clear-img').classList.remove('hidden');
+      }
+      reader.readAsDataURL(file);
+    }
+
+    function clearImage() {
+      document.getElementById('edit-img-upload').value = "";
+      document.getElementById('edit-img-base64').value = "";
+      document.getElementById('edit-img-preview').src = "";
+      document.getElementById('edit-img-preview').classList.add('hidden');
+      document.getElementById('btn-clear-img').classList.add('hidden');
+    }
+
+    function downloadUpdatedHTML() {
+      const dataScript = document.getElementById('quiz-data');
+      dataScript.textContent = "\n" + JSON.stringify(rawQuizData, null, 2) + "\n";
+      
+      let htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = "정보전송일반_9차시_네트워크_최종본.html"; 
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    prevBtn.addEventListener("click", () => { if (currentIdx > 0) loadQuestion(currentIdx - 1); });
+    nextBtn.addEventListener("click", () => { if (currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1); });
+    resetBtn.addEventListener("click", () => {
+      if (confirm("풀이 기록을 모두 초기화하시겠습니까? 처음부터 다시 풉니다.")) {
+        userAnswers = new Array(rawQuizData.length).fill(null);
+        loadQuestion(0);
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if(!editModal.classList.contains('hidden')) return;
+      if (e.key === "ArrowLeft" && currentIdx > 0) loadQuestion(currentIdx - 1);
+      else if (e.key === "ArrowRight" && currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1);
+      else if (["1", "2", "3", "4"].includes(e.key) && userAnswers[currentIdx] === null) selectOption(parseInt(e.key) - 1);
+    });
+
+    if (rawQuizData.length > 0) {
+      initNavGrid();
+      loadQuestion(0);
+    }
+  </script>
+
+</body></html>

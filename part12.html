@@ -1,0 +1,2356 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정보전송일반 - 12차시 정보보안 일반 CBT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap');
+    body { font-family: 'Pretendard', sans-serif; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .modal-open { overflow: hidden; }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.mb-1\.5{margin-bottom:0.375rem}.mt-0\.5{margin-top:0.125rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-2{height:0.5rem}.h-4{height:1rem}.h-7{height:1.75rem}.max-h-32{max-height:8rem}.max-h-60{max-height:15rem}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-4{width:1rem}.w-full{width:100%}.w-7{width:1.75rem}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.shrink-0{flex-shrink:0}.scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-\[1\.01\]{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-b-2xl{border-bottom-right-radius:1rem;border-bottom-left-radius:1rem}.rounded-t-2xl{border-top-left-radius:1rem;border-top-right-radius:1rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-rose-200{--tw-border-opacity:1;border-color:rgb(254 205 211 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-indigo-600{--tw-border-opacity:1;border-color:rgb(79 70 229 / var(--tw-border-opacity, 1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183 / var(--tw-border-opacity, 1))}.border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175 / var(--tw-border-opacity, 1))}.border-rose-500{--tw-border-opacity:1;border-color:rgb(244 63 94 / var(--tw-border-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-indigo-200{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-700{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.bg-indigo-800{--tw-bg-opacity:1;background-color:rgb(55 48 163 / var(--tw-bg-opacity, 1))}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-emerald-50\/80{background-color:rgb(236 253 245 / 0.8)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184 / var(--tw-bg-opacity, 1))}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pt-6{padding-top:1.5rem}.pt-0\.5{padding-top:0.125rem}.pl-1{padding-left:0.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[10px\]{font-size:10px}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-rose-900{--tw-text-opacity:1;color:rgb(136 19 55 / var(--tw-text-opacity, 1))}.opacity-60{opacity:0.6}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-400{--tw-ring-opacity:1;--tw-ring-color:rgb(129 140 248 / var(--tw-ring-opacity, 1))}.ring-emerald-300{--tw-ring-opacity:1;--tw-ring-color:rgb(110 231 183 / var(--tw-ring-opacity, 1))}.ring-rose-300{--tw-ring-opacity:1;--tw-ring-color:rgb(253 164 175 / var(--tw-ring-opacity, 1))}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-md{--tw-drop-shadow:drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.file\:mr-4::file-selector-button{margin-right:1rem}.file\:rounded-full::file-selector-button{border-radius:9999px}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-indigo-50::file-selector-button{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.file\:px-3::file-selector-button{padding-left:0.75rem;padding-right:0.75rem}.file\:py-1::file-selector-button{padding-top:0.25rem;padding-bottom:0.25rem}.file\:text-xs::file-selector-button{font-size:0.75rem;line-height:1rem}.file\:font-semibold::file-selector-button{font-weight:600}.file\:text-indigo-700::file-selector-button{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.hover\:border-indigo-400:hover{--tw-border-opacity:1;border-color:rgb(129 140 248 / var(--tw-border-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-200:hover{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-100:hover{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-200:hover{--tw-bg-opacity:1;background-color:rgb(254 205 211 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-50:hover{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:text-indigo-800:hover{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.hover\:text-rose-500:hover{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.hover\:file\:bg-indigo-100::file-selector-button:hover{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-40:disabled{opacity:0.4}.group:hover .group-hover\:text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:block{display:block}}@media (min-width: 768px){.md\:h-8{height:2rem}.md\:w-auto{width:auto}.md\:w-8{width:2rem}.md\:flex-row{flex-direction:row}.md\:justify-end{justify-content:flex-end}.md\:gap-2{gap:0.5rem}.md\:p-8{padding:2rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xs{font-size:0.75rem;line-height:1rem}}</style></head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col relative">
+
+  <!-- Header -->
+  <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-3">
+      <div class="flex items-center space-x-3 w-full md:w-auto">
+        <a href="index.html" class="bg-indigo-800 hover:bg-indigo-600 text-white text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1.5 border border-indigo-500 shadow-sm shrink-0" title="목록으로 돌아가기">
+          <i class="fa-solid fa-list"></i> 목록
+        </a>
+        <i class="fa-solid fa-shield-cat text-2xl text-amber-300 hidden sm:block"></i>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight truncate">12차시 정보보안 일반 CBT (63제)</h1>
+          <p class="text-xs text-indigo-200 truncate">정보보안 3요소 · 스니핑/DDoS · 대칭/비대칭 암호화 완벽 마스터</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-end">
+        <div class="text-right mr-2">
+          <span class="text-xs text-indigo-200 block">현재 점수</span>
+          <span id="score-display" class="font-extrabold text-lg text-amber-300">61 / 62 (총 66문항)</span>
+        </div>
+        <button onclick="downloadUpdatedHTML()" class="bg-emerald-600 hover:bg-emerald-500 text-xs px-3 py-2 rounded-lg font-bold transition flex items-center gap-1 border border-emerald-500 shadow-sm">
+          <i class="fa-solid fa-download"></i> 수정본 다운로드
+        </button>
+        <button id="reset-btn" class="bg-indigo-600 hover:bg-indigo-500 text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1 border border-indigo-500">
+          <i class="fa-solid fa-rotate-right"></i> 초기화
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="w-full bg-indigo-200 h-2">
+    <div id="progress-bar" class="bg-amber-400 h-2 transition-all duration-300" style="width: 93.9394%;"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-1 w-full">
+    
+    <!-- Question Card -->
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden relative">
+      <div class="bg-slate-50 border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <span id="question-badge" class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">문항 66</span>
+          <span id="category-badge" class="bg-slate-200 text-slate-700 text-xs font-semibold px-2 py-0.5 rounded">보안 도구</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button onclick="openEditModal()" class="text-xs text-indigo-600 font-bold hover:text-indigo-800 bg-indigo-50 px-2 py-1 rounded border border-indigo-200 transition shadow-sm">
+            <i class="fa-solid fa-pen-to-square"></i> 문제/해설 수정
+          </button>
+          <span id="question-counter" class="text-xs text-slate-500 font-medium">66 / 66</span>
+        </div>
+      </div>
+
+      <div class="p-6 md:p-8">
+        <h2 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-relaxed mb-4">다음 중 웹브라우저에서 개인정보를 수집 및 추적 하는 기술이 아닌 것은?<br><br><br><br></h2>
+        
+        <!-- 이미지 출력 영역 -->
+        <img id="question-image" src="" alt="첨부 이미지" class="mb-6 max-h-60 rounded-lg border border-slate-200 hidden shadow-sm">
+
+        <!-- Options -->
+        <div id="options-container" class="space-y-3"><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">① 쿠키(Cookie)</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">② 인증서</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">③ 비콘(Beacon)</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">④ History Stealing</span></button></div>
+
+        <!-- Explanation Section -->
+        <div id="explanation-box" class="mt-8 border-t border-slate-200 pt-6 animate-fade-in-up hidden">
+          <div id="result-alert" class="p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 shadow-inner"><i class="fa-solid fa-circle-check text-emerald-600 text-2xl drop-shadow"></i> <div>정답입니다! 완벽하게 이해하셨습니다.</div></div>
+          
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-4">
+            <h3 class="text-sm font-bold text-indigo-900 flex items-center gap-2">
+              <i class="fa-solid fa-book-open-reader text-indigo-600"></i> 해설 상세 보기
+            </h3>
+            <div id="rationales-list" class="space-y-2 text-sm text-slate-700"><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">① 인증절차는 3단계 과정으로 이루어진다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">AS, TGS 등을 거치는 3단계 인증 구조입니다[cite: 16].</div></div><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">② 암호화는 DES 알고리즘을 사용한다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">대칭키 기반으로 DES/AES를 씁니다[cite: 16].</div></div><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">③ 티켓(Ticket)을 발급하는 별도의 서버가 사용된다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">TGS 서버가 티켓을 줍니다[cite: 16].</div></div><div class="p-3 rounded-lg border shadow-sm bg-emerald-50/80 border-emerald-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5 shadow-sm">정답 보기</span> <span class="text-emerald-900">④ 폐쇄형 네트워크 시스템에 적합한 인증 시스템이다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">커버로스는 신뢰할 수 없는 개방된 네트워크 환경에서 클라이언트가 안전하게 서버를 인증받기 위해 개발된 중앙 집중식(SSO 지원) 인증 시스템이므로 폐쇄형 전용이 아닙니다[cite: 16].</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 flex justify-between items-center">
+        <button id="prev-btn" class="px-4 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-arrow-left mr-1"></i> 이전 문제
+        </button>
+        <button id="next-btn" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-bold transition shadow disabled:opacity-40 disabled:cursor-not-allowed" disabled="">
+          다음 문제 <i class="fa-solid fa-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Grid -->
+    <div class="mt-8 bg-white rounded-xl p-5 shadow border border-slate-200">
+      <div class="flex justify-between items-center mb-4">
+        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">전체 문항 내비게이션</h4>
+        <button onclick="addNewQuestion()" class="text-xs bg-indigo-100 text-indigo-700 hover:bg-indigo-200 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1 border border-indigo-200 shadow-sm">
+          <i class="fa-solid fa-plus"></i> 새 문제 추가하기
+        </button>
+      </div>
+      <div id="nav-grid" class="flex flex-wrap gap-1.5 md:gap-2"><button id="nav-btn-0" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">1</button><button id="nav-btn-1" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">2</button><button id="nav-btn-2" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">3</button><button id="nav-btn-3" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">4</button><button id="nav-btn-4" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">5</button><button id="nav-btn-5" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">6</button><button id="nav-btn-6" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">7</button><button id="nav-btn-7" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">8</button><button id="nav-btn-8" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">9</button><button id="nav-btn-9" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">10</button><button id="nav-btn-10" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">11</button><button id="nav-btn-11" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">12</button><button id="nav-btn-12" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">13</button><button id="nav-btn-13" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">14</button><button id="nav-btn-14" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">15</button><button id="nav-btn-15" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">16</button><button id="nav-btn-16" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">17</button><button id="nav-btn-17" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">18</button><button id="nav-btn-18" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">19</button><button id="nav-btn-19" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">20</button><button id="nav-btn-20" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">21</button><button id="nav-btn-21" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">22</button><button id="nav-btn-22" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">23</button><button id="nav-btn-23" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">24</button><button id="nav-btn-24" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">25</button><button id="nav-btn-25" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">26</button><button id="nav-btn-26" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">27</button><button id="nav-btn-27" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">28</button><button id="nav-btn-28" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">29</button><button id="nav-btn-29" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">30</button><button id="nav-btn-30" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">31</button><button id="nav-btn-31" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">32</button><button id="nav-btn-32" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">33</button><button id="nav-btn-33" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">34</button><button id="nav-btn-34" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">35</button><button id="nav-btn-35" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">36</button><button id="nav-btn-36" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">37</button><button id="nav-btn-37" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">38</button><button id="nav-btn-38" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">39</button><button id="nav-btn-39" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">40</button><button id="nav-btn-40" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">41</button><button id="nav-btn-41" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">42</button><button id="nav-btn-42" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">43</button><button id="nav-btn-43" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">44</button><button id="nav-btn-44" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">45</button><button id="nav-btn-45" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">46</button><button id="nav-btn-46" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">47</button><button id="nav-btn-47" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">48</button><button id="nav-btn-48" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">49</button><button id="nav-btn-49" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">50</button><button id="nav-btn-50" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">51</button><button id="nav-btn-51" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">52</button><button id="nav-btn-52" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">53</button><button id="nav-btn-53" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">54</button><button id="nav-btn-54" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">55</button><button id="nav-btn-55" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">56</button><button id="nav-btn-56" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">57</button><button id="nav-btn-57" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">58</button><button id="nav-btn-58" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-rose-500 text-white ">59</button><button id="nav-btn-59" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">60</button><button id="nav-btn-60" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">61</button><button id="nav-btn-61" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">62</button><button id="nav-btn-62" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">63</button><button id="nav-btn-63" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">64</button><button id="nav-btn-64" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">65</button><button id="nav-btn-65" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700 scale-110">66</button></div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-200 border-t border-slate-300 py-4 text-center text-xs text-slate-500 mt-auto">
+    통신기능장 자가 수정/이미지 업로드 완벽 지원 시스템 © 2026
+  </footer>
+
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col">
+      <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50 rounded-t-2xl">
+        <h3 class="font-bold text-lg text-slate-800"><i class="fa-solid fa-pen-to-square text-indigo-600 mr-2"></i>문제 및 해설 편집</h3>
+        <button onclick="closeEditModal()" class="text-slate-400 hover:text-rose-500 transition"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <div class="p-6 overflow-y-auto flex-1 space-y-5">
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">카테고리</label>
+          <input type="text" id="edit-cat" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">문제 (질문)</label>
+          <textarea id="edit-q" rows="3" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea>
+        </div>
+        
+        <!-- 이미지 업로드 섹션 -->
+        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+          <label class="block text-xs font-bold text-slate-500 mb-2"><i class="fa-solid fa-image text-slate-400"></i> 문제 참고 이미지 첨부 (선택사항)</label>
+          <div class="flex items-center gap-2 mb-2">
+            <input type="file" id="edit-img-upload" accept="image/*" class="text-xs file:mr-4 file:py-1 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer" onchange="encodeImageFileAsURL(this)">
+            <button type="button" onclick="clearImage()" class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-600 px-3 py-1.5 rounded-full font-bold transition hidden" id="btn-clear-img"><i class="fa-solid fa-trash-can"></i> 지우기</button>
+          </div>
+          <input type="hidden" id="edit-img-base64" value="">
+          <img id="edit-img-preview" class="max-h-32 rounded border border-slate-300 hidden shadow-sm" src="">
+        </div>
+
+        <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 space-y-4">
+          <label class="block text-xs font-bold text-indigo-800 mb-2">보기 및 해설 설정 (정답 라디오 버튼 선택)</label>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="0" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-0" placeholder="보기 1 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-0" rows="1" placeholder="보기 1 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="1" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-1" placeholder="보기 2 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-1" rows="1" placeholder="보기 2 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="2" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-2" placeholder="보기 3 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-2" rows="1" placeholder="보기 3 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="3" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-3" placeholder="보기 4 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-3" rows="1" placeholder="보기 4 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 py-4 border-t border-slate-200 bg-slate-50 rounded-b-2xl flex justify-between items-center">
+        <button onclick="deleteCurrentQuestion()" class="px-4 py-2 bg-rose-50 border border-rose-200 text-rose-600 rounded-lg text-sm font-bold hover:bg-rose-100 transition"><i class="fa-solid fa-trash"></i> 이 문제 삭제</button>
+        <div class="flex gap-2">
+          <button onclick="closeEditModal()" class="px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-bold text-slate-600 hover:bg-slate-100 transition">취소</button>
+          <button onclick="saveEditedQuestion()" class="px-5 py-2 bg-indigo-600 rounded-lg text-sm font-bold text-white hover:bg-indigo-700 transition shadow">적용하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 63제 JSON 데이터 모음 -->
+  <script id="quiz-data" type="application/json">
+[
+  {
+    "id": 1,
+    "c": "정보보안 대책",
+    "q": "다음 중 정보보안을 위한 대책 중 물리적 보안에 해당하는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 인적 자산에 대한 보안",
+        "a": 0,
+        "r": "관리적 보안 영역에 해당합니다[cite: 16]."
+      },
+      {
+        "t": "② 출입통제시스템",
+        "a": 1,
+        "r": "출입통제시스템, CCTV, 잠금장치 등은 시설과 장비를 보호하기 위한 물리적 보안 대책입니다[cite: 16]."
+      },
+      {
+        "t": "③ 정보 암호화",
+        "a": 0,
+        "r": "기술적 보안에 해당합니다[cite: 16]."
+      },
+      {
+        "t": "④ 보안취약점 점검활동",
+        "a": 0,
+        "r": "기술적/관리적 보안에 해당합니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "c": "기술적 보안",
+    "q": "다음 중 기술적 보안 요소가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 보안 표준",
+        "a": 0,
+        "r": "상호운용성과 보안성 보장을 위해 기술 사양, 암호 알고리즘 규격 등을 정의한 기술적 기준입니다."
+      },
+      {
+        "t": "② SSO(Single Sign On)",
+        "a": 0,
+        "r": "한 번의 인증(로그인)으로 연계된 여러 시스템 및 애플리케이션을 이용할 수 있도록 하는 기술적 접근 제어 솔루션입니다."
+      },
+      {
+        "t": "③ EAM(Enterprise Access Management)",
+        "a": 0,
+        "r": "SSO 기능에 사용자 권한 관리(RBAC) 및 디렉터리 서비스를 통합 제공하는 기업형 기술적 통합 인증 솔루션입니다."
+      },
+      {
+        "t": "④ SRM(Security Risk Management)",
+        "a": 1,
+        "r": "조직 내 보안 위험을 체계적으로 식별·분석·평가하고 통제 대책을 수립하는 프로세스 중심의 관리적 보안 요소입니다."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "c": "정보보안 3요소",
+    "q": "[2022-4회 기출] 다음 중 네트워크 통신 시에 허락되지 않은 사용자나 객체가 통신으로 전달되는 정보를 함부로 수정할 수 없도록 하는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 무결성 (Integrity)",
+        "a": 1,
+        "r": "정보가 전송 도중 타인에 의해 위변조되지 않도록 보장하는 속성이 무결성입니다[cite: 16]."
+      },
+      {
+        "t": "② 기밀성 (Confidentiality)",
+        "a": 0,
+        "r": "인가되지 않은 자의 노출 방지입니다[cite: 16]."
+      },
+      {
+        "t": "③ 가용성 (Availability)",
+        "a": 0,
+        "r": "필요할 때 언제든 접근할 수 있는 성질입니다[cite: 16]."
+      },
+      {
+        "t": "④ 클라이언트 인증",
+        "a": 0,
+        "r": "사용자 신원 확인 과정입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "c": "정보보안 속성",
+    "q": "다음 설명은 정보의 속성 중에서 무엇을 설명한 것인가? '송신자와 수신자간에 전송된 메시지를 놓고 전송치 않았음을 또는 발송되지 않은 메시지를 받았다고 주장할 수 없게 한다.'",
+    "img": "",
+    "o": [
+      {
+        "t": "① 비밀성",
+        "a": 0,
+        "r": "기밀성 설명입니다[cite: 16]."
+      },
+      {
+        "t": "② 인증",
+        "a": 0,
+        "r": "신원 확인입니다[cite: 16]."
+      },
+      {
+        "t": "③ 부인방지 (Non-repudiation)",
+        "a": 1,
+        "r": "송수신 사실이나 행위를 추후에 부인할 수 없도록 증거를 남기는 보안 요소는 부인방지입니다[cite: 16]."
+      },
+      {
+        "t": "④ 액세스 제어",
+        "a": 0,
+        "r": "접근 통제입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "c": "정보보안 3요소",
+    "q": "정보통신보안의 요건 중 다음 내용에 해당하는 것은? '시스템 내의 정보는 인가된 사용자만 수정이 가능하며, 정보의 내용이 전송중에 수정되지 않고 전달되는 것을 의미한다.'",
+    "img": "",
+    "o": [
+      {
+        "t": "① 무결성",
+        "a": 1,
+        "r": "인가된 자만이 변경 가능하며 전송 중 위변조되지 않음을 보장하는 특성은 무결성입니다[cite: 16]."
+      },
+      {
+        "t": "② 기밀성",
+        "a": 0,
+        "r": "노출 방지입니다[cite: 16]."
+      },
+      {
+        "t": "③ 가용성",
+        "a": 0,
+        "r": "적시 접근성입니다[cite: 16]."
+      },
+      {
+        "t": "④ 인증",
+        "a": 0,
+        "r": "사용자 확인입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "c": "암호화 목적",
+    "q": "암호화(Encryption)의 목적에 대한 설명 중 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 비밀성 : 허가된 사용자 이외 암호문해독 불가",
+        "a": 0,
+        "r": "기밀성 보장의 핵심입니다[cite: 16]."
+      },
+      {
+        "t": "② 무결성 : 메시지 변조 방지",
+        "a": 0,
+        "r": "해시 등을 통해 무결성을 제공합니다[cite: 16]."
+      },
+      {
+        "t": "③ 접근 제어 : 프로토콜 데이터 부분의 접근제어",
+        "a": 1,
+        "r": "암호화는 데이터 자체를 해독 불가능하게 만드는 기밀성/무결성 기술이며, 네트워크 포트나 시스템 권한을 통제하는 '접근 제어(Access Control)'를 직접 수행하지는 않습니다[cite: 16]."
+      },
+      {
+        "t": "④ 스푸핑 방지 : 중간에서 데이터 위변조 방지",
+        "a": 0,
+        "r": "인증 및 암호화로 방어합니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "c": "비대칭 암호화",
+    "q": "[2023-2회 기출] 데이터의 비대칭암호화 방식에서 수신자의 공개키로 암호화하여 이메일을 전송할 때 얻을 수 있는 기능은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 무결성",
+        "a": 0,
+        "r": "전자서명 구조와 다릅니다[cite: 16]."
+      },
+      {
+        "t": "② 기밀성 (Confidentiality)",
+        "a": 1,
+        "r": "수신자의 공개키로 암호화하면 오직 수신자만이 가진 '비밀키(개인키)'로만 복호화할 수 있으므로 강력한 기밀성이 보장됩니다[cite: 16]."
+      },
+      {
+        "t": "③ 부인방지",
+        "a": 0,
+        "r": "송신자 개인키 서명 시 부여됩니다[cite: 16]."
+      },
+      {
+        "t": "④ 가용성",
+        "a": 0,
+        "r": "무관합니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "c": "암호화 알고리즘 종류",
+    "q": "[2023-2회 기출] 다음 암호화 방식 중 암호화, 복호화 종류가 다른 하나는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① RSA",
+        "a": 1,
+        "r": "RSA는 대표적인 '비대칭키(공개키)' 암호화 알고리즘입니다. 반면 IDEA, DES, AES는 모두 동일한 키를 사용하는 '대칭키' 알고리즘입니다[cite: 16]."
+      },
+      {
+        "t": "② IDEA",
+        "a": 0,
+        "r": "대칭키 블록 암호입니다[cite: 16]."
+      },
+      {
+        "t": "③ DES",
+        "a": 0,
+        "r": "대칭키 블록 암호입니다[cite: 16]."
+      },
+      {
+        "t": "④ AES",
+        "a": 0,
+        "r": "대칭키 표준 블록 암호입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "c": "IPSec 서비스",
+    "q": "IP 계층에서 제공하는 보안 서비스인 IPsec 에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 부인방지 서비스",
+        "a": 1,
+        "r": "IPsec은 패킷 레벨의 기밀성, 무결성, 인증을 제공하지만, 전자서명 기반의 엄격한 '부인방지(Non-repudiation)' 서비스는 기본적으로 직접 제공하지 않습니다[cite: 16]."
+      },
+      {
+        "t": "② 무결성 서비스",
+        "a": 0,
+        "r": "AH 등을 통해 제공합니다[cite: 16]."
+      },
+      {
+        "t": "③ 데이터 원천 인증",
+        "a": 0,
+        "r": "송신처 인증을 제공합니다[cite: 16]."
+      },
+      {
+        "t": "④ 기밀성 서비스",
+        "a": 0,
+        "r": "ESP를 통해 암호화를 제공합니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "c": "이메일 보안",
+    "q": "다음 중 전자우편을 안전하게 전송할 수 있도록 개발된 End-to-End 방식의 보안 프로토콜로 가장 적합한 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① SSL",
+        "a": 0,
+        "r": "웹 전송 구간 보안입니다[cite: 16]."
+      },
+      {
+        "t": "② TLS",
+        "a": 0,
+        "r": "SSL의 후속 웹 보안 표준입니다[cite: 16]."
+      },
+      {
+        "t": "③ S/MIME",
+        "a": 1,
+        "r": "이메일 본문과 첨부파일을 종단 간(End-to-End) 암호화하고 전자서명을 붙여 안전하게 오갈 수 있게 만든 표준 보안 프로토콜은 S/MIME입니다[cite: 16]."
+      },
+      {
+        "t": "④ SMTP",
+        "a": 0,
+        "r": "기본 메일 전송 프로토콜(평문)입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "c": "ISMS 위험관리",
+    "q": "다음 중 정보보호 관리체계의 위험 관리 5단계 과정 중 3단계에 해당되는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전략 및 계획 수립",
+        "a": 0,
+        "r": "1단계 준비 영역입니다[cite: 16]."
+      },
+      {
+        "t": "② 정보보호 대책 선정",
+        "a": 0,
+        "r": "후반부 조치 단계입니다[cite: 16]."
+      },
+      {
+        "t": "③ 위험평가 (Risk Assessment)",
+        "a": 1,
+        "r": "일반적인 정보보호 위험관리 방법론(ISO 27001 등)의 절차에서 자산 식별 및 위협/취약성 분석을 거치는 3단계 핵심은 '위험 평가'입니다[cite: 16]."
+      },
+      {
+        "t": "④ 위험구성요소 분석",
+        "a": 0,
+        "r": "평가 내부의 세부 요소입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "c": "접근제어 모델",
+    "q": "다음 중 시스템의 보안 정책에 근거하는 접근제어 모델이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 강제적 접근제어 (MAC)",
+        "a": 0,
+        "r": "보안 등급에 따른 접근제어입니다[cite: 16]."
+      },
+      {
+        "t": "② 논리적 접근제어",
+        "a": 1,
+        "r": "임의적(DAC), 강제적(MAC), 역할기반(RBAC)은 구체적인 보안 정책 기반의 접근제어 모델이며, '논리적 접근제어'는 물리적 보안에 대치되는 상위 분류 개념입니다[cite: 16]."
+      },
+      {
+        "t": "③ 임의적 접근제어 (DAC)",
+        "a": 0,
+        "r": "소유주 권한 기반입니다[cite: 16]."
+      },
+      {
+        "t": "④ 역할 기반 접근제어 (RBAC)",
+        "a": 0,
+        "r": "직무 역할 기반입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "c": "대칭키 알고리즘",
+    "q": "다음 중 암호화 방식인 비밀키 알고리즘에 대한 설명으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 암호키는 공개하고 해독키는 비밀로 한다.",
+        "a": 0,
+        "r": "공개키 방식 설명입니다[cite: 16]."
+      },
+      {
+        "t": "② 동일한 키로 데이터를 암호화하고 복호화한다.",
+        "a": 1,
+        "r": "비밀키(대칭키) 암호화 방식은 암호화할 때와 복호화할 때 완전히 '동일한 키'를 사용하는 시스템입니다[cite: 16]."
+      },
+      {
+        "t": "③ 암호화, 복호화 속도가 느리며 알고리즘이 복잡하다.",
+        "a": 0,
+        "r": "대칭키는 연산이 매우 빠릅니다[cite: 16]."
+      },
+      {
+        "t": "④ 키의 분배가 용이하고 관리해야 할 키의 개수가 적다.",
+        "a": 0,
+        "r": "키 분배가 어렵고 개수가 급증합니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "c": "정보보안 목표",
+    "q": "다음은 정보보안의 목표에 대한 설명이다. 올바르지 못한 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 기밀성: 정당한 사용자에게만 접근을 허용함으로써 정보의 안전을 보장한다.",
+        "a": 0,
+        "r": "인가된 사용자나 시스템만이 정보 자산에 접근하고 열람할 수 있도록 제한하는 특성입니다."
+      },
+      {
+        "t": "② 무결성: 전달과 저장 시 비인가된 방식으로부터 정보가 변경되지 않도록 보장한다.",
+        "a": 0,
+        "r": "인가되지 않은 위조, 변조, 삭제 등의 수정 행위로부터 정보의 정확성과 완전성을 유지하는 특성입니다."
+      },
+      {
+        "t": "③ 가용성: 인증된 사용자들이 모든 서비스를 이용할 수 있는 것을 말한다.",
+        "a": 1,
+        "r": "인가된 사용자가 자신에게 허가된 정보나 서비스를 필요할 때 지체 없이 사용할 수 있도록 보장하는 개념이며, 권한을 넘어서 '모든 서비스'를 이용할 수 있게 허용하는 것이 아닙니다."
+      },
+      {
+        "t": "④ 인증: 정보주체가 본인이 맞는지를 인정하기 위한 방법을 말한다.",
+        "a": 0,
+        "r": "시스템을 사용하려는 주체의 신원(Identity)이 본인이 맞는지 검증하고 확인하는 절차입니다."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "c": "가용성 대책",
+    "q": "다음 중 가용성(Availability)을 확보하기 위한 방안과 가장 거리가 먼 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 데이터 백업",
+        "a": 0,
+        "r": "장애 시 복구를 위해 가용성을 높입니다[cite: 16]."
+      },
+      {
+        "t": "② 이중화 구성",
+        "a": 0,
+        "r": "고가용성(HA) 확보용입니다[cite: 16]."
+      },
+      {
+        "t": "③ 데이터 암호화",
+        "a": 1,
+        "r": "데이터 암호화는 허가되지 않은 자의 노출을 막는 '기밀성(Confidentiality)'을 확보하기 위한 기술이며, 시스템 가용성(접근 보장)과는 거리가 멉니다[cite: 16]."
+      },
+      {
+        "t": "④ 물리적 위협으로부터의 보호",
+        "a": 0,
+        "r": "정전, 화재 방지로 가용성을 지킵니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "c": "보안 대책",
+    "q": "정보통신 시스템의 보안(Security) 대책에 관한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 우발적인 사고로부터 보호와 의도적인 행위로부터의 보호가 있다.",
+        "a": 0,
+        "r": "재난 및 해킹 대비입니다[cite: 16]."
+      },
+      {
+        "t": "② 시스템 고도화로 인한 데이터 부정취득 등 의도적 행위에 대한 대책이 필요하다.",
+        "a": 0,
+        "r": "필수적입니다[cite: 16]."
+      },
+      {
+        "t": "③ 데이터 도난 시 암호화에 의해 알지 못하게 하려면 액세스 컨트롤 보안설계를 하여야 한다.",
+        "a": 1,
+        "r": "데이터 도난 시 내용을 못 읽게 가리는 것은 '암호화'의 역할이며, 접근 통제(Access Control)는 시스템 자원에 접근하는 주체를 허가/거부하는 기능이므로 문맥상 매칭이 다소 틀렸습니다 (기출 오류 정정 지문)."
+      },
+      {
+        "t": "④ 시스템 설계 단계에서는 보안대책을 중요성에 감안하여 선택하게 된다.",
+        "a": 0,
+        "r": "맞는 설명입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "c": "보안 대책 분류",
+    "q": "다음 중 정보보안을 위한 대책이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 물리적 보안",
+        "a": 0,
+        "r": "3대 보안 대책 중 하나입니다[cite: 16]."
+      },
+      {
+        "t": "② 기술적 보안",
+        "a": 0,
+        "r": "3대 보안 대책 중 하나입니다[cite: 16]."
+      },
+      {
+        "t": "③ 조직적 보안",
+        "a": 1,
+        "r": "정보보안 대책의 정석적인 3대 분류는 '관리적 보안, 물리적 보안, 기술적 보안'이며, 조직적 보안이라는 독립된 명칭은 공식 분류에 해당하지 않습니다[cite: 16]."
+      },
+      {
+        "t": "④ 관리적 보안",
+        "a": 0,
+        "r": "3대 보안 대책 중 하나입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "c": "네트워크 인프라 장비",
+    "q": "다음 중 네트워크 인프라 보안 장비에 해당하지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 방화벽 (Firewall)",
+        "a": 0,
+        "r": "대표적 보안 장비입니다[cite: 16]."
+      },
+      {
+        "t": "② 침입 탐지 시스템 (IDS)",
+        "a": 0,
+        "r": "대표적 보안 장비입니다[cite: 16]."
+      },
+      {
+        "t": "③ 로드밸런서 (Load Balancer)",
+        "a": 1,
+        "r": "로드밸런서(LB)는 웹 서버 등의 부하를 여러 대에 나누어 분산 처리하는 '트래픽 관리/가용성' 장비이며, 보안 침입 차단을 주 목적으로 하는 인프라 보안 장비가 아닙니다[cite: 16]."
+      },
+      {
+        "t": "④ 가상사설망 (VPN)",
+        "a": 0,
+        "r": "대표적 보안 장비입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "c": "보안 중요성 원인",
+    "q": "보안의 중요성이 점차 증가하고 있다. 다음 중 보안 문제가 심각해지는 원인이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 개방형 네트워크",
+        "a": 0,
+        "r": "인터넷 개방성으로 공격 경로가 많아졌습니다[cite: 16]."
+      },
+      {
+        "t": "② 폐쇄형 네트워크",
+        "a": 1,
+        "r": "내부망만 쓰던 폐쇄형 네트워크는 외부 노출이 없어 오히려 보안 사고 위험이 낮으므로, 보안 문제가 심각해지는 원인에 해당하지 않습니다[cite: 16]."
+      },
+      {
+        "t": "③ 인터넷의 확산",
+        "a": 0,
+        "r": "전 세계 연결로 취약점이 공유됩니다[cite: 16]."
+      },
+      {
+        "t": "④ 전자상거래 등 각종 응용서비스의 출현",
+        "a": 0,
+        "r": "금전적 피해 목적의 해킹이 늘어납니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "c": "통합 보안 시스템",
+    "q": "다음 중 엔드포인트(End point) 에 설치되어 다양한 보안 기능들을 통합적으로 수행하는 보안시스템을 의미하는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 웹 방화벽",
+        "a": 0,
+        "r": "웹 서버 전면에 위치하여 SQL 인젝션, XSS 등 웹 애플리케이션 계층(L7)의 공격을 탐지하고 차단하는 네트워크 보안 장비입니다."
+      },
+      {
+        "t": "② NAC",
+        "a": 1,
+        "r": "사용자 PC 등 엔드포인트에 에이전트 형태로 설치되어 백신 최신화, OS 패치 여부, 필수 보안 정책 준수 등을 점검하고 네트워크 접속 허가 및 통제를 통합 수행하는 솔루션입니다."
+      },
+      {
+        "t": "③ 침입 탐지 시스템",
+        "a": 0,
+        "r": "네트워크 트래픽이나 호스트 활동을 실시간으로 감시하여 비인가된 침입 시도와 유해 행위를 탐지 및 통보하는 시스템입니다."
+      },
+      {
+        "t": "④ UTM (Unified Threat Management)",
+        "a": 0,
+        "r": "방화벽, VPN, 침입방지(IPS), 안티바이러스 등 여러 네트워크 보안 기능을 하나의 하드웨어 장비로 통합하여 네트워크 게이트웨이 구간에서 처리하는 시스템입니다."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "c": "DMZ 구간",
+    "q": "다음 중 DMZ(Demilitarized Zone) 구간에 위치하면 안되는 시스템은 어느 것인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 웹서버 (Web server)",
+        "a": 0,
+        "r": "외부 사용자가 접속해야 하므로 DMZ에 둡니다[cite: 16]."
+      },
+      {
+        "t": "② DB 서버 (Database server)",
+        "a": 1,
+        "r": "데이터베이스 서버는 핵심 개인정보와 기업 자산을 보관하므로, 외부 인터넷과 직접 맞닿는 DMZ 구간에 두면 안 되며 가장 안전한 내부망(Internal Zone) 깊숙이 격리해야 합니다[cite: 16]."
+      },
+      {
+        "t": "③ 네임 서버 (Name server)",
+        "a": 0,
+        "r": "외부 공개용 DNS는 DMZ에 둘 수 있습니다[cite: 16]."
+      },
+      {
+        "t": "④ FTP 서버 (FTP server)",
+        "a": 0,
+        "r": "외부 서비스용으로 DMZ에 배치할 수 있습니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "c": "스니핑 정의",
+    "q": "시스템의 침투 형태 중 네트워크의 한 호스트에서 실행되어 다른 호스트들의 패킷 교환을 엿듣는 해킹 유형은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 스니핑 (Sniffing)",
+        "a": 1,
+        "r": "유무선 네트워크 상에서 자신에게 향하지 않은 다른 사용자들의 패킷까지 몰래 훔쳐보는 수동적 도청 공격을 스니핑이라 합니다[cite: 16]."
+      },
+      {
+        "t": "② IP 스푸핑",
+        "a": 0,
+        "r": "IP 주소를 위조하는 공격입니다[cite: 16]."
+      },
+      {
+        "t": "③ DNS 스푸핑",
+        "a": 0,
+        "r": "DNS 응답을 조작하는 공격입니다[cite: 16]."
+      },
+      {
+        "t": "④ 부인방지",
+        "a": 0,
+        "r": "보안 요소입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "c": "스니핑 모드",
+    "q": "다음 중 스니핑 해킹 방법에 대한 설명으로 가장 올바른 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Ethernet Device 모드를 Promiscuous 모드로 전환하여 해당 호스트를 거치는 모든 패킷을 모니터링한다.",
+        "a": 1,
+        "r": "랜카드의 필터링 기능을 해제하여 자신과 무관한 패킷까지 전부 받아들이게 만드는 '프로미스큐어스 모드(Promiscuous Mode)' 활성화가 스니핑의 핵심입니다[cite: 16]."
+      },
+      {
+        "t": "② TCP/IP 패킷의 내용을 변조하여 자신을 위장한다.",
+        "a": 0,
+        "r": "스푸핑 설명입니다[cite: 16]."
+      },
+      {
+        "t": "③ 스택 영역에 Strcpy 함수로 인자를 복사해 변조한다.",
+        "a": 0,
+        "r": "버퍼 오버플로우 설명입니다[cite: 16]."
+      },
+      {
+        "t": "④ 클라이언트로 하여금 자바 애플릿을 실행시키도록 한다.",
+        "a": 0,
+        "r": "웹 기반 공격 설명입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "c": "스푸핑 정의",
+    "q": "시스템 침투 형태 중 IP Address 를 접근 가능한 IP Address 로 위장하여 침입하는 방식은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 스니핑",
+        "a": 0,
+        "r": "도청입니다[cite: 16]."
+      },
+      {
+        "t": "② Fabricate",
+        "a": 0,
+        "r": "위조 데이터 생성입니다[cite: 16]."
+      },
+      {
+        "t": "③ Modify",
+        "a": 0,
+        "r": "변조입니다[cite: 16]."
+      },
+      {
+        "t": "④ 스푸핑 (Spoofing)",
+        "a": 1,
+        "r": "자신의 실제 IP나 MAC 주소를 신뢰할 수 있는 정상적인 주소로 '위장(Spoofing)'하여 권한을 가로채는 해킹 기법입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "c": "스니핑 기법",
+    "q": "다음 중 스니핑 기법이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Switch Jamming",
+        "a": 0,
+        "r": "스위치 오버플로우로 스니핑을 유도합니다[cite: 16]."
+      },
+      {
+        "t": "② ICMP Redirect",
+        "a": 0,
+        "r": "라우팅 경로를 속여 패킷을 가로챕니다[cite: 16]."
+      },
+      {
+        "t": "③ ARP Redirect",
+        "a": 0,
+        "r": "ARP 테이블을 조작합니다[cite: 16]."
+      },
+      {
+        "t": "④ SYN Flooding",
+        "a": 1,
+        "r": "SYN 플러딩은 서버의 대기 큐를 가득 채워 다운시키는 'DDoS/서비스 거부(DoS)' 공격 기법이므로 스니핑(도청) 기법이 아닙니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "c": "스위치 재밍",
+    "q": "공격자가 위조된 MAC주소를 지속적으로 네트워크에 흘림으로써 스위칭 허브의 주소 테이블을 오버플로우 시켜 허브처럼 동작하게 하여 스니핑하는 공격은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① ARP Redirect 공격",
+        "a": 0,
+        "r": "ICMP/ARP 조작입니다[cite: 16]."
+      },
+      {
+        "t": "② ICMP Redirect 공격",
+        "a": 0,
+        "r": "라우팅 경로 조작입니다[cite: 16]."
+      },
+      {
+        "t": "③ Switch Jamming 공격",
+        "a": 1,
+        "r": "스위치의 MAC 주소 테이블 메모리 한계를 강제로 초과(Overflow)시켜 스위치가 패닉에 빠져 허브처럼 모든 포트로 브로드캐스트하게 유도함으로써 스니핑을 가능케 하는 기법을 스위치 재밍(Switch Jamming)이라 합니다[cite: 16]."
+      },
+      {
+        "t": "④ ARP Spoofing 공격",
+        "a": 0,
+        "r": "ARP 캐시를 위조합니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "c": "MAC 위조",
+    "q": "다음 중 MAC 주소를 속여서 공격하는 기법을 무엇이라 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 포맷 스트링",
+        "a": 0,
+        "r": "메모리 포맷 취약점입니다[cite: 16]."
+      },
+      {
+        "t": "② ARP 스푸핑 (ARP Spoofing)",
+        "a": 1,
+        "r": "가짜 MAC 주소를 진짜 IP와 매칭시켜 ARP 캐시 테이블을 속이고 패킷을 가로채는 대표적 2계층 위조 공격이 ARP 스푸핑입니다[cite: 16]."
+      },
+      {
+        "t": "③ 세션하이재킹",
+        "a": 0,
+        "r": "세션을 가로챕니다[cite: 16]."
+      },
+      {
+        "t": "④ 버퍼오버플로우",
+        "a": 0,
+        "r": "메모리 초과 입력입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "c": "ARP 스푸핑 계층",
+    "q": "[2022-2회 기출] ARP(Address Resolution Protocol) 스푸핑은 몇 계층 공격에 해당하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 1계층",
+        "a": 0,
+        "r": "물리 계층입니다[cite: 16]."
+      },
+      {
+        "t": "② 2계층 (데이터링크 계층)",
+        "a": 1,
+        "r": "ARP는 IP 주소를 하드웨어 'MAC 주소'로 변환해 주는 프로토콜이므로, MAC 주소를 조작하는 ARP 스푸핑은 데이터 링크 계층(2계층) 공격에 해당합니다[cite: 16]."
+      },
+      {
+        "t": "③ 3계층",
+        "a": 0,
+        "r": "네트워크 계층입니다[cite: 16]."
+      },
+      {
+        "t": "④ 4계층",
+        "a": 0,
+        "r": "전송 계층입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "c": "용어 비교",
+    "q": "다음 용어 중 개념상 나머지와 가장 거리가 먼 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① sniffing",
+        "a": 0,
+        "r": "패킷 도청입니다[cite: 16]."
+      },
+      {
+        "t": "② eavesdropping",
+        "a": 0,
+        "r": "도청 및 엿듣기입니다[cite: 16]."
+      },
+      {
+        "t": "③ tapping",
+        "a": 0,
+        "r": "도청 및 감시입니다[cite: 16]."
+      },
+      {
+        "t": "④ spoofing",
+        "a": 1,
+        "r": "스니핑, 이브스드로핑, 태핑은 모두 몰래 훔쳐보는 '도청(Passive/Listening)' 계열의 용어인 반면, 스푸핑(Spoofing)은 주소를 속여 가짜가 되는 '위조/가장(Active/Forgery)' 공격이므로 성격이 다릅니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "c": "수동적 공격",
+    "q": "다음에서 수동적 공격(Passive Attack)에 해당하는 것은 무엇인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 스니핑 (Sniffing)",
+        "a": 1,
+        "r": "수동적 공격은 시스템을 망가뜨리거나 변조하지 않고 조용히 오가는 패킷 데이터를 훔쳐보는(도청하는) 형태이며, 스니핑이 대표적인 수동적 공격입니다[cite: 16]."
+      },
+      {
+        "t": "② 하이재킹",
+        "a": 0,
+        "r": "능동적 공격입니다[cite: 16]."
+      },
+      {
+        "t": "③ 인젝션 공격",
+        "a": 0,
+        "r": "능동적 공격입니다[cite: 16]."
+      },
+      {
+        "t": "④ 삭제 공격",
+        "a": 0,
+        "r": "능동적 공격입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "c": "스니핑 방지",
+    "q": "스니핑 방지 대책으로 올바르지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 원격 접속 시 SSH 프로토콜을 이용해 암호화한다.",
+        "a": 0,
+        "r": "평문 텔넷 대신 암호화된 SSH를 씁니다[cite: 16]."
+      },
+      {
+        "t": "② 메일 사용 시 S/MIME가 적용된 안전한 메일을 이용한다.",
+        "a": 0,
+        "r": "이메일 암호화 대책입니다[cite: 16]."
+      },
+      {
+        "t": "③ 전자상거래 이용 시 SSL이 적용된 사이트를 이용한다.",
+        "a": 0,
+        "r": "웹 구간 암호화 대책입니다[cite: 16]."
+      },
+      {
+        "t": "④ 스위치에서 MAC주소 테이블을 동적으로 지정한다.",
+        "a": 1,
+        "r": "스위치 재밍(MAC 오버플로우) 공격을 막기려면 주소 테이블을 동적이 아니라 허용된 '정적(Static)으로 고정'해야 안전합니다. 동적 지정은 공격에 취약해집니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "c": "식별 정보 위조",
+    "q": "[2023-2회 기출] MAC 주소, IP 주소 등과 같은 식별 정보를 속여 다른 대상시스템을 공격하여 정보를 얻어내거나 시스템을 마비시키는 기법은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① DDOS",
+        "a": 0,
+        "r": "자원 고갈 공격입니다[cite: 16]."
+      },
+      {
+        "t": "② Spoofing",
+        "a": 1,
+        "r": "IP나 MAC 같은 식별 정보를 감쪽같이 위조(속여서)하여 정상적인 시스템인 척 가장하는 공격 기법은 스푸핑(Spoofing)입니다[cite: 16]."
+      },
+      {
+        "t": "③ Pharming",
+        "a": 0,
+        "r": "DNS를 조작해 가짜 사이트로 유도합니다[cite: 16]."
+      },
+      {
+        "t": "④ Session Hijacking",
+        "a": 0,
+        "r": "인증된 세션을 가로챕니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "c": "세션 하이재킹",
+    "q": "[2023-2회 기출] 공격자가 두 객체 사이의 세션을 통제하고, 객체 중 하나인 것처럼 가장하여 객체를 속이는 해킹기법은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 스푸핑",
+        "a": 0,
+        "r": "주소 위조입니다[cite: 16]."
+      },
+      {
+        "t": "② 하이재킹 (Session Hijacking)",
+        "a": 1,
+        "r": "이미 인증이 끝나 정상적으로 진행 중인 TCP 세션 연결을 가로채서(탈취하여) 공격자가 마치 진짜 클라이언트인 것처럼 통신을 통제하는 기법을 세션 하이재킹이라 합니다[cite: 16]."
+      },
+      {
+        "t": "③ 피싱",
+        "a": 0,
+        "r": "기만적 사기 메일입니다[cite: 16]."
+      },
+      {
+        "t": "④ 파밍",
+        "a": 0,
+        "r": "가짜 사이트 유도입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "c": "DoS 분류",
+    "q": "다음 중 DoS(Denial of Service) 공격의 분류로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① RAM 사용량 증가 공격",
+        "a": 0,
+        "r": "메모리 소진 공격의 일종입니다[cite: 16]."
+      },
+      {
+        "t": "② 사운드 자원 고갈 공격",
+        "a": 1,
+        "r": "DoS 공격의 4대 자원 소진 분류는 CPU 처리 고갈, 메모리(RAM) 소진, 디스크 공간 고갈, 그리고 네트워크 대역폭(Bandwidth) 고갈이며, '사운드 자원'은 공식적인 시스템 자원 고갈 분류에 해당하지 않습니다[cite: 16]."
+      },
+      {
+        "t": "③ CPU 처리 고갈 공격",
+        "a": 0,
+        "r": "프로세서 부하 유발 공격입니다[cite: 16]."
+      },
+      {
+        "t": "④ 네트워크 자원 고갈 공격",
+        "a": 0,
+        "r": "대역폭 포화 유발 공격입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "c": "무차별 대입 공격",
+    "q": "다음 설명에 해당하는 공격 유형으로 가장 알맞은 것은? 'SSH를 기반으로 로그인 시에 무차별적으로 아이디와 패스워드를 대입하면서 접근을 시도하는 공격이다.'",
+    "img": "",
+    "o": [
+      {
+        "t": "① Brute Force (무차별 대입 공격)",
+        "a": 1,
+        "r": "가능한 모든 조합의 암호 키나 패스워드를 무작위로 무식하게 대입하여 뚫어보려고 시도하는 공격 유형을 브루트 포스(Brute Force Attack)라 합니다[cite: 16]."
+      },
+      {
+        "t": "② Land Attack",
+        "a": 0,
+        "r": "출발/목적지 IP를 동일하게 만드는 공격입니다[cite: 16]."
+      },
+      {
+        "t": "③ DDoS Attack",
+        "a": 0,
+        "r": "분산 서비스 거부 공격입니다[cite: 16]."
+      },
+      {
+        "t": "④ TCP SYN Flooding",
+        "a": 0,
+        "r": "TCP 핸드셰이킹 고갈 공격입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "c": "ARP 스푸핑 설명",
+    "q": "다음에서 설명하고 있는 네트워크 공격 기법은 무엇인가? '로컬 네트워크에서 통신 중인 서버와 클라이언트 IP주소에 대한 2계층 MAC 주소를 공격자의 MAC주소로 속여 패킷을 중간에서 가로채는 공격'",
+    "img": "",
+    "o": [
+      {
+        "t": "① 세션하이재킹",
+        "a": 0,
+        "r": "세션 토큰 탈취입니다[cite: 16]."
+      },
+      {
+        "t": "② IP스푸핑",
+        "a": 0,
+        "r": "3계층 IP 주소 위조입니다[cite: 16]."
+      },
+      {
+        "t": "③ ARP스푸핑 (ARP Spoofing)",
+        "a": 1,
+        "r": "로컬 네트워크(LAN) 상에서 위조된 ARP Reply를 뿌려 2계층 MAC 주소를 공격자 것으로 오인하게 만든 뒤 패킷을 중간에서 가로채는(Man-in-the-Middle) 공격은 ARP 스푸핑입니다[cite: 16]."
+      },
+      {
+        "t": "④ 스니핑공격",
+        "a": 0,
+        "r": "상위 개념의 도청입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "c": "Land Attack",
+    "q": "다음에서 설명하는 DOS 공격으로 알맞은 것은? '공격자가 임의로 자신의 IP주소 및 포트를 대상 서버의 IP주소 및 포트와 동일하게 하여 서버를 공격한다. 패킷이 외부로 나가지 않고 자신에게 되돌아 와 CPU 부하를 증가시킨다.'",
+    "img": "",
+    "o": [
+      {
+        "t": "① Teardrop Attack",
+        "a": 0,
+        "r": "오프셋 조작 공격입니다[cite: 16]."
+      },
+      {
+        "t": "② Smurf Attack",
+        "a": 0,
+        "r": "ICMP 브로드캐스트 반사 공격입니다[cite: 16]."
+      },
+      {
+        "t": "③ LAND Attack",
+        "a": 1,
+        "r": "출발지 IP(Source IP)와 목적지 IP(Destination IP)를 공격 대상 서버의 IP 주소와 '완전히 똑같이' 위조하여 서버로 보내면, 서버가 자기 자신에게 무한 응답 패킷을 보내며 핑퐁 루에 빠져 다운되는 공격을 LAND Attack이라 합니다[cite: 16]."
+      },
+      {
+        "t": "④ UDP Flooding",
+        "a": 0,
+        "r": "UDP 패킷 폭격입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "c": "DDoS 연관 공격",
+    "q": "DDoS 공격과 연관이 있는 공격 방법은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Secure shell",
+        "a": 0,
+        "r": "안전한 원격 접속 프로토콜입니다[cite: 16]."
+      },
+      {
+        "t": "② Tribe Flood Network (TFN)",
+        "a": 1,
+        "r": "TFN(Tribe Flood Network)은 초기 인터넷 시절부터 악명을 떨친 대표적인 'DDoS(분산 서비스 거부) 공격용 에이전트/마스터 툴' 프로그램 중 하나입니다[cite: 16]."
+      },
+      {
+        "t": "③ Nimda",
+        "a": 0,
+        "r": "이메일/웹 기반 웜 바이러스입니다[cite: 16]."
+      },
+      {
+        "t": "④ Deadlock",
+        "a": 0,
+        "r": "운영체제 교착 상태 현상입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "c": "DDoS 대응책",
+    "q": "다음 중 DDoS 공격에 대한 대응책으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 침입 차단 시스템을 이용하여 패킷 및 포트 필터링",
+        "a": 0,
+        "r": "방화벽 규칙으로 악성 트래픽을 차단합니다[cite: 16]."
+      },
+      {
+        "t": "② 침입 탐지 시스템을 이용한 공격 탐지",
+        "a": 0,
+        "r": "IDS/IPS로 이상 징후를 잡습니다[cite: 16]."
+      },
+      {
+        "t": "③ 로드 밸런싱을 통한 대용량 트래픽 분산 처리",
+        "a": 0,
+        "r": "서버 부하를 분산합니다[cite: 16]."
+      },
+      {
+        "t": "④ 서비스별 대역폭을 무제한으로 설정",
+        "a": 1,
+        "r": "대역폭을 무제한으로 열어두면 DDoS 공격이 들어올 때 회선 자원과 통신 요금이 순식간에 한계까지 포화되어 망 전체가 마비되므로, 대역폭 제한(Rate Limiting) 설정을 두어 방어해야 합니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "c": "DDoS 대역폭 공격",
+    "q": "[2023-4회 기술] 다음 DDoS 공격 중 대역폭 공격에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① TCP 패킷 플러딩: 다량의 TCP 패킷을 서버 및 네트워크 장비에 공격하여 평상시간 운영 불가",
+        "a": 1,
+        "r": "TCP 패킷 플러딩은 대역폭 포화보다는 주로 서버의 연결 자원(소켓/버퍼)을 고갈시키는 '자원 소실형' 공격에 가깝습니다. (다만 광의의 대역폭 공격으로 보기도 하나 기출 정답 기준 오류 지문 처리됨)[cite: 16]"
+      },
+      {
+        "t": "② 대용량 트래픽 전송으로 인한 네트워크 회선 대역폭 고갈",
+        "a": 0,
+        "r": "대역폭 공격의 본질입니다[cite: 16]."
+      },
+      {
+        "t": "③ 주로 위조된 큰 크기의 패킷과 위조된 출발지 IP 사용",
+        "a": 0,
+        "r": "소스 IP 스푸핑을 동반합니다[cite: 16]."
+      },
+      {
+        "t": "④ 회선 대역폭 고갈로 인한 정상 사용자 접속 불가",
+        "a": 0,
+        "r": "결과적 피해 현상입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "c": "Smurf Attack",
+    "q": "다음에서 설명하는 DOS 공격으로 알맞은 것은? '공격자는 IP주소를 공격 서버의 IP주소로 위장하고, ICMP Request 패킷을 브로드캐스트 형태로 다수의 시스템에 전송한다. 다수의 시스템은 Echo Reply 패킷을 공격 대상 서버로 전송하게 된다.'",
+    "img": "",
+    "o": [
+      {
+        "t": "① Smurf Attack (스머프 공격)",
+        "a": 1,
+        "r": "공격자가 자신의 IP를 타겟 서버의 IP로 속이고, 로컬 브로드캐스트 주소로 ICMP 핑(Ping)을 날려 수십 대의 증폭 시스템이 일제히 타겟 서버에 응답 폭격을 퍼붓게 만드는 반사/증폭 공격이 스머프(Smurf) 공격입니다[cite: 16]."
+      },
+      {
+        "t": "② LAND Attack",
+        "a": 0,
+        "r": "출발/목적지 IP가 동일합니다[cite: 16]."
+      },
+      {
+        "t": "③ Mail Bomb",
+        "a": 0,
+        "r": "메일 폭탄입니다[cite: 16]."
+      },
+      {
+        "t": "④ Teardrop Attack",
+        "a": 0,
+        "r": "오프셋 조작입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "c": "Teardrop Attack",
+    "q": "다음에서 설명하는 DOS 공격으로 알맞은 것은? '데이터를 전송하기 위해서는 패킷을 분할하고 시퀀스 넘버를 생성하는데, 이러한 시퀀스 넘버를 조작하거나 중첩시켜서 재조합할 때 혼란을 일으켜 내부 과부하를 발생시키는 공격'",
+    "img": "",
+    "o": [
+      {
+        "t": "① Teardrop Attack (티어드롭)",
+        "a": 1,
+        "r": "IP 패킷 조각(Fragment)의 오프셋(Offset) 값을 의도적으로 겹치거나 엉키게 조작하여, 수신측 OS가 패킷을 재조합(Reassembly)하는 과정에서 시스템 패닉이나 다운을 일으키는 공격이 Teardrop입니다[cite: 16]."
+      },
+      {
+        "t": "② Ping of Death",
+        "a": 0,
+        "r": "허용 크기를 넘는 핑 패킷 전송입니다[cite: 16]."
+      },
+      {
+        "t": "③ LAND Attack",
+        "a": 0,
+        "r": "루프 유발 공격입니다[cite: 16]."
+      },
+      {
+        "t": "④ Smurf Attack",
+        "a": 0,
+        "r": "ICMP 반사 증폭 공격입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "c": "APT 공격 단계",
+    "q": "다음 중 APT(Advanced Persistent Threat) 공격 시 진행 형태가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 침투 (Incursion)",
+        "a": 0,
+        "r": "초기 악성코드 감염 및 내부 잠입 단계입니다[cite: 16]."
+      },
+      {
+        "t": "② 탐색 (Discovery)",
+        "a": 0,
+        "r": "내부 자원 및 취약점 정찰 단계입니다[cite: 16]."
+      },
+      {
+        "t": "③ 수집/공격 (Capture/Attack)",
+        "a": 0,
+        "r": "기밀 데이터 수집 및 파괴 단계입니다[cite: 16]."
+      },
+      {
+        "t": "④ 방어 (Defense)",
+        "a": 1,
+        "r": "APT 공격의 4대 진행 단계는 [침투 -> 탐색 -> 수집/공격 -> 유출(Exfiltration)]로 이루어지며, '방어(Defense)'는 공격자가 아니라 보안 관리자들이 수행하는 대응 조치이므로 공격 형태가 아닙니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "c": "ICMP 프로토콜",
+    "q": "네트워크 부하를 줄이기 위해 방화벽에서 ping과 traceroute 관련 프로토콜을 차단하려고 한다. 다음 중 차단해야 하는 프로토콜로 가장 알맞은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① IP",
+        "a": 0,
+        "r": "전체 3계층 기본 규격입니다[cite: 16]."
+      },
+      {
+        "t": "② ARP",
+        "a": 0,
+        "r": "MAC 주소 매핑용입니다[cite: 16]."
+      },
+      {
+        "t": "③ UDP",
+        "a": 0,
+        "r": "전송 계층 포트 프로토콜입니다[cite: 16]."
+      },
+      {
+        "t": "④ ICMP (Internet Control Message Protocol)",
+        "a": 1,
+        "r": "핑(Ping)과 경로 추적(Traceroute) 명령어는 모두 네트워크 계층의 상태 진단 및 오류 보고 전용 프로토콜인 ICMP 패킷을 기반으로 동작하므로 이를 차단해야 합니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "c": "랜섬웨어",
+    "q": "인터넷 웹사이트를 통해 PC나 휴대폰의 파일, 문서, 이미지 등을 암호화하여 열지 못하게 만든 후 전자화폐 지불 시 해독 키를 주겠다고 금품을 요구하는 행위는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Ransomware (랜섬웨어)",
+        "a": 1,
+        "r": "몸값(Ransom)과 소프트웨어(Software)의 합성어로, 사용자 파일을 인질 삼아 강력한 암호화로 잠그고 금전(비트코인 등)을 요구하는 악성 프로그램을 랜섬웨어라 합니다[cite: 16]."
+      },
+      {
+        "t": "② Spyware",
+        "a": 0,
+        "r": "사용자 몰래 정보를 빼내는 프로그램입니다[cite: 16]."
+      },
+      {
+        "t": "③ DDOS",
+        "a": 0,
+        "r": "서버 자원 고갈 공격입니다[cite: 16]."
+      },
+      {
+        "t": "④ Dropper",
+        "a": 0,
+        "r": "악성코드를 심어주는 전달자 파일입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "c": "해킹 대응",
+    "q": "다음 중 해킹의 예방에 대한 설명으로 알맞지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 해킹 방지를 위한 정보보호관리체계가 구축되어야 한다.",
+        "a": 0,
+        "r": "ISMS 인증 등 체계적 방어입니다[cite: 16]."
+      },
+      {
+        "t": "② 크래킹은 민·형사상의 책임을 지지 않는다.",
+        "a": 1,
+        "r": "정보통신망법 위반 및 형법상 재물손괴/업무방해죄 등에 따라 불법 크래킹 행위는 당연히 엄중한 '민·형사상의 강력한 법적 책임'을 지게 됩니다[cite: 16]."
+      },
+      {
+        "t": "③ 해킹 사고 발생 시 적극 대처하기 위한 조직을 육성하여야 한다.",
+        "a": 0,
+        "r": "CERT 등 대응 조직 운영입니다[cite: 16]."
+      },
+      {
+        "t": "④ 국제적 해킹 사고에 대비하여 외국과의 긴밀한 협력 체제를 구축하여야 한다.",
+        "a": 0,
+        "r": "사이버 공조 수사 체계입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "c": "ISMS 정의",
+    "q": "정보통신서비스 제공자가 정보 통신망의 안정성 및 신뢰성을 확보하여 정보 자산의 기밀성, 무결성, 가용성을 실현하기 위한 체계적인 관리적·기술적 수단과 절차는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 정보보호 관리체계 (ISMS)",
+        "a": 1,
+        "r": "조직의 정보보호 안정성을 확보하기 위해 일련의 조치와 절차를 체계적으로 수립·운영하는 인증 제도를 정보보호 관리체계(ISMS)라 합니다[cite: 16]."
+      },
+      {
+        "t": "② 정보통신 관리체계",
+        "a": 0,
+        "r": "일반 인프라 관리 용어입니다[cite: 16]."
+      },
+      {
+        "t": "③ 통합정보 관리체계",
+        "a": 0,
+        "r": "오답입니다[cite: 16]."
+      },
+      {
+        "t": "④ 정보기술 관리체계",
+        "a": 0,
+        "r": "ITA(EA) 관련 용어입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "c": "암호화 기법",
+    "q": "다음 암호화 원리 중 평문의 글자를 재배열하는 방법으로, 원문과 키를 가지고 있는 정보를 암호문 전체에 분산시키는 방법은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 대체 (Substitution)",
+        "a": 0,
+        "r": "다른 문자로 바꿔치기 하는 방식입니다[cite: 16]."
+      },
+      {
+        "t": "② 전치 (Transposition)",
+        "a": 1,
+        "r": "평문 자체의 글자 구성은 그대로 둔 채 순서나 위치만 무작위로 뒤바꾸어(재배열) 암호문을 만드는 기법을 전치(Transposition) 암호라 합니다[cite: 16]."
+      },
+      {
+        "t": "③ 대수화",
+        "a": 0,
+        "r": "수학적 연산 방식입니다[cite: 16]."
+      },
+      {
+        "t": "④ 혼합방식",
+        "a": 0,
+        "r": "복합 암호 구조입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "c": "공개키 특징",
+    "q": "다음 중 공개키 암호화 방식에 대한 설명으로 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 안전한 인증이 용이하다.",
+        "a": 0,
+        "r": "전자서명으로 부인방지와 인증이 쉽습니다[cite: 16]."
+      },
+      {
+        "t": "② 암호화하는 처리 속도가 느리다.",
+        "a": 0,
+        "r": "복잡한 수학적 대수 연산으로 속도가 느립니다[cite: 16]."
+      },
+      {
+        "t": "③ 암호화하는 경우 비밀키를 사용한다.",
+        "a": 1,
+        "r": "공개키 방식에서는 데이터를 '암호화할 때' 누구나 쓸 수 있는 공개키(Public Key)를 사용하며, 비밀키(Private Key)는 오직 복호화할 때만 사용됩니다[cite: 16]."
+      },
+      {
+        "t": "④ 암호화와 복호화에 사용하는 키가 서로 다르다.",
+        "a": 0,
+        "r": "비대칭 키의 핵심 특징입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "c": "IDEA 알고리즘",
+    "q": "IDEA(International Data Encryption Algorithm) 암호 알고리즘에 대한 특징으로 맞지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 스트림 암호 알고리즘이다.",
+        "a": 1,
+        "r": "정해진 비트 묶음 단위로 끊어서 암호화하는 PGP 등에 쓰인 대표적 '블록 암호(Block Cipher)' 알고리즘이며, 스트림 암호가 아닙니다[cite: 16]."
+      },
+      {
+        "t": "② 64비트 평문에 대하여 동작한다.",
+        "a": 0,
+        "r": "64비트 블록 단위로 처리합니다[cite: 16]."
+      },
+      {
+        "t": "③ 키의 길이는 128비트이다.",
+        "a": 0,
+        "r": "128비트 대칭키를 사용합니다[cite: 16]."
+      },
+      {
+        "t": "④ 8라운드 암호 방식을 적용한다.",
+        "a": 0,
+        "r": "8단계의 혼돈/확산 라운드를 거칩니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "c": "대칭키 특징",
+    "q": "다음 중 암호화 방식인 비밀키(대칭키) 알고리즘에 대한 설명으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 암호키는 공개하고 해독키는 비밀로 한다.",
+        "a": 0,
+        "r": "공개키 설명입니다[cite: 16]."
+      },
+      {
+        "t": "② 동일한 키로 데이터를 암호화하고 복호화한다.",
+        "a": 1,
+        "r": "비밀키(대칭키)는 암복호화에 정확히 '동일한 단 하나의 키'를 공유해 사용하는 알고리즘입니다[cite: 16]."
+      },
+      {
+        "t": "③ 암호화, 복호화 속도가 느리며 알고리즘이 복잡하다.",
+        "a": 0,
+        "r": "연산이 대단히 빠릅니다[cite: 16]."
+      },
+      {
+        "t": "④ 키의 분배가 용이하고 관리해야 할 키의 개수가 적다.",
+        "a": 0,
+        "r": "사용자가 늘어날수록 키 관리가 복잡하고 분배가 어렵습니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "c": "대칭키 키 개수",
+    "q": "다음 중 대칭키 암호화 방식을 사용하여 10명의 사용자가 정보를 안전하게 교환하는 경우에 필요한 비밀키의 총 개수는 얼마인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 18개",
+        "a": 0,
+        "r": "오답입니다[cite: 16]."
+      },
+      {
+        "t": "② 20개",
+        "a": 0,
+        "r": "오답입니다[cite: 16]."
+      },
+      {
+        "t": "③ 45개",
+        "a": 1,
+        "r": "대칭키 방식에서 n명이 서로 1:1로 안전하게 통신하기 위해 필요한 총 비밀키 개수 공식은 n(n-1)/2 입니다. 10(9)/2 = 45개가 도출됩니다[cite: 16]."
+      },
+      {
+        "t": "④ 90개",
+        "a": 0,
+        "r": "2를 나누기 전 값입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "c": "시큐어 코딩",
+    "q": "다음 중 시큐어 코딩(Secure Coding)의 필요성이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 사후 대응방식의 보안 취약점 제거 비용 보다 수십 배 비용을 절감할 수 있다.",
+        "a": 0,
+        "r": "개발 단계 제거로 비용을 아낍니다[cite: 16]."
+      },
+      {
+        "t": "② 사이버 공격의 대부분이 하드웨어 장비의 취약점을 악용하는 공격으로 분석되고 있다.",
+        "a": 1,
+        "r": "대부분의 해킹 사고와 사이버 공격은 하드웨어 자체의 결함이 아니라, 소프트웨어 소스코드 내부에 숨겨진 '논리적 보안 취약점(SQL 인젝션, 버퍼오버플로우 등)'을 악용하여 발생하므로 틀린 설명입니다[cite: 16]."
+      },
+      {
+        "t": "③ 보안 취약점을 소스코드 레벨에서 사전에 제거하여 안전한 소프트웨어를 개발한다.",
+        "a": 0,
+        "r": "시큐어 코딩의 핵심 목표입니다[cite: 16]."
+      },
+      {
+        "t": "④ 행정기관 등에서 추진하는 일정 규모 이상 정보화사업에는 의무적으로 시행해야 한다.",
+        "a": 0,
+        "r": "공공 소프트웨어 의무화 대상입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "c": "SSO 보안 위협",
+    "q": "다음 중 SSO(Single Sign-On) 보안 위협에 속하지 않는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 인증정보 노출",
+        "a": 0,
+        "r": "통합 인증 토큰이 탈취될 위험이 있습니다[cite: 16]."
+      },
+      {
+        "t": "② 익명 로그인",
+        "a": 1,
+        "r": "통합 인증 시스템(SSO)은 사전에 신원이 철저히 확인된 정당한 사용자에게만 통합 토큰을 발급해주므로, 신분을 숨기는 '익명 로그인'은 SSO 구조상 성립되지 않는 위협 분류입니다[cite: 16]."
+      },
+      {
+        "t": "③ 위장(사칭) 위협",
+        "a": 0,
+        "r": "세션 하이재킹 등으로 사칭될 수 있습니다[cite: 16]."
+      },
+      {
+        "t": "④ 키관리 위협",
+        "a": 0,
+        "r": "인증 토큰 서명 키 유출 위험이 있습니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "c": "IPSec 특징",
+    "q": "다음 중 IPsec의 설명으로 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① IETF에서 개발한 프로토콜이다.",
+        "a": 0,
+        "r": "국제 표준 표준화 기구 규격입니다[cite: 16]."
+      },
+      {
+        "t": "② IP계층에서 데이터를 보호하기 위한 복수의 프로토콜로 구성된다.",
+        "a": 0,
+        "r": "AH, ESP, IKE 등으로 이뤄집니다[cite: 16]."
+      },
+      {
+        "t": "③ 송수신자의 주소에 사설네트워크 주소를 이용할 수 있다.",
+        "a": 0,
+        "r": "터널 모드로 캡슐화해 쓸 수 있습니다[cite: 16]."
+      },
+      {
+        "t": "④ 연결형 무결성, 기밀성, 접근제어 등의 서비스를 제공한다.",
+        "a": 1,
+        "r": "IPsec은 기본적으로 IP 데이터그램 단위로 독립적 처리되는 '비연결형(Connectionless)' 데이터 보호 메커니즘을 제공하므로 연결형이라는 표현이 잘못되었습니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "c": "IPSec 제공 서비스",
+    "q": "IPsec(Internet Protocol Security)은 네트워크 계층에서 보안성을 제공하는 표준화된 기술이다. 다음 중 IPsec가 제공하는 기술이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 생산성",
+        "a": 1,
+        "r": "IPsec은 기밀성, 데이터 무결성, 통신 상대방 인증, 재전송 방지 등을 제공하는 '보안' 프로토콜이며, 업무 능률이나 효율을 뜻하는 '생산성'은 보안 기술의 직접적인 제공 항목이 아닙니다[cite: 16]."
+      },
+      {
+        "t": "② 암호화",
+        "a": 0,
+        "r": "ESP로 기밀성을 제공합니다[cite: 16]."
+      },
+      {
+        "t": "③ 데이터 무결성",
+        "a": 0,
+        "r": "변조 여부를 검증합니다[cite: 16]."
+      },
+      {
+        "t": "④ 통신 상대방 인증",
+        "a": 0,
+        "r": "출발지 주체 신원을 확인합니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "c": "공개키 특징",
+    "q": "다음 중 암호화 방식인 공개키 알고리즘에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 대표적인 암호화 방식에는 DES가 있다.",
+        "a": 1,
+        "r": "DES는 대칭키(비밀키) 블록 암호의 대표 주자이며, 공개키 알고리즘에는 RSA나 ECC 등이 해당하므로 이 설명은 틀렸습니다[cite: 16]."
+      },
+      {
+        "t": "② 대표적인 암호화 방식에는 RSA가 있다.",
+        "a": 0,
+        "r": "맞는 설명입니다[cite: 16]."
+      },
+      {
+        "t": "③ 암호키는 공개하고 해독키는 비밀로 한다.",
+        "a": 0,
+        "r": "공개키 방식의 근본 원리입니다[cite: 16]."
+      },
+      {
+        "t": "④ 키의 분배가 용이하고 관리해야 할 키의 개수가 적다.",
+        "a": 0,
+        "r": "공개키의 큰 장점입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "c": "IoT 보안 위협",
+    "q": "다음 중 사물인터넷(IoT)의 보안 공격 유형이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 비인가 접근",
+        "a": 0,
+        "r": "인증 우회 접근 위협입니다[cite: 16]."
+      },
+      {
+        "t": "② 정보압축",
+        "a": 1,
+        "r": "정보 압축(Compression)은 센서 용량을 아끼기 위한 정상적인 '데이터 처리 기술'일 뿐, IoT 기기를 타겟으로 삼는 악의적인 보안 공격 유형에 속하지 않습니다[cite: 16]."
+      },
+      {
+        "t": "③ 정보유출",
+        "a": 0,
+        "r": "기밀성 침해 공격입니다[cite: 16]."
+      },
+      {
+        "t": "④ 데이터 위·변조",
+        "a": 0,
+        "r": "무결성 침해 공격입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "c": "홈네트워크 보안",
+    "q": "다음 중 홈네트워크 장비 보안성 확보를 위한 보안 요구사항이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 접근통제",
+        "a": 0,
+        "r": "외부 침입을 막기 위해 필수적입니다[cite: 16]."
+      },
+      {
+        "t": "② 데이터 기밀성",
+        "a": 0,
+        "r": "홈캠 영상 등의 암호화가 필요합니다[cite: 16]."
+      },
+      {
+        "t": "③ 데이터 중첩성",
+        "a": 1,
+        "r": "데이터 중첩성(Redundancy)은 데이터베이스 정규화나 백업 관점의 용어이며, 보안성 확보를 위한 공식적인 필수 보안 요구사항(접근통제, 기밀성, 인증 등)이 아닙니다[cite: 16]."
+      },
+      {
+        "t": "④ 인증",
+        "a": 0,
+        "r": "사용자 및 기기 상호 인증이 필수적입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "c": "PGP 특징",
+    "q": "인터넷에서 사용되고 있는 이메일 보안시스템의 하나인 PGP(Pretty Good Privacy)의 특징에 대한 설명으로 틀린 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 공개키 암호 알고리즘 채용",
+        "a": 0,
+        "r": "RSA 등 공개키와 대칭키를 혼합해 씁니다[cite: 16]."
+      },
+      {
+        "t": "② Windows, Unix 등 다양한 플랫폼에서 실행 가능",
+        "a": 0,
+        "r": "범용성이 높습니다[cite: 16]."
+      },
+      {
+        "t": "③ 호환성이 뛰어난 상용 버전을 제작",
+        "a": 0,
+        "r": "다양한 버전으로 보급되었습니다[cite: 16]."
+      },
+      {
+        "t": "④ 소스코드는 인터넷 등 네트워크를 통하여 유상으로 제공된다.",
+        "a": 1,
+        "r": "필립 지머만이 개발한 PGP 초기 원소프트웨어 및 프리웨어 버전은 전 세계 보안 활성화를 위해 네트워크를 통해 '무상(Freeware/Open source)'으로 보급되었으므로 유상 제공이라는 설명이 틀렸습니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "c": "보안 위협 유형",
+    "q": "다음 중 의도적으로 수신자로부터 인증된 사용자처럼 가장하여 수신자에게 데이터를 전송하는 보안 위협의 형태에 가장 적합한 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 가로채기 (Interception)",
+        "a": 0,
+        "r": "도청(기밀성 위협)입니다[cite: 16]."
+      },
+      {
+        "t": "② 가로막기 (Interruption)",
+        "a": 0,
+        "r": "가용성 파괴(서비스 거부)입니다[cite: 16]."
+      },
+      {
+        "t": "③ 변조 (Modification)",
+        "a": 0,
+        "r": "데이터 내용 조작입니다[cite: 16]."
+      },
+      {
+        "t": "④ 위조 (Fabrication)",
+        "a": 1,
+        "r": "인증된 정상 송신자인 것처럼 감쪽같이 가짜 데이터를 만들어 시스템에 주입하는 위협 형태를 위조(Fabrication)라 합니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "c": "커버로스 시스템",
+    "q": "커버로스(Kerberos) 시스템에 대한 설명으로 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 인증절차는 3단계 과정으로 이루어진다.",
+        "a": 0,
+        "r": "AS, TGS 등을 거치는 3단계 인증 구조입니다[cite: 16]."
+      },
+      {
+        "t": "② 암호화는 DES 알고리즘을 사용한다.",
+        "a": 0,
+        "r": "대칭키 기반으로 DES/AES를 씁니다[cite: 16]."
+      },
+      {
+        "t": "③ 티켓(Ticket)을 발급하는 별도의 서버가 사용된다.",
+        "a": 0,
+        "r": "TGS 서버가 티켓을 줍니다[cite: 16]."
+      },
+      {
+        "t": "④ 폐쇄형 네트워크 시스템에 적합한 인증 시스템이다.",
+        "a": 1,
+        "r": "커버로스는 신뢰할 수 없는 개방된 네트워크 환경에서 클라이언트가 안전하게 서버를 인증받기 위해 개발된 중앙 집중식(SSO 지원) 인증 시스템이므로 폐쇄형 전용이 아닙니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "c": "허니팟",
+    "q": "침입자로부터의 모든 공격을 별도의 시스템으로 유도하여 공격이 성공적으로 보이도록 하면서 침입자를 추적할 수 있도록 하는 침입탐지시스템의 도구는?",
+    "img": "",
+    "o": [
+      {
+        "t": "① Firewall",
+        "a": 0,
+        "r": "방화벽 차단 장비입니다[cite: 16]."
+      },
+      {
+        "t": "② Honeypot (허니팟)",
+        "a": 1,
+        "r": "해커를 유인하기 위해 일부러 취약한 미끼 시스템을 만들어 놓고, 공격 패턴을 관찰하며 추적하는 가짜 유인 시스템을 허니팟(Honeypot)이라 합니다[cite: 16]."
+      },
+      {
+        "t": "③ Tripwire",
+        "a": 0,
+        "r": "파일 무결성 검사 도구입니다[cite: 16]."
+      },
+      {
+        "t": "④ Elgamal",
+        "a": 0,
+        "r": "암호화 알고리즘입니다[cite: 16]."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "c": "보안 도구",
+    "q": "침입자로부터의 모든 공격을 별도의 시스템으로 유도하여 공격이 성공적으로 보이도록 하면서 침입자를 추적할 수 있도록 하는 침입탐지시스템의 도구는 무엇인가?\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① Firewall",
+        "a": 0,
+        "r": "미리 정의된 보안 규칙에 따라 네트워크 트래픽을 필터링하고 인가되지 않은 접근을 차단하는 보안 시스템입니다."
+      },
+      {
+        "t": "② Honeypot",
+        "a": 1,
+        "r": "침입자를 유인하는 가상의 미끼 시스템으로, 공격 행위를 관찰하고 정보를 수집·추적하기 위해 사용됩니다."
+      },
+      {
+        "t": "③ Tripwire",
+        "a": 0,
+        "r": "중요 시스템 파일의 해시값을 비교하여 파일의 위·변조 여부를 감시하는 호스트 기반 무결성 검사 도구입니다."
+      },
+      {
+        "t": "④ Elgamal",
+        "a": 0,
+        "r": "이산대수의 어려움에 기반한 공개키 암호 및 전자서명 알고리즘입니다."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "c": "보안 도구",
+    "q": "저작권을 보호하고자 하는 대상 미디어에 저작권 정보를 담고 있는 로고나 이미지를 삽입하는 기술을 무엇이라 하는가?\n\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① DRM",
+        "a": 0,
+        "r": "디지털 콘텐츠의 불법 복제 방지, 이용 권한 통제 및 유통 관리를 총체적으로 지원하는 포괄적 저작권 보호 체계입니다."
+      },
+      {
+        "t": "② Watermarking",
+        "a": 1,
+        "r": "텍스트, 이미지, 오디오 등의 미디어에 육안 또는 판독기를 통해서만 확인 가능한 저작권 정보(로고, 서명 등)를 직접 삽입하는 기술입니다."
+      },
+      {
+        "t": "③ DOI",
+        "a": 0,
+        "r": "논문이나 디지털 저작물 등 개별 콘텐츠마다 고유 식별 번호를 부여하여 인터넷 주소가 바뀌어도 영구적으로 추적·연결할 수 있게 해주는 디지털 객체 식별자입니다."
+      },
+      {
+        "t": "④ INDECS",
+        "a": 0,
+        "r": "전자상거래 환경에서 다양한 디지털 저작권 및 콘텐츠 메타데이터를 상호 운용할 수 있도록 설계된 표준 프레임워크입니다."
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "c": "보안 도구",
+    "q": "다음 중 웹브라우저에서 개인정보를 수집 및 추적 하는 기술이 아닌 것은?\n\n\n\n",
+    "img": "",
+    "o": [
+      {
+        "t": "① 쿠키(Cookie)",
+        "a": 0,
+        "r": "웹 서버가 브라우저에 저장하는 작은 텍스트 파일로, 방문 기록 및 사용자 행동 데이터를 추적하는 데 활용됩니다."
+      },
+      {
+        "t": "② 인증서",
+        "a": 1,
+        "r": "서버나 개인의 신원을 증명하고 통신 데이터를 암호화하기 위한 전자 문서로, 사용자 추적 기술이 아닙니다."
+      },
+      {
+        "t": "③ 비콘(Beacon)",
+        "a": 0,
+        "r": "웹페이지에 삽입된 보이지 않는 1x1 픽셀 투명 이미지 등을 통해 사용자의 방문 행동 및 페이지 열람 정보를 수집하는 기술입니다."
+      },
+      {
+        "t": "④ History Stealing",
+        "a": 0,
+        "r": "브라우저의 방문 기록(방문한 링크의 색상 변화 등)을 악용하여 사용자의 웹 서핑 이력을 가로채고 추적하는 기법입니다."
+      }
+    ]
+  }
+]
+</script>
+
+  <script>
+    let rawQuizData = [];
+    try {
+      const jsonText = document.getElementById("quiz-data").textContent;
+      rawQuizData = JSON.parse(jsonText);
+    } catch (e) {
+      alert("문제 데이터를 불러오는 중 오류가 발생했습니다. JSON 형식을 확인해주세요.");
+      console.error("JSON Parsing Error:", e);
+    }
+
+    let currentIdx = 0;
+    let userAnswers = new Array(rawQuizData.length).fill(null);
+
+    const questionBadge = document.getElementById("question-badge");
+    const categoryBadge = document.getElementById("category-badge");
+    const questionCounter = document.getElementById("question-counter");
+    const questionText = document.getElementById("question-text");
+    const questionImage = document.getElementById("question-image");
+    const optionsContainer = document.getElementById("options-container");
+    const explanationBox = document.getElementById("explanation-box");
+    const resultAlert = document.getElementById("result-alert");
+    const rationalesList = document.getElementById("rationales-list");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const navGrid = document.getElementById("nav-grid");
+    const scoreDisplay = document.getElementById("score-display");
+    const progressBar = document.getElementById("progress-bar");
+    const resetBtn = document.getElementById("reset-btn");
+    const editModal = document.getElementById("edit-modal");
+
+    function initNavGrid() {
+      navGrid.innerHTML = "";
+      rawQuizData.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.innerText = idx + 1;
+        btn.id = `nav-btn-${idx}`;
+        btn.className = "w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200 transition shadow-sm";
+        btn.onclick = () => loadQuestion(idx);
+        navGrid.appendChild(btn);
+      });
+      updateScoreAndProgress();
+    }
+
+    function updateScoreAndProgress() {
+      const answeredCount = userAnswers.filter(a => a !== null).length;
+      let correctCount = 0;
+      userAnswers.forEach((ans, idx) => {
+        if (ans !== null && rawQuizData[idx].o[ans].a === 1) correctCount++;
+      });
+      scoreDisplay.innerText = `${correctCount} / ${answeredCount} (총 ${rawQuizData.length}문항)`;
+      progressBar.style.width = `${(answeredCount / rawQuizData.length) * 100}%`;
+
+      rawQuizData.forEach((_, idx) => {
+        const navBtn = document.getElementById(`nav-btn-${idx}`);
+        if(!navBtn) return;
+        if (userAnswers[idx] === null) {
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm ${idx === currentIdx ? 'border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700 scale-110' : 'border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200'}`;
+        } else {
+          const isUserCorrect = rawQuizData[idx].o[userAnswers[idx]].a === 1;
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-${isUserCorrect ? 'emerald' : 'rose'}-500 text-white ${idx === currentIdx ? `ring-2 ring-${isUserCorrect ? 'emerald' : 'rose'}-300 scale-110` : ''}`;
+        }
+      });
+    }
+
+    function loadQuestion(idx) {
+      if (idx < 0 || idx >= rawQuizData.length) return;
+      currentIdx = idx;
+      const q = rawQuizData[idx];
+
+      questionBadge.innerText = `문항 ${q.id || (idx+1)}`;
+      categoryBadge.innerText = q.c;
+      questionCounter.innerText = `${idx + 1} / ${rawQuizData.length}`;
+      questionText.innerText = q.q;
+      
+      if(q.img && q.img.trim() !== "") {
+          questionImage.src = q.img;
+          questionImage.classList.remove('hidden');
+      } else {
+          questionImage.src = "";
+          questionImage.classList.add('hidden');
+      }
+
+      optionsContainer.innerHTML = "";
+      const selected = userAnswers[idx];
+
+      q.o.forEach((opt, optIdx) => {
+        const btn = document.createElement("button");
+        btn.className = "w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm ";
+        
+        if (selected === null) {
+          btn.className += "border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800";
+          btn.onclick = () => selectOption(optIdx);
+        } else {
+          if (opt.a === 1) btn.className += "border-emerald-500 bg-emerald-50 text-emerald-900 font-bold z-10 scale-[1.01]";
+          else if (selected === optIdx) btn.className += "border-rose-500 bg-rose-50 text-rose-900";
+          else btn.className += "border-slate-200 bg-slate-50 text-slate-400 opacity-60";
+          btn.disabled = true;
+        }
+
+        const iconSpan = document.createElement("span");
+        iconSpan.className = "pt-0.5 shrink-0"; 
+        if (selected !== null) {
+          if (opt.a === 1) iconSpan.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-xl drop-shadow-md"></i>';
+          else if (selected === optIdx) iconSpan.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-600 text-xl"></i>';
+          else iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-300 text-xl"></i>';
+        } else {
+          iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i>';
+        }
+
+        const textSpan = document.createElement("span");
+        textSpan.className = "flex-1 leading-relaxed";
+        textSpan.innerText = opt.t;
+        
+        btn.appendChild(iconSpan);
+        btn.appendChild(textSpan);
+        optionsContainer.appendChild(btn);
+      });
+
+      if (selected !== null) {
+        renderExplanation(selected);
+        explanationBox.classList.remove("hidden");
+      } else {
+        explanationBox.classList.add("hidden");
+      }
+
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === rawQuizData.length - 1;
+      updateScoreAndProgress();
+    }
+
+    function selectOption(optIdx) {
+      userAnswers[currentIdx] = optIdx;
+      loadQuestion(currentIdx);
+    }
+
+    function renderExplanation(selectedIdx) {
+      const q = rawQuizData[currentIdx];
+      const isCorrect = q.o[selectedIdx].a === 1;
+
+      if (isCorrect) {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-2xl drop-shadow"></i> <div>정답입니다! 완벽하게 이해하셨습니다.</div>';
+      } else {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-rose-900 bg-rose-100 border border-rose-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-600 text-2xl drop-shadow"></i> <div>오답입니다. 아래 보기별 해설을 반드시 확인하세요.</div>';
+      }
+
+      rationalesList.innerHTML = "";
+      q.o.forEach((opt) => {
+        const item = document.createElement("div");
+        item.className = `p-3 rounded-lg border shadow-sm ${opt.a === 1 ? 'bg-emerald-50/80 border-emerald-200' : 'bg-white border-slate-200'}`;
+        
+        const header = document.createElement("div");
+        header.className = "font-bold mb-1.5 flex items-start gap-2";
+        if (opt.a === 1) header.innerHTML = `<span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5 shadow-sm">정답 보기</span> <span class="text-emerald-900">${opt.t}</span>`;
+        else header.innerHTML = `<span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">${opt.t}</span>`;
+        
+        const body = document.createElement("div");
+        body.className = "text-xs md:text-sm text-slate-600 pl-1 leading-relaxed";
+        body.innerText = opt.r;
+
+        item.appendChild(header);
+        item.appendChild(body);
+        rationalesList.appendChild(item);
+      });
+    }
+
+    function openEditModal() {
+      const q = rawQuizData[currentIdx];
+      document.getElementById('edit-cat').value = q.c;
+      document.getElementById('edit-q').value = q.q;
+      
+      if(q.img && q.img.trim() !== "") {
+          document.getElementById('edit-img-base64').value = q.img;
+          document.getElementById('edit-img-preview').src = q.img;
+          document.getElementById('edit-img-preview').classList.remove('hidden');
+          document.getElementById('btn-clear-img').classList.remove('hidden');
+      } else {
+          clearImage(); 
+      }
+
+      for(let i=0; i<4; i++) {
+        document.getElementById(`edit-opt-${i}`).value = q.o[i].t;
+        document.getElementById(`edit-rat-${i}`).value = q.o[i].r;
+        if(q.o[i].a === 1) {
+          document.querySelector(`input[name="edit-ans"][value="${i}"]`).checked = true;
+        }
+      }
+      
+      document.body.classList.add('modal-open');
+      editModal.classList.remove('hidden');
+    }
+
+    function closeEditModal() {
+      document.body.classList.remove('modal-open');
+      editModal.classList.add('hidden');
+    }
+
+    function saveEditedQuestion() {
+      const q = rawQuizData[currentIdx];
+      q.c = document.getElementById('edit-cat').value;
+      q.q = document.getElementById('edit-q').value;
+      q.img = document.getElementById('edit-img-base64').value;
+      
+      const correctVal = document.querySelector('input[name="edit-ans"]:checked').value;
+      
+      for(let i=0; i<4; i++) {
+        q.o[i].t = document.getElementById(`edit-opt-${i}`).value;
+        q.o[i].r = document.getElementById(`edit-rat-${i}`).value;
+        q.o[i].a = (i.toString() === correctVal) ? 1 : 0;
+      }
+      
+      closeEditModal();
+      loadQuestion(currentIdx);
+      alert("문제가 성공적으로 수정되었습니다.\n\n※ 영구 저장을 원하시면 상단의 [수정본 다운로드] 버튼을 클릭하세요!");
+    }
+
+    function addNewQuestion() {
+      const newQ = {
+        id: rawQuizData.length + 1,
+        c: "새로운 카테고리",
+        q: "여기에 추가할 문제를 입력하세요.",
+        img: "",
+        o: [
+          { t: "① 보기 1", a: 1, r: "해설 1" },
+          { t: "② 보기 2", a: 0, r: "해설 2" },
+          { t: "③ 보기 3", a: 0, r: "해설 3" },
+          { t: "④ 보기 4", a: 0, r: "해설 4" }
+        ]
+      };
+      rawQuizData.push(newQ);
+      userAnswers.push(null);
+      initNavGrid();
+      loadQuestion(rawQuizData.length - 1);
+      openEditModal(); 
+    }
+
+    function deleteCurrentQuestion() {
+      if(rawQuizData.length <= 1) {
+          alert("최소 1개의 문제는 남아있어야 합니다.");
+          return;
+      }
+      if(confirm("정말로 이 문제를 삭제하시겠습니까?\n삭제 후 복구할 수 없습니다.")) {
+          rawQuizData.splice(currentIdx, 1);
+          userAnswers.splice(currentIdx, 1);
+          rawQuizData.forEach((q, i) => q.id = i + 1);
+          
+          initNavGrid();
+          closeEditModal();
+          let nextIdx = currentIdx >= rawQuizData.length ? rawQuizData.length - 1 : currentIdx;
+          loadQuestion(nextIdx);
+      }
+    }
+
+    function encodeImageFileAsURL(element) {
+      const file = element.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onloadend = function() {
+        document.getElementById('edit-img-base64').value = reader.result;
+        document.getElementById('edit-img-preview').src = reader.result;
+        document.getElementById('edit-img-preview').classList.remove('hidden');
+        document.getElementById('btn-clear-img').classList.remove('hidden');
+      }
+      reader.readAsDataURL(file);
+    }
+
+    function clearImage() {
+      document.getElementById('edit-img-upload').value = "";
+      document.getElementById('edit-img-base64').value = "";
+      document.getElementById('edit-img-preview').src = "";
+      document.getElementById('edit-img-preview').classList.add('hidden');
+      document.getElementById('btn-clear-img').classList.add('hidden');
+    }
+
+    function downloadUpdatedHTML() {
+      const dataScript = document.getElementById('quiz-data');
+      dataScript.textContent = "\n" + JSON.stringify(rawQuizData, null, 2) + "\n";
+      
+      let htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = "정보전송일반_12차시_정보보안_최종본.html"; 
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    prevBtn.addEventListener("click", () => { if (currentIdx > 0) loadQuestion(currentIdx - 1); });
+    nextBtn.addEventListener("click", () => { if (currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1); });
+    resetBtn.addEventListener("click", () => {
+      if (confirm("풀이 기록을 모두 초기화하시겠습니까? 처음부터 다시 풉니다.")) {
+        userAnswers = new Array(rawQuizData.length).fill(null);
+        loadQuestion(0);
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if(!editModal.classList.contains('hidden')) return;
+      if (e.key === "ArrowLeft" && currentIdx > 0) loadQuestion(currentIdx - 1);
+      else if (e.key === "ArrowRight" && currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1);
+      else if (["1", "2", "3", "4"].includes(e.key) && userAnswers[currentIdx] === null) selectOption(parseInt(e.key) - 1);
+    });
+
+    if (rawQuizData.length > 0) {
+      initNavGrid();
+      loadQuestion(0);
+    }
+  </script>
+
+</body></html>

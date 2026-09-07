@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정보전송일반 - 15차시 정보통신 기술기준 CBT (35제)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap');
+    body { font-family: 'Pretendard', sans-serif; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .modal-open { overflow: hidden; }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-40{z-index:40}.z-50{z-index:50}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.mb-1\.5{margin-bottom:0.375rem}.mt-0\.5{margin-top:0.125rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-2{height:0.5rem}.h-4{height:1rem}.h-7{height:1.75rem}.max-h-32{max-height:8rem}.max-h-60{max-height:15rem}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-4{width:1rem}.w-full{width:100%}.w-7{width:1.75rem}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.shrink-0{flex-shrink:0}.scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-\[1\.01\]{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-b-2xl{border-bottom-right-radius:1rem;border-bottom-left-radius:1rem}.rounded-t-2xl{border-top-left-radius:1rem;border-top-right-radius:1rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-rose-200{--tw-border-opacity:1;border-color:rgb(254 205 211 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-indigo-600{--tw-border-opacity:1;border-color:rgb(79 70 229 / var(--tw-border-opacity, 1))}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183 / var(--tw-border-opacity, 1))}.border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175 / var(--tw-border-opacity, 1))}.border-rose-500{--tw-border-opacity:1;border-color:rgb(244 63 94 / var(--tw-border-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-indigo-200{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-700{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.bg-indigo-800{--tw-bg-opacity:1;background-color:rgb(55 48 163 / var(--tw-bg-opacity, 1))}.bg-rose-100{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-emerald-50\/80{background-color:rgb(236 253 245 / 0.8)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-slate-400{--tw-bg-opacity:1;background-color:rgb(148 163 184 / var(--tw-bg-opacity, 1))}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pt-6{padding-top:1.5rem}.pt-0\.5{padding-top:0.125rem}.pl-1{padding-left:0.25rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[10px\]{font-size:10px}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-rose-900{--tw-text-opacity:1;color:rgb(136 19 55 / var(--tw-text-opacity, 1))}.opacity-60{opacity:0.6}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-400{--tw-ring-opacity:1;--tw-ring-color:rgb(129 140 248 / var(--tw-ring-opacity, 1))}.ring-emerald-300{--tw-ring-opacity:1;--tw-ring-color:rgb(110 231 183 / var(--tw-ring-opacity, 1))}.ring-rose-300{--tw-ring-opacity:1;--tw-ring-color:rgb(253 164 175 / var(--tw-ring-opacity, 1))}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-md{--tw-drop-shadow:drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.file\:mr-4::file-selector-button{margin-right:1rem}.file\:rounded-full::file-selector-button{border-radius:9999px}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-indigo-50::file-selector-button{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.file\:px-3::file-selector-button{padding-left:0.75rem;padding-right:0.75rem}.file\:py-1::file-selector-button{padding-top:0.25rem;padding-bottom:0.25rem}.file\:text-xs::file-selector-button{font-size:0.75rem;line-height:1rem}.file\:font-semibold::file-selector-button{font-weight:600}.file\:text-indigo-700::file-selector-button{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.hover\:border-indigo-400:hover{--tw-border-opacity:1;border-color:rgb(129 140 248 / var(--tw-border-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-200:hover{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-500:hover{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-100:hover{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-200:hover{--tw-bg-opacity:1;background-color:rgb(254 205 211 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-50:hover{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:text-indigo-800:hover{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.hover\:text-rose-500:hover{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.hover\:file\:bg-indigo-100::file-selector-button:hover{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-40:disabled{opacity:0.4}.group:hover .group-hover\:text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:block{display:block}}@media (min-width: 768px){.md\:h-8{height:2rem}.md\:w-auto{width:auto}.md\:w-8{width:2rem}.md\:flex-row{flex-direction:row}.md\:justify-end{justify-content:flex-end}.md\:gap-2{gap:0.5rem}.md\:p-8{padding:2rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xs{font-size:0.75rem;line-height:1rem}}</style></head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col relative">
+
+  <!-- Header -->
+  <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-3">
+      <div class="flex items-center space-x-3 w-full md:w-auto">
+        <a href="index.html" class="bg-indigo-800 hover:bg-indigo-600 text-white text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1.5 border border-indigo-500 shadow-sm shrink-0" title="목록으로 돌아가기">
+          <i class="fa-solid fa-list"></i> 목록
+        </a>
+        <i class="fa-solid fa-scale-balanced text-2xl text-amber-300 hidden sm:block"></i>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight truncate">15차시 정보통신 기술기준 CBT (35제)</h1>
+          <p class="text-xs text-indigo-200 truncate">방송통신설비 및 선로·구내·보호기 기술기준 마스터</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-end">
+        <div class="text-right mr-2">
+          <span class="text-xs text-indigo-200 block">현재 점수</span>
+          <span id="score-display" class="font-extrabold text-lg text-amber-300">32 / 34 (총 35문항)</span>
+        </div>
+        <button onclick="downloadUpdatedHTML()" class="bg-emerald-600 hover:bg-emerald-500 text-xs px-3 py-2 rounded-lg font-bold transition flex items-center gap-1 border border-emerald-500 shadow-sm">
+          <i class="fa-solid fa-download"></i> 수정본 다운로드
+        </button>
+        <button id="reset-btn" class="bg-indigo-600 hover:bg-indigo-500 text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1 border border-indigo-500">
+          <i class="fa-solid fa-rotate-right"></i> 초기화
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="w-full bg-indigo-200 h-2">
+    <div id="progress-bar" class="bg-amber-400 h-2 transition-all duration-300" style="width: 97.1429%;"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-1 w-full">
+    
+    <!-- Question Card -->
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden relative">
+      <div class="bg-slate-50 border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <span id="question-badge" class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">문항 35</span>
+          <span id="category-badge" class="bg-slate-200 text-slate-700 text-xs font-semibold px-2 py-0.5 rounded">보호기 성능</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <button onclick="openEditModal()" class="text-xs text-indigo-600 font-bold hover:text-indigo-800 bg-indigo-50 px-2 py-1 rounded border border-indigo-200 transition shadow-sm">
+            <i class="fa-solid fa-pen-to-square"></i> 문제/해설 수정
+          </button>
+          <span id="question-counter" class="text-xs text-slate-500 font-medium">35 / 35</span>
+        </div>
+      </div>
+
+      <div class="p-6 md:p-8">
+        <h2 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-relaxed mb-4">다음은 보호기의 기본회로도이다. 보호기 성능에 관한 설명으로 틀린 것은?</h2>
+        
+        <!-- 이미지 출력 영역 -->
+        <img id="question-image" src="data:image/png;base64,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" alt="첨부 이미지" class="mb-6 max-h-60 rounded-lg border border-slate-200 shadow-sm">
+
+        <!-- Options -->
+        <div id="options-container" class="space-y-3"><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-slate-50 text-slate-400 opacity-60" disabled=""><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-300 text-xl"></i></span><span class="flex-1 leading-relaxed">① L1-E, L2-E 간에 직류 100[V/sec] 상승전압 인가 시 184~280V 사이에서 E를 통해 방전이 개시되어야 한다.</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-slate-50 text-slate-400 opacity-60" disabled=""><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-300 text-xl"></i></span><span class="flex-1 leading-relaxed">② L1-E, L2-E 간에 60[Hz], 5[A]를 15분간 인가할 때 보호기 발화 및 변형이 없어야 한다.</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-emerald-500 bg-emerald-50 text-emerald-900 font-bold z-10 scale-[1.01]" disabled=""><span class="pt-0.5 shrink-0"><i class="fa-solid fa-circle-check text-emerald-600 text-xl drop-shadow-md"></i></span><span class="flex-1 leading-relaxed">③ L1-T1, L2-T2 간에 직류 150[mA]를 3시간 인가할 때, 과전류 제한소자는 즉시 동작하여야 한다.</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-slate-50 text-slate-400 opacity-60" disabled=""><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-300 text-xl"></i></span><span class="flex-1 leading-relaxed">④ 회로의 'A'는 과전압방전소자, 'C1, C2'는 과전류제한소자로 동작되어야 한다.</span></button></div>
+
+        <!-- Explanation Section -->
+        <div id="explanation-box" class="mt-8 border-t border-slate-200 pt-6 animate-fade-in-up">
+          <div id="result-alert" class="p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 shadow-inner"><i class="fa-solid fa-circle-check text-emerald-600 text-2xl drop-shadow"></i> <div>정답입니다! 완벽하게 이해하셨습니다.</div></div>
+          
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-4">
+            <h3 class="text-sm font-bold text-indigo-900 flex items-center gap-2">
+              <i class="fa-solid fa-book-open-reader text-indigo-600"></i> 해설 상세 보기
+            </h3>
+            <div id="rationales-list" class="space-y-2 text-sm text-slate-700"><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">① L1-E, L2-E 간에 직류 100[V/sec] 상승전압 인가 시 184~280V 사이에서 E를 통해 방전이 개시되어야 한다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">과전압 동작 합격 기준입니다.</div></div><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">② L1-E, L2-E 간에 60[Hz], 5[A]를 15분간 인가할 때 보호기 발화 및 변형이 없어야 한다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">화재 예방 내구성 기준입니다.</div></div><div class="p-3 rounded-lg border shadow-sm bg-emerald-50/80 border-emerald-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5 shadow-sm">정답 보기</span> <span class="text-emerald-900">③ L1-T1, L2-T2 간에 직류 150[mA]를 3시간 인가할 때, 과전류 제한소자는 즉시 동작하여야 한다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">통신선에 늘 살짝 맴돌 수 있는 150mA 수준의 간지러운 미세 전류에 보호기가 툭하면 동작해서 통신을 끊어버리면 안 됩니다. 따라서 이 정도 미세 전류에는 3시간을 푹 고아도 '동작하지 않고 거뜬히 버텨야' 합격품으로 인정받습니다.[cite: 19]</div></div><div class="p-3 rounded-lg border shadow-sm bg-white border-slate-200"><div class="font-bold mb-1.5 flex items-start gap-2"><span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">④ 회로의 'A'는 과전압방전소자, 'C1, C2'는 과전류제한소자로 동작되어야 한다.</span></div><div class="text-xs md:text-sm text-slate-600 pl-1 leading-relaxed">부품의 정확한 역할입니다.</div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 flex justify-between items-center">
+        <button id="prev-btn" class="px-4 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-arrow-left mr-1"></i> 이전 문제
+        </button>
+        <button id="next-btn" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-bold transition shadow disabled:opacity-40 disabled:cursor-not-allowed" disabled="">
+          다음 문제 <i class="fa-solid fa-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Grid -->
+    <div class="mt-8 bg-white rounded-xl p-5 shadow border border-slate-200">
+      <div class="flex justify-between items-center mb-4">
+        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">전체 문항 내비게이션</h4>
+        <button onclick="addNewQuestion()" class="text-xs bg-indigo-100 text-indigo-700 hover:bg-indigo-200 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1 border border-indigo-200 shadow-sm">
+          <i class="fa-solid fa-plus"></i> 새 문제 추가하기
+        </button>
+      </div>
+      <div id="nav-grid" class="flex flex-wrap gap-1.5 md:gap-2"><button id="nav-btn-0" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">1</button><button id="nav-btn-1" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">2</button><button id="nav-btn-2" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">3</button><button id="nav-btn-3" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">4</button><button id="nav-btn-4" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">5</button><button id="nav-btn-5" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">6</button><button id="nav-btn-6" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">7</button><button id="nav-btn-7" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">8</button><button id="nav-btn-8" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">9</button><button id="nav-btn-9" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">10</button><button id="nav-btn-10" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">11</button><button id="nav-btn-11" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">12</button><button id="nav-btn-12" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">13</button><button id="nav-btn-13" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">14</button><button id="nav-btn-14" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">15</button><button id="nav-btn-15" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">16</button><button id="nav-btn-16" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">17</button><button id="nav-btn-17" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">18</button><button id="nav-btn-18" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">19</button><button id="nav-btn-19" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">20</button><button id="nav-btn-20" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-rose-500 text-white ">21</button><button id="nav-btn-21" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-rose-500 text-white ">22</button><button id="nav-btn-22" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">23</button><button id="nav-btn-23" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">24</button><button id="nav-btn-24" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">25</button><button id="nav-btn-25" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">26</button><button id="nav-btn-26" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">27</button><button id="nav-btn-27" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">28</button><button id="nav-btn-28" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">29</button><button id="nav-btn-29" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">30</button><button id="nav-btn-30" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">31</button><button id="nav-btn-31" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">32</button><button id="nav-btn-32" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">33</button><button id="nav-btn-33" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">34</button><button id="nav-btn-34" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ring-2 ring-emerald-300 scale-110">35</button></div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-200 border-t border-slate-300 py-4 text-center text-xs text-slate-500 mt-auto">
+    통신기능장 자가 수정/이미지 업로드 완벽 지원 시스템 © 2026
+  </footer>
+
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col">
+      <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50 rounded-t-2xl">
+        <h3 class="font-bold text-lg text-slate-800"><i class="fa-solid fa-pen-to-square text-indigo-600 mr-2"></i>문제 및 해설 편집</h3>
+        <button onclick="closeEditModal()" class="text-slate-400 hover:text-rose-500 transition"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <div class="p-6 overflow-y-auto flex-1 space-y-5">
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">카테고리</label>
+          <input type="text" id="edit-cat" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">문제 (질문)</label>
+          <textarea id="edit-q" rows="3" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea>
+        </div>
+        
+        <!-- 이미지 업로드 섹션 -->
+        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+          <label class="block text-xs font-bold text-slate-500 mb-2"><i class="fa-solid fa-image text-slate-400"></i> 문제 참고 이미지 첨부 (선택사항)</label>
+          <div class="flex items-center gap-2 mb-2">
+            <input type="file" id="edit-img-upload" accept="image/*" class="text-xs file:mr-4 file:py-1 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer" onchange="encodeImageFileAsURL(this)">
+            <button type="button" onclick="clearImage()" class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-600 px-3 py-1.5 rounded-full font-bold transition" id="btn-clear-img"><i class="fa-solid fa-trash-can"></i> 지우기</button>
+          </div>
+          <input type="hidden" id="edit-img-base64" value="data:image/png;base64,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">
+          <img id="edit-img-preview" class="max-h-32 rounded border border-slate-300 shadow-sm" src="data:image/png;base64,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">
+        </div>
+
+        <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 space-y-4">
+          <label class="block text-xs font-bold text-indigo-800 mb-2">보기 및 해설 설정 (정답 라디오 버튼 선택)</label>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="0" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-0" placeholder="보기 1 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-0" rows="1" placeholder="보기 1 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="1" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-1" placeholder="보기 2 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-1" rows="1" placeholder="보기 2 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="2" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-2" placeholder="보기 3 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-2" rows="1" placeholder="보기 3 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="3" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-3" placeholder="보기 4 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-3" rows="1" placeholder="보기 4 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 py-4 border-t border-slate-200 bg-slate-50 rounded-b-2xl flex justify-between items-center">
+        <button onclick="deleteCurrentQuestion()" class="px-4 py-2 bg-rose-50 border border-rose-200 text-rose-600 rounded-lg text-sm font-bold hover:bg-rose-100 transition"><i class="fa-solid fa-trash"></i> 이 문제 삭제</button>
+        <div class="flex gap-2">
+          <button onclick="closeEditModal()" class="px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-bold text-slate-600 hover:bg-slate-100 transition">취소</button>
+          <button onclick="saveEditedQuestion()" class="px-5 py-2 bg-indigo-600 rounded-lg text-sm font-bold text-white hover:bg-indigo-700 transition shadow">적용하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JSON 데이터 공간 -->
+  <script id="quiz-data" type="application/json">
+[
+  {
+    "id": 1,
+    "c": "통신규약 공개",
+    "q": "다음 보기의 괄호( ) 안에 들어갈 내용으로 옳은 것은? [보기] 기간통신사업자는 정보통신설비와 이에 연결되는 다른 정보통신설비 또는 이용자설비와의 사이에 정보의 상호전달을 위하여 사용하는 ( )을 인터넷, 언론매체 또는 그 밖의 홍보매체를 활용하여 공개하여야 한다.",
+    "img": "",
+    "o": [
+      {
+        "t": "① 기술기준",
+        "a": 0,
+        "r": "정부가 정하는 기준입니다."
+      },
+      {
+        "t": "② 전용회선",
+        "a": 0,
+        "r": "물리적 회선망입니다."
+      },
+      {
+        "t": "③ 통신규약",
+        "a": 1,
+        "r": "원활한 접속과 데이터 교환을 보장하기 위해, 사업자는 기기 간에 사용하는 언어적 약속인 '통신규약(Protocol)'을 외부에 투명하게 공개해야 합니다.[cite: 19]"
+      },
+      {
+        "t": "④ 설비기준",
+        "a": 0,
+        "r": "하드웨어 규격입니다."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "c": "전송설비",
+    "q": "교환설비 등으로부터 수신된 방송통신콘텐츠를 변환 재생 또는 증폭하여 유선 또는 무선으로 송신하거나 수신하는 설비로서 전송단국장치 중계장치 다중화장치 분배장치 등과 그 부대설비를 총괄하여 무엇이라 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 선로설비",
+        "a": 0,
+        "r": "순수 케이블 매체입니다."
+      },
+      {
+        "t": "② 전송설비",
+        "a": 1,
+        "r": "콘텐츠를 변환, 재생, 증폭하여 실어나르는 광장비, 마이크로웨이브 장비, 다중화 장치 등을 총괄하여 '전송설비'라 정의합니다.[cite: 19]"
+      },
+      {
+        "t": "③ 정보통신망",
+        "a": 0,
+        "r": "네트워크 전체를 아우릅니다."
+      },
+      {
+        "t": "④ 전기통신망",
+        "a": 0,
+        "r": "통신망의 포괄적 명칭입니다."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "c": "설비 보호",
+    "q": "다음 중 전송설비 및 선로설비의 보호대책과 관계가 없는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전송설비와 선로설비간의 분계점을 명확히 한다.",
+        "a": 1,
+        "r": "분계점(제4조)은 방송통신설비가 다른 사람의 방송통신설비와 접속될 때 건설·보전의 책임 한계를 규정하기 위한 것이며, 전송설비와 선로설비 자체에 대한 물리적·기술적 보호대책 항목이 아닙니다."
+      },
+      {
+        "t": "② 다른 사람이 설치한 설비에 피해를 받지 않도록 한다.",
+        "a": 0,
+        "r": "전송설비 및 선로설비는 타 설비나 통행하는 사람·차량·선박 등으로부터 피해를 입거나 주지 않도록 설치하여야 하는 법정 보호대책입니다."
+      },
+      {
+        "t": "③ 설비 주위에 설비에 관한 안전표지를 한다.",
+        "a": 0,
+        "r": "외부 충격이나 작업 중 손상을 방지하기 위해 설비 주변에 위험 및 안전표지를 설치하는 보호대책에 해당합니다."
+      },
+      {
+        "t": "④ 강전류전선에 대한 보호망이나 보호선을 설치한다.",
+        "a": 0,
+        "r": "강전류전선과 교차·접근할 때 접촉이나 혼촉에 의한 화재·감전 등 재해를 방지하기 위해 보호망이나 보호선을 설치해야 하는 기술기준상 보호대책입니다."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "c": "절연저항",
+    "q": "선로설비의 회선 상호간, 회선과 대지간 및 회선의 심선 상호간의 절연저항은 직류 500 볼트 절연저항계로 측정하여 얼마 이상이어야 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 5메가옴",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 10메가옴",
+        "a": 1,
+        "r": "통신선끼리 전기가 누설되어 신호가 간섭받는 것을 막기 위해, 심선 간 또는 대지 간 절연 저항은 500V 메가테스터로 측정 시 최소 '10MΩ (10 메가옴) 이상' 확보해야 합니다.[cite: 19]"
+      },
+      {
+        "t": "③ 15메가옴",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 20메가옴",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "c": "구내 선로설비",
+    "q": "다음 중 구내통신선로설비의 설치 및 철거방법으로 잘못된 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 구내에 5회선 이상의 국선을 인입하는 경우 옥외회선은 지하로 인입한다.",
+        "a": 0,
+        "r": "지하 매설 원칙입니다."
+      },
+      {
+        "t": "② 사업자는 이용계약이 해지된 경우 설치된 옥외회선을 30일 이내 철거하여야 한다.",
+        "a": 0,
+        "r": "흉물스런 사선 방치를 막습니다."
+      },
+      {
+        "t": "③ 배관시설은 설치 후 배선의 교체 및 증설시공이 쉽게 이루어질 수 있는 구조로 설치하여야 한다.",
+        "a": 0,
+        "r": "유지보수 용이성 확보입니다."
+      },
+      {
+        "t": "④ 인입맨홀·핸드홀 또는 인입주까지 지하인입배관을 설치한 경우에는 지하로 인입하지 않아도 된다.",
+        "a": 1,
+        "r": "통신사가 밖에서 끌고 온 선을 건물주의 인입 맨홀까지 지하로 연결했다면, 맨홀에서 건물 내부로 들어가는 구간 역시 흉물스럽게 공중으로 날리지 말고 '끝까지 지하로 인입'해야 하는 것이 원칙입니다.[cite: 19]"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "c": "국선 인입 수용",
+    "q": "다음 괄호 안에 들어갈 내용으로 옳은 것은? '기간통신사업자는 국선을 5회선 이상으로 인입하는 경우에는 케이블로 [ ]에 접속·수용하여야 한다.'",
+    "img": "",
+    "o": [
+      {
+        "t": "① 단자함",
+        "a": 0,
+        "r": "소규모 분배용입니다."
+      },
+      {
+        "t": "② 분배함",
+        "a": 0,
+        "r": "일반 분배용입니다."
+      },
+      {
+        "t": "③ 주배선반",
+        "a": 0,
+        "r": "MDF는 대규모 집선 장비입니다."
+      },
+      {
+        "t": "④ 국선수용단자반",
+        "a": 1,
+        "r": "외부 전봇대나 관로를 타고 들어온 5회선 이상의 굵은 국선 케이블은 체계적인 관리를 위해 건물 입구의 전용 '국선수용단자반'에 깔끔하게 종단하여 수용해야 합니다.[cite: 19]"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "c": "구내 회선 확보",
+    "q": "다음 중 구내통신선로설비에서 충분한 회선을 확보하여야 하는 경우와 관계없는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 옥외로 인입되는 국선의 구성",
+        "a": 1,
+        "r": "건물주가 넉넉하게 예비 회선 수를 확보해야 하는 구간은 건물 안으로 들어온 '구내' 구간에 한정됩니다. 담장 밖인 '옥외' 국선 구성은 전적으로 KT 등 통신사업자가 알아서 할 몫입니다.[cite: 19]"
+      },
+      {
+        "t": "② 구내로 인입되는 국선의 수용",
+        "a": 0,
+        "r": "충분한 단자 용량이 필요합니다."
+      },
+      {
+        "t": "③ 구내회선의 구성",
+        "a": 0,
+        "r": "여유 코어가 필요합니다."
+      },
+      {
+        "t": "④ 단말장치 등의 증설",
+        "a": 0,
+        "r": "미래 확장을 대비합니다."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "c": "MDF 접지저항",
+    "q": "국선 수용 회선이 100 회선 이하인 주배선반의 접지저항 허용범위는 얼마인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 1,000[Ω] 이하",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 100[Ω] 이하",
+        "a": 1,
+        "r": "통신 설비의 표준 접지저항은 10Ω 이하이나, 100회선 이하의 자그마한 동네 빌라 주배선반 같은 소규모 통신 시설은 규제를 살짝 풀어 '100옴(Ω) 이하'까지만 맞춰도 합법으로 인정해 줍니다.[cite: 19]"
+      },
+      {
+        "t": "③ 10[Ω] 이하",
+        "a": 0,
+        "r": "대형 교환 설비 등의 기준입니다."
+      },
+      {
+        "t": "④ 1[Ω] 이하",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "c": "접지 시설",
+    "q": "다음 중 보호기와 금속으로 된 주배선반, 지지물, 단자함 등이 사람 또는 방송통신설비에 피해를 줄 우려가 있을 때에 하는 시설은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 보안시설",
+        "a": 0,
+        "r": "포괄적 용어입니다."
+      },
+      {
+        "t": "② 통전시설",
+        "a": 0,
+        "r": "전기를 통하게 하는 목적이 아닙니다."
+      },
+      {
+        "t": "③ 절연시설",
+        "a": 0,
+        "r": "전기를 막는 테이핑 등입니다."
+      },
+      {
+        "t": "④ 접지시설",
+        "a": 1,
+        "r": "통신 기계를 감싸는 쇳덩이 함체나 철탑에 번개가 떨어지거나 누전이 발생했을 때, 사람을 감전시키지 않고 벼락의 에너지를 땅속으로 흘려보내는 안전줄이 '접지(Ground) 시설'입니다.[cite: 19]"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "c": "전력유도 한계",
+    "q": "다음 중 전력유도 방지조치를 해야 하는 기준으로 잘못된 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 기기 오동작 유도종전압: 15볼트 초과",
+        "a": 0,
+        "r": "기기 오동작 한계(15V)입니다."
+      },
+      {
+        "t": "② 잡음전압 : 0.5밀리볼트 초과",
+        "a": 0,
+        "r": "통화 잡음 한계(0.5mV)입니다."
+      },
+      {
+        "t": "③ 상시 유도위험종전압 : 50볼트 초과",
+        "a": 1,
+        "r": "옆에 있는 고압선 때문에 평소(상시) 통신선에 맴도는 전압이 '60볼트(V)'를 초과하면 감전 위험이 커지므로 방지 조치를 해야 합니다. 50볼트가 아닙니다.[cite: 19]"
+      },
+      {
+        "t": "④ 이상 시 유도위험전압 : 650볼트 초과",
+        "a": 0,
+        "r": "번개 등 이상 시 한계(650V)입니다."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "c": "전력선통신 보호",
+    "q": "다음 중 전력선통신을 행하기 위한 방송통신설비가 갖추어야 할 기능으로 옳은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전력선과의 접속부분을 안전하게 분리하고 이를 연결할 수 있는 기능",
+        "a": 1,
+        "r": "220V 고압 전기가 흐르는 전력선과 통신 회로가 만나는 위험천만한 지점이므로, 고압 전기가 통신 칩으로 넘어오지 않도록 '접속 부분을 전기적으로 안전하게 분리(Isolation)하는 기능'이 최우선으로 구비되어야 합니다.[cite: 19]"
+      },
+      {
+        "t": "② 전력선으로부터 이상전류가 유입된 경우 접지될 수 있는 기능",
+        "a": 0,
+        "r": "접지는 부차적 기능입니다."
+      },
+      {
+        "t": "③ 단말기의 전력분배 기능",
+        "a": 0,
+        "r": "전력 분배는 배전반의 역할입니다."
+      },
+      {
+        "t": "④ 주장치의 이상 현상으로부터 보호할 수 있는 기능",
+        "a": 0,
+        "r": "애매한 설명입니다."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "c": "분계점",
+    "q": "사업용방송통신설비와 이용자방송통신설비의 분계점을 설정하는데 국선과 구내선의 분계점은 어떻게 설정하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 사업용방송통신설비의 국선수용단자반과 이용자방송통신설비의 단말장치와의 접속되는 점",
+        "a": 0,
+        "r": "단말장치는 너무 안쪽입니다."
+      },
+      {
+        "t": "② 사업용방송통신설비의 국선접속설비와 이용자 방송통신설비가 최초로 접속되는 점",
+        "a": 1,
+        "r": "통신사에서 들어온 '국선 접속설비(케이블 끝단)'와 아파트 통신실에 깔린 내 돈 내산 '이용자 구내설비'가 딱 만나서 연결되는 '최초 접속 지점'을 국선과 구내선의 법적 분계점으로 칼같이 자릅니다.[cite: 19]"
+      },
+      {
+        "t": "③ 전송설비와 구내통신선로설비가 최초로 접속되는 점",
+        "a": 0,
+        "r": "전송설비는 외부 장비입니다."
+      },
+      {
+        "t": "④ 교환설비와 이용자 최초단자사이에 구성되는 회선",
+        "a": 0,
+        "r": "너무 광범위합니다."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "c": "강전류전선",
+    "q": "전기도체, 절연물로 싼 전기도체 또는 절연물로 싼 것의 위를 보호피막으로 보호한 전기도체 등으로서 300 볼트 이상의 전력을 송전하거나 배전하는 전선을 무엇이라 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전력선",
+        "a": 0,
+        "r": "일반적 명칭입니다."
+      },
+      {
+        "t": "② 통신선",
+        "a": 0,
+        "r": "데이터를 나르는 선입니다."
+      },
+      {
+        "t": "③ 통신케이블",
+        "a": 0,
+        "r": "피복된 통신선입니다."
+      },
+      {
+        "t": "④ 강전류전선",
+        "a": 1,
+        "r": "통신선에 유도 장애를 일으키거나 화재를 유발할 수 있는, 법적 기준 300V 이상의 강한 전력을 송배전하는 전선을 '강전류전선'이라 명명합니다.[cite: 19]"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "c": "강전류 전선 기준",
+    "q": "<2024 CBT 기술> 다음 중 강전류 전선은 얼마 이상의 전력을 송전하거나 배전하는 전선을 말하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 110 [V]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 220 [V]",
+        "a": 0,
+        "r": "가정용 옥내 배선 전압입니다."
+      },
+      {
+        "t": "③ 300 [V]",
+        "a": 1,
+        "r": "동일한 내용의 최신 기출문제입니다. 통신 설비에 위해를 줄 수 있는 강전류 전선의 커트라인은 300V 이상입니다.[cite: 19]"
+      },
+      {
+        "t": "④ 600 [V]",
+        "a": 0,
+        "r": "고압의 경계 기준선입니다."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "c": "덕트 요건",
+    "q": "다음 중 옥내에 설치하는 덕트의 요건으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 유지보수를 위한 충분한 공간 확보",
+        "a": 0,
+        "r": "작업자가 들어가야 합니다."
+      },
+      {
+        "t": "② 선로 받침대를 60[cm] 내지 150[cm]의 간격으로 설치",
+        "a": 0,
+        "r": "케이블 처짐을 막아줍니다."
+      },
+      {
+        "t": "③ 덕트 내부에는 누전위험이 있으므로 전기콘센트 미설치",
+        "a": 1,
+        "r": "어두컴컴한 거대 덕트 안에서 작업자가 조명을 켜고 장비를 꽂아 쓰려면 전기가 필요하므로, 법적으로 바닥 덕트를 제외한 덕트 내부에는 유지보수 작업용 '조명과 전기콘센트를 의무적으로 설치'하도록 강제하고 있습니다.[cite: 19]"
+      },
+      {
+        "t": "④ 수직으로 설치된 덕트는 작업을 용이하게 할 수 있는 디딤대 설치",
+        "a": 0,
+        "r": "추락 방지를 위해 발판이 필요합니다."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "c": "기술기준 포함 대상",
+    "q": "<2022-2회 기술> 방송통신설비의 기술기준에 관한 규정에 포함되어 있는 기술기준이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전자파설비의 기술기준",
+        "a": 1,
+        "r": "구내통신설비, 이동통신구내설비, 방송통신기자재 등은 해당 규정에 포함되지만, '전자파 설비'는 방송통신 기술기준 영역이 아니라 '전파법'에서 인체 보호 및 전파 간섭 방지를 위해 별도로 강력하게 다루는 규제 영역입니다.[cite: 19]"
+      },
+      {
+        "t": "② 구내통신선로설비의 기술기준",
+        "a": 0,
+        "r": "건물 내 랜선 포설 기준입니다."
+      },
+      {
+        "t": "③ 구내용 이동통신설비의 기술기준",
+        "a": 0,
+        "r": "지하주차장 중계기 설치 기준입니다."
+      },
+      {
+        "t": "④ 방송통신기자재의 기술기준",
+        "a": 0,
+        "r": "단말장치 접속 등 하드웨어 기준입니다."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "c": "단말장치 기술기준",
+    "q": "<2022-4회 기술> 다음 중 방송통신설비의 운용자와 이용자의 안전 및 방송통신서비스의 품질향상을 위하여 규정한 단말장치의 기술기준이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 방송통신망 또는 방송통신서비스에 대한 장애인의 용이한 접근에 관한 사항",
+        "a": 0,
+        "r": "정보 소외 계층의 접근성을 보장합니다."
+      },
+      {
+        "t": "② 전송품질의 유지에 관한 사항",
+        "a": 0,
+        "r": "기기가 망 품질을 떨어뜨리지 않게 합니다."
+      },
+      {
+        "t": "③ 전화역무 간의 상호운용에 관한 사항",
+        "a": 0,
+        "r": "기기끼리 원활하게 통화가 되게 합니다."
+      },
+      {
+        "t": "④ 전기통신망 유지 및 보수자의 안전에 관한 사항",
+        "a": 1,
+        "r": "단말장치(스마트폰 등)의 기술 기준은 단말기 이용자의 감전 방지, 청각장애인 접근성, 통화 품질 유지 등을 목적으로 합니다. 전신주에 오르는 '통신사 유지 보수자'의 작업 안전 수칙은 단말장치의 기술 규격과는 무관한 산업안전법 영역입니다.[cite: 19]"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "c": "접지 면제",
+    "q": "다음의 방송통신관련 설비 중 접지를 하지 않아도 되는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전도성이 있는 인장선을 사용하는 전력선 방송케이블",
+        "a": 0,
+        "r": "금속 와이어가 번개를 맞으므로 무조건 접지해야 합니다."
+      },
+      {
+        "t": "② 금속성 함체로 내부에 전기적 접속을 하는 경우",
+        "a": 0,
+        "r": "누전 시 철제 함체에 전기가 흐르므로 접지해야 합니다."
+      },
+      {
+        "t": "③ 광섬유케이블로 전도성이 없는 인장선을 사용하는 경우",
+        "a": 1,
+        "r": "빛만 통과하는 유리섬유(광케이블)이고 뼈대(인장선)마저 전기가 전혀 통하지 않는 비전도성(FRP 등) 재질로만 꽉 차 있다면, 벼락을 맞거나 전기가 흐를 쇳덩이 자체가 없으므로 굳이 삽질해서 접지할 필요가 없습니다.[cite: 19]"
+      },
+      {
+        "t": "④ 중계기에 전원 공급을 병행하는 케이블 및 방송용 동축케이블",
+        "a": 0,
+        "r": "전기가 흐르므로 접지가 필수입니다."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "c": "위해 방지 대책",
+    "q": "방송통신설비가 이에 접속되는 다른 방송통신설비의 위해 등을 방지하기 위한 대책으로 적합하지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전력선통신을 행하는 방송통신설비는 이상전압이나 이상전류에 대한 방지대책이 요구되지 않는다.",
+        "a": 1,
+        "r": "220V 고압 전력선에 묻어가는 전력선 통신(PLC) 장비야말로 고압 전기가 통신망으로 파고들어 장비를 태워 먹을 위험이 가장 높으므로, 이상전압 유입 차단을 위한 절연 보호 방지대책이 '매우 강력하게 요구'됩니다.[cite: 19]"
+      },
+      {
+        "t": "② 다른 방송통신설비를 손상시킬 우려가 있는 전류가 송출되는 것이어서는 아니 된다.",
+        "a": 0,
+        "r": "당연한 보호 조항입니다."
+      },
+      {
+        "t": "③ 다른 방송통신설비의 기능에 지장을 주는 방송통신콘텐츠가 송출되어서는 아니 된다.",
+        "a": 0,
+        "r": "노이즈나 불량 신호 송출 금지입니다."
+      },
+      {
+        "t": "④ 다른 방송통신설비를 손상시킬 우려가 있는 전압이 송출되는 것이어서는 아니 된다.",
+        "a": 0,
+        "r": "당연한 보호 조항입니다."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "c": "전원 설비",
+    "q": "방송통신설비에 사용되는 전원설비는 동작전압과 전류의 변동률을 정격전압 및 정격전류의 얼마 이내로 유지할 수 있어야 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① ±10[%]",
+        "a": 1,
+        "r": "통신 장비는 전압이 널뛰면 멈추거나 타버리므로, 통신국사 전원설비는 외부 전기가 불안정하더라도 기준 정격전압 대비 상하 '±10% 이내'로 칼같이 유지하여 깨끗한 전기를 먹여주어야 합니다.[cite: 19]"
+      },
+      {
+        "t": "② ±15[%]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ ±20[%]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ ±25[%]",
+        "a": 0,
+        "r": "너무 많이 출렁여 기계가 고장납니다."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "c": "특고압 기준",
+    "q": "방송통신설비의 기술기준에 관한 규정에서 정의한 '특고압'은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 7,000볼트를 초과하는 전압",
+        "a": 1,
+        "r": "통신선 주변에 엄청난 유도 장애를 일으키는 무시무시한 특별고압(특고압) 송전선로의 법적 기준은 예나 지금이나 '7,000V (7kV)를 초과'하는 초고압 전기를 의미합니다.[cite: 19]"
+      },
+      {
+        "t": "② 5,000볼트를 초과하는 전압",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 2,500볼트를 초과하는 전압",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 직류는 750볼트, 교류는 600볼트를 초과하는 전압",
+        "a": 0,
+        "r": "이것은 고압의 시작 기준(하한선)입니다."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "c": "고압 기준",
+    "q": "직류는 750 볼트, 교류는 600 볼트를 초과하고 각각 7,000 볼트 이하인 전압은 무엇인가? (과거 기준)",
+    "img": "",
+    "o": [
+      {
+        "t": "① 고압",
+        "a": 1,
+        "r": "저압의 한계를 넘어서고 특고압(7,000V)에는 못 미치는 중간 계층의 전압 대역(전봇대 고압선 등)을 법적으로 '고압(High Voltage)'이라 분류합니다.[cite: 19]"
+      },
+      {
+        "t": "② 저압",
+        "a": 0,
+        "r": "600V 이하 대역입니다."
+      },
+      {
+        "t": "③ 특별고압",
+        "a": 0,
+        "r": "7,000V 초과 대역입니다."
+      },
+      {
+        "t": "④ 중고압",
+        "a": 0,
+        "r": "없는 명칭입니다."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "c": "가공 이격거리",
+    "q": "가공강전류전선의 사용전압이 저압일 경우 가공통신선의 지지물과 가공강전류전선간의 이격거리는 얼마 이상이어야 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 30[cm]",
+        "a": 1,
+        "r": "전봇대 위에서 약한 저압/고압 전력선이 지나갈 때, 통신사에서 세운 쇠막대기(통신선 지지물)에 전기가 옮겨붙지 않도록 최소한 한 뼘 거리인 '30cm 이상'을 강제로 이격시켜야 안전합니다.[cite: 19]"
+      },
+      {
+        "t": "② 60[cm]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 90[cm]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 1[m]",
+        "a": 0,
+        "r": "특고압 나전선 기준 등에 쓰입니다."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "c": "처벌 규정",
+    "q": "방송통신설비의 제거명령을 위반한 자에 대한 벌칙규정은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 1년 이하의 징역 또는 1천만원 이하의 벌금에 처한다.",
+        "a": 1,
+        "r": "통신 장애나 전파 혼신을 유발하는 불법 설비를 치우라는 정부의 제거명령에 불응하고 버티는 자는 방송통신발전 기본법에 따라 '1년 이하의 징역 또는 1천만원 이하의 벌금'이라는 엄벌에 처해집니다.[cite: 19]"
+      },
+      {
+        "t": "② 2년 이하의 징역 또는 2천만원 이하의 벌금에 처한다.",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 3년 이하의 징역 또는 3천만원 이하의 벌금에 처한다.",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다.",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "c": "재난관리",
+    "q": "방송통신재난에 대비하기 위하여 수립하여야 하는 방송통신재난관리기본계획에 포함되어야 하는 사항이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 우회 방송통신 경로의 확보",
+        "a": 0,
+        "r": "망 붕괴 시 우회로를 짭니다."
+      },
+      {
+        "t": "② 방송통신회선설비의 연계 운용을 위한 정보체계의 구성",
+        "a": 0,
+        "r": "타 통신사 망을 빌려 쓰는 로밍 체계입니다."
+      },
+      {
+        "t": "③ 피해복구 물자의 확보",
+        "a": 0,
+        "r": "예비 케이블과 발전기 등 창고 비축입니다."
+      },
+      {
+        "t": "④ 통신재난을 입은 전기통신설비의 매수",
+        "a": 1,
+        "r": "화재 등으로 박살 난 통신사의 사유 장비나 케이블을 국가가 국민 세금으로 '매수(사들임)' 해준다는 황당한 조항은 재난관리 기본계획에 포함되어 있지 않습니다.[cite: 19]"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "c": "안전성 신뢰성",
+    "q": "다음 중 방송통신서비스를 제공하는 사업자가 구비하여야 할 안정성과 신뢰성에 해당하는 것으로 관계가 적은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 방송통신설비 이용자의 안전 확보에 필요한 사항",
+        "a": 0,
+        "r": "감전 방지 등 이용자 보호 조치입니다."
+      },
+      {
+        "t": "② 방송통신설비의 안전성 및 신뢰성 확보를 위하여 필요한 사항",
+        "a": 0,
+        "r": "이중화 및 견고성 조치입니다."
+      },
+      {
+        "t": "③ 방송통신설비의 운용에 필요한 시험 감시 기능에 관한 사항",
+        "a": 0,
+        "r": "트래픽 감시 시스템 구축입니다."
+      },
+      {
+        "t": "④ 방송통신설비를 판매하기 위한 건축물의 화재대책 등에 관한 사항",
+        "a": 1,
+        "r": "안정성/신뢰성 기준은 '통신 서비스의 무중단 유지'를 위한 기계적, 시스템적 요건이지, 폰팔이 매장처럼 통신 장비를 늘어놓고 '판매하기 위한 상가 건물'의 소방 화재 대책을 통신법에서 규정하지 않습니다.[cite: 19]"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "c": "분계점 개념",
+    "q": "다음 중 방송통신설비가 다른 사람의 방송통신 설비와 접속되는 경우에 그 건설과 보전에 관한 책임 등의 한계를 명확하게 하기 위하여 설정 하여야 하는 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 분기점",
+        "a": 0,
+        "r": "케이블이 갈라지는 지점입니다."
+      },
+      {
+        "t": "② 분계점",
+        "a": 1,
+        "r": "휴전선처럼 내 땅과 네 땅, 즉 통신사 장비 책임 구역과 건물주 구내 랜선 책임 구역을 명확히 나눠 고장 시 누구 돈으로 수리할지를 결정하는 법적 기준선이 바로 '분계점(Demarcation Point)'입니다.[cite: 19]"
+      },
+      {
+        "t": "③ 국선분계점",
+        "a": 0,
+        "r": "분계점의 일종입니다."
+      },
+      {
+        "t": "④ 국선분기점",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "c": "옥외설비 대책",
+    "q": "다음 중 방송통신설비의 옥외설비가 갖추어야 할 신뢰성 및 안전성에 대한 대책이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 동결 대책",
+        "a": 0,
+        "r": "한겨울 영하 온도에 대비합니다."
+      },
+      {
+        "t": "② 다자접근 용이성 대책",
+        "a": 1,
+        "r": "전봇대 매달린 장비 뚜껑을 길 가던 행인이나 고물상이 아무나 '다수가 접근하기 쉽게(용이하게)' 만들어 놓으면 망이 털립니다. 오히려 외부인의 무단 접근을 철저히 차단하는 '잠금장치 대책'을 세워야 합법입니다.[cite: 19]"
+      },
+      {
+        "t": "③ 다습도 대책",
+        "a": 0,
+        "r": "장마철 방수 씰링 조치입니다."
+      },
+      {
+        "t": "④ 진동 대책",
+        "a": 0,
+        "r": "대형 트럭 진동에 나사가 풀리지 않게 합니다."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "c": "가공통신선 높이",
+    "q": "일반적으로 도로상에 설치되는 가공통신선의 높이는 노면으로부터 얼마 이상으로 설치하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 2[m]",
+        "a": 0,
+        "r": "오토바이에 목이 걸릴 위험이 있습니다."
+      },
+      {
+        "t": "② 3[m]",
+        "a": 0,
+        "r": "인도(보도) 상공의 기준입니다."
+      },
+      {
+        "t": "③ 4.5[m]",
+        "a": 1,
+        "r": "대형 탑차나 이삿짐 트럭이 차도를 달릴 때 지붕에 광케이블이 걸려 전봇대가 뽑히는 대형 사고를 막기 위해, 도로 상공을 횡단하는 가공통신선은 노면 바닥에서 최소 '4.5미터 이상' 높이 띄워야 합니다.[cite: 19]"
+      },
+      {
+        "t": "④ 6.5[m]",
+        "a": 0,
+        "r": "기차가 다니는 철도 건널목 상공 기준입니다."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "c": "가공선 높이",
+    "q": "설치장소의 여건에 따른 가공통신선의 설치높이에 대한 설명으로 옳지 않은 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 22,900[V] 전력을 수용하는 가공강전류전선용 전주에 가설되는 경우에는 노면으로부터 5[m] 이상이어야 한다.",
+        "a": 0,
+        "r": "특고압 전주를 함께 쓸 때는 감전 방지를 위해 더 높게 띄웁니다."
+      },
+      {
+        "t": "② 도로상에 설치되는 경우 노면으로부터 4.5[m] 이상으로 한다.",
+        "a": 0,
+        "r": "일반 차도 기준입니다."
+      },
+      {
+        "t": "③ 철도 또는 궤도를 횡단하는 경우 차량 통행 지장이 없더라도 열차의 높이 때문에 5[m] 이상으로 하여야 한다.",
+        "a": 1,
+        "r": "지붕 위로 2만5천 볼트 고압선을 매달고 달리는 KTX 등 기차의 위험성 때문에, 철도를 가로지르는 통신선은 무조건 5m가 아니라 가장 깐깐한 높이인 '6.5m 이상' 아득히 띄워 올리도록 강제하고 있습니다.[cite: 19]"
+      },
+      {
+        "t": "④ 보도와 차도의 구별이 있으면 보도상에서 3[m] 이상으로 한다.",
+        "a": 0,
+        "r": "보행자만 다니는 인도는 3m로 봐줍니다."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "c": "전원 설비",
+    "q": "다음 중 수변전장치, 정류기, 축전지, 전원반, 예비용 발전기 및 배선 등 방송통신용 전원을 공급하기 위한 설비를 무엇이라 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 전기설비",
+        "a": 0,
+        "r": "일반적인 형광등이나 콘센트 배선 등입니다."
+      },
+      {
+        "t": "② 전력설비",
+        "a": 0,
+        "r": "한전의 외부 송전 설비입니다."
+      },
+      {
+        "t": "③ 통신설비",
+        "a": 0,
+        "r": "데이터를 나르는 장비 그 자체입니다."
+      },
+      {
+        "t": "④ 전원설비",
+        "a": 1,
+        "r": "교환기 랙에 꽂히는 -48V 직류를 만들고, 정전 시에도 백업 배터리와 발전기를 통해 통신 장비의 심장이 멎지 않도록 전기를 공급해 주는 인프라 전체를 '전원설비'라 명명합니다.[cite: 19]"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "c": "통신공동구",
+    "q": "다음 중 통신공동구의 유지·관리에 필요한 부대설비가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 조명시설",
+        "a": 0,
+        "r": "어두운 터널 속 필수 시설입니다."
+      },
+      {
+        "t": "② 환기시설",
+        "a": 0,
+        "r": "가스 질식 방지용으로 필수입니다."
+      },
+      {
+        "t": "③ 집수시설",
+        "a": 1,
+        "r": "통신공동구 부대설비로는 물을 빼내는 '배수펌프(배수시설)'가 필수적이지, 반대로 물을 웅덩이에 한데 모아놓는 '집수(모으는) 시설'은 법정 부대설비 공식 명칭에 존재하지 않는 말장난 오답입니다.[cite: 19]"
+      },
+      {
+        "t": "④ 접지시설",
+        "a": 0,
+        "r": "누전 방지용으로 필수입니다."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "c": "누화 감쇠량",
+    "q": "전화급 평형회선은 회선 상호 간 방송통신콘텐츠의 내용이 혼입되지 아니하도록 두 회선 사이의 근단누화 또는 원단누화의 감쇠량은 얼마 이상이어야 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 62데시벨",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 65데시벨",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 68데시벨",
+        "a": 1,
+        "r": "옆 사람의 통화 소리가 전선 피복을 뚫고 내 수화기로 희미하게 넘어오는 무서운 혼선(누화, Crosstalk)을 막기 위해, 통신선 제조 시 두 회선 간의 누화 차단벽 두께(감쇠량)를 최소 '68 dB(데시벨) 이상' 단단하게 확보하도록 법으로 강제하고 있습니다.[cite: 19]"
+      },
+      {
+        "t": "④ 72데시벨",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "c": "보호기 회로",
+    "q": "다음은 구내통신설비 등에 사용하는 보호기의 기본회로도이다. 각 단자의 설명이 맞는 것은?",
+    "img": "data:image/png;base64,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",
+    "o": [
+      {
+        "t": "① L1, L2: 내선측 단자",
+        "a": 0,
+        "r": "L1/L2는 번개를 몰고 오는 외부 라인(Line, 외선측)입니다."
+      },
+      {
+        "t": "② A: 과전류 제한소자",
+        "a": 0,
+        "r": "A 모양의 부품은 땅으로 번개를 쏟아내는 과전압 방전소자(Arrester)입니다."
+      },
+      {
+        "t": "③ E: 접지선 단자",
+        "a": 1,
+        "r": "E(Earth) 단자는 방전소자가 받아낸 번개 에너지를 꿀꺽 삼켜 땅속 깊이 안전하게 흘려보내는 든든한 '접지선 단자'가 맞습니다.[cite: 19]"
+      },
+      {
+        "t": "④ C1, C2 : 과전압 방전소자",
+        "a": 0,
+        "r": "이들은 과전류를 막는 퓨즈형 제한소자(Current Limiter)입니다."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "c": "보호기 성능",
+    "q": "다음은 보호기의 기본회로도이다. 보호기 성능에 관한 설명으로 틀린 것은?",
+    "img": "data:image/png;base64,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",
+    "o": [
+      {
+        "t": "① L1-E, L2-E 간에 직류 100[V/sec] 상승전압 인가 시 184~280V 사이에서 E를 통해 방전이 개시되어야 한다.",
+        "a": 0,
+        "r": "과전압 동작 합격 기준입니다."
+      },
+      {
+        "t": "② L1-E, L2-E 간에 60[Hz], 5[A]를 15분간 인가할 때 보호기 발화 및 변형이 없어야 한다.",
+        "a": 0,
+        "r": "화재 예방 내구성 기준입니다."
+      },
+      {
+        "t": "③ L1-T1, L2-T2 간에 직류 150[mA]를 3시간 인가할 때, 과전류 제한소자는 즉시 동작하여야 한다.",
+        "a": 1,
+        "r": "통신선에 늘 살짝 맴돌 수 있는 150mA 수준의 간지러운 미세 전류에 보호기가 툭하면 동작해서 통신을 끊어버리면 안 됩니다. 따라서 이 정도 미세 전류에는 3시간을 푹 고아도 '동작하지 않고 거뜬히 버텨야' 합격품으로 인정받습니다.[cite: 19]"
+      },
+      {
+        "t": "④ 회로의 'A'는 과전압방전소자, 'C1, C2'는 과전류제한소자로 동작되어야 한다.",
+        "a": 0,
+        "r": "부품의 정확한 역할입니다."
+      }
+    ]
+  }
+]
+</script>
+
+  <script>
+    let rawQuizData = [];
+    try {
+      const jsonText = document.getElementById("quiz-data").textContent;
+      rawQuizData = JSON.parse(jsonText);
+    } catch (e) {
+      alert("문제 데이터를 불러오는 중 오류가 발생했습니다. JSON 형식을 확인해주세요.");
+      console.error("JSON Parsing Error:", e);
+    }
+
+    let currentIdx = 0;
+    let userAnswers = new Array(rawQuizData.length).fill(null);
+
+    const questionBadge = document.getElementById("question-badge");
+    const categoryBadge = document.getElementById("category-badge");
+    const questionCounter = document.getElementById("question-counter");
+    const questionText = document.getElementById("question-text");
+    const questionImage = document.getElementById("question-image");
+    const optionsContainer = document.getElementById("options-container");
+    const explanationBox = document.getElementById("explanation-box");
+    const resultAlert = document.getElementById("result-alert");
+    const rationalesList = document.getElementById("rationales-list");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const navGrid = document.getElementById("nav-grid");
+    const scoreDisplay = document.getElementById("score-display");
+    const progressBar = document.getElementById("progress-bar");
+    const resetBtn = document.getElementById("reset-btn");
+    const editModal = document.getElementById("edit-modal");
+
+    function initNavGrid() {
+      navGrid.innerHTML = "";
+      rawQuizData.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.innerText = idx + 1;
+        btn.id = `nav-btn-${idx}`;
+        btn.className = "w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200 transition shadow-sm";
+        btn.onclick = () => loadQuestion(idx);
+        navGrid.appendChild(btn);
+      });
+      updateScoreAndProgress();
+    }
+
+    function updateScoreAndProgress() {
+      const answeredCount = userAnswers.filter(a => a !== null).length;
+      let correctCount = 0;
+      userAnswers.forEach((ans, idx) => {
+        if (ans !== null && rawQuizData[idx].o[ans].a === 1) correctCount++;
+      });
+      scoreDisplay.innerText = `${correctCount} / ${answeredCount} (총 ${rawQuizData.length}문항)`;
+      progressBar.style.width = `${(answeredCount / rawQuizData.length) * 100}%`;
+
+      rawQuizData.forEach((_, idx) => {
+        const navBtn = document.getElementById(`nav-btn-${idx}`);
+        if(!navBtn) return;
+        if (userAnswers[idx] === null) {
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm ${idx === currentIdx ? 'border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700 scale-110' : 'border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200'}`;
+        } else {
+          const isUserCorrect = rawQuizData[idx].o[userAnswers[idx]].a === 1;
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-${isUserCorrect ? 'emerald' : 'rose'}-500 text-white ${idx === currentIdx ? `ring-2 ring-${isUserCorrect ? 'emerald' : 'rose'}-300 scale-110` : ''}`;
+        }
+      });
+    }
+
+    function loadQuestion(idx) {
+      if (idx < 0 || idx >= rawQuizData.length) return;
+      currentIdx = idx;
+      const q = rawQuizData[idx];
+
+      questionBadge.innerText = `문항 ${q.id || (idx+1)}`;
+      categoryBadge.innerText = q.c;
+      questionCounter.innerText = `${idx + 1} / ${rawQuizData.length}`;
+      questionText.innerText = q.q;
+      
+      if(q.img && q.img.trim() !== "") {
+          questionImage.src = q.img;
+          questionImage.classList.remove('hidden');
+      } else {
+          questionImage.src = "";
+          questionImage.classList.add('hidden');
+      }
+
+      optionsContainer.innerHTML = "";
+      const selected = userAnswers[idx];
+
+      q.o.forEach((opt, optIdx) => {
+        const btn = document.createElement("button");
+        btn.className = "w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm ";
+        
+        if (selected === null) {
+          btn.className += "border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800";
+          btn.onclick = () => selectOption(optIdx);
+        } else {
+          if (opt.a === 1) btn.className += "border-emerald-500 bg-emerald-50 text-emerald-900 font-bold z-10 scale-[1.01]";
+          else if (selected === optIdx) btn.className += "border-rose-500 bg-rose-50 text-rose-900";
+          else btn.className += "border-slate-200 bg-slate-50 text-slate-400 opacity-60";
+          btn.disabled = true;
+        }
+
+        const iconSpan = document.createElement("span");
+        iconSpan.className = "pt-0.5 shrink-0"; 
+        if (selected !== null) {
+          if (opt.a === 1) iconSpan.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-xl drop-shadow-md"></i>';
+          else if (selected === optIdx) iconSpan.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-600 text-xl"></i>';
+          else iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-300 text-xl"></i>';
+        } else {
+          iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i>';
+        }
+
+        const textSpan = document.createElement("span");
+        textSpan.className = "flex-1 leading-relaxed";
+        textSpan.innerText = opt.t;
+        
+        btn.appendChild(iconSpan);
+        btn.appendChild(textSpan);
+        optionsContainer.appendChild(btn);
+      });
+
+      if (selected !== null) {
+        renderExplanation(selected);
+        explanationBox.classList.remove("hidden");
+      } else {
+        explanationBox.classList.add("hidden");
+      }
+
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === rawQuizData.length - 1;
+      updateScoreAndProgress();
+    }
+
+    function selectOption(optIdx) {
+      userAnswers[currentIdx] = optIdx;
+      loadQuestion(currentIdx);
+    }
+
+    function renderExplanation(selectedIdx) {
+      const q = rawQuizData[currentIdx];
+      const isCorrect = q.o[selectedIdx].a === 1;
+
+      if (isCorrect) {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-2xl drop-shadow"></i> <div>정답입니다! 완벽하게 이해하셨습니다.</div>';
+      } else {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-rose-900 bg-rose-100 border border-rose-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-600 text-2xl drop-shadow"></i> <div>오답입니다. 아래 보기별 해설을 반드시 확인하세요.</div>';
+      }
+
+      rationalesList.innerHTML = "";
+      q.o.forEach((opt) => {
+        const item = document.createElement("div");
+        item.className = `p-3 rounded-lg border shadow-sm ${opt.a === 1 ? 'bg-emerald-50/80 border-emerald-200' : 'bg-white border-slate-200'}`;
+        
+        const header = document.createElement("div");
+        header.className = "font-bold mb-1.5 flex items-start gap-2";
+        if (opt.a === 1) header.innerHTML = `<span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5 shadow-sm">정답 보기</span> <span class="text-emerald-900">${opt.t}</span>`;
+        else header.innerHTML = `<span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">${opt.t}</span>`;
+        
+        const body = document.createElement("div");
+        body.className = "text-xs md:text-sm text-slate-600 pl-1 leading-relaxed";
+        body.innerText = opt.r;
+
+        item.appendChild(header);
+        item.appendChild(body);
+        rationalesList.appendChild(item);
+      });
+    }
+
+    function openEditModal() {
+      const q = rawQuizData[currentIdx];
+      document.getElementById('edit-cat').value = q.c;
+      document.getElementById('edit-q').value = q.q;
+      
+      if(q.img && q.img.trim() !== "") {
+          document.getElementById('edit-img-base64').value = q.img;
+          document.getElementById('edit-img-preview').src = q.img;
+          document.getElementById('edit-img-preview').classList.remove('hidden');
+          document.getElementById('btn-clear-img').classList.remove('hidden');
+      } else {
+          clearImage(); 
+      }
+
+      for(let i=0; i<4; i++) {
+        document.getElementById(`edit-opt-${i}`).value = q.o[i].t;
+        document.getElementById(`edit-rat-${i}`).value = q.o[i].r;
+        if(q.o[i].a === 1) {
+          document.querySelector(`input[name="edit-ans"][value="${i}"]`).checked = true;
+        }
+      }
+      
+      document.body.classList.add('modal-open');
+      editModal.classList.remove('hidden');
+    }
+
+    function closeEditModal() {
+      document.body.classList.remove('modal-open');
+      editModal.classList.add('hidden');
+    }
+
+    function saveEditedQuestion() {
+      const q = rawQuizData[currentIdx];
+      q.c = document.getElementById('edit-cat').value;
+      q.q = document.getElementById('edit-q').value;
+      q.img = document.getElementById('edit-img-base64').value;
+      
+      const correctVal = document.querySelector('input[name="edit-ans"]:checked').value;
+      
+      for(let i=0; i<4; i++) {
+        q.o[i].t = document.getElementById(`edit-opt-${i}`).value;
+        q.o[i].r = document.getElementById(`edit-rat-${i}`).value;
+        q.o[i].a = (i.toString() === correctVal) ? 1 : 0;
+      }
+      
+      closeEditModal();
+      loadQuestion(currentIdx);
+      alert("문제가 성공적으로 수정되었습니다.\n\n※ 영구 저장을 원하시면 상단의 [수정본 다운로드] 버튼을 클릭하세요!");
+    }
+
+    function addNewQuestion() {
+      const newQ = {
+        id: rawQuizData.length + 1,
+        c: "새 카테고리",
+        q: "여기에 새로운 문제를 입력하세요.",
+        img: "",
+        o: [
+          { t: "① 보기 1", a: 1, r: "해설 1" },
+          { t: "② 보기 2", a: 0, r: "해설 2" },
+          { t: "③ 보기 3", a: 0, r: "해설 3" },
+          { t: "④ 보기 4", a: 0, r: "해설 4" }
+        ]
+      };
+      rawQuizData.push(newQ);
+      userAnswers.push(null);
+      initNavGrid();
+      loadQuestion(rawQuizData.length - 1);
+      openEditModal(); 
+    }
+
+    function deleteCurrentQuestion() {
+      if(rawQuizData.length <= 1) {
+          alert("최소 1개의 문제는 남아있어야 합니다.");
+          return;
+      }
+      if(confirm("정말로 이 문제를 삭제하시겠습니까?\n삭제 후 복구할 수 없습니다.")) {
+          rawQuizData.splice(currentIdx, 1);
+          userAnswers.splice(currentIdx, 1);
+          
+          rawQuizData.forEach((q, i) => q.id = i + 1);
+          
+          initNavGrid();
+          closeEditModal();
+          
+          let nextIdx = currentIdx >= rawQuizData.length ? rawQuizData.length - 1 : currentIdx;
+          loadQuestion(nextIdx);
+      }
+    }
+
+    function encodeImageFileAsURL(element) {
+      const file = element.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onloadend = function() {
+        document.getElementById('edit-img-base64').value = reader.result;
+        document.getElementById('edit-img-preview').src = reader.result;
+        document.getElementById('edit-img-preview').classList.remove('hidden');
+        document.getElementById('btn-clear-img').classList.remove('hidden');
+      }
+      reader.readAsDataURL(file);
+    }
+
+    function clearImage() {
+      document.getElementById('edit-img-upload').value = "";
+      document.getElementById('edit-img-base64').value = "";
+      document.getElementById('edit-img-preview').src = "";
+      document.getElementById('edit-img-preview').classList.add('hidden');
+      document.getElementById('btn-clear-img').classList.add('hidden');
+    }
+
+    function downloadUpdatedHTML() {
+      const dataScript = document.getElementById('quiz-data');
+      dataScript.textContent = "\n" + JSON.stringify(rawQuizData, null, 2) + "\n";
+      
+      let htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = "정보전송일반_15차시_법규기술기준_최종본.html"; 
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    prevBtn.addEventListener("click", () => { if (currentIdx > 0) loadQuestion(currentIdx - 1); });
+    nextBtn.addEventListener("click", () => { if (currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1); });
+    
+    resetBtn.addEventListener("click", () => {
+      if (confirm("풀이 기록을 모두 초기화하시겠습니까? 처음부터 다시 풉니다.")) {
+        userAnswers = new Array(rawQuizData.length).fill(null);
+        loadQuestion(0);
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if(!editModal.classList.contains('hidden')) return;
+      if (e.key === "ArrowLeft" && currentIdx > 0) loadQuestion(currentIdx - 1);
+      else if (e.key === "ArrowRight" && currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1);
+      else if (["1", "2", "3", "4"].includes(e.key) && userAnswers[currentIdx] === null) selectOption(parseInt(e.key) - 1);
+    });
+
+    // 시작
+    if (rawQuizData.length > 0) {
+      initNavGrid();
+      loadQuestion(0);
+    }
+  </script>
+
+</body></html>
