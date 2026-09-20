@@ -21,7 +21,6 @@
   <header class="bg-indigo-700 text-white shadow-xl sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
       <div class="flex items-center space-x-3 w-full md:w-auto">
-        
         <!-- 뒤로가기(메인으로) 버튼 -->
         <a href="index.html" class="bg-indigo-800 hover:bg-indigo-600 text-white text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1.5 border border-indigo-500 shadow-sm shrink-0" title="메인으로 돌아가기">
           <i class="fa-solid fa-arrow-left"></i> 메인으로
@@ -32,7 +31,7 @@
         </div>
         <div>
           <h1 class="text-lg md:text-xl font-extrabold tracking-tight">통신기능장 연도별 기출 포털</h1>
-          <p class="text-[11px] md:text-xs text-indigo-200 mt-0.5">역대 실전 기출복원 모의고사 (2023~2026)</p>
+          <p class="text-[11px] md:text-xs text-indigo-200 mt-0.5">역대 실전 기출복원 모의고사 (2020~2026)</p>
         </div>
       </div>
       <div class="text-xs font-semibold bg-indigo-800/50 px-3 py-1.5 rounded-lg border border-indigo-500/50 flex items-center gap-2">
@@ -52,139 +51,60 @@
       </div>
     </div>
 
-    <!-- ==================== 2026년 섹션 ==================== -->
+    <!-- ==================== 2026년 섹션 (Blue) ==================== -->
     <div class="mb-12">
-      <!-- 섹션 타이틀 -->
       <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-200 pb-3">
         <span class="bg-blue-600 text-white font-extrabold px-3 py-1.5 rounded-lg text-sm shadow-sm tracking-widest">2026</span>
         <h3 class="text-lg font-bold text-slate-800">최신 기출복원 모의고사</h3>
       </div>
       
-      <!-- 2026년 그리드 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        
-        <!-- 2026 1회차 -->
-        <a href="2026_CBT_01.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-blue-50 px-4 py-3 flex items-center gap-3 border-b border-blue-100 group-hover:bg-blue-600 transition-colors">
-            <div class="bg-blue-100 text-blue-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-blue-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2026년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">1회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-blue-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
+        <!-- 2026 1~5회차 -->
+        <script>
+          const items2026 = [1, 2, 3, 4, 5];
+          items2026.forEach(num => {
+            document.write(`
+              <a href="2026_CBT_0${num}.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+                <div class="bg-blue-50 px-4 py-3 flex items-center gap-3 border-b border-blue-100 group-hover:bg-blue-600 transition-colors">
+                  <div class="bg-blue-100 text-blue-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-laptop-code text-sm"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] font-bold text-blue-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2026년도</span>
+                    <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">${num}회차 CBT</h3>
+                  </div>
+                </div>
+                <div class="px-4 py-3 flex-1 flex flex-col justify-between">
+                  <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
+                  <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
+                    <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
+                    <span class="text-blue-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
+                  </div>
+                </div>
+              </a>
+            `);
+          });
+        </script>
+      </div>
+    </div>
 
-        <!-- 2026 2회차 -->
-        <a href="2026_CBT_02.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-indigo-50 px-4 py-3 flex items-center gap-3 border-b border-indigo-100 group-hover:bg-indigo-600 transition-colors">
-            <div class="bg-indigo-100 text-indigo-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-indigo-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2026년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">2회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-indigo-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
 
-        <!-- 2026 3회차 -->
-        <a href="2026_CBT_03.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+    <!-- ==================== 2025년 섹션 (Emerald) ==================== -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-200 pb-3">
+        <span class="bg-emerald-600 text-white font-extrabold px-3 py-1.5 rounded-lg text-sm shadow-sm tracking-widest">2025</span>
+        <h3 class="text-lg font-bold text-slate-800">기출복원 모의고사</h3>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <!-- 2025 신규출제 -->
+        <a href="2025_CBT_01.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
           <div class="bg-emerald-50 px-4 py-3 flex items-center gap-3 border-b border-emerald-100 group-hover:bg-emerald-600 transition-colors">
             <div class="bg-emerald-100 text-emerald-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
               <i class="fa-solid fa-laptop-code text-sm"></i>
             </div>
             <div>
-              <span class="text-[10px] font-bold text-emerald-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2026년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">3회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-emerald-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
-        <!-- 2026 4회차 -->
-        <a href="2026_CBT_04.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-violet-50 px-4 py-3 flex items-center gap-3 border-b border-violet-100 group-hover:bg-violet-600 transition-colors">
-            <div class="bg-violet-100 text-violet-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2026년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">4회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-violet-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
-        <!-- 2026 5회차 -->
-        <a href="2026_CBT_05.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-amber-50 px-4 py-3 flex items-center gap-3 border-b border-amber-100 group-hover:bg-amber-500 transition-colors">
-            <div class="bg-amber-100 text-amber-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-amber-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2026년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">5회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-amber-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
-      </div>
-    </div>
-
-
-    <!-- ==================== 2025년 섹션 ==================== -->
-    <div class="mb-12">
-      <!-- 섹션 타이틀 -->
-      <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-200 pb-3">
-        <span class="bg-emerald-500 text-white font-extrabold px-3 py-1.5 rounded-lg text-sm shadow-sm tracking-widest">2025</span>
-        <h3 class="text-lg font-bold text-slate-800">기출복원 모의고사</h3>
-      </div>
-      
-      <!-- 2025년 그리드 -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        
-        <a href="2025_CBT_01.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-amber-50 px-4 py-3 flex items-center gap-3 border-b border-amber-100 group-hover:bg-amber-500 transition-colors">
-            <div class="bg-amber-100 text-amber-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-amber-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2025년도</span>
+              <span class="text-[10px] font-bold text-emerald-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2025년도</span>
               <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">신규출제 및 핸드북</h3>
             </div>
           </div>
@@ -192,200 +112,83 @@
             <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 비앤피랩</p>
             <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
               <span><i class="fa-solid fa-file-lines mr-1"></i> 42 문항</span>
-              <span class="text-amber-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
+              <span class="text-emerald-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
             </div>
           </div>
         </a>
 
-                <a href="2025_CBT_02.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-amber-50 px-4 py-3 flex items-center gap-3 border-b border-amber-100 group-hover:bg-amber-500 transition-colors">
-            <div class="bg-amber-100 text-amber-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
+        <!-- 2025 4회 -->
+        <a href="2025_CBT_02.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+          <div class="bg-emerald-50 px-4 py-3 flex items-center gap-3 border-b border-emerald-100 group-hover:bg-emerald-600 transition-colors">
+            <div class="bg-emerald-100 text-emerald-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
               <i class="fa-solid fa-laptop-code text-sm"></i>
             </div>
             <div>
-              <span class="text-[10px] font-bold text-amber-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2025년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">2025년 4회 CBT 기출 일부</h3>
+              <span class="text-[10px] font-bold text-emerald-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2025년도</span>
+              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">4회차 기출 일부</h3>
             </div>
           </div>
           <div class="px-4 py-3 flex-1 flex flex-col justify-between">
             <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 비앤피랩</p>
             <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
               <span><i class="fa-solid fa-file-lines mr-1"></i> 27 문항</span>
-              <span class="text-amber-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
+              <span class="text-emerald-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
             </div>
           </div>
         </a>
-        
       </div>
     </div>
 
 
-    <!-- ==================== 2024년 섹션 ==================== -->
+    <!-- ==================== 2024년 섹션 (Violet) ==================== -->
     <div class="mb-12">
-      <!-- 섹션 타이틀 -->
       <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-200 pb-3">
-        <span class="bg-amber-500 text-white font-extrabold px-3 py-1.5 rounded-lg text-sm shadow-sm tracking-widest">2024</span>
+        <span class="bg-violet-600 text-white font-extrabold px-3 py-1.5 rounded-lg text-sm shadow-sm tracking-widest">2024</span>
         <h3 class="text-lg font-bold text-slate-800">기출복원 모의고사</h3>
       </div>
       
-      <!-- 2024년 그리드 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        
-        <a href="2024_CBT_01.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-violet-50 px-4 py-3 flex items-center gap-3 border-b border-violet-100 group-hover:bg-violet-600 transition-colors">
-            <div class="bg-violet-100 text-violet-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2024년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">1회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-violet-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
-                <a href="2024_CBT_02.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-violet-50 px-4 py-3 flex items-center gap-3 border-b border-violet-100 group-hover:bg-violet-600 transition-colors">
-            <div class="bg-violet-100 text-violet-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2024년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">2회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-violet-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
-
-                <a href="2024_CBT_03.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-violet-50 px-4 py-3 flex items-center gap-3 border-b border-violet-100 group-hover:bg-violet-600 transition-colors">
-            <div class="bg-violet-100 text-violet-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2024년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">3회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-violet-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
-                <a href="2024_CBT_04.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-violet-50 px-4 py-3 flex items-center gap-3 border-b border-violet-100 group-hover:bg-violet-600 transition-colors">
-            <div class="bg-violet-100 text-violet-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2024년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">4회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-violet-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
-
-                <a href="2024_CBT_05.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-violet-50 px-4 py-3 flex items-center gap-3 border-b border-violet-100 group-hover:bg-violet-600 transition-colors">
-            <div class="bg-violet-100 text-violet-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2024년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">5회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-violet-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
-
-                <a href="2024_CBT_06.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-violet-50 px-4 py-3 flex items-center gap-3 border-b border-violet-100 group-hover:bg-violet-600 transition-colors">
-            <div class="bg-violet-100 text-violet-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2024년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">6회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-violet-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
-                <a href="2024_CBT_07.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-violet-50 px-4 py-3 flex items-center gap-3 border-b border-violet-100 group-hover:bg-violet-600 transition-colors">
-            <div class="bg-violet-100 text-violet-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2024년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">7회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-violet-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
-        
+        <!-- 2024 1~7회차 -->
+        <script>
+          const items2024 = [1, 2, 3, 4, 5, 6, 7];
+          items2024.forEach(num => {
+            document.write(`
+              <a href="2024_CBT_0${num}.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+                <div class="bg-violet-50 px-4 py-3 flex items-center gap-3 border-b border-violet-100 group-hover:bg-violet-600 transition-colors">
+                  <div class="bg-violet-100 text-violet-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-laptop-code text-sm"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] font-bold text-violet-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2024년도</span>
+                    <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">${num}회차 CBT</h3>
+                  </div>
+                </div>
+                <div class="px-4 py-3 flex-1 flex flex-col justify-between">
+                  <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 한빛전기통신학원</p>
+                  <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
+                    <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
+                    <span class="text-violet-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
+                  </div>
+                </div>
+              </a>
+            `);
+          });
+        </script>
       </div>
     </div>
 
 
-    <!-- ==================== 2023년 섹션 ==================== -->
+    <!-- ==================== 2023년 섹션 (Rose) ==================== -->
     <div class="mb-12">
-      <!-- 섹션 타이틀 -->
       <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-200 pb-3">
-        <span class="bg-rose-500 text-white font-extrabold px-3 py-1.5 rounded-lg text-sm shadow-sm tracking-widest">2023</span>
+        <span class="bg-rose-600 text-white font-extrabold px-3 py-1.5 rounded-lg text-sm shadow-sm tracking-widest">2023</span>
         <h3 class="text-lg font-bold text-slate-800">기출복원 모의고사</h3>
       </div>
       
-      <!-- 2023년 그리드 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        
         <!-- 2023 1회차 -->
         <a href="2023_CBT_01.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-rose-50 px-4 py-3 flex items-center gap-3 border-b border-rose-100 group-hover:bg-rose-500 transition-colors">
+          <div class="bg-rose-50 px-4 py-3 flex items-center gap-3 border-b border-rose-100 group-hover:bg-rose-600 transition-colors">
             <div class="bg-rose-100 text-rose-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
               <i class="fa-solid fa-laptop-code text-sm"></i>
             </div>
@@ -403,9 +206,9 @@
           </div>
         </a>
 
-                <!-- 2023 4회차 -->
+        <!-- 2023 4회차 -->
         <a href="2023_CBT_02.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-rose-50 px-4 py-3 flex items-center gap-3 border-b border-rose-100 group-hover:bg-rose-500 transition-colors">
+          <div class="bg-rose-50 px-4 py-3 flex items-center gap-3 border-b border-rose-100 group-hover:bg-rose-600 transition-colors">
             <div class="bg-rose-100 text-rose-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
               <i class="fa-solid fa-laptop-code text-sm"></i>
             </div>
@@ -422,66 +225,119 @@
             </div>
           </div>
         </a>
-
       </div>
     </div>
 
 
-        <!-- ==================== 2023년 섹션 ==================== -->
+    <!-- ==================== 2022년 섹션 (Amber) ==================== -->
     <div class="mb-12">
-      <!-- 섹션 타이틀 -->
       <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-200 pb-3">
-        <span class="bg-rose-500 text-white font-extrabold px-3 py-1.5 rounded-lg text-sm shadow-sm tracking-widest">2022</span>
+        <span class="bg-amber-500 text-white font-extrabold px-3 py-1.5 rounded-lg text-sm shadow-sm tracking-widest">2022</span>
         <h3 class="text-lg font-bold text-slate-800">기출복원 모의고사</h3>
       </div>
       
-      <!-- 2023년 그리드 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        
-        <!-- 2023 1회차 -->
-        <a href="2023_CBT_01.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-rose-50 px-4 py-3 flex items-center gap-3 border-b border-rose-100 group-hover:bg-rose-500 transition-colors">
-            <div class="bg-rose-100 text-rose-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-rose-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2023년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">1회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 비앤피랩</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-rose-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
-                <!-- 2023 4회차 -->
-        <a href="2023_CBT_02.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
-          <div class="bg-rose-50 px-4 py-3 flex items-center gap-3 border-b border-rose-100 group-hover:bg-rose-500 transition-colors">
-            <div class="bg-rose-100 text-rose-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
-              <i class="fa-solid fa-laptop-code text-sm"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold text-rose-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2023년도</span>
-              <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">4회차 CBT</h3>
-            </div>
-          </div>
-          <div class="px-4 py-3 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : 대방전기통신학원</p>
-            <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
-              <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
-              <span class="text-rose-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
-            </div>
-          </div>
-        </a>
-
+        <script>
+          const items2022 = [{num: 1, src: '대방전기통신학원'}, {num: 4, src: '비앤피랩'}];
+          items2022.forEach(item => {
+            document.write(`
+              <a href="2022_CBT_0${item.num}.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+                <div class="bg-amber-50 px-4 py-3 flex items-center gap-3 border-b border-amber-100 group-hover:bg-amber-500 transition-colors">
+                  <div class="bg-amber-100 text-amber-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-laptop-code text-sm"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] font-bold text-amber-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2022년도</span>
+                    <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">${item.num}회차 CBT</h3>
+                  </div>
+                </div>
+                <div class="px-4 py-3 flex-1 flex flex-col justify-between">
+                  <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : ${item.src}</p>
+                  <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
+                    <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
+                    <span class="text-amber-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
+                  </div>
+                </div>
+              </a>
+            `);
+          });
+        </script>
       </div>
     </div>
 
 
+    <!-- ==================== 2021년 섹션 (Teal) ==================== -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-200 pb-3">
+        <span class="bg-teal-600 text-white font-extrabold px-3 py-1.5 rounded-lg text-sm shadow-sm tracking-widest">2021</span>
+        <h3 class="text-lg font-bold text-slate-800">기출복원 모의고사</h3>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <script>
+          const items2021 = [{num: 1, src: '비앤피랩'}, {num: 4, src: '대방전기통신학원'}];
+          items2021.forEach(item => {
+            document.write(`
+              <a href="2021_CBT_0${item.num}.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+                <div class="bg-teal-50 px-4 py-3 flex items-center gap-3 border-b border-teal-100 group-hover:bg-teal-600 transition-colors">
+                  <div class="bg-teal-100 text-teal-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-laptop-code text-sm"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] font-bold text-teal-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2021년도</span>
+                    <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">${item.num}회차 CBT</h3>
+                  </div>
+                </div>
+                <div class="px-4 py-3 flex-1 flex flex-col justify-between">
+                  <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : ${item.src}</p>
+                  <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
+                    <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
+                    <span class="text-teal-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
+                  </div>
+                </div>
+              </a>
+            `);
+          });
+        </script>
+      </div>
+    </div>
+
+
+    <!-- ==================== 2020년 섹션 (Sky) ==================== -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-4 border-b-2 border-slate-200 pb-3">
+        <span class="bg-sky-600 text-white font-extrabold px-3 py-1.5 rounded-lg text-sm shadow-sm tracking-widest">2020</span>
+        <h3 class="text-lg font-bold text-slate-800">기출복원 모의고사</h3>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <script>
+          const items2020 = [{num: 1, src: '한빛전기통신학원'}, {num: 4, src: '비앤피랩'}];
+          items2020.forEach(item => {
+            document.write(`
+              <a href="2020_CBT_0${item.num}.html" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+                <div class="bg-sky-50 px-4 py-3 flex items-center gap-3 border-b border-sky-100 group-hover:bg-sky-600 transition-colors">
+                  <div class="bg-sky-100 text-sky-600 p-2 rounded-lg group-hover:bg-white/20 group-hover:text-white transition-colors">
+                    <i class="fa-solid fa-laptop-code text-sm"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] font-bold text-sky-600 bg-white px-2 py-0.5 rounded-full shadow-sm">2020년도</span>
+                    <h3 class="text-sm font-bold text-slate-800 mt-0.5 group-hover:text-white transition-colors">${item.num}회차 CBT</h3>
+                  </div>
+                </div>
+                <div class="px-4 py-3 flex-1 flex flex-col justify-between">
+                  <p class="text-xs text-slate-500 mb-3 line-clamp-2">출처 : ${item.src}</p>
+                  <div class="flex justify-between items-center text-[11px] font-semibold text-slate-400">
+                    <span><i class="fa-solid fa-file-lines mr-1"></i> 60 문항</span>
+                    <span class="text-sky-600 group-hover:translate-x-1 transition-transform">학습하기 <i class="fa-solid fa-chevron-right ml-0.5"></i></span>
+                  </div>
+                </div>
+              </a>
+            `);
+          });
+        </script>
+      </div>
+    </div>
     
   </main>
 
