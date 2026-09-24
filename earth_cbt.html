@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지구과학1 지질시대 기출문제 CBT (50제)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap');
+    body { font-family: 'Pretendard', sans-serif; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .modal-open { overflow: hidden; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col relative">
+
+  <!-- Header -->
+  <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-3">
+      <div class="flex items-center space-x-3 w-full md:w-auto">
+        <a href="#" class="bg-indigo-800 hover:bg-indigo-600 text-white text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1.5 border border-indigo-500 shadow-sm shrink-0" title="목록으로 돌아가기">
+          <i class="fa-solid fa-arrow-left"></i> 메인으로
+        </a>
+        <i class="fa-solid fa-globe text-2xl text-amber-300 hidden sm:block"></i>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight truncate">고1 지구과학 지질시대 파트 완벽대비 (50제)</h1>
+          <p class="text-xs text-indigo-200 truncate">내신 및 수능 기초 대비</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-end">
+        <div class="text-right mr-2">
+          <span class="text-xs text-indigo-200 block">현재 점수</span>
+          <span id="score-display" class="font-extrabold text-lg text-amber-300">0 / 0 (총 50문항)</span>
+        </div>
+        <button onclick="downloadUpdatedHTML()" class="bg-emerald-600 hover:bg-emerald-500 text-xs px-3 py-2 rounded-lg font-bold transition flex items-center gap-1 border border-emerald-500 shadow-sm">
+          <i class="fa-solid fa-download"></i> 수정본 다운로드
+        </button>
+        <button id="reset-btn" class="bg-indigo-600 hover:bg-indigo-500 text-xs px-3 py-2 rounded-lg font-semibold transition flex items-center gap-1 border border-indigo-500">
+          <i class="fa-solid fa-rotate-right"></i> 초기화
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="w-full bg-indigo-200 h-2">
+    <div id="progress-bar" class="bg-amber-400 h-2 transition-all duration-300" style="width: 0%;"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-1 w-full">
+    
+    <!-- Question Card -->
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden relative">
+      <div class="bg-slate-50 border-b border-slate-200 px-4 py-3 sm:px-6 sm:py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <span id="question-badge" class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shrink-0">문항 1</span>
+          <span id="category-badge" class="bg-slate-200 text-slate-700 text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded hidden sm:inline-block">지구과학</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="question-counter" class="text-xs text-slate-500 font-medium mr-1 hidden sm:block">1 / 50</span>
+          <button onclick="openEditModal()" class="text-xs text-indigo-600 font-bold hover:text-indigo-800 bg-indigo-50 px-2.5 py-1.5 rounded border border-indigo-200 transition shadow-sm" title="문제 수정">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </button>
+          <button id="next-btn-top" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-bold transition shadow disabled:opacity-40 disabled:cursor-not-allowed">
+            다음 <i class="fa-solid fa-arrow-right ml-0.5"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="p-6 md:p-8">
+        <h2 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-relaxed mb-4">문제가 로딩 중입니다...</h2>
+        <img id="question-image" src="" alt="첨부 이미지" class="mb-6 max-h-60 rounded-lg border border-slate-200 shadow-sm hidden">
+        <div id="options-container" class="space-y-3"></div>
+
+        <!-- Explanation Section -->
+        <div id="explanation-box" class="mt-8 hidden border-t border-slate-200 pt-6 animate-fade-in-up">
+          <div id="result-alert" class="p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-sm md:text-base"></div>
+          
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-4">
+            <h3 class="text-sm font-bold text-indigo-900 flex items-center gap-2">
+              <i class="fa-solid fa-book-open-reader text-indigo-600"></i> 해설 상세 보기
+            </h3>
+            <div id="rationales-list" class="space-y-2 text-sm text-slate-700"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 flex justify-between items-center">
+        <button id="prev-btn" class="px-4 py-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 rounded-lg text-sm font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed">
+          <i class="fa-solid fa-arrow-left mr-1"></i> 이전 문제
+        </button>
+        <button id="next-btn" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-bold transition shadow disabled:opacity-40 disabled:cursor-not-allowed">
+          다음 문제 <i class="fa-solid fa-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Grid -->
+    <div class="mt-8 bg-white rounded-xl p-5 shadow border border-slate-200">
+      <div class="flex justify-between items-center mb-4">
+        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">전체 문항 내비게이션</h4>
+        <button onclick="addNewQuestion()" class="text-xs bg-indigo-100 text-indigo-700 hover:bg-indigo-200 px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1 border border-indigo-200 shadow-sm">
+          <i class="fa-solid fa-plus"></i> 새 문제 추가하기
+        </button>
+      </div>
+      <div id="nav-grid" class="flex flex-wrap gap-1.5 md:gap-2"></div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-200 border-t border-slate-300 py-4 text-center text-xs text-slate-500 mt-auto">
+    지구과학 지질시대 학습 시스템 © 2026
+  </footer>
+
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="fixed inset-0 bg-slate-900/60 z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col">
+      <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50 rounded-t-2xl">
+        <h3 class="font-bold text-lg text-slate-800"><i class="fa-solid fa-pen-to-square text-indigo-600 mr-2"></i>문제 및 해설 편집</h3>
+        <button onclick="closeEditModal()" class="text-slate-400 hover:text-rose-500 transition"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <div class="p-6 overflow-y-auto flex-1 space-y-5">
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">카테고리</label>
+          <input type="text" id="edit-cat" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-500 mb-1">문제 (질문)</label>
+          <textarea id="edit-q" rows="3" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none resize-none"></textarea>
+        </div>
+        
+        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200">
+          <label class="block text-xs font-bold text-slate-500 mb-2"><i class="fa-solid fa-image text-slate-400"></i> 문제 참고 이미지 첨부 (선택사항)</label>
+          <div class="flex items-center gap-2 mb-2">
+            <input type="file" id="edit-img-upload" accept="image/*" class="text-xs file:mr-4 file:py-1 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100 cursor-pointer" onchange="encodeImageFileAsURL(this)">
+            <button type="button" onclick="clearImage()" class="text-xs bg-rose-100 hover:bg-rose-200 text-rose-600 px-3 py-1.5 rounded-full font-bold transition hidden" id="btn-clear-img"><i class="fa-solid fa-trash-can"></i> 지우기</button>
+          </div>
+          <input type="hidden" id="edit-img-base64" value="">
+          <img id="edit-img-preview" class="max-h-32 rounded border border-slate-300 shadow-sm hidden" src="">
+        </div>
+
+        <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100 space-y-4">
+          <label class="block text-xs font-bold text-indigo-800 mb-2">보기 및 해설 설정 (정답 라디오 버튼 선택)</label>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="0" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-0" placeholder="보기 1 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-0" rows="1" placeholder="보기 1 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="1" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-1" placeholder="보기 2 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-1" rows="1" placeholder="보기 2 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="2" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-2" placeholder="보기 3 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-2" rows="1" placeholder="보기 3 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <input type="radio" name="edit-ans" value="3" class="mt-2 w-4 h-4 text-indigo-600">
+            <div class="flex-1 space-y-1">
+              <input type="text" id="edit-opt-3" placeholder="보기 4 내용" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-indigo-500 outline-none">
+              <textarea id="edit-rat-3" rows="1" placeholder="보기 4 해설" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs text-slate-600 outline-none resize-none"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 py-4 border-t border-slate-200 bg-slate-50 rounded-b-2xl flex justify-between items-center">
+        <button onclick="deleteCurrentQuestion()" class="px-4 py-2 bg-rose-50 border border-rose-200 text-rose-600 rounded-lg text-sm font-bold hover:bg-rose-100 transition"><i class="fa-solid fa-trash"></i> 이 문제 삭제</button>
+        <div class="flex gap-2">
+          <button onclick="closeEditModal()" class="px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-bold text-slate-600 hover:bg-slate-100 transition">취소</button>
+          <button onclick="saveEditedQuestion()" class="px-5 py-2 bg-indigo-600 rounded-lg text-sm font-bold text-white hover:bg-indigo-700 transition shadow">적용하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script id="quiz-data" type="application/json">
+[
+  {
+    "id": 1,
+    "c": "지질시대",
+    "q": "지질 시대를 구분하는 가장 중요하고 객관적인 기준은 무엇인가?",
+    "img": "",
+    "o": [
+      { "t": "① 암석의 색깔 변화", "a": 0, "r": "암석의 색깔은 국지적인 환경 변화를 반영할 뿐, 전 지구적 기준이 될 수 없습니다." },
+      { "t": "② 화석군(생물계)의 급격한 변화", "a": 1, "r": "지질 시대는 주로 대규모 멸종이나 새로운 생물의 출현 등 화석군의 급격한 변화를 기준으로 구분합니다." },
+      { "t": "③ 지층의 두께 변화", "a": 0, "r": "지층 두께는 퇴적 속도에 따라 다르므로 시대 구분의 기준이 아닙니다." },
+      { "t": "④ 방사성 동위 원소의 종류", "a": 0, "r": "방사성 동위 원소는 절대 연령 측정에 사용되나 시대 구분의 직접적 기준은 아닙니다." }
+    ]
+  },
+  {
+    "id": 2,
+    "c": "화석",
+    "q": "지층이 생성된 시대를 알려주는 '표준 화석'이 되기 위한 조건으로 가장 적절한 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 분포 면적이 넓고, 생존 기간이 짧아야 한다.", "a": 1, "r": "특정 시대에 전 지구적으로 번성했다가 멸종해야 시대를 지시하는 표준 화석이 될 수 있습니다." },
+      { "t": "② 분포 면적이 좁고, 생존 기간이 길어야 한다.", "a": 0, "r": "이는 특정 환경을 지시하는 시상 화석의 조건입니다." },
+      { "t": "③ 분포 면적이 넓고, 생존 기간이 길어야 한다.", "a": 0, "r": "생존 기간이 길면 특정 시대를 특정할 수 없습니다." },
+      { "t": "④ 분포 면적이 좁고, 생존 기간이 짧아야 한다.", "a": 0, "r": "분포 면적이 좁으면 널리 대비하기 어렵습니다." }
+    ]
+  },
+  {
+    "id": 3,
+    "c": "화석",
+    "q": "지층이 퇴적될 당시의 자연환경을 알려주는 '시상 화석'의 조건으로 옳은 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 분포 면적이 넓고, 생존 기간이 짧다.", "a": 0, "r": "표준 화석의 조건입니다." },
+      { "t": "② 환경 변화에 대한 적응력이 뛰어나다.", "a": 0, "r": "적응력이 뛰어나면 모든 환경에서 살 수 있어 특정 환경을 지시할 수 없습니다." },
+      { "t": "③ 특정 환경에서만 살며, 생존 기간이 길다.", "a": 1, "r": "특정 환경(예: 따뜻한 얕은 바다)에서 오래 살아남아야 과거의 환경을 유추할 수 있습니다." },
+      { "t": "④ 진화 속도가 매우 빨라야 한다.", "a": 0, "r": "진화 속도가 빠른 것은 표준 화석에 유리한 조건입니다." }
+    ]
+  },
+  {
+    "id": 4,
+    "c": "표준화석",
+    "q": "다음 중 고생대의 대표적인 표준 화석으로만 짝지어진 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 삼엽충, 방추충, 갑주어", "a": 1, "r": "삼엽충, 방추충(푸줄리나), 필석, 갑주어는 고생대를 대표하는 표준 화석입니다." },
+      { "t": "② 암모나이트, 공룡, 시조새", "a": 0, "r": "이들은 모두 중생대의 표준 화석입니다." },
+      { "t": "③ 화폐석, 매머드", "a": 0, "r": "이들은 신생대의 표준 화석입니다." },
+      { "t": "④ 삼엽충, 암모나이트, 화폐석", "a": 0, "r": "각각 고생대, 중생대, 신생대의 화석이 섞여 있습니다." }
+    ]
+  },
+  {
+    "id": 5,
+    "c": "표준화석",
+    "q": "중생대 지층에서 주로 발견될 수 있는 화석은?",
+    "img": "",
+    "o": [
+      { "t": "① 방추충", "a": 0, "r": "고생대 화석입니다." },
+      { "t": "② 필석", "a": 0, "r": "고생대 화석입니다." },
+      { "t": "③ 암모나이트", "a": 1, "r": "암모나이트는 공룡과 함께 중생대의 대표적인 표준 화석입니다." },
+      { "t": "④ 매머드", "a": 0, "r": "신생대 화석입니다." }
+    ]
+  },
+  {
+    "id": 6,
+    "c": "시상화석",
+    "q": "어느 지층에서 고사리 화석이 다량으로 발견되었다. 이 지층이 퇴적될 당시의 환경으로 추정할 수 있는 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 따뜻하고 얕은 바다", "a": 0, "r": "산호가 서식하는 환경입니다." },
+      { "t": "② 온난 습윤한 육지", "a": 1, "r": "고사리는 현재도 온난하고 습윤한 육지(늪지대 등)에서 서식하므로, 과거에도 동일한 환경이었음을 알 수 있습니다." },
+      { "t": "③ 건조한 사막", "a": 0, "r": "고사리가 살기에는 수분이 부족합니다." },
+      { "t": "④ 깊고 차가운 바다", "a": 0, "r": "육상 식물인 고사리와 무관합니다." }
+    ]
+  },
+  {
+    "id": 7,
+    "c": "시상화석",
+    "q": "산호 화석이 발견된 지층을 통해 알 수 있는 퇴적 당시의 환경은?",
+    "img": "",
+    "o": [
+      { "t": "① 한랭한 육지", "a": 0, "r": "산호는 해양 생물입니다." },
+      { "t": "② 깊고 어두운 심해", "a": 0, "r": "산호는 광합성을 하는 공생 조류가 필요하여 얕은 바다에 삽니다." },
+      { "t": "③ 따뜻하고 얕은 바다", "a": 1, "r": "산호는 수온이 따뜻하고 수심이 얕고 맑은 바다에서 서식하는 대표적 시상화석입니다." },
+      { "t": "④ 온난 다습한 습지", "a": 0, "r": "이는 고사리의 환경입니다." }
+    ]
+  },
+  {
+    "id": 8,
+    "c": "상대연령",
+    "q": "퇴적물이 쌓일 때 밑에 있는 지층이 먼저 퇴적되고 위에 있는 지층이 나중에 퇴적되었다는 법칙은?",
+    "img": "",
+    "o": [
+      { "t": "① 지층 누중의 법칙", "a": 1, "r": "지층이 역전되지 않았다면 아래 지층이 위 지층보다 오래되었다는 법칙입니다." },
+      { "t": "② 관입의 법칙", "a": 0, "r": "관입당한 암석이 관입한 암석보다 오래되었다는 법칙입니다." },
+      { "t": "③ 부정합의 법칙", "a": 0, "r": "부정합면을 경계로 상하 지층 간에 긴 시간적 공백이 있다는 법칙입니다." },
+      { "t": "④ 동물군 천이의 법칙", "a": 0, "r": "화석군의 변화로 지층의 선후를 아는 법칙입니다." }
+    ]
+  },
+  {
+    "id": 9,
+    "c": "상대연령",
+    "q": "마그마가 기존의 암석을 뚫고 들어와 굳어진 경우, 뚫고 들어온 암석이 뚫린 암석보다 나중에 생성되었다는 원리는?",
+    "img": "",
+    "o": [
+      { "t": "① 관입의 법칙", "a": 1, "r": "관입한 화성암은 관입당한 암석보다 나중에 생성되었습니다." },
+      { "t": "② 포획의 법칙", "a": 0, "r": "포획된 암석(포획암)이 포획한 암석보다 먼저 만들어졌다는 원리입니다." },
+      { "t": "③ 지층 누중의 법칙", "a": 0, "r": "퇴적암의 상하 관계를 설명합니다." },
+      { "t": "④ 동물군 천이의 법칙", "a": 0, "r": "화석을 이용한 선후 관계 설명입니다." }
+    ]
+  },
+  {
+    "id": 10,
+    "c": "상대연령",
+    "q": "부정합면을 경계로 상하 지층 사이에 나타나는 특징으로 가장 거리가 먼 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 오랜 시간적 단절이 존재한다.", "a": 0, "r": "부정합의 가장 큰 특징입니다." },
+      { "t": "② 상하 지층의 화석군이 크게 다를 수 있다.", "a": 0, "r": "시간적 공백이 커서 생물의 진화가 크게 일어납니다." },
+      { "t": "③ 부정합면 바로 위에는 주로 기저 역암이 존재한다.", "a": 0, "r": "침식 과정의 산물인 역암이 기저부에 주로 쌓입니다." },
+      { "t": "④ 부정합면 아래 지층은 항상 화성암이다.", "a": 1, "r": "부정합면 아래 지층은 퇴적암일 수도 있고, 화성암이나 변성암(난정합)일 수도 있으므로 '항상 화성암'은 틀린 설명입니다." }
+    ]
+  },
+  {
+    "id": 11,
+    "c": "상대연령",
+    "q": "지층의 생성 순서를 판단할 때, 진화된 생물의 화석일수록 더 최근의(위쪽) 지층에서 발견된다는 원리는?",
+    "img": "",
+    "o": [
+      { "t": "① 수평 퇴적의 법칙", "a": 0, "r": "퇴적물은 중력에 의해 수평으로 쌓인다는 법칙입니다." },
+      { "t": "② 동물군 천이의 법칙", "a": 1, "r": "생물은 하등한 형태에서 고등한 형태로 진화하므로, 화석의 진화 정도를 통해 지층의 선후를 판단할 수 있습니다." },
+      { "t": "③ 지층 누중의 법칙", "a": 0, "r": "지층의 물리적 위치를 통한 판단입니다." },
+      { "t": "④ 포획의 법칙", "a": 0, "r": "암석 속에 포함된 암석 조각으로 순서를 판단합니다." }
+    ]
+  },
+  {
+    "id": 12,
+    "c": "절대연령",
+    "q": "어떤 방사성 동위 원소의 반감기가 2억 년이다. 이 원소가 포함된 암석을 조사했더니 모원소와 자원소의 비율이 1:3이었다. 이 암석의 절대 연령은?",
+    "img": "",
+    "o": [
+      { "t": "① 2억 년", "a": 0, "r": "비율이 1:1일 때입니다 (반감기 1회)." },
+      { "t": "② 4억 년", "a": 1, "r": "모원소:자원소 = 1:3 이면 모원소가 전체의 1/4 (25%)이 남은 상태입니다. 이는 반감기를 2회 거친 것이므로 2억 년 × 2 = 4억 년입니다." },
+      { "t": "③ 6억 년", "a": 0, "r": "모원소가 1/8 (12.5%) 남았을 때입니다." },
+      { "t": "④ 8억 년", "a": 0, "r": "모원소가 1/16 (6.25%) 남았을 때입니다." }
+    ]
+  },
+  {
+    "id": 13,
+    "c": "절대연령",
+    "q": "비교적 최근(수만 년 이내)에 생성된 유적지나 화석의 연대를 측정하는 데 가장 적합한 방사성 동위 원소는?",
+    "img": "",
+    "o": [
+      { "t": "① 탄소-14 ($^{14}C$)", "a": 1, "r": "탄소-14의 반감기는 약 5730년으로 짧아, 젊은 지층이나 역사 시대의 유물 연대 측정에 적합합니다." },
+      { "t": "② 우라늄-238 ($^{238}U$)", "a": 0, "r": "반감기가 45억 년으로 매우 깁니다." },
+      { "t": "③ 칼륨-40 ($^{40}K$)", "a": 0, "r": "반감기가 13억 년으로 오래된 암석 측정에 쓰입니다." },
+      { "t": "④ 루비듐-87 ($^{87}Rb$)", "a": 0, "r": "반감기가 약 490억 년으로 매우 깁니다." }
+    ]
+  },
+  {
+    "id": 14,
+    "c": "지질시대",
+    "q": "지구 탄생 이후 전체 지질 시대 중 가장 긴 시간을 차지하는 시대는?",
+    "img": "",
+    "o": [
+      { "t": "① 선캄브리아 시대", "a": 1, "r": "약 46억 년 전부터 5억 4천만 년 전까지로, 전체 지질 시대의 약 88%를 차지합니다." },
+      { "t": "② 고생대", "a": 0, "r": "약 6%를 차지합니다." },
+      { "t": "③ 중생대", "a": 0, "r": "약 4%를 차지합니다." },
+      { "t": "④ 신생대", "a": 0, "r": "가장 최근의 지질시대로 약 1.4%를 차지합니다." }
+    ]
+  },
+  {
+    "id": 15,
+    "c": "선캄브리아",
+    "q": "선캄브리아 시대에 남세균(시아노박테리아)의 광합성 활동으로 만들어진 층상 구조의 석회질 퇴적 구조물은?",
+    "img": "",
+    "o": [
+      { "t": "① 에디아카라 동물군", "a": 0, "r": "호주 등에서 발견된 다세포 생물 화석군입니다." },
+      { "t": "② 스트로마톨라이트", "a": 1, "r": "남세균이 점액질을 분비해 퇴적물과 함께 층층이 쌓인 구조로, 대기에 산소를 공급한 중요한 생물 흔적입니다." },
+      { "t": "③ 갑주어", "a": 0, "r": "고생대의 최초 어류입니다." },
+      { "t": "④ 공룡 발자국", "a": 0, "r": "중생대의 흔적 화석입니다." }
+    ]
+  },
+  {
+    "id": 16,
+    "c": "선캄브리아",
+    "q": "선캄브리아 시대 말기에 출현한 껍질이나 골격이 없는 연체 다세포 생물들의 화석군을 무엇이라 하는가?",
+    "img": "",
+    "o": [
+      { "t": "① 방추충", "a": 0, "r": "고생대 말기의 단세포 생물 화석입니다." },
+      { "t": "② 암모나이트군", "a": 0, "r": "중생대 해양 화석입니다." },
+      { "t": "③ 에디아카라 동물군", "a": 1, "r": "선캄브리아 시대 후반에 나타난 잎이나 원반 모양의 뼈대 없는 다세포 동물군입니다." },
+      { "t": "④ 화폐석", "a": 0, "r": "신생대의 유공충입니다." }
+    ]
+  },
+  {
+    "id": 17,
+    "c": "고생대",
+    "q": "고생대 실루리아기에 최초의 육상 생물이 출현할 수 있었던 가장 결정적인 배경은?",
+    "img": "",
+    "o": [
+      { "t": "① 대륙의 분리 시작", "a": 0, "r": "오존층 형성과 무관하며 중생대의 사건입니다." },
+      { "t": "② 오존층의 형성", "a": 1, "r": "대기 중의 산소가 축적되어 오존층이 형성되면서 태양의 자외선을 차단해 주었기 때문에 생물이 육지로 올라올 수 있었습니다." },
+      { "t": "③ 빙하기의 종료", "a": 0, "r": "육상 진출의 직접적 원인은 자외선 차단입니다." },
+      { "t": "④ 겉씨식물의 번성", "a": 0, "r": "겉씨식물 번성은 중생대입니다." }
+    ]
+  },
+  {
+    "id": 18,
+    "c": "대륙이동",
+    "q": "고생대 말기(페름기)에 흩어져 있던 대륙들이 하나로 뭉쳐 만들어진 초대륙의 이름은?",
+    "img": "",
+    "o": [
+      { "t": "① 곤드와나", "a": 0, "r": "판게아의 남쪽 대륙 부분입니다." },
+      { "t": "② 로라시아", "a": 0, "r": "판게아의 북쪽 대륙 부분입니다." },
+      { "t": "③ 로디니아", "a": 0, "r": "선캄브리아 시대에 존재했던 초대륙입니다." },
+      { "t": "④ 판게아", "a": 1, "r": "고생대 말기에 형성된 거대한 단일 대륙으로, 이로 인해 해양 면적이 줄고 기후가 변해 대규모 멸종이 발생했습니다." }
+    ]
+  },
+  {
+    "id": 19,
+    "c": "대륙이동",
+    "q": "초대륙 판게아가 다시 분리되기 시작하여 대서양과 인도양이 형성되기 시작한 지질 시대는?",
+    "img": "",
+    "o": [
+      { "t": "① 선캄브리아 시대", "a": 0, "r": "이 시기에는 로디니아가 있었습니다." },
+      { "t": "② 고생대", "a": 0, "r": "고생대 말에 판게아가 형성되었습니다." },
+      { "t": "③ 중생대", "a": 1, "r": "중생대 트라이아스기부터 판게아가 분리되기 시작하며 새로운 바다(대서양 등)가 열리기 시작했습니다." },
+      { "t": "④ 신생대", "a": 0, "r": "대륙 분리가 계속되어 현재와 비슷한 수륙 분포가 완성되었습니다." }
+    ]
+  },
+  {
+    "id": 20,
+    "c": "동물계",
+    "q": "척추동물의 진화 역사에서 양서류가 가장 크게 번성했던 지질 시대는?",
+    "img": "",
+    "o": [
+      { "t": "① 고생대", "a": 1, "r": "고생대 석탄기 무렵 온난 다습한 기후에서 양서류가 크게 번성했습니다." },
+      { "t": "② 중생대", "a": 0, "r": "중생대는 파충류의 시대입니다." },
+      { "t": "③ 신생대", "a": 0, "r": "신생대는 포유류의 시대입니다." },
+      { "t": "④ 선캄브리아 시대", "a": 0, "r": "육상 동물 자체가 존재하지 않았습니다." }
+    ]
+  },
+  {
+    "id": 21,
+    "c": "동물계",
+    "q": "다음 중 중생대를 '파충류의 시대'라고 부르는 가장 큰 이유는?",
+    "img": "",
+    "o": [
+      { "t": "① 최초의 파충류가 이때 출현했기 때문이다.", "a": 0, "r": "파충류의 출현 자체는 고생대 말기입니다." },
+      { "t": "② 공룡과 같은 파충류가 육, 해, 공을 지배하며 크게 번성했기 때문이다.", "a": 1, "r": "중생대에는 공룡, 익룡, 어룡 등 다양한 파충류가 폭발적으로 적응 방산하여 전 지구를 지배했습니다." },
+      { "t": "③ 파충류가 멸종한 시기이기 때문이다.", "a": 0, "r": "중생대 말에 공룡이 멸종했지만 파충류 전체가 멸종한 것은 아닙니다." },
+      { "t": "④ 포유류가 파충류로 진화한 시기이기 때문이다.", "a": 0, "r": "진화 순서가 반대입니다." }
+    ]
+  },
+  {
+    "id": 22,
+    "c": "동물계",
+    "q": "포유류가 급격히 번성하기 시작하여 '포유류의 시대'로 불리는 지질 시대는?",
+    "img": "",
+    "o": [
+      { "t": "① 고생대", "a": 0, "r": "어류와 양서류가 번성했습니다." },
+      { "t": "② 중생대", "a": 0, "r": "포유류가 출현하기는 했으나 번성하지는 못했습니다." },
+      { "t": "③ 신생대", "a": 1, "r": "공룡 멸종 이후 비어있는 생태적 지위를 차지하며 포유류가 신생대에 크게 번성했습니다." },
+      { "t": "④ 선캄브리아 시대", "a": 0, "r": "포유류가 존재하지 않았습니다." }
+    ]
+  },
+  {
+    "id": 23,
+    "c": "식물계",
+    "q": "소철, 은행나무 등 겉씨식물이 크게 번성했던 지질 시대는?",
+    "img": "",
+    "o": [
+      { "t": "① 선캄브리아 시대", "a": 0, "r": "조류 중심이었습니다." },
+      { "t": "② 고생대", "a": 0, "r": "양치식물이 번성했습니다." },
+      { "t": "③ 중생대", "a": 1, "r": "중생대의 비교적 건조한 기후에 적응한 겉씨식물이 크게 번성하였습니다." },
+      { "t": "④ 신생대", "a": 0, "r": "속씨식물이 번성했습니다." }
+    ]
+  },
+  {
+    "id": 24,
+    "c": "식물계",
+    "q": "현재 지구상에서 가장 번성하고 있는 식물군으로, 신생대에 크게 번성하기 시작한 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 양치식물", "a": 0, "r": "고생대에 번성했습니다." },
+      { "t": "② 겉씨식물", "a": 0, "r": "중생대에 번성했습니다." },
+      { "t": "③ 속씨식물", "a": 1, "r": "중생대 말에 출현한 속씨식물(꽃피는 식물)은 신생대에 적응 방산하여 현재 식물계의 주류를 이룹니다." },
+      { "t": "④ 녹조류", "a": 0, "r": "수생 식물로 신생대 육상 지배 식물은 아닙니다." }
+    ]
+  },
+  {
+    "id": 25,
+    "c": "식물계",
+    "q": "고생대 석탄기에 무성한 숲을 이루어 오늘날 큰 석탄층의 원료가 된 주요 식물군은?",
+    "img": "",
+    "o": [
+      { "t": "① 양치식물", "a": 1, "r": "고생대 후기에 온난 습윤한 기후에서 대형 양치식물이 번성하여 현재의 주요 석탄층을 형성했습니다." },
+      { "t": "② 겉씨식물", "a": 0, "r": "중생대 식물입니다." },
+      { "t": "③ 속씨식물", "a": 0, "r": "신생대 식물입니다." },
+      { "t": "④ 선태식물", "a": 0, "r": "이끼류로 대규모 석탄층을 형성하기 어렵습니다." }
+    ]
+  },
+  {
+    "id": 26,
+    "c": "대멸종",
+    "q": "지구 역사상 가장 규모가 컸던 대멸종으로, 해양 무척추동물의 90% 이상이 멸종했던 시기는?",
+    "img": "",
+    "o": [
+      { "t": "① 오르도비스기 말", "a": 0, "r": "첫 번째 대멸종 시기이나 최대 규모는 아닙니다." },
+      { "t": "② 페름기 말", "a": 1, "r": "고생대 페름기 말(약 2억 5천만 년 전), 판게아 형성과 대규모 화산 활동으로 역사상 최대 규모의 멸종(3차)이 발생했습니다." },
+      { "t": "③ 트라이아스기 말", "a": 0, "r": "4번째 대멸종입니다." },
+      { "t": "④ 백악기 말", "a": 0, "r": "공룡이 멸종한 유명한 시기지만 규모 면에서는 페름기가 더 큽니다." }
+    ]
+  },
+  {
+    "id": 27,
+    "c": "대멸종",
+    "q": "중생대 백악기 말 대멸종(공룡과 암모나이트 멸종)의 가장 유력한 원인으로 꼽히는 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 판게아의 형성", "a": 0, "r": "페름기 멸종의 주 원인입니다." },
+      { "t": "② 초대형 운석(소행성)의 충돌", "a": 1, "r": "멕시코 칙술루브 크레이터와 이리듐 이례를 근거로 백악기 말 멸종은 소행성 충돌이 주 원인으로 꼽힙니다." },
+      { "t": "③ 초신성 폭발", "a": 0, "r": "가설 중 하나이나 소행성 충돌만큼 유력한 증거가 없습니다." },
+      { "t": "④ 전 지구적 해수면 상승", "a": 0, "r": "해수면 하강이 주로 생물계에 더 큰 스트레스를 줍니다." }
+    ]
+  },
+  {
+    "id": 28,
+    "c": "지각변동",
+    "q": "신생대에 알프스-히말라야 조산대가 형성된 주된 이유는?",
+    "img": "",
+    "o": [
+      { "t": "① 대서양 중앙 해령의 형성", "a": 0, "r": "바다가 벌어지는 현상입니다." },
+      { "t": "② 아프리카 및 인도 대륙과 유라시아 대륙의 충돌", "a": 1, "r": "신생대에 대륙들이 북상하며 유라시아 판과 충돌하여 거대한 습곡 산맥이 형성되었습니다." },
+      { "t": "③ 판게아의 분리 시작", "a": 0, "r": "중생대의 사건입니다." },
+      { "t": "④ 초대형 운석의 충돌", "a": 0, "r": "산맥 형성과 무관합니다." }
+    ]
+  },
+  {
+    "id": 29,
+    "c": "기후",
+    "q": "전체 지질 시대 중 빙하기가 단 한 번도 없었던 것으로 추정되는, 전반적으로 매우 온난했던 시대는?",
+    "img": "",
+    "o": [
+      { "t": "① 선캄브리아 시대", "a": 0, "r": "후기에 눈덩이 지구라 불리는 대빙하기가 있었습니다." },
+      { "t": "② 고생대", "a": 0, "r": "오르도비스기, 석탄기-페름기 등에 빙하기가 있었습니다." },
+      { "t": "③ 중생대", "a": 1, "r": "중생대는 대기 중 이산화탄소 농도가 높아 빙하기 없이 전반적으로 고온 다습한 기후를 유지했습니다." },
+      { "t": "④ 신생대", "a": 0, "r": "제4기에 여러 차례의 빙하기와 간빙기가 교대했습니다." }
+    ]
+  },
+  {
+    "id": 30,
+    "c": "기후",
+    "q": "신생대 제4기 기후의 특징으로 옳은 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 빙하기가 전혀 없이 온난했다.", "a": 0, "r": "중생대의 특징입니다." },
+      { "t": "② 지구 전체가 얼어붙는 눈덩이 지구 상태였다.", "a": 0, "r": "선캄브리아 시대의 특징입니다." },
+      { "t": "③ 약 4번의 빙하기와 3번의 간빙기가 번갈아 나타났다.", "a": 1, "r": "신생대 말기(제4기)에는 기후 변동이 심해 빙하기와 간빙기가 교대로 나타났습니다." },
+      { "t": "④ 지속적으로 기온이 상승하여 현재 가장 뜨거운 상태이다.", "a": 0, "r": "현재는 간빙기이지만 기후 변동 사이클 상 계속 상승만 한 것은 아닙니다." }
+    ]
+  },
+  {
+    "id": 31,
+    "c": "지질시대",
+    "q": "지질 시대를 세분하는 단위 중 가장 큰 단위부터 순서대로 바르게 나열한 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 누대 - 대 - 기 - 세", "a": 1, "r": "지질시대 단위는 누대(Eon), 대(Era), 기(Period), 세(Epoch) 순으로 작아집니다." },
+      { "t": "② 대 - 기 - 누대 - 세", "a": 0, "r": "단위 순서가 틀렸습니다." },
+      { "t": "③ 기 - 세 - 누대 - 대", "a": 0, "r": "단위 순서가 틀렸습니다." },
+      { "t": "④ 세 - 기 - 대 - 누대", "a": 0, "r": "가장 작은 것부터 나열된 순서입니다." }
+    ]
+  },
+  {
+    "id": 32,
+    "c": "연령측정",
+    "q": "어떤 지층을 뚫고 들어온 화강암의 절대 연령을 측정했더니 1억 년 전으로 확인되었다. 관입당한 셰일 지층의 생성 시기는 언제인가?",
+    "img": "",
+    "o": [
+      { "t": "① 1억 년 전 이후", "a": 0, "r": "관입당한 암석이 더 오래되어야 합니다." },
+      { "t": "② 1억 년 전 이전", "a": 1, "r": "관입의 법칙에 따라, 관입당한 셰일은 관입한 화강암(1억 년 전)보다 먼저 생성(1억 년 전보다 과거)되어야 합니다." },
+      { "t": "③ 정확히 1억 년 전", "a": 0, "r": "동시에 생성될 수 없습니다." },
+      { "t": "④ 알 수 없다.", "a": 0, "r": "상대적인 선후 관계는 알 수 있습니다." }
+    ]
+  },
+  {
+    "id": 33,
+    "c": "화석형성",
+    "q": "생물체의 원래 성분은 녹아 없어지고 빈 공간에 지하수에 녹아 있던 다른 광물질(규산, 탄산칼슘 등)이 채워져 화석이 되는 작용은?",
+    "img": "",
+    "o": [
+      { "t": "① 탄화 작용", "a": 0, "r": "수소, 산소 등이 날아가고 탄소만 남아 검게 변하는 작용입니다." },
+      { "t": "② 치환 작용", "a": 1, "r": "규화목 등과 같이 생물체의 조직이 다른 광물질로 교체(치환)되는 작용입니다." },
+      { "t": "③ 캐스트 형성", "a": 0, "r": "빈 공간(몰드)에 퇴적물이 채워져 굳은 것입니다." },
+      { "t": "④ 몰드 형성", "a": 0, "r": "껍데기가 녹아 없어져 겉모양의 틀만 남은 구덩이입니다." }
+    ]
+  },
+  {
+    "id": 34,
+    "c": "화석",
+    "q": "조개껍데기가 퇴적물 속에 묻힌 후 껍데기 자체는 지하수에 녹아 없어지고 겉모양을 알 수 있는 빈 공간(틀)만 남은 화석을 무엇이라 하는가?",
+    "img": "",
+    "o": [
+      { "t": "① 캐스트", "a": 0, "r": "몰드 안에 퇴적물이 채워져 만들어진 복제품 형태입니다." },
+      { "t": "② 몰드", "a": 1, "r": "녹아 없어진 후 남은 거푸집 형태의 '틀'을 몰드라고 합니다." },
+      { "t": "③ 생흔 화석", "a": 0, "r": "발자국, 기어간 자국 등 생활의 흔적입니다." },
+      { "t": "④ 호박 화석", "a": 0, "r": "수지에 갇혀 원래 형태가 그대로 보존된 화석입니다." }
+    ]
+  },
+  {
+    "id": 35,
+    "c": "진화",
+    "q": "독일의 쥐라기 지층에서 발견된 '시조새' 화석의 진화론적 의의로 가장 적절한 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 어류가 양서류로 진화했음을 보여준다.", "a": 0, "r": "시조새와 무관합니다." },
+      { "t": "② 양서류가 파충류로 진화했음을 보여준다.", "a": 0, "r": "시조새와 무관합니다." },
+      { "t": "③ 파충류와 조류의 특징을 모두 가져, 파충류에서 조류로의 진화를 보여준다.", "a": 1, "r": "날개와 깃털(조류 특징)이 있으면서 이빨과 긴 꼬리뼈(파충류 특징)를 모두 가지는 중간 단계 화석입니다." },
+      { "t": "④ 파충류가 포유류로 진화했음을 보여준다.", "a": 0, "r": "단궁류 등의 특징입니다." }
+    ]
+  },
+  {
+    "id": 36,
+    "c": "건층",
+    "q": "멀리 떨어져 있는 두 지역의 지층을 대비할 때, 기준이 되는 지층을 '건층(열쇠층)'이라고 한다. 건층으로 가장 널리 쓰이는 암석 2가지는?",
+    "img": "",
+    "o": [
+      { "t": "① 사암과 셰일", "a": 0, "r": "매우 흔한 퇴적암이라 특정 시기를 지시하기 어렵습니다." },
+      { "t": "② 응회암과 석탄층", "a": 1, "r": "응회암(화산재)과 석탄층은 특정 시기에 짧은 기간 동안 광범위하게 형성되므로 지층 대비의 훌륭한 기준이 됩니다." },
+      { "t": "③ 석회암과 역암", "a": 0, "r": "비교적 좁은 지역에 여러 시대에 걸쳐 형성됩니다." },
+      { "t": "④ 화강암과 현무암", "a": 0, "r": "화성암은 층리를 이루지 않아 대비에 부적합합니다." }
+    ]
+  },
+  {
+    "id": 37,
+    "c": "고기후",
+    "q": "과거의 기후(고기후)를 연구하는 방법으로 거리가 먼 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 빙하 코어의 분석", "a": 0, "r": "빙하에 갇힌 공기방울로 과거 대기 조성을 알 수 있습니다." },
+      { "t": "② 나무의 나이테 연구", "a": 0, "r": "나이테 간격으로 과거의 강수량과 기온을 유추합니다." },
+      { "t": "③ 해양 퇴적물 내 유공충 껍질의 산소 동위 원소 비 분석", "a": 0, "r": "수온에 따라 산소 동위 원소 비가 변하므로 매우 중요한 연구 방법입니다." },
+      { "t": "④ 현재 대기의 이산화탄소 농도 측정", "a": 1, "r": "현재의 농도 측정은 미래 기후 예측이나 현재 기후 연구에 쓰이며, 수백만 년 전의 고기후를 알려주지는 못합니다." }
+    ]
+  },
+  {
+    "id": 38,
+    "c": "고기후",
+    "q": "빙하 코어를 분석할 때, 빙하 얼음 속에 포함된 물 분자의 '산소 동위 원소 비($^{18}O/^{16}O$)'가 평소보다 높게 나타났다면 그 당시 지구의 기후는 어떠했을까?",
+    "img": "",
+    "o": [
+      { "t": "① 매우 한랭했다.", "a": 0, "r": "한랭할 경우 무거운 동위원소의 증발이 덜 되어 빙하 속 비가 낮아집니다." },
+      { "t": "② 매우 온난했다.", "a": 1, "r": "기온이 높으면 증발이 활발해져 무거운 $^{18}O$를 포함한 물 분자도 많이 증발하여 눈(빙하)에 섞이므로, 빙하의 산소 동위원소 비가 높아집니다." },
+      { "t": "③ 건조했다.", "a": 0, "r": "주로 기온(수온)과 밀접한 관련이 있습니다." },
+      { "t": "④ 알 수 없다.", "a": 0, "r": "기온을 유추하는 확실한 지표입니다." }
+    ]
+  },
+  {
+    "id": 39,
+    "c": "지각변동",
+    "q": "선캄브리아 시대의 지층이나 화석이 고생대나 중생대에 비해 매우 드물게 발견되는 이유로 가장 적절한 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 생물체가 전혀 존재하지 않았기 때문이다.", "a": 0, "r": "단세포, 다세포 등 생물체는 존재했습니다." },
+      { "t": "② 오랫동안 수많은 지각 변동과 풍화, 침식을 받아 지층이 훼손되었기 때문이다.", "a": 1, "r": "선캄브리아 시대는 너무 오래전이라 대부분의 지층이 지각변동으로 파괴되거나 깊은 곳에서 변성되었습니다. 또한 단단한 골격이 없어 화석 보존이 어렵습니다." },
+      { "t": "③ 당시 퇴적 작용이 전혀 일어나지 않았기 때문이다.", "a": 0, "r": "퇴적 작용은 항상 일어났습니다." },
+      { "t": "④ 생성된 화석이 모두 우주 밖으로 날아갔기 때문이다.", "a": 0, "r": "터무니없는 오답입니다." }
+    ]
+  },
+  {
+    "id": 40,
+    "c": "화석형성",
+    "q": "생물의 유해나 흔적이 화석으로 잘 보존되기 위한 조건이 아닌 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 단단한 뼈나 껍데기를 가져야 한다.", "a": 0, "r": "단단한 부분이 있어야 화석화되기 쉽습니다." },
+      { "t": "② 죽은 후 퇴적물에 의해 빨리 매몰되어야 한다.", "a": 0, "r": "빨리 묻혀야 분해나 훼손을 막을 수 있습니다." },
+      { "t": "③ 화석화 작용(탄화, 치환 등)을 받아야 한다.", "a": 0, "r": "화석화 과정을 거쳐야 오랫동안 보존됩니다." },
+      { "t": "④ 지각 변동을 매우 심하게 받아야 한다.", "a": 1, "r": "지각 변동(습곡, 단층, 마그마 관입)을 받으면 열과 압력으로 인해 화석이 훼손되거나 사라집니다." }
+    ]
+  },
+  {
+    "id": 41,
+    "c": "고생대",
+    "q": "고생대 전기의 바다에서 엄청나게 번성하여 '고생대의 바퀴벌레'라 불릴 만큼 전 지구적 표준 화석이 된 절지동물은?",
+    "img": "",
+    "o": [
+      { "t": "① 암모나이트", "a": 0, "r": "중생대 두족류입니다." },
+      { "t": "② 삼엽충", "a": 1, "r": "삼엽충은 캄브리아기 폭발과 함께 등장해 고생대 내내 번성하다 페름기 말에 멸종한 고생대의 가장 대표적 화석입니다." },
+      { "t": "③ 화폐석", "a": 0, "r": "신생대 유공충입니다." },
+      { "t": "④ 산호", "a": 0, "r": "특정 시대보다는 환경을 지시하는 시상 화석입니다." }
+    ]
+  },
+  {
+    "id": 42,
+    "c": "중생대",
+    "q": "중생대의 바다에서 크게 번성했던 연체동물로, 돌돌 말린 나선형 껍데기를 가진 화석은?",
+    "img": "",
+    "o": [
+      { "t": "① 필석", "a": 0, "r": "고생대 부유성 생물입니다." },
+      { "t": "② 암모나이트", "a": 1, "r": "중생대 해양을 대표하는 연체동물(두족류) 화석입니다." },
+      { "t": "③ 방추충", "a": 0, "r": "고생대 말기의 바다 생물입니다." },
+      { "t": "④ 매머드", "a": 0, "r": "신생대 육상 동물입니다." }
+    ]
+  },
+  {
+    "id": 43,
+    "c": "신생대",
+    "q": "매머드 화석이 주로 발견되는 지질 시대는?",
+    "img": "",
+    "o": [
+      { "t": "① 선캄브리아 시대", "a": 0, "r": "생물이 거의 없던 시기입니다." },
+      { "t": "② 고생대", "a": 0, "r": "어류와 양서류 중심입니다." },
+      { "t": "③ 중생대", "a": 0, "r": "파충류(공룡) 중심입니다." },
+      { "t": "④ 신생대", "a": 1, "r": "제4기 빙하시대에 추위에 적응하며 살았던 포유류로 신생대 대표 화석입니다." }
+    ]
+  },
+  {
+    "id": 44,
+    "c": "고생대",
+    "q": "방추충(푸줄리나)이 번성했던 시기는?",
+    "img": "",
+    "o": [
+      { "t": "① 캄브리아기 (고생대 초)", "a": 0, "r": "삼엽충이 지배적이었습니다." },
+      { "t": "② 석탄기~페름기 (고생대 말)", "a": 1, "r": "방추충은 고생대 후반 바다에서 크게 번성하다 대멸종 때 사라졌습니다." },
+      { "t": "③ 트라이아스기 (중생대 초)", "a": 0, "r": "중생대입니다." },
+      { "t": "④ 제3기 (신생대)", "a": 0, "r": "신생대입니다." }
+    ]
+  },
+  {
+    "id": 45,
+    "c": "포획암",
+    "q": "마그마가 관입하여 굳어질 때, 주변 암석의 파편이 마그마 속으로 떨어져 들어와 굳은 암석 덩어리를 무엇이라 하는가?",
+    "img": "",
+    "o": [
+      { "t": "① 기저 역암", "a": 0, "r": "부정합면 위에서 발견되는 자갈 퇴적물입니다." },
+      { "t": "② 건층", "a": 0, "r": "지층 대비의 기준이 되는 층입니다." },
+      { "t": "③ 포획암", "a": 1, "r": "포획암은 자신을 감싸고 있는 화성암보다 항상 더 오래된 암석입니다 (포획의 법칙)." },
+      { "t": "④ 변성암", "a": 0, "r": "열과 압력에 의해 성질이 변한 암석 전체를 뜻합니다." }
+    ]
+  },
+  {
+    "id": 46,
+    "c": "연령비교",
+    "q": "다음 중 가장 나중에 일어난 사건은?",
+    "img": "",
+    "o": [
+      { "t": "① 남세균에 의한 스트로마톨라이트 형성", "a": 0, "r": "선캄브리아 시대의 일입니다." },
+      { "t": "② 오존층 형성으로 인한 육상 식물 출현", "a": 0, "r": "고생대의 일입니다." },
+      { "t": "③ 판게아의 분리 시작", "a": 0, "r": "중생대의 일입니다." },
+      { "t": "④ 속씨식물의 번성 및 인류의 조상 출현", "a": 1, "r": "가장 최근인 신생대의 핵심 사건들입니다." }
+    ]
+  },
+  {
+    "id": 47,
+    "c": "지구환경",
+    "q": "고생대 석탄기 무렵, 엄청난 양의 식물이 광합성을 하고 땅에 묻히면서 나타난 지구 대기의 변화로 알맞은 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 이산화탄소 증가, 산소 감소", "a": 0, "r": "광합성은 이산화탄소를 흡수하고 산소를 배출합니다." },
+      { "t": "② 이산화탄소 감소, 산소 증가", "a": 1, "r": "광대하게 번성한 식물군이 광합성을 하여 대기 중 이산화탄소가 크게 줄고 산소 농도가 매우 높아져 거대 곤충이 살 수 있었습니다." },
+      { "t": "③ 질소 증가, 산소 감소", "a": 0, "r": "광합성과 직접적 연관이 적습니다." },
+      { "t": "④ 오존층 파괴", "a": 0, "r": "산소 농도 증가로 오존층은 더 두꺼워집니다." }
+    ]
+  },
+  {
+    "id": 48,
+    "c": "지층해석",
+    "q": "아래부터 셰일 - 사암 - 기저역암 - 석회암 순서로 지층이 쌓여 있다. 이 지역에서 일어난 지질학적 사건으로 옳은 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 계속 바다 밑에서 퇴적만 일어났다.", "a": 0, "r": "기저역암은 육상 노출 및 침식을 의미합니다." },
+      { "t": "② 화산 폭발이 여러 번 있었다.", "a": 0, "r": "응회암이 없으므로 확신할 수 없습니다." },
+      { "t": "③ 사암이 퇴적된 후 융기하여 오랜 침식을 받고 다시 침강하였다.", "a": 1, "r": "기저역암의 존재는 부정합을 의미하며, 이는 융기, 침식, 침강의 과정이 있었음을 지시합니다." },
+      { "t": "④ 사암과 석회암은 동시에 퇴적되었다.", "a": 0, "r": "중간에 시간적 단절(부정합)이 있습니다." }
+    ]
+  },
+  {
+    "id": 49,
+    "c": "동위원소",
+    "q": "우라늄-235가 납-207로 붕괴할 때 반감기는 약 7억 년이다. 어떤 암석에서 우라늄-235와 납-207의 비율이 1:7이었다면, 이 암석의 나이는?",
+    "img": "",
+    "o": [
+      { "t": "① 7억 년", "a": 0, "r": "1:1 비율(반감기 1회)일 때입니다." },
+      { "t": "② 14억 년", "a": 0, "r": "1:3 비율(반감기 2회)일 때입니다." },
+      { "t": "③ 21억 년", "a": 1, "r": "모원소:자원소 = 1:7 이면 모원소가 1/8 남은 것이며, 이는 반감기를 3번 거친 것이므로 7억 × 3 = 21억 년입니다." },
+      { "t": "④ 28억 년", "a": 0, "r": "1:15 비율(반감기 4회)일 때입니다." }
+    ]
+  },
+  {
+    "id": 50,
+    "c": "지질시대 종합",
+    "q": "지질 시대와 그 시대의 지각 변동 및 환경에 대한 설명으로 올바르게 연결된 것은?",
+    "img": "",
+    "o": [
+      { "t": "① 고생대 - 히말라야 산맥 형성", "a": 0, "r": "히말라야는 신생대에 형성되었습니다." },
+      { "t": "② 중생대 - 판게아 분리 시작 및 온난한 기후", "a": 1, "r": "중생대는 트라이아스기부터 판게아가 갈라지기 시작했고 빙하기 없이 온난했습니다." },
+      { "t": "③ 신생대 - 오존층 형성으로 육상 생물 출현", "a": 0, "r": "오존층 형성은 고생대입니다." },
+      { "t": "④ 선캄브리아 시대 - 석탄층의 대규모 형성", "a": 0, "r": "석탄층은 고생대 석탄기에 형성되었습니다." }
+    ]
+  }
+]
+</script>
+
+  <script>
+    let rawQuizData = [];
+    try {
+      const jsonText = document.getElementById("quiz-data").textContent;
+      rawQuizData = JSON.parse(jsonText);
+    } catch (e) {
+      alert("문제 데이터를 불러오는 중 오류가 발생했습니다. JSON 형식을 확인해주세요.");
+      console.error("JSON Parsing Error:", e);
+    }
+
+    let currentIdx = 0;
+    let userAnswers = new Array(rawQuizData.length).fill(null);
+
+    const questionBadge = document.getElementById("question-badge");
+    const categoryBadge = document.getElementById("category-badge");
+    const questionCounter = document.getElementById("question-counter");
+    const questionText = document.getElementById("question-text");
+    const questionImage = document.getElementById("question-image");
+    const optionsContainer = document.getElementById("options-container");
+    const explanationBox = document.getElementById("explanation-box");
+    const resultAlert = document.getElementById("result-alert");
+    const rationalesList = document.getElementById("rationales-list");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const navGrid = document.getElementById("nav-grid");
+    const scoreDisplay = document.getElementById("score-display");
+    const progressBar = document.getElementById("progress-bar");
+    const resetBtn = document.getElementById("reset-btn");
+    const editModal = document.getElementById("edit-modal");
+    const nextBtnTop = document.getElementById("next-btn-top");
+
+    function initNavGrid() {
+      navGrid.innerHTML = "";
+      rawQuizData.forEach((q, idx) => {
+        const btn = document.createElement("button");
+        btn.innerText = idx + 1;
+        btn.id = `nav-btn-${idx}`;
+        btn.className = "w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200 transition shadow-sm";
+        btn.onclick = () => loadQuestion(idx);
+        navGrid.appendChild(btn);
+      });
+      updateScoreAndProgress();
+    }
+
+    function updateScoreAndProgress() {
+      const answeredCount = userAnswers.filter(a => a !== null).length;
+      let correctCount = 0;
+      userAnswers.forEach((ans, idx) => {
+        if (ans !== null && rawQuizData[idx].o[ans].a === 1) correctCount++;
+      });
+      scoreDisplay.innerText = `${correctCount} / ${answeredCount} (총 ${rawQuizData.length}문항)`;
+      progressBar.style.width = `${(answeredCount / rawQuizData.length) * 100}%`;
+
+      rawQuizData.forEach((_, idx) => {
+        const navBtn = document.getElementById(`nav-btn-${idx}`);
+        if(!navBtn) return;
+        if (userAnswers[idx] === null) {
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm ${idx === currentIdx ? 'border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700 scale-110' : 'border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200'}`;
+        } else {
+          const isUserCorrect = rawQuizData[idx].o[userAnswers[idx]].a === 1;
+          navBtn.className = `w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-${isUserCorrect ? 'emerald' : 'rose'}-500 text-white ${idx === currentIdx ? `ring-2 ring-${isUserCorrect ? 'emerald' : 'rose'}-300 scale-110` : ''}`;
+        }
+      });
+    }
+
+    function loadQuestion(idx) {
+      if (idx < 0 || idx >= rawQuizData.length) return;
+      currentIdx = idx;
+      const q = rawQuizData[idx];
+
+      window.scrollTo(0, 0);
+
+      questionBadge.innerText = `문항 ${q.id || (idx+1)}`;
+      categoryBadge.innerText = q.c;
+      questionCounter.innerText = `${idx + 1} / ${rawQuizData.length}`;
+      questionText.innerText = q.q;
+      
+      if(q.img && q.img.trim() !== "") {
+          questionImage.src = q.img;
+          questionImage.classList.remove('hidden');
+      } else {
+          questionImage.src = "";
+          questionImage.classList.add('hidden');
+      }
+
+      optionsContainer.innerHTML = "";
+      const selected = userAnswers[idx];
+
+      q.o.forEach((opt, optIdx) => {
+        const btn = document.createElement("button");
+        btn.className = "w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm ";
+        
+        if (selected === null) {
+          btn.className += "border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800";
+          btn.onclick = () => selectOption(optIdx);
+        } else {
+          if (opt.a === 1) btn.className += "border-emerald-500 bg-emerald-50 text-emerald-900 font-bold z-10 scale-[1.01]";
+          else if (selected === optIdx) btn.className += "border-rose-500 bg-rose-50 text-rose-900";
+          else btn.className += "border-slate-200 bg-slate-50 text-slate-400 opacity-60";
+          btn.disabled = true;
+        }
+
+        const iconSpan = document.createElement("span");
+        iconSpan.className = "pt-0.5 shrink-0"; 
+        if (selected !== null) {
+          if (opt.a === 1) iconSpan.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-xl drop-shadow-md"></i>';
+          else if (selected === optIdx) iconSpan.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-600 text-xl"></i>';
+          else iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-300 text-xl"></i>';
+        } else {
+          iconSpan.innerHTML = '<i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i>';
+        }
+
+        const textSpan = document.createElement("span");
+        textSpan.className = "flex-1 leading-relaxed";
+        textSpan.innerText = opt.t;
+        
+        btn.appendChild(iconSpan);
+        btn.appendChild(textSpan);
+        optionsContainer.appendChild(btn);
+      });
+
+      if (selected !== null) {
+        renderExplanation(selected);
+        explanationBox.classList.remove("hidden");
+      } else {
+        explanationBox.classList.add("hidden");
+      }
+
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === rawQuizData.length - 1;
+      nextBtnTop.disabled = idx === rawQuizData.length - 1;
+      updateScoreAndProgress();
+    }
+
+    function selectOption(optIdx) {
+      userAnswers[currentIdx] = optIdx;
+      loadQuestion(currentIdx);
+    }
+
+    function renderExplanation(selectedIdx) {
+      const q = rawQuizData[currentIdx];
+      const isCorrect = q.o[selectedIdx].a === 1;
+
+      if (isCorrect) {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-emerald-900 bg-emerald-100 border border-emerald-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600 text-2xl drop-shadow"></i> <div>정답입니다! 완벽하게 이해하셨습니다.</div>';
+      } else {
+        resultAlert.className = "p-4 rounded-xl flex items-center gap-3 mb-4 font-bold text-rose-900 bg-rose-100 border border-rose-300 shadow-inner";
+        resultAlert.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-600 text-2xl drop-shadow"></i> <div>오답입니다. 아래 보기별 해설을 반드시 확인하세요.</div>';
+      }
+
+      rationalesList.innerHTML = "";
+      q.o.forEach((opt) => {
+        const item = document.createElement("div");
+        item.className = `p-3 rounded-lg border shadow-sm ${opt.a === 1 ? 'bg-emerald-50/80 border-emerald-200' : 'bg-white border-slate-200'}`;
+        
+        const header = document.createElement("div");
+        header.className = "font-bold mb-1.5 flex items-start gap-2";
+        if (opt.a === 1) header.innerHTML = `<span class="bg-emerald-600 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5 shadow-sm">정답 보기</span> <span class="text-emerald-900">${opt.t}</span>`;
+        else header.innerHTML = `<span class="bg-slate-400 text-white text-[10px] md:text-xs px-2 py-0.5 rounded flex-shrink-0 mt-0.5">오답 보기</span> <span class="text-slate-800">${opt.t}</span>`;
+        
+        const body = document.createElement("div");
+        body.className = "text-xs md:text-sm text-slate-600 pl-1 leading-relaxed";
+        body.innerText = opt.r;
+
+        item.appendChild(header);
+        item.appendChild(body);
+        rationalesList.appendChild(item);
+      });
+    }
+
+    function openEditModal() {
+      const q = rawQuizData[currentIdx];
+      document.getElementById('edit-cat').value = q.c;
+      document.getElementById('edit-q').value = q.q;
+      
+      if(q.img && q.img.trim() !== "") {
+          document.getElementById('edit-img-base64').value = q.img;
+          document.getElementById('edit-img-preview').src = q.img;
+          document.getElementById('edit-img-preview').classList.remove('hidden');
+          document.getElementById('btn-clear-img').classList.remove('hidden');
+      } else {
+          clearImage(); 
+      }
+
+      for(let i=0; i<4; i++) {
+        document.getElementById(`edit-opt-${i}`).value = q.o[i].t;
+        document.getElementById(`edit-rat-${i}`).value = q.o[i].r;
+        if(q.o[i].a === 1) {
+          document.querySelector(`input[name="edit-ans"][value="${i}"]`).checked = true;
+        }
+      }
+      
+      document.body.classList.add('modal-open');
+      editModal.classList.remove('hidden');
+    }
+
+    function closeEditModal() {
+      document.body.classList.remove('modal-open');
+      editModal.classList.add('hidden');
+    }
+
+    function saveEditedQuestion() {
+      const q = rawQuizData[currentIdx];
+      q.c = document.getElementById('edit-cat').value;
+      q.q = document.getElementById('edit-q').value;
+      q.img = document.getElementById('edit-img-base64').value;
+      
+      const correctVal = document.querySelector('input[name="edit-ans"]:checked').value;
+      
+      for(let i=0; i<4; i++) {
+        q.o[i].t = document.getElementById(`edit-opt-${i}`).value;
+        q.o[i].r = document.getElementById(`edit-rat-${i}`).value;
+        q.o[i].a = (i.toString() === correctVal) ? 1 : 0;
+      }
+      
+      closeEditModal();
+      loadQuestion(currentIdx);
+      alert("문제가 성공적으로 수정되었습니다.\n\n※ 영구 저장을 원하시면 상단의 [수정본 다운로드] 버튼을 클릭하세요!");
+    }
+
+    function addNewQuestion() {
+      const newQ = {
+        id: rawQuizData.length + 1,
+        c: "새 카테고리",
+        q: "여기에 새로운 문제를 입력하세요.",
+        img: "",
+        o: [
+          { t: "① 보기 1", a: 1, r: "해설 1" },
+          { t: "② 보기 2", a: 0, r: "해설 2" },
+          { t: "③ 보기 3", a: 0, r: "해설 3" },
+          { t: "④ 보기 4", a: 0, r: "해설 4" }
+        ]
+      };
+      rawQuizData.push(newQ);
+      userAnswers.push(null);
+      initNavGrid();
+      loadQuestion(rawQuizData.length - 1);
+      openEditModal(); 
+    }
+
+    function deleteCurrentQuestion() {
+      if(rawQuizData.length <= 1) {
+          alert("최소 1개의 문제는 남아있어야 합니다.");
+          return;
+      }
+      if(confirm("정말로 이 문제를 삭제하시겠습니까?\n삭제 후 복구할 수 없습니다.")) {
+          rawQuizData.splice(currentIdx, 1);
+          userAnswers.splice(currentIdx, 1);
+          
+          rawQuizData.forEach((q, i) => q.id = i + 1);
+          
+          initNavGrid();
+          closeEditModal();
+          
+          let nextIdx = currentIdx >= rawQuizData.length ? rawQuizData.length - 1 : currentIdx;
+          loadQuestion(nextIdx);
+      }
+    }
+
+    function encodeImageFileAsURL(element) {
+      const file = element.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onloadend = function() {
+        document.getElementById('edit-img-base64').value = reader.result;
+        document.getElementById('edit-img-preview').src = reader.result;
+        document.getElementById('edit-img-preview').classList.remove('hidden');
+        document.getElementById('btn-clear-img').classList.remove('hidden');
+      }
+      reader.readAsDataURL(file);
+    }
+
+    function clearImage() {
+      document.getElementById('edit-img-upload').value = "";
+      document.getElementById('edit-img-base64').value = "";
+      document.getElementById('edit-img-preview').src = "";
+      document.getElementById('edit-img-preview').classList.add('hidden');
+      document.getElementById('btn-clear-img').classList.add('hidden');
+    }
+
+    function downloadUpdatedHTML() {
+      const dataScript = document.getElementById('quiz-data');
+      dataScript.textContent = "\n" + JSON.stringify(rawQuizData, null, 2) + "\n";
+      
+      let htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: "text/html;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = "지구과학_지질시대_50제.html"; 
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    prevBtn.addEventListener("click", () => { if (currentIdx > 0) loadQuestion(currentIdx - 1); });
+    nextBtn.addEventListener("click", () => { if (currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1); });
+    nextBtnTop.addEventListener("click", () => { if (currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1); });
+    
+    resetBtn.addEventListener("click", () => {
+      if (confirm("풀이 기록을 모두 초기화하시겠습니까? 처음부터 다시 풉니다.")) {
+        userAnswers = new Array(rawQuizData.length).fill(null);
+        loadQuestion(0);
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if(!editModal.classList.contains('hidden')) return;
+      if (e.key === "ArrowLeft" && currentIdx > 0) loadQuestion(currentIdx - 1);
+      else if (e.key === "ArrowRight" && currentIdx < rawQuizData.length - 1) loadQuestion(currentIdx + 1);
+      else if (["1", "2", "3", "4"].includes(e.key) && userAnswers[currentIdx] === null) selectOption(parseInt(e.key) - 1);
+    });
+
+    // 초기 실행
+    if (rawQuizData.length > 0) {
+      initNavGrid();
+      loadQuestion(0);
+    }
+  </script>
+</body></html>
