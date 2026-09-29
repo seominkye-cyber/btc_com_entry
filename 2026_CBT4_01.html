@@ -33,7 +33,7 @@
       <div class="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-end">
         <div class="text-right mr-2">
           <span class="text-xs text-indigo-200 block">현재 점수</span>
-          <span id="score-display" class="font-extrabold text-lg text-amber-300">3 / 3 (총 98문항)</span>
+          <span id="score-display" class="font-extrabold text-lg text-amber-300">3 / 3 (총 106문항)</span>
         </div>
         <button onclick="downloadUpdatedHTML()" class="bg-emerald-600 hover:bg-emerald-500 text-xs px-3 py-2 rounded-lg font-bold transition flex items-center gap-1 border border-emerald-500 shadow-sm">
           <i class="fa-solid fa-download"></i> 수정본 다운로드
@@ -47,7 +47,7 @@
 
   <!-- Progress Bar -->
   <div class="w-full bg-indigo-200 h-2">
-    <div id="progress-bar" class="bg-amber-400 h-2 transition-all duration-300" style="width: 3.06122%;"></div>
+    <div id="progress-bar" class="bg-amber-400 h-2 transition-all duration-300" style="width: 2.83019%;"></div>
   </div>
 
   <!-- Main Content -->
@@ -58,11 +58,11 @@
       <!-- 카드 상단 헤더 (항상 보이는 다음 버튼) -->
       <div class="bg-slate-50 border-b border-slate-200 px-4 py-3 sm:px-6 sm:py-4 flex justify-between items-center">
         <div class="flex items-center space-x-2">
-          <span id="question-badge" class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shrink-0">문항 98</span>
-          <span id="category-badge" class="bg-slate-200 text-slate-700 text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded hidden sm:inline-block">새 카테고리</span>
+          <span id="question-badge" class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shrink-0">문항 106</span>
+          <span id="category-badge" class="bg-slate-200 text-slate-700 text-[11px] sm:text-xs font-semibold px-2 py-0.5 rounded hidden sm:inline-block">PLL</span>
         </div>
         <div class="flex items-center gap-2">
-          <span id="question-counter" class="text-xs text-slate-500 font-medium mr-1 hidden sm:block">98 / 98</span>
+          <span id="question-counter" class="text-xs text-slate-500 font-medium mr-1 hidden sm:block">106 / 106</span>
           <button onclick="openEditModal()" class="text-xs text-indigo-600 font-bold hover:text-indigo-800 bg-indigo-50 px-2.5 py-1.5 rounded border border-indigo-200 transition shadow-sm" title="문제 수정">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
@@ -73,13 +73,13 @@
       </div>
 
       <div class="p-6 md:p-8">
-        <h2 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-relaxed mb-4">여기에 새로운 문제를 입력하세요.</h2>
+        <h2 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-relaxed mb-4">다음 중 PLL(Phase Locked Loop)의 주요 구성이 아닌 것은?</h2>
         
         <!-- 이미지 출력 영역 -->
         <img id="question-image" src="" alt="첨부 이미지" class="mb-6 max-h-60 rounded-lg border border-slate-200 shadow-sm hidden">
 
         <!-- Options -->
-        <div id="options-container" class="space-y-3"><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">① 보기 1</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">② 보기 2</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">③ 보기 3</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">④ 보기 4</span></button></div>
+        <div id="options-container" class="space-y-3"><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">① AGC</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">② VCO</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">③ LPF</span></button><button class="w-full text-left p-4 rounded-xl border-2 transition flex items-start gap-3 text-sm md:text-base font-medium shadow-sm border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50 text-slate-800"><span class="pt-0.5 shrink-0"><i class="fa-regular fa-circle text-slate-400 text-xl group-hover:text-indigo-600"></i></span><span class="flex-1 leading-relaxed">④ 위상비교기</span></button></div>
 
         <!-- Explanation Section -->
         <div id="explanation-box" class="mt-8 border-t border-slate-200 pt-6 animate-fade-in-up hidden">
@@ -112,7 +112,7 @@
           <i class="fa-solid fa-plus"></i> 새 문제 추가하기
         </button>
       </div>
-      <div id="nav-grid" class="flex flex-wrap gap-1.5 md:gap-2"><button id="nav-btn-0" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">1</button><button id="nav-btn-1" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">2</button><button id="nav-btn-2" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">3</button><button id="nav-btn-3" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">4</button><button id="nav-btn-4" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">5</button><button id="nav-btn-5" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">6</button><button id="nav-btn-6" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">7</button><button id="nav-btn-7" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">8</button><button id="nav-btn-8" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">9</button><button id="nav-btn-9" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">10</button><button id="nav-btn-10" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">11</button><button id="nav-btn-11" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">12</button><button id="nav-btn-12" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">13</button><button id="nav-btn-13" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">14</button><button id="nav-btn-14" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">15</button><button id="nav-btn-15" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">16</button><button id="nav-btn-16" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">17</button><button id="nav-btn-17" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">18</button><button id="nav-btn-18" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">19</button><button id="nav-btn-19" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">20</button><button id="nav-btn-20" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">21</button><button id="nav-btn-21" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">22</button><button id="nav-btn-22" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">23</button><button id="nav-btn-23" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">24</button><button id="nav-btn-24" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">25</button><button id="nav-btn-25" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">26</button><button id="nav-btn-26" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">27</button><button id="nav-btn-27" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">28</button><button id="nav-btn-28" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">29</button><button id="nav-btn-29" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">30</button><button id="nav-btn-30" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">31</button><button id="nav-btn-31" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">32</button><button id="nav-btn-32" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">33</button><button id="nav-btn-33" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">34</button><button id="nav-btn-34" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">35</button><button id="nav-btn-35" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">36</button><button id="nav-btn-36" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">37</button><button id="nav-btn-37" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">38</button><button id="nav-btn-38" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">39</button><button id="nav-btn-39" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">40</button><button id="nav-btn-40" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">41</button><button id="nav-btn-41" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">42</button><button id="nav-btn-42" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">43</button><button id="nav-btn-43" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">44</button><button id="nav-btn-44" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">45</button><button id="nav-btn-45" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">46</button><button id="nav-btn-46" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">47</button><button id="nav-btn-47" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">48</button><button id="nav-btn-48" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">49</button><button id="nav-btn-49" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">50</button><button id="nav-btn-50" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">51</button><button id="nav-btn-51" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">52</button><button id="nav-btn-52" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">53</button><button id="nav-btn-53" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">54</button><button id="nav-btn-54" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">55</button><button id="nav-btn-55" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">56</button><button id="nav-btn-56" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">57</button><button id="nav-btn-57" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">58</button><button id="nav-btn-58" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">59</button><button id="nav-btn-59" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">60</button><button id="nav-btn-60" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">61</button><button id="nav-btn-61" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">62</button><button id="nav-btn-62" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">63</button><button id="nav-btn-63" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">64</button><button id="nav-btn-64" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">65</button><button id="nav-btn-65" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">66</button><button id="nav-btn-66" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">67</button><button id="nav-btn-67" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">68</button><button id="nav-btn-68" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">69</button><button id="nav-btn-69" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">70</button><button id="nav-btn-70" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">71</button><button id="nav-btn-71" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">72</button><button id="nav-btn-72" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">73</button><button id="nav-btn-73" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">74</button><button id="nav-btn-74" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">75</button><button id="nav-btn-75" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">76</button><button id="nav-btn-76" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">77</button><button id="nav-btn-77" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">78</button><button id="nav-btn-78" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">79</button><button id="nav-btn-79" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">80</button><button id="nav-btn-80" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">81</button><button id="nav-btn-81" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">82</button><button id="nav-btn-82" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">83</button><button id="nav-btn-83" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">84</button><button id="nav-btn-84" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">85</button><button id="nav-btn-85" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">86</button><button id="nav-btn-86" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">87</button><button id="nav-btn-87" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">88</button><button id="nav-btn-88" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">89</button><button id="nav-btn-89" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">90</button><button id="nav-btn-90" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">91</button><button id="nav-btn-91" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">92</button><button id="nav-btn-92" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">93</button><button id="nav-btn-93" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">94</button><button id="nav-btn-94" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">95</button><button id="nav-btn-95" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">96</button><button id="nav-btn-96" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">97</button><button id="nav-btn-97" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700 scale-110">98</button></div>
+      <div id="nav-grid" class="flex flex-wrap gap-1.5 md:gap-2"><button id="nav-btn-0" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">1</button><button id="nav-btn-1" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">2</button><button id="nav-btn-2" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">3</button><button id="nav-btn-3" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">4</button><button id="nav-btn-4" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">5</button><button id="nav-btn-5" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">6</button><button id="nav-btn-6" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">7</button><button id="nav-btn-7" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">8</button><button id="nav-btn-8" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">9</button><button id="nav-btn-9" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">10</button><button id="nav-btn-10" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">11</button><button id="nav-btn-11" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">12</button><button id="nav-btn-12" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">13</button><button id="nav-btn-13" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">14</button><button id="nav-btn-14" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">15</button><button id="nav-btn-15" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">16</button><button id="nav-btn-16" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">17</button><button id="nav-btn-17" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">18</button><button id="nav-btn-18" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">19</button><button id="nav-btn-19" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">20</button><button id="nav-btn-20" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">21</button><button id="nav-btn-21" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">22</button><button id="nav-btn-22" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">23</button><button id="nav-btn-23" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">24</button><button id="nav-btn-24" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">25</button><button id="nav-btn-25" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">26</button><button id="nav-btn-26" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">27</button><button id="nav-btn-27" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">28</button><button id="nav-btn-28" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">29</button><button id="nav-btn-29" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">30</button><button id="nav-btn-30" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">31</button><button id="nav-btn-31" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">32</button><button id="nav-btn-32" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">33</button><button id="nav-btn-33" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">34</button><button id="nav-btn-34" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">35</button><button id="nav-btn-35" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">36</button><button id="nav-btn-36" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">37</button><button id="nav-btn-37" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">38</button><button id="nav-btn-38" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">39</button><button id="nav-btn-39" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">40</button><button id="nav-btn-40" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">41</button><button id="nav-btn-41" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">42</button><button id="nav-btn-42" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">43</button><button id="nav-btn-43" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">44</button><button id="nav-btn-44" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">45</button><button id="nav-btn-45" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">46</button><button id="nav-btn-46" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">47</button><button id="nav-btn-47" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">48</button><button id="nav-btn-48" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">49</button><button id="nav-btn-49" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">50</button><button id="nav-btn-50" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">51</button><button id="nav-btn-51" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">52</button><button id="nav-btn-52" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">53</button><button id="nav-btn-53" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">54</button><button id="nav-btn-54" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">55</button><button id="nav-btn-55" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">56</button><button id="nav-btn-56" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">57</button><button id="nav-btn-57" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">58</button><button id="nav-btn-58" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">59</button><button id="nav-btn-59" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">60</button><button id="nav-btn-60" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">61</button><button id="nav-btn-61" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">62</button><button id="nav-btn-62" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">63</button><button id="nav-btn-63" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">64</button><button id="nav-btn-64" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">65</button><button id="nav-btn-65" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">66</button><button id="nav-btn-66" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">67</button><button id="nav-btn-67" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">68</button><button id="nav-btn-68" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">69</button><button id="nav-btn-69" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">70</button><button id="nav-btn-70" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">71</button><button id="nav-btn-71" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">72</button><button id="nav-btn-72" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">73</button><button id="nav-btn-73" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">74</button><button id="nav-btn-74" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">75</button><button id="nav-btn-75" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">76</button><button id="nav-btn-76" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">77</button><button id="nav-btn-77" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">78</button><button id="nav-btn-78" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">79</button><button id="nav-btn-79" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">80</button><button id="nav-btn-80" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">81</button><button id="nav-btn-81" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">82</button><button id="nav-btn-82" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">83</button><button id="nav-btn-83" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">84</button><button id="nav-btn-84" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">85</button><button id="nav-btn-85" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">86</button><button id="nav-btn-86" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">87</button><button id="nav-btn-87" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">88</button><button id="nav-btn-88" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">89</button><button id="nav-btn-89" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">90</button><button id="nav-btn-90" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">91</button><button id="nav-btn-91" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">92</button><button id="nav-btn-92" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">93</button><button id="nav-btn-93" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">94</button><button id="nav-btn-94" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">95</button><button id="nav-btn-95" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs shadow-sm bg-emerald-500 text-white ">96</button><button id="nav-btn-96" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">97</button><button id="nav-btn-97" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">98</button><button id="nav-btn-98" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">99</button><button id="nav-btn-99" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">100</button><button id="nav-btn-100" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">101</button><button id="nav-btn-101" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">102</button><button id="nav-btn-102" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">103</button><button id="nav-btn-103" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">104</button><button id="nav-btn-104" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-slate-300 bg-slate-50 text-slate-600 hover:bg-slate-200">105</button><button id="nav-btn-105" class="w-7 h-7 md:w-8 md:h-8 rounded font-bold text-xs border shadow-sm border-indigo-600 ring-2 ring-indigo-400 bg-white text-indigo-700 scale-110">106</button></div>
     </div>
   </main>
 
@@ -2934,6 +2934,230 @@
         "t": "④ 보기 4",
         "a": 0,
         "r": "해설 4"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "c": "UTP 케이블",
+    "q": "LAN에서 사용되는 UTP 케이블(EIA/TIA568A)의 심선 배열을 핀1에서 8번까지 순서대로 나열한 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 백/녹, 녹, 백/등, 청, 백/청, 등, 백/갈, 갈",
+        "a": 1,
+        "r": "T568A 규격은 1,2번 핀에 초록색 쌍(흰초-초)을 먼저 배치하고 3,6번에 주황색 쌍(흰주-주)을 배치합니다. T568B는 1,2번이 주황, 3,6번이 초록입니다."
+      },
+      {
+        "t": " ② 백/녹, 등, 백/등, 녹, 백/청, 갈, 백/갈, 청",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": " ③ 백/등, 등, 백/녹, 청, 백/청, 녹, 백/갈, 갈",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "기 ④ 백/등, 등, 백/녹, 녹, 백/청, 청, 백/갈, 갈",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "c": "포설장력",
+    "q": "지하관로에 케이블 인입시 통신용 케이블의 중량이 100[kg/m]이고, 마찰계수 0.5, 설치 관로의 길이가 245[m] 일 때, 이 케이블 포설장력은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 50 [kg]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 122 [kg]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "③ 4,900 [kg]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 12,250 [kg]",
+        "a": 1,
+        "r": "포설장력 T = 선형중량(100) × 마찰계수(0.5) × 길이(245) = 12,250 [kg] 입니다.[cite: 18]"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "c": "라우팅",
+    "q": "주로 컴퓨터 네트워크의 동적 라우팅 프로토콜(예: OSPF, IS-IS)에서 라우터 간에 서로의 네트워크 지도(Topology) 정보를 완벽하게 일치시키는 과정을 무엇이라 하는가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① LSS(Link State Synchronization)",
+        "a": 1,
+        "r": "링크 상태 데이터베이스(LSDB)를 모든 라우터가 똑같이 일치시키는 과정을 링크 상태 동기화(LSS)라고 부릅니다."
+      },
+      {
+        "t": "② Hello",
+        "a": 0,
+        "r": "이웃 확인 패킷입니다."
+      },
+      {
+        "t": "③ DBD(Database Description)",
+        "a": 0,
+        "r": "요약 정보 패킷입니다."
+      },
+      {
+        "t": "④ LSU(Link State Update)",
+        "a": 0,
+        "r": "업데이트 전달 패킷입니다."
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "c": "무선랜",
+    "q": "Wi-Fi 네트워크 상태를 점검하고 최적화할 때 현재 상용화되어 확인해야 하는 주파수 대역은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 2.4GHz, 5GHz, 6GHz 대역",
+        "a": 1,
+        "r": "Wi-Fi 6E 및 Wi-Fi 7의 등장으로 현재는 2.4GHz, 5GHz뿐만 아니라 6GHz 대역까지 함께 점검합니다."
+      },
+      {
+        "t": "② 800MHz, 1.8GHz 대역",
+        "a": 0,
+        "r": "이동통신용 대역입니다."
+      },
+      {
+        "t": "③ 10GHz, 28GHz 대역",
+        "a": 0,
+        "r": "5G 밀리미터파 대역입니다."
+      },
+      {
+        "t": "④ 900MHz, 2.4GHz 대역",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "c": "프로토콜",
+    "q": "다음 괄호 안에 공통으로 들어갈 프로토콜 이름은 무엇인가? '인터넷상 노드 간에 에러사항이나 통신제어를 위한 메시지를 보고하게 할 목적으로 만들어진 프로토콜이 ( )이고, 대표적으로 PING이라는 유틸리티는 ( )의 에코요청과 에코응답 메시지를 사용해 구현할 수 있다.'",
+    "img": "",
+    "o": [
+      {
+        "t": "① ARP",
+        "a": 0,
+        "r": "주소 변환 프로토콜입니다."
+      },
+      {
+        "t": "② PARP",
+        "a": 0,
+        "r": "프록시 ARP입니다."
+      },
+      {
+        "t": "③ IGMP",
+        "a": 0,
+        "r": "멀티캐스트 그룹 관리 프로토콜입니다."
+      },
+      {
+        "t": "④ ICMP",
+        "a": 1,
+        "r": "IP의 신뢰성 보완 및 오류 보고, Ping 유틸리티에 사용되는 네트워크 계층 프로토콜은 ICMP입니다."
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "c": "중계선 효율문제",
+    "q": "20개의 중계선으로 5[Erl]의 호량을 운반하였다면 이 중계선의 효율은 몇 [%] 인가?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 20[%]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "② 25[%]",
+        "a": 1,
+        "r": "5[Erl]의 호량을 운반하기 위해 20개의 중계선을 사용했으므로, 각 중계선은 5/20 = 0.25[Erl]의 호량을 운반하게 됩니다. 따라서, 전체 호량 대비 실제 운반된 호량은 5[Erl] / 20[Erl] = 0.25 또는 25%가 되므로, 중계선의 효율은 25%입니다."
+      },
+      {
+        "t": "③ 30[%]",
+        "a": 0,
+        "r": "오답입니다."
+      },
+      {
+        "t": "④ 35[%]",
+        "a": 0,
+        "r": "오답입니다."
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "c": "AM 수신기",
+    "q": "다음 중 AM 수신기의 보조회로가 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① 자동이득 제어회로 (AGC)",
+        "a": 0,
+        "r": "입력 전신호의 강약에 관계없이 수신기의 출력 출력을 일정하게 유지해 주는 AM 수신기의 대표적인 보조회로입니다."
+      },
+      {
+        "t": "② 자연이득 제어회로 (DAGC)",
+        "a": 0,
+        "r": "AGC 회로의 일종(Delayed AGC 등)으로, 약한 신호에는 이득을 제어하지 않고 일정 수준 이상의 강한 신호에만 이득 제어를 걸어주는 지연 자동이득 제어회로를 의미합니다."
+      },
+      {
+        "t": "③ 자동잡음 억제회로 (ANL)",
+        "a": 0,
+        "r": "펄스 형태의 잡음(자동차 점화 노이즈 등)이 수신기에 들어올 때 이를 잘라내거나 억제하여 음질을 개선하는 AM 수신기 보조회로입니다."
+      },
+      {
+        "t": "④ 순시편이 제어회로 (IDC)",
+        "a": 1,
+        "r": "IDC(Instantaneous Deviation Control)는 **FM(주파수 변조) 송신기** 등에서 최대 주파수 편이가 허용치를 초과하지 않도록 제한하는 변조 제어 회로이므로, AM 수신기의 보조회로가 아닙니다."
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "c": "PLL",
+    "q": "다음 중 PLL(Phase Locked Loop)의 주요 구성이 아닌 것은?",
+    "img": "",
+    "o": [
+      {
+        "t": "① AGC",
+        "a": 1,
+        "r": "AGC(자동이득 제어회로)는 AM 수신기 등의 출력 진폭을 일정하게 유지하기 위한 회로이며, PLL의 기본 구성 요소가 아닙니다."
+      },
+      {
+        "t": "② VCO",
+        "a": 0,
+        "r": "전압제어 발진기(Voltage Controlled Oscillator)로, 입력되는 제어 전압에 따라 출력 주파수가 변화하는 PLL의 핵심 구성 요소입니다."
+      },
+      {
+        "t": "③ LPF",
+        "a": 0,
+        "r": "저역 통과 필터(Low Pass Filter)로, 위상비교기 출력에서 고주파 성분을 제거하고 직류 제어 전압만 VCO로 전달하는 PLL의 필수 요소입니다"
+      },
+      {
+        "t": "④ 위상비교기",
+        "a": 0,
+        "r": "Phase Detector (또는 Phase Comparator)로, 입력 신호와 VCO의 출력 신호 간의 위상 차이를 검출하는 PLL의 핵심 구성 요소입니다."
       }
     ]
   }
